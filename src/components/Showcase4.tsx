@@ -177,15 +177,53 @@ export const Showcase4 = () => {
 
 
 
-        <section className="py-16 bg-lightGrey text-center px-4">
-          <BentoSection2 className="bg-lightGrey relative" />
-        </section>
-
+       
 
       {/* Team Section */}
       <section id="team-section" className="py-16 bg-gray-100 text-center px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8">Meet Our Team</h2>
+        <h2 className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-bl from-mintAccent via-tealAccent to-teal-900 bg-clip-text text-transparent">Meet Our Team</h2>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Team Member Card */}
+          <div className="bg-white p-6 shadow rounded">
+            <Image
+              src={WomanWhiteRainJacket}
+              alt="Jason Kakoyiannis"
+              className="w-32 h-32 rounded-full mx-auto mb-4"
+            />
+            <h3 className="text-xl font-semibold">Jason Kakoyiannis</h3>
+            <p className="text-gray-600">Managing Partner</p>
+          </div>
+          <div className="bg-white p-6 shadow rounded">
+            <Image
+              src={WomanWhiteRainJacket}
+              alt="Brian Brazeau"
+              className="w-32 h-32 rounded-full mx-auto mb-4"
+            />
+            <h3 className="text-xl font-semibold">Brian Brazeau</h3>
+            <p className="text-gray-600">Partner</p>
+          </div>
+
+          {/* Team Member Card */}
+          <div className="bg-white p-6 shadow rounded">
+            <Image
+              src={WomanWhiteRainJacket}
+              alt="Jason Kakoyiannis"
+              className="w-32 h-32 rounded-full mx-auto mb-4"
+            />
+            <h3 className="text-xl font-semibold">Jason Kakoyiannis</h3>
+            <p className="text-gray-600">Managing Partner</p>
+          </div>
+          <div className="bg-white p-6 shadow rounded">
+            <Image
+              src={WomanWhiteRainJacket}
+              alt="Brian Brazeau"
+              className="w-32 h-32 rounded-full mx-auto mb-4"
+            />
+            <h3 className="text-xl font-semibold">Brian Brazeau</h3>
+            <p className="text-gray-600">Partner</p>
+          </div>
+
+
           {/* Team Member Card */}
           <div className="bg-white p-6 shadow rounded">
             <Image
@@ -207,6 +245,11 @@ export const Showcase4 = () => {
           </div>
         </div>
       </section>
+
+      <section className="py-16 bg-lightGrey text-center px-4">
+          <BentoSection2 className="bg-lightGrey relative" />
+      </section>
+
     </main>
   );
 };

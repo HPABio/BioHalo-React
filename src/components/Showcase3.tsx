@@ -254,7 +254,7 @@ export const Showcase3 = () => {
       <section id="feature-pfas" className="w-full h-full relative pt-32">
         <TransitionSectionFour
           className="w-full h-[200px]"
-          circleSize="700vw"
+          circleSize={700}
         />
         <FeatureOfPFAS
           className="w-full min-h-[70vh] bg-black"
@@ -262,7 +262,7 @@ export const Showcase3 = () => {
         />
         <TransitionSectionFour
           className="w-full h-[200px] rotate-180"
-          circleSize="700vw"
+          circleSize={700}
         />
       </section>
 

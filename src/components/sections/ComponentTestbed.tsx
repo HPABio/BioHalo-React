@@ -16,6 +16,8 @@ import WomanWhiteRainJacket from "@/assets/images/BGImagesTest/WomanWhiteRainJac
 import { useRef } from "react";
 import Image from "next/image";
 import { FluorinatedMaterialsSection } from "../sections2/BioHaloSections/FluorinatedMaterialsSection";
+import { BentoFourBoxSectionR } from "../sections2/BentoFourBoxSectionR";
+import { BentoFourBoxSectionL } from "../sections2/BentoFourBoxSectionL";
 
 export default function ComponentTestbed() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -118,6 +120,31 @@ export default function ComponentTestbed() {
 
   return (
     <main className="relative min-h-screen w-screen bg-lightGrey overflow-hidden">
+      
+      
+      
+      <section className="w-screen h-screen flex items-center justify-center bg-red-500/0 mx-auto px-14">
+        <div className="w-full h-[600px] flex items-center justify-center bg-blue-500/0">
+                  <BentoFourBoxSectionL />
+                  <div id="BentoFourBoxSectionR Text"
+                  className="w-full h-[600px] flex items-center justify-center bg-blue-500/0">
+                    <div  className="w-full h-full flex flex-stretch items-center justify-center bg-blue-500"></div>
+                  </div>
+        </div>
+      </section>
+
+
+      <section className="w-screen h-screen flex items-center justify-center bg-red-500/0">
+        <div className="w-full h-[600px] flex items-center justify-center bg-blue-500/0">
+                  <BentoFourBoxSectionR />
+                  <div id="BentoFourBoxSectionL Text"
+                  className="w-full h-[600px] flex items-center justify-center bg-blue-500/0">
+                  </div>
+        </div>
+      </section>
+
+
+
       <section className="w-screen h-screen flex items-center justify-center bg-red-500/0">
         <div className="w-[600px] h-[600px] flex items-center justify-center bg-blue-500/0">
           <RotatingMaterials />
