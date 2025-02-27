@@ -12,7 +12,7 @@ export function TransitionSectionFour({ className = "", circleSize = 300 }: { cl
       <div className="w-full h-full overflow-hidden relative" >
 
 
-        <div className={`w-[700vw] h-[700vw] bg-black rounded-full
+        <div className={`w-[${circleSize}vw] h-[${circleSize}vw] bg-black rounded-full
         absolute top-0 left-[50%] -translate-x-[50%]`}></div>
       </div>
       <div></div>
