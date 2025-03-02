@@ -6,7 +6,10 @@ import React, { Suspense, memo } from "react";
 import dynamic from "next/dynamic";
 import { HeroSection5 } from "@/components/HeroSections/HeroSection5";
 import { FluorinatedMaterialsSection } from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection";
-import { PollutionSection, PollutionSectionBACKUP } from "@/components/sections2/BioHaloSections/PollutionSection";
+import {
+  PollutionSection,
+  PollutionSectionBACKUP,
+} from "@/components/sections2/BioHaloSections/PollutionSection";
 import { FollowingCircle } from "@/components/ui/FollowingCircle";
 import { TransitionSectionOne } from "@/components/sections2/BioHaloSections/TransitionSectionOne";
 import { TransitionSectionTwo } from "@/components/sections2/BioHaloSections/TransitionSectionTwo";
@@ -21,6 +24,11 @@ import { BentoSection2 } from "@/components/sections2/BentoSection2";
 import { TransitionSectionFour } from "@/components/sections2/BioHaloSections/TransitionSectionFour";
 import IconCarousel from "@/components/ui/IconCarousel";
 
+// Import the new sections
+import { MeetUsAtSection } from "@/components/sections2/BioHaloSections/MeetUsAtSection";
+import { PlatformTechnologySection } from "@/components/sections2/BioHaloSections/PlatformTechnologySection";
+import { PartnersMarqueeSection } from "@/components/sections2/BioHaloSections/PartnersMarqueeSection";
+import { SuccessesSection } from "@/components/sections2/BioHaloSections/SuccessesSection";
 
 // ✅ Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
@@ -127,61 +135,87 @@ export const Showcase4 = () => {
   return (
     <main className="min-h-screen w-full h-full bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70 overflow-hidden">
       <HeroSection5 className="w-screen h-screen relative" />
-      
-      <section className="py-16 bg-black text-center px-4" id="transition-section-one">
+
+      <section
+        className="py-16 bg-black text-center px-4"
+        id="transition-section-one"
+      >
         <div className="w-full h-[300px]"></div>
       </section>
 
-      <FluorinatedMaterialsSection className="relative w-full h-full overflow-hidden xl:overflow-visible z-10 xl:-mb-[100px]"  
-      stats={stats}/>
+      <FluorinatedMaterialsSection
+        className="relative w-full h-full overflow-hidden xl:overflow-visible z-10 xl:-mb-[100px]"
+        stats={stats}
+      />
 
-
-        <section id="what-we-do">
-          <WhatWeDoSection className="min-h-[50vh] max-w-[1280px] mx-auto text-white px-14 mt-32 relative border-2 border-red-500/0" 
-          stats={stats}/>
-        </section>
-
-
-      <section id="feature-pfas" className="w-full h-full relative pt-48">
-          {/* <MemoizedTransitionSectionFour className="w-full h-[200px]" circleSize={700} /> */}
-
-          <FeatureOfPFAS className="w-full min-h-[70vh] bg-black" />
-
-        <MemoizedTransitionSectionFour className="w-full h-[200px] rotate-180" circleSize={700} />
+      <section id="what-we-do">
+        <WhatWeDoSection
+          className="min-h-[50vh] max-w-[1280px] mx-auto text-white px-14 mt-32 relative border-2 border-red-500/0"
+          stats={stats}
+        />
       </section>
 
+      <section id="feature-pfas" className="w-full h-full relative pt-48">
+        {/* <MemoizedTransitionSectionFour className="w-full h-[200px]" circleSize={700} /> */}
 
-        <section id="health" className="w-full h-full relative pt-32">
-          <HealthSectionImgRight className="min-h-[50vh] max-w-[1280px] mx-auto px-14 relative overflow-hidden xl:overflow-visible mb-36" 
-          stats={stats}/>
-        </section>
+        <FeatureOfPFAS className="w-full min-h-[70vh] bg-black" />
 
+        <MemoizedTransitionSectionFour
+          className="w-full h-[200px] rotate-180"
+          circleSize={700}
+        />
+      </section>
+
+      <section id="health" className="w-full h-full relative pt-32">
+        <HealthSectionImgRight
+          className="min-h-[50vh] max-w-[1280px] mx-auto px-14 relative overflow-hidden xl:overflow-visible mb-36"
+          stats={stats}
+        />
+      </section>
 
       {/* Pollution Section */}
 
-        <section id="pollution" className="min-h-screen">
-          <PollutionSection className="min-h-[50vh] max-w-[1280px] mx-auto px-14 relative overflow-visible z-10" 
-          stats={stats}/>
-        </section>
+      <section id="pollution" className="min-h-screen">
+        <PollutionSection
+          className="min-h-[50vh] max-w-[1280px] mx-auto px-14 relative overflow-visible z-10"
+          stats={stats}
+        />
+      </section>
 
+      {/* Platform Technology Section */}
+      <section id="platform-technology" className="w-full">
+        <PlatformTechnologySection className="bg-gradient-to-br from-lightGrey/90 via-mintAccent/30 to-tealAccent/10" />
+      </section>
 
+      <section className="bg-red-500/0 w-full">
+        <div className="w-full h-[700px] pt-10 overflow-hidden">
+          <IconCarousel className="w-[1200px] h-[1200px] -mb-[500px] mx-auto" />
+        </div>
+        <div id="platform-features">
+          <PlatformFeaturesSection />
+        </div>
+      </section>
 
-        <section className="bg-red-500/0 w-full">
-          <div className="w-full h-[700px] pt-10 overflow-hidden">
-            <IconCarousel className="w-[1200px] h-[1200px] -mb-[500px] mx-auto" />
-          </div>
-          <div id="platform-features">
-            <PlatformFeaturesSection />
-          </div>
-        </section>
+      {/* Successes Section */}
+      <section id="successes" className="w-full">
+        <SuccessesSection className="bg-gradient-to-br from-lightGrey/90 via-mintAccent/30 to-tealAccent/10" />
+      </section>
 
+      {/* Partners Marquee Section */}
+      <section id="partners" className="w-full">
+        <PartnersMarqueeSection />
+      </section>
 
-
-       
+      {/* Meet Us At Section */}
+      <section id="meet-us-at" className="w-full">
+        <MeetUsAtSection className="bg-gradient-to-br from-lightGrey/90 via-mintAccent/30 to-tealAccent/10" />
+      </section>
 
       {/* Team Section */}
       <section id="team-section" className="py-16 bg-gray-100 text-center px-4">
-        <h2 className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-bl from-mintAccent via-tealAccent to-teal-900 bg-clip-text text-transparent">Meet Our Team</h2>
+        <h2 className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-bl from-mintAccent via-tealAccent to-teal-900 bg-clip-text text-transparent">
+          Meet Our Team
+        </h2>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Team Member Card */}
           <div className="bg-white p-6 shadow rounded">
@@ -223,7 +257,6 @@ export const Showcase4 = () => {
             <p className="text-gray-600">Partner</p>
           </div>
 
-
           {/* Team Member Card */}
           <div className="bg-white p-6 shadow rounded">
             <Image
@@ -247,9 +280,8 @@ export const Showcase4 = () => {
       </section>
 
       <section className="py-16 bg-lightGrey text-center px-4">
-          <BentoSection2 className="bg-lightGrey relative" />
+        <BentoSection2 className="bg-lightGrey relative" />
       </section>
-
     </main>
   );
 };

@@ -34,7 +34,7 @@ export function PollutionSection({
             The Consequences of
             <br /> pollution can be
             <br />
-            <span className="bg-gradient-to-t from-pinkAccent to-tealAccent/30 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-b from-pinkAccent to-red-900 bg-clip-text text-transparent">
               devastating
               <br />
             </span>
@@ -43,7 +43,7 @@ export function PollutionSection({
         <h1
           className=" w-full pb-2 font-black font-Arial text-6xl text-center lg:text-right
         bg-gradient-to-tl from-tealAccent to-tealAccent/30 bg-clip-text text-transparent capitalize
-        blur-[1px] opacity-70"
+        blur-[1.5px] opacity-70"
         >
           <span className="">
             for Public Health and
@@ -51,7 +51,7 @@ export function PollutionSection({
             The Consequences of
             <br /> pollution can be
             <br />
-            <span className="bg-gradient-to-t from-pinkAccent to-tealAccent/30 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-b from-pinkAccent to-black/70 bg-clip-text text-transparent">
               devastating
               <br />
             </span>
