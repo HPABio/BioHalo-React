@@ -2,14 +2,14 @@
 node_modules
 /.pnp
 .pnp.js
-yarn.lock
-package-lock.json
+#yarn.lock
+#package-lock.json
 
 # Next.js build output
 .next
 out/
 dist/
-build/
+# build/
 
 # Environment Variables
 .env
