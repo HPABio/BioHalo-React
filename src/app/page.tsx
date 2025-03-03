@@ -1,15 +1,5 @@
 "use client";
 
-import { ChallengesSection } from "@/components/sections2/ChallengesSection";
-import { SolutionSection } from "@/components/sections2/SolutionSection";
-import { AchievementsSection } from "@/components/sections2/AchievementsSection";
-import { ConferencesSection } from "@/components/sections2/ConferencesSection";
-import { BentoSection } from "@/components/sections2/BentoSection";
-import { HeroSection4 } from "@/components/HeroSections/HeroSection4";
-import { ShowcaseNavbar } from "@/components/ShowcaseNavbar";
-import { Showcase } from "@/components/Showcase";
-import { Showcase2 } from "@/components/Showcase2";
-import { Showcase3 } from "@/components/Showcase3";
 import { Showcase4 } from "@/components/Showcase4"; 
 import { ScreenSizeDEVTOOL } from "@/components/ui/ScreenSizeDEVTOOL";
 

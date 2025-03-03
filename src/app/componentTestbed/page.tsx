@@ -38,7 +38,7 @@ export default function Page() {
       
       <div>
         
-        <ComponentTestbed />
+        {/* <ComponentTestbed /> */}
         <DNAAnalysis className="w-full h-full" />
       </div>
     </div>
