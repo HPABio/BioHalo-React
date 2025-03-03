@@ -1,11 +1,10 @@
-import type { Config } from "/Users/hendrikcooper/Local Programming/Cursor/BioHalo React/node_modules/.pnpm/tailwindcss@3.4.17/node_modules/tailwindcss/types/index.d.ts";
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: ["class"],
   content: [
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/lib/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     container: {
@@ -104,4 +103,3 @@ const config: Config = {
 };
 
 export default config;
-
