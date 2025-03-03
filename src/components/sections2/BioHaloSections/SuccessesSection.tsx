@@ -99,7 +99,7 @@ export const SuccessesSection = ({
   }, {} as Record<string, Achievement[]>);
 
   // Get unique categories for filtering
-  const categories = [...new Set(achievements.map((a) => a.category))];
+  const categories = Array.from(new Set(achievements.map((a) => a.category)));
 
   const [activeFilter, setActiveFilter] = React.useState<string | null>(null);
   const filteredAchievements = activeFilter
