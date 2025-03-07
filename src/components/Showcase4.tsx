@@ -23,6 +23,8 @@ import { PlatformFeaturesSection } from "@/components/sections2/BioHaloSections/
 import { BentoSection2 } from "@/components/sections2/BentoSection2";
 import { TransitionSectionFour } from "@/components/sections2/BioHaloSections/TransitionSectionFour";
 import IconCarousel from "@/components/ui/IconCarousel";
+import { BentosPFASSection } from "@/components/sections2/BentosPFASSection";
+
 
 // Import the new sections
 import { MeetUsAtSection } from "@/components/sections2/BioHaloSections/MeetUsAtSection";
@@ -154,6 +156,11 @@ export const Showcase4 = () => {
           stats={stats}
         />
       </section>
+
+      <section className="w-full h-full relative pt-48">
+        <BentosPFASSection className="bg-black relative" />
+      </section>
+
 
       <section id="feature-pfas" className="w-full h-full relative pt-48">
         {/* <MemoizedTransitionSectionFour className="w-full h-[200px]" circleSize={700} /> */}
