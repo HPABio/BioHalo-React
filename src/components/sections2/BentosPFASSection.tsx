@@ -1,49 +1,96 @@
-  "use client";
+"use client";
 
-  import { BentoInfo } from "../bentos/PFAS_Bentos/BentoInfo";
-  import { BentoStats } from "../bentos/PFAS_Bentos/BentoStats";
-  import { BentoPeriodicTable } from "../bentos/PFAS_Bentos/BentoPeriodicTable";
-  import { BentoProcess } from "../bentos/PFAS_Bentos/BentoProcess";
-  import { BentoVideo } from "../bentos/PFAS_Bentos/BentoVideo";
-  import { BentoTeam } from "../bentos/PFAS_Bentos/BentoTeam";
-  import { BentoSafety } from "../bentos/PFAS_Bentos/BentoSafety";
-  import { BentoEnvironment } from "../bentos/PFAS_Bentos/BentoEnvironment";
-  import { BentoContact } from "../bentos/PFAS_Bentos/BentoContact";
+import { BentoPFASOverview } from "@/components/bentos/PFAS_Bentos/BentoPFASOverview";
+import { BentoRegulation } from "@/components/bentos/PFAS_Bentos/BentoRegulation";
+import { BentoFluorineBenefits } from "@/components/bentos/PFAS_Bentos/BentoFluorineBenefits";
+import { BentoIndustries } from "@/components/bentos/PFAS_Bentos/BentoIndustries";
+import { BentoEnvironmentalConcerns } from "@/components/bentos/PFAS_Bentos/BentoEnvironmentalConcerns";
+import { BentoFutureOutlook } from "@/components/bentos/PFAS_Bentos/BentoFutureOutlook";
+import { Shield, Flame, Droplets, Factory } from "lucide-react";
+import { motion } from "framer-motion";
 
-  export const BentosPFASSection = ({ className }: { className?: string }) => {
-    const DEBUG = false; // Toggle this to enable/disable logging
+const characteristics = [
+  {
+    title: "Highly Durable",
+    icon: Shield,
+    description: "Long-lasting compounds",
+  },
+  {
+    title: "Heat Resistant",
+    icon: Flame,
+    description: "Thermal stability",
+  },
+  {
+    title: "Water Repellent",
+    icon: Droplets,
+    description: "Moisture protection",
+  },
+  {
+    title: "Industry Ready",
+    icon: Factory,
+    description: "Wide applications",
+  },
+];
 
-    if (DEBUG) console.log("Rendering BentoSection2");
+export const BentosPFASSection = ({ className }: { className?: string }) => {
+  const DEBUG = false;
 
-    return (
-      <section className={`py-16 ${className || ""}`}>
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 capitalize">
-            Fluorine drives our modern society
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Understanding the key characteristics of Per- and Polyfluoroalkyl
-            Substances
-          </p>
-        </div>
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[minmax(180px,auto)]">
-            {/* Row 1 */}
-            <BentoInfo className="" /> {/* col-span-2 row-span-2 */}
-            <BentoStats className="border-2 border-gray-600" />
-            <BentoVideo className="" />
-            {/* Row 2 */}
-            <BentoTeam className="" />
-            <BentoSafety className="bg-gradient-to-bl from-mintAccent/50 to-gray-400" />
-            {/* Row 3 */}
-            <BentoEnvironment className="bg-gradient-to-br from-mintAccent/50 to-gray-400" />
-            <BentoContact className="border-2 border-gray-600" />
-            <BentoPeriodicTable className="bg-gradient-to-br from-lightGrey to-tealAccent border-2 border-gray-200" />{" "}
-            {/* col-span-2 row-span-2 */}
-            {/* Row 4 */}
-            <BentoProcess className="" /> {/* col-span-2 */}
+  if (DEBUG) console.log("Rendering BentoSection2");
+
+  return (
+    <section className={`py-16 ${className || ""}`}>
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold mb-4">
+          PFAS – Per- & Polyfluoroalkyl Substances
+        </h2>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Used in thousands of products worldwide
+        </p>
+      </div>
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[minmax(180px,auto)]">
+          {/* Overview Container */}
+          <div className="md:col-span-2 md:row-span-2 grid grid-rows-2 gap-4">
+            {/* Overview Top Section */}
+            <div className="relative overflow-hidden rounded-3xl">
+              <BentoPFASOverview />
+            </div>
+
+            {/* Characteristics Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              {characteristics.map((char, index) => (
+                <motion.div
+                  key={char.title}
+                  className="relative overflow-hidden rounded-3xl bg-white shadow-lg"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <div className="absolute top-4 left-4">
+                    <char.icon className="w-6 h-6 text-tealAccent" />
+                  </div>
+                  <div className="p-6 pt-12">
+                    <h4 className="font-semibold text-darkGrey">
+                      {char.title}
+                    </h4>
+                    <p className="text-sm text-gray-500 mt-1">
+                      {char.description}
+                    </p>
+                  </div>
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-tealAccent to-mintAccent opacity-50" />
+                </motion.div>
+              ))}
+            </div>
           </div>
+
+          <BentoEnvironmentalConcerns />
+          <BentoRegulation className="bg-gradient-to-br from-mintAccent/50 to-gray-400" />
+          <BentoIndustries className="md:col-span-2 border-2 border-gray-600" />
+          <BentoFluorineBenefits className="md:col-span-2 bg-gradient-to-br from-lightGrey to-tealAccent" />
+          <BentoFutureOutlook className="md:col-span-2 border-2 border-gray-200" />
         </div>
-      </section>
-    );
-  };
+      </div>
+    </section>
+  );
+};

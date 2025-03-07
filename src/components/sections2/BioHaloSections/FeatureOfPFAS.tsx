@@ -99,7 +99,6 @@ const FeatureCardV3 = ({
     className="bg-white rounded-[3rem] p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-100"
   >
     <div className="flex items-center space-x-4 mb-4">
-      <BentosPFASSection />
     </div>
   </motion.div>
 );
