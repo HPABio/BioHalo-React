@@ -40,9 +40,19 @@ export const BentosPFASSection = ({ className }: { className?: string }) => {
   return (
     <section className={`py-16 ${className || ""}`}>
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4">
-          PFAS – Per- & Polyfluoroalkyl Substances
-        </h2>
+        <div className="space-y-4">
+            <h1 className="font-black font-Arial text-4xl md:text-6xl bg-gradient-to-tl from-mintAccent via-tealAccent to-tealAccent bg-clip-text text-transparent pb-10">
+              <span className="">We explore, design,</span>
+              <br />
+              <span className="">and produce, unmatched</span>
+              <br />
+              <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent">
+                new-to-market{" "}
+              </span>{" "}
+              <br className="hidden lg:block xl:hidden" />
+              products
+            </h1>
+        </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Used in thousands of products worldwide
         </p>

@@ -14,18 +14,19 @@ export function BentoTeam({ className }: { className?: string }) {
     >
       <div className="space-y-4">
         <h3 className="text-xl font-semibold text-darkGrey">Meet the Team</h3>
+
         <div className="relative">
           <LayoutGroup id="team-circles">
             <motion.div
-              className="flex"
+              className="xl:flex hidden"
               initial={{
                 gap: "0px",
               }}
               variants={{
                 hover: {
                   gap: "0.9rem",
-                  paddingLeft: "70px",
-                  paddingRight: "60px",
+                  paddingLeft: "20%",
+                  paddingRight: "10%",
                   scale: 1.4,
                 },
               }}
@@ -54,6 +55,15 @@ export function BentoTeam({ className }: { className?: string }) {
                 +8
               </motion.div>
             </motion.div>
+            <div className="flex xl:hidden">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-tealAccent to-mintAccent border-2 border-white -ml-2 first:ml-0"/>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-tealAccent to-mintAccent border-2 border-white -ml-2"/>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-tealAccent to-mintAccent border-2 border-white -ml-2"/>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-tealAccent to-mintAccent border-2 border-white -ml-2"/>
+              <div className="w-8 h-8 rounded-full bg-tealAccent border-2 border-white flex items-center justify-center text-white text-xs -ml-2">
+                +8
+              </div>
+            </div>
           </LayoutGroup>
         </div>
         <p className="text-sm text-gray-600">

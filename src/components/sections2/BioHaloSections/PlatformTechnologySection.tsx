@@ -38,7 +38,7 @@ const technologyFeatures: TechnologyFeature[] = [
     title: "Biocatalysis",
     description:
       "We harness the power of biocatalysts to perform chemical transformations with unprecedented selectivity and efficiency.",
-    icon: <Beaker className="w-8 h-8 text-tealAccent" />,
+    icon: <Microscope className="w-8 h-8 text-tealAccent" />,
   },
   {
     id: 3,
@@ -59,7 +59,7 @@ const technologyFeatures: TechnologyFeature[] = [
     title: "Scalable Production",
     description:
       "Our technology seamlessly scales from laboratory to industrial production while maintaining performance and sustainability.",
-    icon: <Atom className="w-8 h-8 text-tealAccent" />,
+    icon: <Beaker className="w-8 h-8 text-tealAccent" />,
   },
   {
     id: 6,
@@ -82,25 +82,74 @@ export const PlatformTechnologySection = ({
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-tealAccent via-tealAccent/70 to-mintAccent bg-clip-text text-transparent">
-            Our Platform Technology
+          <h1
+            className="text-5xl md:text-7xl font-bold mb-6 capitalize opacity-1 text-center xl:mt-[3vw]
+                bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent py-10"
+          >
+            <span className="">
+              Through our <br />
+            </span>
+            <span
+              className="absolute opacity-0 lg:opacity-50 uppercase blur-[2px] font-black font-Poppins  
+              bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent "
+            >
+              biohalogenation{" "}
+            </span>
+            <span
+              className="absolute opacity-0 lg:opacity-30 uppercase blur-[4px] font-black font-Poppins
+              bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent "
+            >
+              biohalogenation{" "}
+            </span>
+            <span
+              className=" bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
+              uppercase drop-shadow-sm font-black font-Poppins"
+            >
+              biohalogenation{" "}
+            </span>
+            <br />
+            approach
+          </h1>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 pb-4 bg-gradient-to-r from-tealAccent via-tealAccent/70 to-mintAccent bg-clip-text text-transparent">
+            Our Platform Technology Offers
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            BioHalo's proprietary enzyme platform enables sustainable
-            fluorination through innovative biotechnology, replacing harmful
-            PFAS with eco-friendly alternatives without compromising
-            performance.
-          </p>
+          
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-          {/* Left side: Technology visualization */}
-          <motion.div
+        <div className="grid grid-cols-1 gap-12 mb-20">
+          
+
+          {/* Right side: Features list */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {technologyFeatures.map((feature) => (
+              <motion.div
+                key={feature.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: feature.id * 0.1 }}
+                className="p-6 bg-white/10 backdrop-blur-sm border border-tealAccent/20 rounded-xl hover:border-tealAccent transition-all group"
+              >
+                <div className="w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center mb-4 group-hover:shadow-[0px_0px_35px_1px_rgba(18,110,99,0.5)]
+">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-400">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Left side: Technology visualization */}
+        <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative h-[500px] bg-gradient-to-br from-tealAccent/10 to-mintAccent/20 rounded-2xl overflow-hidden flex items-center justify-center"
+            className="hidden relative h-[500px] bg-gradient-to-br from-tealAccent/10 to-mintAccent/20 rounded-2xl overflow-hidden lg:flex items-center justify-center"
           >
             <div className="absolute inset-0 flex items-center justify-center">
               {/* This would ideally be replaced with a custom visualization or diagram of the enzyme platform */}
@@ -155,29 +204,6 @@ export const PlatformTechnologySection = ({
             </div>
           </motion.div>
 
-          {/* Right side: Features list */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {technologyFeatures.map((feature) => (
-              <motion.div
-                key={feature.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: feature.id * 0.1 }}
-                className="p-6 bg-white/10 backdrop-blur-sm border border-tealAccent/20 rounded-xl hover:border-tealAccent/40 transition-all"
-              >
-                <div className="w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -203,6 +229,12 @@ export const PlatformTechnologySection = ({
             </a>
           </div>
         </motion.div>
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            BioHalo's proprietary enzyme platform enables sustainable
+            fluorination through innovative biotechnology, replacing harmful
+            PFAS with eco-friendly alternatives without compromising
+            performance.
+          </p>
       </div>
     </section>
   );

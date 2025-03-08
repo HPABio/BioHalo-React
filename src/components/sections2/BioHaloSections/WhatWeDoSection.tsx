@@ -78,7 +78,7 @@ export const WhatWeDoSection = ({
           className="absolute w-[43%] right-0 -translate-x-[12%] 2xl:translate-x-[2vw] xl:-translate-y-[20%]"
         />
       </div>
-      <div className="hidden lg:block xl:hidden absolute w-[400px] h-[400px] top-0 right-[5%]  rounded-full 
+{/*       <div className="hidden lg:block xl:hidden absolute w-[400px] h-[400px] top-0 right-[5%]  rounded-full 
       border-2 border-lightGrey"
       style={{
         backgroundImage: `url(${DNALogo.src})`,
@@ -86,7 +86,7 @@ export const WhatWeDoSection = ({
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      />
+      /> */}
 
       <div className="w-[720px] bg-red-500/0 mt-10 relative z-10">
         <h2 className="relative font-black font-Arial text-6xl bg-gradient-to-tl from-tealAccent to-tealAccent/60 bg-clip-text text-transparent pb-10">

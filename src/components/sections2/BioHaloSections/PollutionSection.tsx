@@ -70,50 +70,9 @@ export function PollutionSection({
             className="absolute w-[600px] h-[600px] top-[35%] left-[65%] 
             -translate-y-[50%] -translate-x-[50%]"
           >
-            {/* Stats Circle Contaminated Sites */}
-            <div
-              className="hidden lg:absolute h-[66%] w-[66%] rounded-full
-              left-[20%] top-[-15%] -translate-x-[50%] -translate-y-[50%] 
-              overflow-hidden lg:flex items-center justify-center bg-red-500/0"
-              style={{
-                backgroundImage: `url(${WaterRepellantFabric.src})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div
-                className="absolute w-full h-full inset-0 rounded-full overflow-hidden
-                    bg-gradient-to-tr from-black via-black/50 to-tealAccent/0 mix-blend-multiply
-                    flex flex-col items-center justify-center"
-              />
 
-              <motion.div
-                className="absolute w-full h-full inset-0 rounded-full overflow-hidden
-                bg-gradient-to-tr from-black via-black/50 to-tealAccent/0 mix-blend-multiply"
-              />
-
-              <StaticStatsBox
-                classNamesContainer="w-fit z-10 h-fit -mt-12"
-                classNamesTitle="lg-9xl w-[800px] mt-5 scale-[0.7] text-center lg:text-9xl md:text-8xl 
-                font-bold mb-6 bg-gradient-to-tl from-tealAccent to-lightGrey bg-clip-text text-transparent [-webkit-text-stroke:2px_rgb(229,231,235,0.1)] [text-stroke:2px_rgb(229,231,235,0.1)]"
-                classNamesSubTitle="text-center text-lightGrey/60 text-2xl font-bold -mt-14 capitalize"
-                key={2}
-                stat={stats[2]}
-                /* scrollYProgress={
-                  useScroll({
-                    target: refLG,
-                    offset: ["start end", "end start"],
-                  }).scrollYProgress
-                }
-                scrollEndThreshold={0.2}
-                index={2}
-                text=""
-                ratchet={true} */
-              />
-            </div>
-
-            {/* Big Stats Circle */}
-            <div
+     {/* Big Stats Circle */}
+     <div
               className="absolute w-full h-full rounded-full
               bg-gradient-to-tr from-black via-teal-900 to-black"
             >
@@ -138,6 +97,58 @@ export function PollutionSection({
                 />
               </div>
             </div>
+
+            {/* Stats Circle Contaminated Sites */}
+            <div
+              className="hidden lg:absolute h-[66%] w-[66%] rounded-full
+              left-[100%] top-[105%] -translate-x-[50%] -translate-y-[50%] 
+              overflow-hidden lg:flex items-center justify-center bg-red-500/0"
+              style={{
+                backgroundImage: `url(${WaterRepellantFabric.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div
+                className="absolute w-full h-full inset-0 rounded-full overflow-hidden
+                    bg-gradient-to-tr from-black via-black/50 to-tealAccent/0 mix-blend-multiply
+                    flex flex-col items-center justify-center"
+              />
+
+              <div
+                className="absolute w-full h-full inset-0 rounded-full overflow-hidden
+                bg-gradient-to-tr from-black via-black/50 to-tealAccent/0 mix-blend-multiply"
+              />
+            <motion.div
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ 
+                 opacity: 1,
+                 y: 10,
+                 transition: { duration: 1, delay: 0.3 }
+               }}
+             className="absolute w-full h-full top-0 left-0 -mt-1 bg-green-40 flex flex-col items-center justify-center">
+              <StaticStatsBox
+                classNamesContainer="w-fit z-10 h-fit -mt-12"
+                classNamesTitle="lg-9xl w-[800px] mt-5 scale-[0.7] text-center lg:text-9xl md:text-8xl 
+                font-bold mb-6 bg-gradient-to-tl from-tealAccent to-lightGrey bg-clip-text text-transparent [-webkit-text-stroke:2px_rgb(229,231,235,0.1)] [text-stroke:2px_rgb(229,231,235,0.1)]"
+                classNamesSubTitle="text-center text-lightGrey/60 text-2xl font-bold -mt-14 capitalize"
+                key={2}
+                stat={stats[2]}
+                /* scrollYProgress={
+                  useScroll({
+                    target: refLG,
+                    offset: ["start end", "end start"],
+                  }).scrollYProgress
+                }
+                scrollEndThreshold={0.2}
+                index={2}
+                text=""
+                ratchet={true} */
+              />
+            </motion.div>
+            </div>
+
+       
 
             {/*Stats Circle 4.4 million tons of PFAS released*/}
             <div
@@ -192,8 +203,8 @@ export function PollutionSection({
 
             {/*Stats Circle Degradation Time  */}
             <div
-              className="hidden lg:absolute h-[33%] w-[33%] max-w-[600px] max-h-[600px] 
-              left-[87%] top-[100%]  -translate-x-[50%] -translate-y-[50%] 
+              className="hidden lg:absolute h-[38%] w-[38%] max-w-[600px] max-h-[600px] 
+              left-[7%] top-[10%]  -translate-x-[50%] -translate-y-[50%] 
               overflow-hidden lg:flex items-center justify-center bg-red-500/0 rounded-full"
               style={{
                 backgroundImage: `url(${MeshFabric.src})`,
@@ -209,13 +220,21 @@ export function PollutionSection({
                 className="absolute w-full h-full inset-0 rounded-full overflow-hidden
                 bg-gradient-to-tr from-black via-black/50 to-tealAccent/0 mix-blend-multiply"
               />
-              {/* Stats right */}
-              <motion.div
+              {/* Stats  */}
+              <div
                 className="absolute w-full h-full inset-0 rounded-full overflow-hidden
                     bg-gradient-to-tr from-black via-black/50 to-tealAccent/0 mix-blend-multiply
                     "
               />
-              <div className="absolute w-full h-full top-0 left-0 -mt-1 bg-green-40 flex flex-col items-center justify-center">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ 
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1, delay: 0.5 }
+                }}
+                
+              className="absolute w-full h-full top-0 left-0 -mt-1 bg-green-40 flex flex-col items-center justify-center">
                 <h2 className="text-center text-lightGrey/60 text-lg font-bold capitalize">
                   Minimum
                   <br />
@@ -245,7 +264,7 @@ export function PollutionSection({
                 >
                   years
                 </h2>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>

@@ -157,7 +157,12 @@ export const Showcase4 = () => {
         />
       </section>
 
-      <section className="w-full h-full relative pt-48">
+          {/* Platform Technology Section */}
+          <section id="platform-technology" className="w-full pt-48">
+        <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
+      </section>
+
+      <section className="w-full h-full relative">
         <BentosPFASSection className="bg-black relative" />
       </section>
 
@@ -189,10 +194,7 @@ export const Showcase4 = () => {
         />
       </section>
 
-      {/* Platform Technology Section */}
-      <section id="platform-technology" className="w-full">
-        <PlatformTechnologySection className="bg-gradient-to-br from-lightGrey/90 via-mintAccent/30 to-tealAccent/10" />
-      </section>
+  
 
       <section className="bg-red-500/0 w-full">
         <div className="w-full h-[700px] pt-10 overflow-hidden">
