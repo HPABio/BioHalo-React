@@ -167,7 +167,7 @@ export const Showcase4 = () => {
       </section>
 
 
-      <section id="feature-pfas" className="w-full h-full relative pt-48">
+      <section id="feature-pfas" className="w-full h-full hidden pt-48">
         {/* <MemoizedTransitionSectionFour className="w-full h-[200px]" circleSize={700} /> */}
 
         <FeatureOfPFAS className="w-full min-h-[70vh] bg-black" />

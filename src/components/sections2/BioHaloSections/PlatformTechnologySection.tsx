@@ -269,6 +269,7 @@ export const PlatformTechnologySection = ({
           </div>
         </motion.div>
       </div>
+      
     </section>
   );
 };

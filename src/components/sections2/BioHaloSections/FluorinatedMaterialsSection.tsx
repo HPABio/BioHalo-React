@@ -206,8 +206,17 @@ export function FluorinatedMaterialsSection({
                   <p className="text-2xl md:text-3xl text-gray-300">
                     From coatings and textiles to <br />
                     food packaging and electronics, <br />
-                    <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
-                      PFAS
+                    <span className="relative group">
+                      <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
+                        PFAS
+                      </span>
+                      <span className="invisible group-hover:visible absolute left-0 top-full mt-2 w-64 p-4 bg-white/90 backdrop-blur-md rounded-lg shadow-lg text-sm text-gray-800 z-50 transition-all duration-200 ease-in-out">
+                      <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
+                        PFAS
+                      </span> are Per- and Polyfluoroalkyl Substances also known as "<span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
+                      forever chemicals
+                      </span>"
+                      </span>
                     </span>{" "}
                     are everywhere.
                   </p>
