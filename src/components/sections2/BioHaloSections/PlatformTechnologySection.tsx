@@ -113,11 +113,11 @@ export const PlatformTechnologySection = ({
               biohalogenation{" "}<br/></span>
 
             <span className="absolute opacity-0 lg:opacity-50 uppercase blur-[2px] font-black font-Poppins  
-                bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent ">Technologie</span>
+                bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent ">Technology</span>
             <span className="absolute opacity-0 lg:opacity-30 uppercase blur-[4px] font-black font-Poppins
-              bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent">Technologie</span>
+              bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent">Technology</span>
             <span className=" bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
-              uppercase drop-shadow-sm font-black font-Poppins">Technologie <br /></span>
+              uppercase drop-shadow-sm font-black font-Poppins">Technology<br /></span>
 
             <span className="text-4xl md:text-6xl">
             The  <span className="text-4xl md:text-6xl bg-gradient-to-br from-mintAccent/40 to-mintAccent/70 bg-clip-text text-transparent">Platform</span> Offers
