@@ -125,7 +125,6 @@ export default function ComponentTestbed() {
       
       <section className="w-screen h-screen flex items-center justify-center bg-red-500/0 mx-auto px-14">
         <div className="w-full h-[600px] flex items-center justify-center bg-blue-500/0">
-                  <BentoFourBoxSectionL />
                   <div id="BentoFourBoxSectionR Text"
                   className="w-full h-[600px] flex items-center justify-center bg-blue-500/0">
                     <div  className="w-full h-full flex flex-stretch items-center justify-center bg-blue-500"></div>
