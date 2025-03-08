@@ -8,6 +8,7 @@ interface MovingAtomProps {
   width?: number;
   height?: number;
   className?: string;
+  color?: string;
 
   // Hover animation props
   hoverAmplitude?: number;
@@ -33,7 +34,7 @@ export function MovingAtom({
   width = 300,
   height = 300,
   className = "",
-
+  color = "tealAccent",
   // Default values for hover animation
   hoverAmplitude = 10,
   hoverDuration = 2,
@@ -68,6 +69,7 @@ export function MovingAtom({
         shouldRotate={shouldRotate}
         shouldScale={shouldScale}
         shouldHover={shouldHover}
+        color={color}
       />
       {children}
     </div>

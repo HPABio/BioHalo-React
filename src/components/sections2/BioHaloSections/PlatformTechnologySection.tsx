@@ -4,6 +4,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { MovingAtom } from "@/components/ui/MovingAtom";
+import AtomDiagram from "@/components/ui/AtomDiagram";
+import Barrels from "@/assets/images/BluePrintSVG/Barrels.svg";
+import BioReactorBP from "@/assets/images/BluePrintSVG/bio-reactor.svg";
+
 
 import {
   Beaker,
@@ -15,12 +19,11 @@ import {
   Recycle,
   Zap,
 } from "lucide-react";
-
 interface TechnologyFeature {
   id: number;
   title: string;
-  description: string;
   icon: React.ReactNode;
+  description: string;
 }
 
 interface PlatformTechnologySectionProps {
@@ -76,8 +79,16 @@ export const PlatformTechnologySection = ({
   className = "",
 }: PlatformTechnologySectionProps) => {
   return (
-    <section className={`w-full py-24 relative ${className}`}>
+    <section className={`w-full py-24 relative ${className} overflow-hidden`}>
       <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="absolute bottom-[100%] left-[100%] translate-x-[-50%] translate-y-[50%] opacity-[4%] mix-blend-screen">
+        <AtomDiagram width={5300} height={5300} color="rgba(18,110,119,1)" />
+        </div>
+        <div className="absolute top-[100%] right-[100%] translate-x-[50%] -translate-y-[50%] opacity-[2%]">
+        <AtomDiagram width={2300} height={2300} color="rgba(18,110,119,1)" />
+        </div>
+ 
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -109,12 +120,12 @@ export const PlatformTechnologySection = ({
               uppercase drop-shadow-sm font-black font-Poppins">Technologie <br /></span>
 
             <span className="text-4xl md:text-6xl">
-            Our Platform Offers
+            The  <span className="text-4xl md:text-6xl bg-gradient-to-br from-mintAccent/40 to-mintAccent/70 bg-clip-text text-transparent">Platform</span> Offers
             </span>
           </h1>
           <MovingAtom
-        width={90}
-        height={90}
+        width={60}
+        height={60}
         hoverAmplitude={10}
         hoverDuration={4}
         shouldRotate={false}
@@ -122,7 +133,8 @@ export const PlatformTechnologySection = ({
         shouldScale={true}
         scaleRange={[0.9, 1.1]}
         scaleDuration={4}
-        className="absolute bg-red-500/0 xl:top-[12%] xl:right-[15%] top-[1%] right-[10%]"
+        color="rgba(18,110,119,1)"
+        className="absolute top-[22%] left-[17%]"
       />
           </motion.div>
 
@@ -139,9 +151,9 @@ export const PlatformTechnologySection = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: feature.id * 0.1 }}
-                className="p-6 bg-white/10 backdrop-blur-sm border border-tealAccent/20 rounded-xl hover:border-tealAccent transition-all group"
+                className="p-6 bg-white/10 backdrop-blur-sm border border-mintAccent/20 rounded-xl hover:border-tealAccent transition-all group"
               >
-                <div className="w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center mb-4 group-hover:shadow-[0px_0px_35px_1px_rgba(18,110,99,0.5)]
+                <div className="w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center mb-4 group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)]
 ">
                   {feature.icon}
                 </div>
@@ -152,6 +164,12 @@ export const PlatformTechnologySection = ({
               </motion.div>
             ))}
           </div>
+        <p className="text-md text-gray-700 max-w-3xl mx-auto text-center">
+            BioHalo's proprietary enzyme platform enables sustainable
+            fluorination through innovative biotechnology, replacing harmful
+            PFAS with eco-friendly alternatives without compromising
+            performance.
+          </p>
         </div>
 
         {/* Left side: Technology visualization */}
@@ -160,7 +178,7 @@ export const PlatformTechnologySection = ({
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="hidden relative h-[500px] bg-gradient-to-br from-tealAccent/10 to-mintAccent/20 rounded-2xl overflow-hidden lg:flex items-center justify-center"
+            className="hidden relative h-[500px] bg-gradient-to-br from-tealAccent/10 to-mintAccent/20 rounded-2xl overflow-hidden items-center justify-center"
           >
             <div className="absolute inset-0 flex items-center justify-center">
               {/* This would ideally be replaced with a custom visualization or diagram of the enzyme platform */}
@@ -214,13 +232,23 @@ export const PlatformTechnologySection = ({
               </div>
             </div>
           </motion.div>
+       
+
+          <div className="relative w-full h-full flex items-center justify-center">
+            <Image src={BioReactorBP} alt="BioReactor" width={700} height={300} className="pl-24 py-2 -mb-20 opacity-80"/>
+          </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center bg-gradient-to-br from-tealAccent/10 to-mintAccent/20 p-8 rounded-xl"
+          className="relative text-center bg-gradient-to-br from-tealAccent/10 to-mintAccent/20 p-8 rounded-xl"
         >
+          
+          {/* <div className="absolute top-[15%] left-[-25%] w-full h-full">
+              <Image src={Barrels} alt="BioReactor" width={300} height={300} />
+          </div> */}
+
           <h3 className="text-2xl font-semibold mb-4 text-gray-400">
             Transforming Industries with Sustainable Solutions
           </h3>
@@ -240,12 +268,6 @@ export const PlatformTechnologySection = ({
             </a>
           </div>
         </motion.div>
-      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            BioHalo's proprietary enzyme platform enables sustainable
-            fluorination through innovative biotechnology, replacing harmful
-            PFAS with eco-friendly alternatives without compromising
-            performance.
-          </p>
       </div>
     </section>
   );
