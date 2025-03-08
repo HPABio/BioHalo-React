@@ -46,18 +46,7 @@ export const WhatWeDoSection = ({
   return (
     <section className={`${className} overflow-visible`}>
       {/* Title */}
-      <MovingAtom
-        width={70}
-        height={70}
-        hoverAmplitude={10}
-        hoverDuration={4}
-        shouldRotate={false}
-        rotationDuration={30}
-        shouldScale={true}
-        scaleRange={[0.9, 1.1]}
-        scaleDuration={4}
-        className="absolute bg-red-500/0 top-[5.4%] left-[580px] lx:left-[46%]"
-      />
+      
       <MovingAtom
         width={50}
         height={50}
@@ -68,7 +57,8 @@ export const WhatWeDoSection = ({
         shouldScale={true}
         scaleRange={[0.9, 1.1]}
         scaleDuration={4}
-        className="absolute bg-red-500/0 top-[13.2%] left-[1.2%]"
+        color="rgba(225,12,115,0.7)"
+        className="absolute bg-red-500/0 top-[13.2%] left-[1.2%] bg-pinkAccent"
       />
 
       <div className="hidden xl:block absolute top-0 right-0 w-full bg-red-500/0">
@@ -78,7 +68,7 @@ export const WhatWeDoSection = ({
           className="absolute w-[43%] right-0 -translate-x-[12%] 2xl:translate-x-[2vw] xl:-translate-y-[20%]"
         />
       </div>
-      <div className="hidden lg:block xl:hidden absolute w-[400px] h-[400px] top-0 right-[5%]  rounded-full 
+{/*       <div className="hidden lg:block xl:hidden absolute w-[400px] h-[400px] top-0 right-[5%]  rounded-full 
       border-2 border-lightGrey"
       style={{
         backgroundImage: `url(${DNALogo.src})`,
@@ -86,7 +76,7 @@ export const WhatWeDoSection = ({
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      />
+      /> */}
 
       <div className="w-[720px] bg-red-500/0 mt-10 relative z-10">
         <h2 className="relative font-black font-Arial text-6xl bg-gradient-to-tl from-tealAccent to-tealAccent/60 bg-clip-text text-transparent pb-10">
@@ -209,18 +199,7 @@ export const WhatWeDoSection = ({
 
       {/* Text Section */}
       <div className="bg-black/0 text-gray-800/70 pt-8 w-[1200px] relative">
-        <MovingAtom
-          width={90}
-          height={90}
-          hoverAmplitude={35}
-          hoverDuration={4}
-          shouldRotate={true}
-          rotationDuration={25}
-          shouldScale={false}
-          scaleRange={[0.9, 1.1]}
-          scaleDuration={4}
-          className="absolute top-[-4%] left-[310px] md:right-[48%] opacity-70 z-5"
-        />
+        
         {/* Header Section */}
         <div className="space-y-16 bg-red-500/0 relative">
           {/* Top Text Section */}
@@ -271,17 +250,29 @@ export const WhatWeDoSection = ({
         }}
         >
       </div> */}
-        <div className="absolute w-[800px] h-[400px] opacity-50
-        bottom-[-11%] left-[30%] invert grayscale"
+      <div className="absolute w-[800px] h-[400px] 
+          bottom-[-11%] left-[30%]">
+        <div className="w-full h-full invert grayscale opacity-50"
         style={{
           backgroundImage: `url(${BioHaloStep2.src})`,
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          willChange: "opacity, transform",
-        }}
-        >
-      </div>
+          willChange: "opacity, transform",}}/>
+      <MovingAtom
+          width={80}
+          height={80}
+          hoverAmplitude={7}
+          hoverDuration={4}
+          shouldRotate={true}
+          rotationDuration={25}
+          shouldScale={false}
+          scaleRange={[0.9, 1.1]}
+          scaleDuration={4}
+          color="rgba(195,12,95,1)"
+          className="absolute top-[7%] right-[16%] opacity-90 z-5"
+          />
+          </div>
     </section>
   );
 };

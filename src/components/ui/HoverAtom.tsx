@@ -8,7 +8,7 @@ interface HoverAtomProps {
   width?: number;
   height?: number;
   className?: string;
-
+  color?: string;
   // Animation control props
   hoverAmplitude?: number; // How far the atom moves up/down (in pixels)
   hoverDuration?: number; // Duration of one complete hover cycle (in seconds)
@@ -33,6 +33,7 @@ export function HoverAtom({
   width = 300,
   height = 300,
   className = "",
+  color = "tealAccent",
 
   // Default values for animation props
   hoverAmplitude = 10, // 10px up/down movement
@@ -97,16 +98,7 @@ export function HoverAtom({
       transition={transitionProps}
       className={className}
     >
-      <AtomDiagram
-        width={width}
-        height={height}
-        electronFill="rgba(34, 85, 102, 0.6)"
-        electronStroke="rgba(34, 85, 102, 0.6)"
-        shell1Stroke="rgba(34, 85, 102, 0.6)"
-        shell2Stroke="rgba(34, 85, 102, 0.6)"
-        nucleusFill="rgba(34, 85, 102, 0.6)"
-        electronStrokeWidth={1}
-      />
+      <AtomDiagram width={width} height={height} color={color} />
     </motion.div>
   );
 }

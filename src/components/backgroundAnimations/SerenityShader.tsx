@@ -1,16 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 
+
 // Dynamically import p5 with no SSR to avoid window undefined errors
 const Sketch = dynamic(() => import("react-p5").then((mod) => mod.default), {
   ssr: false,
 });
-
-interface SerenityShaderProps {
-  className?: string;
-  colors?: string[];
-  debug?: boolean;
-}
 
 const vertexShader = `
 attribute vec3 aPosition;
@@ -272,7 +267,7 @@ void main() {
 
 const defaultColors = ["#225ee1", "#28d7bf", "#ac53cf", "#e7a39c"];
 
-const SerenityShader: React.FC<SerenityShaderProps> = ({
+const SerenityShader = ({
   className = "",
   colors = defaultColors,
   debug = false,
@@ -319,8 +314,6 @@ const SerenityShader: React.FC<SerenityShaderProps> = ({
     shaderRef.current = p5.createShader(vertexShader, fragmentShader);
     lastTimeRef.current = p5.millis();
   };
-
-
 
   const draw = (p5: any) => {
     // Only perform draw operations if the component is in view
