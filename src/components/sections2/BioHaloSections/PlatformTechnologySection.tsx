@@ -3,6 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { MovingAtom } from "@/components/ui/MovingAtom";
+
 import {
   Beaker,
   Dna,
@@ -74,47 +76,56 @@ export const PlatformTechnologySection = ({
   className = "",
 }: PlatformTechnologySectionProps) => {
   return (
-    <section className={`w-full py-24 ${className}`}>
+    <section className={`w-full py-24 relative ${className}`}>
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-16 relative"
         >
           <h1
             className="text-5xl md:text-7xl font-bold mb-6 capitalize opacity-1 text-center xl:mt-[3vw]
-                bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent py-10"
-          >
-            <span className="">
-              Through our <br />
+                bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent py-10">
+
+            <span className="text-4xl md:text-6xl">
+              With our revolutionary <br /></span>
+            
+            <span className="absolute opacity-0 lg:opacity-50 uppercase blur-[2px] font-black font-Poppins  
+              bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent ">
+              biohalogenation{" "}<br/></span>
+            <span className="absolute opacity-0 lg:opacity-30 uppercase blur-[4px] font-black font-Poppins
+              bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent ">
+              biohalogenation{" "}<br/></span>
+            <span className=" bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
+              uppercase drop-shadow-sm font-black font-Poppins">
+              biohalogenation{" "}<br/></span>
+
+            <span className="absolute opacity-0 lg:opacity-50 uppercase blur-[2px] font-black font-Poppins  
+                bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent ">Technologie</span>
+            <span className="absolute opacity-0 lg:opacity-30 uppercase blur-[4px] font-black font-Poppins
+              bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent">Technologie</span>
+            <span className=" bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
+              uppercase drop-shadow-sm font-black font-Poppins">Technologie <br /></span>
+
+            <span className="text-4xl md:text-6xl">
+            Our Platform Offers
             </span>
-            <span
-              className="absolute opacity-0 lg:opacity-50 uppercase blur-[2px] font-black font-Poppins  
-              bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent "
-            >
-              biohalogenation{" "}
-            </span>
-            <span
-              className="absolute opacity-0 lg:opacity-30 uppercase blur-[4px] font-black font-Poppins
-              bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent "
-            >
-              biohalogenation{" "}
-            </span>
-            <span
-              className=" bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
-              uppercase drop-shadow-sm font-black font-Poppins"
-            >
-              biohalogenation{" "}
-            </span>
-            <br />
-            approach
           </h1>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 pb-4 bg-gradient-to-r from-tealAccent via-tealAccent/70 to-mintAccent bg-clip-text text-transparent">
-            Our Platform Technology Offers
-          </h2>
-          
-        </motion.div>
+          <MovingAtom
+        width={90}
+        height={90}
+        hoverAmplitude={10}
+        hoverDuration={4}
+        shouldRotate={false}
+        rotationDuration={30}
+        shouldScale={true}
+        scaleRange={[0.9, 1.1]}
+        scaleDuration={4}
+        className="absolute bg-red-500/0 xl:top-[12%] xl:right-[15%] top-[1%] right-[10%]"
+      />
+          </motion.div>
+
 
         <div className="grid grid-cols-1 gap-12 mb-20">
           
@@ -210,7 +221,7 @@ export const PlatformTechnologySection = ({
           viewport={{ once: true }}
           className="text-center bg-gradient-to-br from-tealAccent/10 to-mintAccent/20 p-8 rounded-xl"
         >
-          <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+          <h3 className="text-2xl font-semibold mb-4 text-gray-400">
             Transforming Industries with Sustainable Solutions
           </h3>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -222,9 +233,9 @@ export const PlatformTechnologySection = ({
           <div className="mt-6">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-6 py-3 bg-tealAccent text-white font-medium rounded-lg hover:bg-tealAccent/90 transition-colors"
+              className="inline-flex capitalize items-center justify-center px-6 py-3 bg-tealAccent text-white font-medium rounded-lg hover:bg-tealAccent/90 transition-colors"
             >
-              Learn More About Our Technology
+              Learn More About Our Technology via our newsletter
               <Zap className="w-5 h-5 ml-2" />
             </a>
           </div>

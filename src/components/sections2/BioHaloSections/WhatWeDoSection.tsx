@@ -46,18 +46,7 @@ export const WhatWeDoSection = ({
   return (
     <section className={`${className} overflow-visible`}>
       {/* Title */}
-      <MovingAtom
-        width={70}
-        height={70}
-        hoverAmplitude={10}
-        hoverDuration={4}
-        shouldRotate={false}
-        rotationDuration={30}
-        shouldScale={true}
-        scaleRange={[0.9, 1.1]}
-        scaleDuration={4}
-        className="absolute bg-red-500/0 top-[5.4%] left-[580px] lx:left-[46%]"
-      />
+      
       <MovingAtom
         width={50}
         height={50}
