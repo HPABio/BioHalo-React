@@ -146,13 +146,14 @@ export const Showcase4 = () => {
       </section>
 
       <FluorinatedMaterialsSection
-        className="relative w-full h-full overflow-hidden xl:overflow-visible z-10 xl:-mb-[100px]"
+        className="relative w-full h-full overflow-hidden z-0 "
         stats={stats}
       />
 
-      <section id="what-we-do">
+
+      <section id="what-we-do" className="pt-48">
         <WhatWeDoSection
-          className="min-h-[50vh] max-w-[1280px] mx-auto text-white px-14 mt-32 relative border-2 border-red-500/0"
+          className="min-h-[50vh] max-w-[1280px] mx-auto text-white px-14 relative border-2 border-green-500/0 "
           stats={stats}
         />
       </section>
@@ -162,12 +163,12 @@ export const Showcase4 = () => {
         <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
       </section>
 
-      <section className="w-full h-full relative">
+      <section className="w-full h-full relative hidden">
         <BentosPFASSection className="bg-black relative" />
       </section>
 
 
-      <section id="feature-pfas" className="w-full h-full hidden pt-48">
+      <section id="feature-pfas" className="w-full h-full pt-48">
         {/* <MemoizedTransitionSectionFour className="w-full h-[200px]" circleSize={700} /> */}
 
         <FeatureOfPFAS className="w-full min-h-[70vh] bg-black" />
@@ -180,7 +181,7 @@ export const Showcase4 = () => {
 
       <section id="health" className="w-full h-full relative pt-32">
         <HealthSectionImgRight
-          className="min-h-[50vh] max-w-[1280px] mx-auto px-14 relative overflow-hidden xl:overflow-visible mb-36"
+          className="min-h-[50vh] max-w-[1280px] mx-auto px-14 relative overflow-hidden xl:overflow-visible"
           stats={stats}
         />
       </section>
@@ -189,7 +190,7 @@ export const Showcase4 = () => {
 
       <section id="pollution" className="min-h-screen">
         <PollutionSection
-          className="min-h-[50vh] max-w-[1280px] mx-auto px-14 relative overflow-visible z-10"
+          className="min-h-[50vh] max-w-[1280px] mx-auto px-14 relative overflow-visible z-10 xl:mt-32"
           stats={stats}
         />
       </section>

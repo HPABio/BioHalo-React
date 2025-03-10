@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 import Image from "next/image";
-import { SimpleStatsBox, StatsBox } from "@/components/ui/StatsBox";
+import { SimpleStatsBox, StaticStatsBox, StatsBox } from "@/components/ui/StatsBox";
 import WaterRepellantFabric from "@/assets/images/water-repellant-fabric.png";
 import Pharma from "@/assets/images/BluePrintSVG/Pharma.svg";
 import MeshFabric from "@/assets/images/Mesh-fabric.png";
@@ -216,7 +216,7 @@ export const HealthSectionImgRight = ({
         bg-gradient-to-tl from-tealAccent to-tealAccent/30 bg-clip-text text-transparent capitalize"
         >
           <span className="">
-            But these special properties <br />
+          But their special properties<br />
             also make them <br /> hard to degrade and{" "}
             <span className="bg-gradient-to-t from-pinkAccent to-tealAccent/30 bg-clip-text text-transparent">
               <br />
@@ -230,7 +230,7 @@ export const HealthSectionImgRight = ({
         blur-[1px] opacity-70"
         >
           <span className="">
-            But these special properties <br />
+            But their special properties<br />
             also make them <br /> hard to degrade and{" "}
             <span className="bg-gradient-to-t from-pinkAccent to-tealAccent/30 bg-clip-text text-transparent">
               <br />
@@ -313,7 +313,7 @@ export const HealthSectionImgRight = ({
 
 
         {/* Left Column with Text */}
-        <div className="w-full lg:w-1/2 space-y-8 lg:space-y-12 mt-8 lg:mt-16">
+        <div className="hidden w-full lg:w-1/2 space-y-8 lg:space-y-12 mt-8 lg:mt-16">
           <div className="space-y-4">
             <h3 className="text-gray-800/80 text-3xl lg:text-4xl text-center lg:text-left">
               Persistent Pollutants <br /> with hidden health risks
@@ -336,8 +336,72 @@ export const HealthSectionImgRight = ({
             </p>
           </div>
         </div>
+
+
+        
+        <div className=" w-full lg:w-1/2 space-y-8 lg:space-y-12 mt-8 lg:mt-16">
+          <div className="space-y-4">
+            <h3 className="text-gray-800/80 text-3xl lg:text-4xl text-center lg:text-left">
+              Causing billions of dollars in damages every year
+            </h3>
+            <p
+              className="max-w-prose lg:max-w-sm text-gray-800/60 text-center lg:text-left 
+                text-lg lg:text-xl mx-auto lg:mx-0"
+            >
+              The incredible durability of fluorinated compounds has become a double-edged sword, as persistent exposure is now linked
+              to health problems like hormone imbalances, immune system effects, and even cancer.
+            </p>
+          </div>
+        </div>
+        
+
       </div>
-      <div className="w-full h-[100px] bg-red-500/0"></div>
+      <div className="relative w-full h-[200px] ">
+      {/* Stats Circle Contaminated Sites */}
+      <div
+              className="hidden absolute w-[300px] h-[300px] rounded-full top-[50%] left-[4%] translate-y-[-70%]
+              overflow-hidden xl:flex items-center justify-center bg-red-500/0 border-2 border-gray-500"
+              style={{
+                backgroundImage: `url(${WaterRepellantFabric.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div
+                className="absolute w-[300px] h-[300px] inset-0 rounded-full overflow-hidden
+                    bg-gradient-to-tr from-black via-black/50 to-tealAccent/0 mix-blend-multiply
+                    flex flex-col items-center justify-center"
+              />
+
+              <div
+                className="absolute w-[300px] h-[300px] inset-0 rounded-full overflow-hidden
+                bg-gradient-to-tr from-black via-black/50 to-tealAccent/0 mix-blend-multiply "
+              />
+            <motion.div
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ 
+                 opacity: 1,
+                 y: 10,
+                 transition: { duration: 1, delay: 0.3 }
+               }}
+               viewport={{ once: true }}
+             className="absolute w-[300px] h-[300px] top-0 left-0 -mt-1 bg-green-40 flex flex-col items-center justify-center">
+              <StaticStatsBox
+                classNamesContainer="w-fit z-10 h-fit -mt-12"
+                classNamesTitle="lg-9xl w-[800px] mt-5 scale-[0.7] text-center lg:text-9xl md:text-8xl 
+                font-bold mb-6 bg-gradient-to-tl from-tealAccent to-lightGrey bg-clip-text text-transparent [-webkit-text-stroke:2px_rgb(229,231,235,0.1)] [text-stroke:2px_rgb(229,231,235,0.1)]"
+                classNamesSubTitle="text-center text-lightGrey/60 text-2xl font-bold -mt-14 capitalize"
+                stat={stats[7]}
+              />
+              <h2 className="text-center text-lightGrey/60 text-1xl font-bold lowerfcase mt-0">
+                  Amount of Released
+                  <br />
+                  Fluorinated materials <br />
+                  by 2053
+                </h2>
+            </motion.div>
+            </div>
+      </div>
 
       {/* Paradox Section */}
       <section className="hidden bg-red-500/0 w-full">

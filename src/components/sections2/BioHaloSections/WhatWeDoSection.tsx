@@ -239,7 +239,11 @@ export const WhatWeDoSection = ({
             </p>
             <p className="text-lg max-w-md pt-4 leading-relaxed">
               BioHalos revolutionary enzyme-based biohalogenation platform
-              offers near limitless possibilities for fluorine-enhanced
+              offers you near limitless possibilities for {" "}
+              <span className="bg-gradient-to-tr from-pinkAccent to-red-900/80 bg-clip-text text-transparent">
+                fluorine
+                </span>
+                -enhanced
               compound development.
             </p>
           </div>

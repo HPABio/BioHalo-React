@@ -76,18 +76,21 @@ export function PollutionSection({
               className="absolute w-full h-full rounded-full
               bg-gradient-to-tr from-black via-teal-900 to-black"
             >
+
               <div
-                className="absolute w-full h-full rounded-full scale-[1.1] 
-                            bg-gradient-to-tr from-black via-teal-900 to-black blur-[50px] opacity-40 xl:opacity-70 2xl:opacity-50"
-              />
-              <div
-                className="absolute w-full h-full rounded-full overflow-hidden border-2 border-lightGrey drop-shadow-2xl"
+                className="absolute w-full h-full rounded-full overflow-hidden border-2 border-lightGrey drop-shadow-2xl grayscale contrast-125"
                 style={{
                   backgroundImage: `url(${IndustrialPollution.src})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
-                }}
-              ></div>
+                }}/>
+
+<div
+                className="absolute w-full h-full rounded-full
+                            bg-tealAccent/50 mix-blend-overlay"
+              />
+
+              
 
               <div className="absolute opacity-1 overflow-visible h-full w-full rounded-full left-0 top-0 flex items-center justify-center">
                 <Image
@@ -102,7 +105,7 @@ export function PollutionSection({
             <div
               className="hidden lg:absolute h-[66%] w-[66%] rounded-full
               left-[100%] top-[105%] -translate-x-[50%] -translate-y-[50%] 
-              overflow-hidden lg:flex items-center justify-center bg-red-500/0"
+              overflow-hidden lg:flex items-center justify-center bg-red-500/0 border-2 border-gray-500"
               style={{
                 backgroundImage: `url(${WaterRepellantFabric.src})`,
                 backgroundSize: "cover",
@@ -117,7 +120,7 @@ export function PollutionSection({
 
               <div
                 className="absolute w-full h-full inset-0 rounded-full overflow-hidden
-                bg-gradient-to-tr from-black via-black/50 to-tealAccent/0 mix-blend-multiply"
+                bg-gradient-to-tr from-black via-black/50 to-tealAccent/0 mix-blend-multiply "
               />
             <motion.div
                initial={{ opacity: 0, y: 30 }}
@@ -126,6 +129,7 @@ export function PollutionSection({
                  y: 10,
                  transition: { duration: 1, delay: 0.3 }
                }}
+               viewport={{ once: true }}
              className="absolute w-full h-full top-0 left-0 -mt-1 bg-green-40 flex flex-col items-center justify-center">
               <StaticStatsBox
                 classNamesContainer="w-fit z-10 h-fit -mt-12"
@@ -177,16 +181,6 @@ export function PollutionSection({
                     font-bold bg-gradient-to-tl from-tealAccent to-lightGrey bg-clip-text text-transparent"
                   classNamesSubTitle="text-center text-lightGrey/60 text-2xl font-bold capitalize -mt-8"
                   stat={stats[7]}
-                  /* scrollYProgress={
-                      useScroll({
-                        target: refLG,
-                        offset: ["start end", "end start"],
-                      }).scrollYProgress
-                    }
-                    scrollEndThreshold={0.8}
-                    index={7}
-                    text=""
-                    ratchet={true} */
                 />
                 <h2 className="text-center text-lightGrey/60 text-1xl font-bold lowerfcase mt-0">
                   Amount of Released
@@ -205,7 +199,8 @@ export function PollutionSection({
             <div
               className="hidden lg:absolute h-[38%] w-[38%] max-w-[600px] max-h-[600px] 
               left-[7%] top-[10%]  -translate-x-[50%] -translate-y-[50%] 
-              overflow-hidden lg:flex items-center justify-center bg-red-500/0 rounded-full"
+              overflow-hidden lg:flex items-center justify-center bg-red-500/0 rounded-full
+              border-2 border-gray-300"
               style={{
                 backgroundImage: `url(${MeshFabric.src})`,
                 backgroundSize: "cover",
@@ -233,6 +228,7 @@ export function PollutionSection({
                   y: 0,
                   transition: { duration: 1, delay: 0.5 }
                 }}
+                viewport={{ once: true }}
                 
               className="absolute w-full h-full top-0 left-0 -mt-1 bg-green-40 flex flex-col items-center justify-center">
                 <h2 className="text-center text-lightGrey/60 text-lg font-bold capitalize">

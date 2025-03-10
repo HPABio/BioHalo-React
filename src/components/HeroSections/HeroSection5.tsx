@@ -165,15 +165,15 @@ export const HeroSection5 = ({
             </h1>
 
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto capitalize text-gray-500 ">
-              Using Enzymes to{" "}
+              We use Enzymes to create bio-
               <span className="text-pinkAccent bg-gradient-to-bl from-pinkAccent via-pink-500 to-red-900 bg-clip-text text-transparent">
-                fluorinate
+                fluorinated
               </span>{" "}
-              the future
+              compounds
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-3 bg-white text-black rounded-full hover:bg-gray-100">
-                Get Started
+                Get In Contact
               </button>
               <button className="px-8 py-3 border-2 border-tealAccent  text-tealAccent  rounded-full hover:bg-tealAccent/10">
                 Learn More
