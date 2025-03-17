@@ -20,6 +20,9 @@ import RainJacketMist from "@/assets/images/BGImagesTest/RainJacketMist.jpeg";
 import HikerOverlookingMistyValley from "@/assets/images/BGImagesTest/HikerOverlookingMistyValley.jpeg";
 import TexturedGlassSurface from "@/assets/images/BGImagesTest/Textured Glass Surface.jpeg";
 import WaterRepellantFabric from "@/assets/images/water-repellant-fabric.png";
+import pollutionearth from "@/assets/images/BluePrintStyle/polutionEarth.svg";
+import IndustrialPollution from "@/assets/images/BGImagesTest/IndustrialPollution.png";
+
 
 interface FluorinatedMaterialsSectionProps {
   stats: any[];
@@ -44,10 +47,10 @@ const Circle1 = React.memo(function Circle1() {
         top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] "
       >
         <EcoliTripletsSVG
-          className="w-full h-full opacity-40 mix-blend-screen"
+          className="w-full h-full opacity-40 mix-blend-screen filter invert grayscale "
           style={{
             willChange: "opacity, transform",
-            transform: "translate3d(-3%, 2%, 0) scale(1.1)",
+            transform: "translate3d(-3%, 2%, 0) scale(1.1) rotate(56deg)",
           }}
         />
       </div>
@@ -78,7 +81,7 @@ const Circle2 = React.memo(function Circle2() {
         <EcoliTripletsSVG
           className="w-full h-full opacity-40 mix-blend-screen"
           style={{
-            transform: "translate3d(-3%, 2%, 0) scale(1.1)",
+            transform: "translate3d(-3%, 2%, 0) scale(1.1) rotate(32deg)",
             willChange: "opacity, transform",
           }}
         />
@@ -92,8 +95,8 @@ const Circle3Base = React.memo(function Circle3Base() {
   return (
     <div className="relative w-[900px] h-[900px] grid place-items-center rounded-full overflow-hidden">
       <Image
-        src={Droplets1}
-        alt="Droplets1"
+        src={IndustrialPollution}
+        alt="IndustrialPollution"
         fill
         priority
         sizes="(max-width: 768px) 100vw, 900px"
@@ -103,7 +106,7 @@ const Circle3Base = React.memo(function Circle3Base() {
       <div className="w-full h-full border-2 border-lightGrey opacity-80 absolute inset-0"></div>
       <div
         className="w-[110%] h-[110%] min-w-[110%] min-h-[110%] 
-        absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+        absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rotate-180"
       >
         <EcoliTripletsSVG
           className="w-full h-full opacity-70 invert grayscale mix-blend-overlay"
@@ -113,8 +116,8 @@ const Circle3Base = React.memo(function Circle3Base() {
           }}
         />
       </div>
-      <div className="absolute w-full h-full bg-gradient-to-tr from-tealAccent via-tealAccent to-mintAccent mix-blend-overlay opacity-70"></div>
-      <div className="absolute w-full h-full bg-gradient-to-t from-black via-tealAccent to-mintAccent/0 mix-blend-multiply opacity-1"></div>
+      <div className="absolute w-full h-full bg-gradient-to-tr from-tealAccent via-tealAccent to-mintAccent mix-blend-overlay opacity-20"></div>
+      <div className="absolute w-full h-full bg-gradient-to-t from-black via-slate-900 to-teal-950/20 mix-blend-multiply opacity-60"></div>
     </div>
   );
 });
@@ -169,15 +172,9 @@ export function FluorinatedMaterialsSection({
     <section className={`${className} relative`}>
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
 
-        <div className="hidden bottom-0 right-0 w-full h-full bg-gradient-to-t from-black via-black/70 to-tealAccent/0"></div>
-
-        <div className="w-full md:h-[1200px] lg:h-[1500px] xl:h-[2000px]  relative border-2 border-red-500/0 ">
-          <div className="w-full h-full relative">
-            <div className=" w-full h-[75%] xl:h-[60%] top-0 left-0 bg-black" />
-            <TransitionSectionOne
-              className="absolute w-screen h-[800px] xl:block hidden bottom-0 left-0 
-                        rotate-180 overflow-hidden  "
-            />
+        <div className="w-full md:h-[1200px] lg:h-[1400px]  relative">
+          <div className="w-full h-full relative bg-gradient-to-b bg-teal-950 from-black via-black/70 to-black">
+            
           </div>
 
         <div className="absolute w-full h-full top-0 left-0 overflow-hidden xl:overflow-visible xl:bg-transparent bg-black  ">
@@ -199,6 +196,7 @@ export function FluorinatedMaterialsSection({
               </h1>
             </div>
 
+        {/* Flexbox container */}
             <div className="mt-0 flex flex-row gap-8 min-w-[1280px] lg:h-full h-[1000px] ">
               {/* left column */}
               <div className="w-1/2">
@@ -210,10 +208,10 @@ export function FluorinatedMaterialsSection({
                       <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
                         PFAS
                       </span>
-                      <span className="invisible group-hover:visible absolute left-0 top-full mt-2 w-64 p-4 bg-white/90 backdrop-blur-md rounded-lg shadow-lg text-sm text-gray-800 z-50 transition-all duration-200 ease-in-out">
+                      <span className="invisible group-hover:visible absolute left-0 top-full mt-2 w-64 p-4 bg-white/90 backdrop-blur-md rounded-lg shadow-lg text-sm text-gray-800 transition-all duration-200 ease-in-out">
                       <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
                         PFAS
-                      </span> are Per- and Polyfluoroalkyl Substances also known as "<span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
+                      </span> are Per- and PolyfluoroAlkyl Substances also known as "<span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
                       forever chemicals
                       </span>"
                       </span>
@@ -222,9 +220,11 @@ export function FluorinatedMaterialsSection({
                   </p>
                   <p className="text-lg max-w-md pt-4 leading-relaxed text-gray-500">
                     Due to their unique properties, like heat resistance, water
-                    repellency, and chemical stability, they are highly sought
-                    after and used in a wide range of products. From industrial
-                    applications to consumer products, PFAS are everywhere.
+                    repellency, and chemical stability, these so called "<span className="bg-gradient-to-tr from-fuchsia-700/70 via-pinkAccent to-red-900/80 bg-clip-text text-transparent">
+                  foever chemicals
+                </span>" are highly sought
+                    after and used in a wide range of materials and technologies. From industrial
+                    applications to consumer products, fluorinated-compounds are everywhere.
                   </p>
                 </div>
               </div>
@@ -241,20 +241,11 @@ export function FluorinatedMaterialsSection({
                   <Circle2 />
                 </div>
 
-                <div
-                  className="hidden xl:block w-[700px] h-[700px] absolute 
-                        bottom-[-10%] right-[120%] ml-auto translate-y-[20%] translate-x-[5%] 
-                        opacity-70 bg-black/70 rounded-full blur-[25px]"
-                />
 
-                {/* Circle 4 V2 */}
-                <div className="w-[1200px] h-[1200px] hidden absolute bottom-[-10%] right-[120%] ml-auto translate-y-[40%] -translate-x-[6%] bg-green-500/0">
-                  <Circle4 />
-                </div>
 
                 {/* Circle 3 */}
                 <div
-                  className="w-[900px] h-[900px] absolute bottom-[20%] right-[45%] ml-auto translate-y-[15%] translate-x-[0%] bg-green-500/0 z-10
+                  className="w-[900px] h-[900px] absolute bottom-[20%] right-[45%] ml-auto translate-y-[15%] translate-x-[0%] bg-green-500/0
                   lg:translate-y-[15%] lg:translate-x-[5%]"
                   style={{ willChange: "transform" }}
                 >
@@ -273,7 +264,7 @@ export function FluorinatedMaterialsSection({
                         classNamesSubTitle="text-center text-lightGrey/60 text-3xl font-bold mt-20 capitalize"
                         stat={stats[4]}
                         scrollYProgress={scrollYProgress}
-                        scrollEndThreshold={0.7}
+                        scrollEndThreshold={0.4}
                         index={4}
                       />
 
@@ -285,7 +276,7 @@ export function FluorinatedMaterialsSection({
                           classNamesSubTitle="text-center text-lightGrey/60 text-3xl font-bold mt-20 capitalize"
                           stat={stats[4]}
                           scrollYProgress={scrollYProgress}
-                          scrollEndThreshold={0.7}
+                          scrollEndThreshold={0.4}
                           index={4}
                         />
                     </div>
@@ -315,17 +306,9 @@ export function FluorinatedMaterialsSection({
             </div>
           </div>
         </div>
-        <div className="hidden absolute top-[32%] left-[23%] w-[300px] -translate-x-[50%] -translate-y-[50%] rotate-[-28deg]">
-          <Image
-            src={BioFMonomer}
-            alt="PFAS"
-            style={{ objectFit: "cover" }}
-            className="w-full h-full
-                      grayscale opacity-70 "
-          />
-        </div>
       </div>
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
+      <div className="absolute hidden lg:block bottom-0 right-0 w-full h-[200px] bg-gradient-to-t from-black via-black/90 to-transparent"></div>
       {/* <div className="w-full h-[100px] absolute bottom-0 left-0 bg-gradient-to-t from-black/0 via-black/70 to-black/100"/> */}
     </section>
   );
@@ -533,20 +516,11 @@ export function FluorinatedMaterialsSectionBACKUP({
                     <div className="opacity-60 absolute h-full w-full rounded-full left-0 top-0 bg-gradient-to-tr from-tealAccent via-tealAccent to-mintAccent mix-blend-multiply"></div>
                   </div>
                   <div className="opacity-10 absolute h-full w-full rounded-full left-0 top-0 overflow-visible flex items-center justify-center">
-                    {/* <EcoliTripletsSVG className="w-[100%] h-[100%] translate-x-[-3%] translate-y-[2%] opacity-40 mix-blend-screen" /> */}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="hidden absolute top-[32%] left-[23%] w-[300px] -translate-x-[50%] -translate-y-[50%] rotate-[-28deg]">
-          <Image
-            src={BioFMonomer}
-            alt="PFAS"
-            className="w-full h-full object-cover
-                      grayscale opacity-70 "
-          />
         </div>
       </div>
 

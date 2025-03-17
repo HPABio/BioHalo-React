@@ -28,7 +28,7 @@ export const ShowcaseNavbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="w-screen border-b border-mediumGrey/5 bg-lightGrey/20 backdrop-blur-lg box-shadow-md"
+      className="w-screen border-b border-mediumGrey/5 bg-lightGrey/50 backdrop-blur-lg box-shadow-md"
     >
       <div className="container mx-auto px-4 py-4 z-90">
         <nav className="flex items-center justify-between">

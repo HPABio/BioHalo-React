@@ -84,6 +84,97 @@ const sampleAchievements: Achievement[] = [
   },
 ];
 
+export const TimelineVisualization = ({
+  achievements = sampleAchievements,
+}: SuccessesSectionProps) => {
+  return (
+    <main>
+
+    {/* Timeline visualization */}
+     <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="relative mt-20 pt-10 border-t border-gray-200"
+        >
+          <h3 className="text-2xl font-semibold text-center mb-12 text-gray-800">
+            Our Journey
+          </h3>
+
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-tealAccent via-mintAccent to-tealAccent/30"></div>
+
+            {/* Timeline events */}
+            <div className="space-y-20">
+                {Object.entries(achievements.reduce((acc, achievement) => {
+                  const year = achievement.date.split(' ')[1];
+                  if (!acc[year]) acc[year] = [];
+                  acc[year].push(achievement);
+                  return acc;
+                }, {} as Record<string, typeof achievements>))
+                .reverse()
+                .map(([year, yearAchievements], yearIndex) => (
+                  <div key={year} className="relative">
+                    {/* Year marker */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 -top-10">
+                      <div className="bg-tealAccent text-white text-lg font-bold px-4 py-2 rounded-full">
+                        {year}
+                      </div>
+                    </div>
+
+                    {/* Year's achievements */}
+                    <div className="space-y-12 relative">
+                      {yearAchievements.map((achievement, index) => (
+                        <motion.div
+                          key={achievement.id}
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.5, delay: index * 0.1 }}
+                          className={`flex ${
+                            index % 2 === 0 ? "justify-end" : "justify-start"
+                          } relative`}
+                        >
+                          {/* Timeline dot */}
+                          <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-4 border-tealAccent rounded-full"></div>
+
+                          {/* Content */}
+                          <div
+                            className={`w-5/12 ${
+                              index % 2 === 0 ? "pr-12" : "pl-12"
+                            }`}
+                          >
+                            <div className="bg-white/20 backdrop-blur-sm border border-tealAccent/20 rounded-xl p-6 hover:border-tealAccent/40 transition-all">
+                              <div className="flex items-center mb-2">
+                                <div className="w-8 h-8 rounded-full bg-tealAccent/10 flex items-center justify-center mr-3">
+                                  {achievement.icon}
+                                </div>
+                                <span className="text-sm text-gray-500">
+                                  {achievement.date}
+                                </span>
+                              </div>
+                              <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                                {achievement.title}
+                              </h4>
+                              <p className="text-gray-600 text-sm">
+                                {achievement.description}
+                              </p>
+                            </div>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+        </motion.div>
+    </main>
+  );
+};
+
+
 export const SuccessesSection = ({
   className = "",
   achievements = sampleAchievements,
@@ -185,88 +276,15 @@ export const SuccessesSection = ({
           ))}
         </div>
 
-        {/* Timeline visualization */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="relative mt-20 pt-10 border-t border-gray-200"
-        >
-          <h3 className="text-2xl font-semibold text-center mb-12 text-gray-800">
-            Our Journey
-          </h3>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-tealAccent via-mintAccent to-tealAccent/30"></div>
-
-            {/* Timeline events */}
-            <div className="space-y-20">
-              {Object.entries(achievementsByYear)
-                .reverse()
-                .map(([year, yearAchievements], yearIndex) => (
-                  <div key={year} className="relative">
-                    {/* Year marker */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 -top-10">
-                      <div className="bg-tealAccent text-white text-lg font-bold px-4 py-2 rounded-full">
-                        {year}
-                      </div>
-                    </div>
-
-                    {/* Year's achievements */}
-                    <div className="space-y-12 relative">
-                      {yearAchievements.map((achievement, index) => (
-                        <motion.div
-                          key={achievement.id}
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.5, delay: index * 0.1 }}
-                          className={`flex ${
-                            index % 2 === 0 ? "justify-end" : "justify-start"
-                          } relative`}
-                        >
-                          {/* Timeline dot */}
-                          <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-4 border-tealAccent rounded-full"></div>
-
-                          {/* Content */}
-                          <div
-                            className={`w-5/12 ${
-                              index % 2 === 0 ? "pr-12" : "pl-12"
-                            }`}
-                          >
-                            <div className="bg-white/20 backdrop-blur-sm border border-tealAccent/20 rounded-xl p-6 hover:border-tealAccent/40 transition-all">
-                              <div className="flex items-center mb-2">
-                                <div className="w-8 h-8 rounded-full bg-tealAccent/10 flex items-center justify-center mr-3">
-                                  {achievement.icon}
-                                </div>
-                                <span className="text-sm text-gray-500">
-                                  {achievement.date}
-                                </span>
-                              </div>
-                              <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                                {achievement.title}
-                              </h4>
-                              <p className="text-gray-600 text-sm">
-                                {achievement.description}
-                              </p>
-                            </div>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-            </div>
-          </div>
-        </motion.div>
+        
+       
 
         {/* Call to action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mt-24 bg-gradient-to-br from-tealAccent/10 to-mintAccent/20 p-8 rounded-xl"
+          className="hidden text-center mt-24 bg-gradient-to-br from-tealAccent/10 to-mintAccent/20 p-8 rounded-xl"
         >
           <h3 className="text-2xl font-semibold mb-4 text-gray-800">
             Join Us on Our Journey

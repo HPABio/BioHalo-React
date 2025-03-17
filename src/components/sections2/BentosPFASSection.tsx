@@ -95,17 +95,17 @@ export const BentosPFASSection = ({ className }: { className?: string }) => {
           </div>
 
           <BentoEnvironmentalConcerns />
-          <BentoRegulation className="bg-gradient-to-br from-mintAccent/50 to-gray-400" />
+          <BentoRegulation className="bg-gradient-to-br from-mintAccent/50 to-gray-400 rounded-full aspect-square" />
           <BentoIndustries className="md:col-span-2 border-2 border-gray-600" />
           <BentoFluorineBenefits className="md:col-span-2 bg-gradient-to-br from-lightGrey to-tealAccent" />
           <BentoFutureOutlook className="md:col-span-2 border-2 border-gray-200" />
         </div>
       </div>
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+     {/*  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="bg-yellow-400/70 text-black/60 text-6xl font-black py-8 px-16 rotate-[35deg] transform scale-[300%] shadow-2xl">
           UNDER CONSTRUCTION
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

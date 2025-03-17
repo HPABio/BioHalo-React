@@ -39,7 +39,7 @@ export const PartnersMarqueeSection = ({
   const duplicatedPartners = createDuplicatedArray(partners);
 
   return (
-    <section className={`w-full py-16 overflow-hidden ${className}`}>
+    <section className={`w-full py-16 overflow-hidden ${className} bg-[mask-image:linear-gradient(to_left,black,transparent)]`}>
       <div className="max-w-7xl mx-auto px-4 md:px-8 mb-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,9 +58,8 @@ export const PartnersMarqueeSection = ({
       </div>
 
       {/* First marquee - left to right */}
-      <div className="relative w-full py-6 bg-gradient-to-r from-tealAccent/5 to-mintAccent/10">
-        <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
-        <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
+      <div className="relative w-full py-6 "
+      style={{ maskImage: 'linear-gradient(to right, transparent, rgba(0,0,0,0.5), black, black, black, black, black,black, rgba(0,0,0,0.5), transparent)' }}>
 
         <motion.div
           className="flex items-center space-x-16 whitespace-nowrap"
@@ -99,9 +98,8 @@ export const PartnersMarqueeSection = ({
       </div>
 
       {/* Second marquee - right to left (opposite direction) */}
-      <div className="relative w-full py-6 bg-gradient-to-r from-mintAccent/10 to-tealAccent/5">
-        <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
-        <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
+      <div className="relative w-full py-6 "
+      style={{ maskImage: 'linear-gradient(to right, transparent, rgba(0,0,0,0.5), black, black, black, black, black,black, rgba(0,0,0,0.5), transparent)' }}>
 
         <motion.div
           className="flex items-center space-x-16 whitespace-nowrap"
