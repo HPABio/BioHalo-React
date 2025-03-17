@@ -97,7 +97,8 @@ export const WhatWeDoSection = ({
           </span>
           <br />
           provides the world <br />
-          with a sustainable <br />
+          with sustainable <br />
+          
           <span className="relative group">
             <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent cursor-help">
               PFAS{" "}
@@ -110,20 +111,20 @@ export const WhatWeDoSection = ({
               </span>"
             </span>
           </span>
-          alternative
+          alternatives
         </h2>
       </div>
 
       {/* Subtitle */}
       <div className="w-[720px] bg-red-500/0">
-        <h2 className="text-gray-800/50 text-6xl font-poppins">
-          using our enzyme-based biohalogenation platform
+        <h2 className="text-gray-800/60 text-6xl font-poppins">
+          thruogh our enzyme-based biohalogenation platform
         </h2>
       </div>
 
       {/* Text */}
       <div className="h-[200px] w-[480px] bg-red-500/0 mt-10">
-        <p className="text-gray-400 text-2xl font-poppins">
+        <p className="text-gray-500/80 text-2xl font-poppins">
           we can selectively halogenate organic molecules, opening up new
           possibilities for{" "}
           <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent">
@@ -217,7 +218,7 @@ export const WhatWeDoSection = ({
         <div className="space-y-16 bg-red-500/0 relative">
           {/* Top Text Section */}
           <div className="space-y-4">
-            <h1 className="font-black font-Arial text-4xl md:text-6xl bg-gradient-to-tl from-mintAccent via-tealAccent/80 to-tealAccent/40 bg-clip-text text-transparent pb-10">
+            <h1 className="font-black font-Arial text-4xl md:text-6xl bg-gradient-to-br from-teal-800/70 via-tealAccent/80 to-tealAccent/40 bg-clip-text text-transparent pb-10">
               <span className="">We explore, design,</span>
               <br />
               <span className="">and produce, unmatched</span>
@@ -237,9 +238,9 @@ export const WhatWeDoSection = ({
                 </span>
                 -Polymers
               </span>{" "}
-              are versatile, durable, and resistant
+              do not compromise performance
               <br />
-              while also being safe and sustainable.
+              while also being safe and sustainable
             </p>
             <p className="text-lg max-w-md pt-4 leading-relaxed">
               BioHalos revolutionary enzyme-based biohalogenation platform
@@ -281,20 +282,96 @@ export const WhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(195,12,95,1)"
-          className="absolute top-[7%] right-[16%] opacity-90 z-5"
+          className="absolute top-[-29%] right-[6%] opacity-90 z-5"
+          />
+      <MovingAtom
+          width={80}
+          height={80}
+          hoverAmplitude={7}
+          hoverDuration={4}
+          shouldRotate={true}
+          rotationDuration={25}
+          shouldScale={false}
+          scaleRange={[0.9, 1.1]}
+          scaleDuration={4}
+          color="rgba(18,110,119,1)" //teal rbga(18,110,119,1)
+          className="absolute top-[-89%] right-[26%] opacity-90 z-5"
+          />
+      <MovingAtom
+          width={50}
+          height={50}
+          hoverAmplitude={7}
+          hoverDuration={4}
+          shouldRotate={true}
+          rotationDuration={25}
+          shouldScale={false}
+          scaleRange={[0.9, 1.1]}
+          scaleDuration={4}
+          color="rgba(195,12,95,1)" //pink
+          className="absolute top-[-100%] right-[6%] opacity-90 z-5"
+          />
+      <MovingAtom
+          width={40}
+          height={40}
+          hoverAmplitude={7}
+          hoverDuration={4}
+          shouldRotate={true}
+          rotationDuration={25}
+          shouldScale={false}
+          scaleRange={[0.9, 1.1]}
+          scaleDuration={4}
+          color="rgba(195,12,95,1)" //pink
+          className="absolute top-[-65%] right-[43%] opacity-90 z-5"
+          />
+      <MovingAtom
+          width={50}
+          height={50}
+          hoverAmplitude={7}
+          hoverDuration={4}
+          shouldRotate={true}
+          rotationDuration={25}
+          shouldScale={false}
+          scaleRange={[0.9, 1.1]}
+          scaleDuration={4}
+          color="rgba(18,110,119,1)" //teal rbga(18,110,119,1)
+          className="absolute top-[0%] right-[26%] opacity-90 z-5"
+          />
+      <MovingAtom
+          width={50}
+          height={50}
+          hoverAmplitude={7}
+          hoverDuration={4}
+          shouldRotate={true}
+          rotationDuration={25}
+          shouldScale={false}
+          scaleRange={[0.9, 1.1]}
+          scaleDuration={4}
+          color="rgba(18,110,119,1)" //teal rbga(18,110,119,1)
+          className="absolute top-[-33%] right-[-12%] opacity-90 z-5"
           />
           </div>
     </div>
 
-    <div className="relative bottom-0 left-0 w-full h-[200px] bg-gradient-to-t from-black via-black/70 to-transparent">
-        <div className="w-full h-full opacity-1"
+    <div className="relative bottom-0 left-0 w-full h-[200px]">
+      {/*   <div className="w-full h-full opacity-1"
         style={{
           backgroundImage: `url(${BioReactorBP.src})`,
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          willChange: "opacity, transform",}}/>
+          willChange: "opacity, transform",}}/> */}
           </div>
+      <div className="relative bottom-0 left-0 w-full h-[200px] bg-red-600/0">
+      <div className="relative bottom-0 left-[50%] translate-x-[-30%] translate-y-[-380px] w-[800px] h-[800px] filter invert grayscale"
+      style={{
+        backgroundImage: `url(${beaker.src})`,
+        backgroundSize: "contain",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      />
+      
+      </div>
     </section>
     
   );

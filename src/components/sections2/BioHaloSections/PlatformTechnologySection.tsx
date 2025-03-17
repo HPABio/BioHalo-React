@@ -6,6 +6,7 @@ import Image from "next/image";
 import { MovingAtom } from "@/components/ui/MovingAtom";
 import AtomDiagram from "@/components/ui/AtomDiagram";
 import Barrels from "@/assets/images/BluePrintSVG/Barrels.svg";
+import beaker from "@/assets/images/BluePrintSVG/beaker.svg";
 import BioReactorBP from "@/assets/images/BluePrintSVG/bio-reactor.svg";
 
 
@@ -79,7 +80,19 @@ export const PlatformTechnologySection = ({
   className = "",
 }: PlatformTechnologySectionProps) => {
   return (
-    <section className={`w-full py-24 relative ${className} overflow-hidden`}>
+    <section className={`w-full relative ${className} overflow-hidden`}>
+      <div className="relative bottom-0 left-0 w-full h-[200px] bg-gradient-to-b from-black/0 via-black/50 to-black">
+      <div className="relative top-0 left-[50%] translate-x-[-30%] translate-y-[-580px] w-[800px] h-[800px]"
+      style={{
+        backgroundImage: `url(${beaker.src})`,
+        backgroundSize: "contain",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      />
+      </div>
+
+
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="absolute bottom-[100%] left-[100%] translate-x-[-50%] translate-y-[50%] opacity-[4%] mix-blend-screen">
         <AtomDiagram width={5300} height={5300} color="rgba(18,110,119,1)" />

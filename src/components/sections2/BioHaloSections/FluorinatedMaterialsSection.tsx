@@ -20,6 +20,9 @@ import RainJacketMist from "@/assets/images/BGImagesTest/RainJacketMist.jpeg";
 import HikerOverlookingMistyValley from "@/assets/images/BGImagesTest/HikerOverlookingMistyValley.jpeg";
 import TexturedGlassSurface from "@/assets/images/BGImagesTest/Textured Glass Surface.jpeg";
 import WaterRepellantFabric from "@/assets/images/water-repellant-fabric.png";
+import pollutionearth from "@/assets/images/BluePrintStyle/polutionEarth.svg";
+import IndustrialPollution from "@/assets/images/BGImagesTest/IndustrialPollution.png";
+
 
 interface FluorinatedMaterialsSectionProps {
   stats: any[];
@@ -92,8 +95,8 @@ const Circle3Base = React.memo(function Circle3Base() {
   return (
     <div className="relative w-[900px] h-[900px] grid place-items-center rounded-full overflow-hidden">
       <Image
-        src={Droplets1}
-        alt="Droplets1"
+        src={IndustrialPollution}
+        alt="IndustrialPollution"
         fill
         priority
         sizes="(max-width: 768px) 100vw, 900px"
@@ -103,7 +106,7 @@ const Circle3Base = React.memo(function Circle3Base() {
       <div className="w-full h-full border-2 border-lightGrey opacity-80 absolute inset-0"></div>
       <div
         className="w-[110%] h-[110%] min-w-[110%] min-h-[110%] 
-        absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+        absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rotate-180"
       >
         <EcoliTripletsSVG
           className="w-full h-full opacity-70 invert grayscale mix-blend-overlay"
