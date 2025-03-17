@@ -261,7 +261,7 @@ export function FluorinatedMaterialsSection({
                         classNamesSubTitle="text-center text-lightGrey/60 text-3xl font-bold mt-20 capitalize"
                         stat={stats[4]}
                         scrollYProgress={scrollYProgress}
-                        scrollEndThreshold={0.5}
+                        scrollEndThreshold={0.4}
                         index={4}
                       />
 
@@ -273,7 +273,7 @@ export function FluorinatedMaterialsSection({
                           classNamesSubTitle="text-center text-lightGrey/60 text-3xl font-bold mt-20 capitalize"
                           stat={stats[4]}
                           scrollYProgress={scrollYProgress}
-                          scrollEndThreshold={0.5}
+                          scrollEndThreshold={0.4}
                           index={4}
                         />
                     </div>
