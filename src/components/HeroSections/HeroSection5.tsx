@@ -53,50 +53,6 @@ export const HeroSection5 = ({
 
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute w-full h-full flex items-end justify-center pb-[15vh] md:pb-[35vh] lg:pb-[25vh] 2xl:pb-[15vh] xl:-mt-[50px]"
-      >
-  
-        
-        <div className="relative max-w-[900px] px-6 mb-16 ml-[12vw] ">
-          <h1 className="text-center">
-            <span className="block text-base sm:text-lg md:text-xl lg:text-2xl uppercase mb-2 font-medium  text-gray-700/80">
-              Our Company uses enzymes and <br /> biological processe to disrupt the
-            </span>
-            <span className="relative block uppercase bg-gradient-to-tr from-red-900/80 via-pinkAccent to-purple-950/80 bg-clip-text text-transparent font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-Poppins tracking-wide">
-              forever chemicals
-              <span className="absolute top-0 left-0 w-full h-full opacity-40 lg:opacity-50 uppercase blur-[2px] font-black font-Poppins bg-gradient-to-tr from-red-900/80 via-pinkAccent to-purple-950/80 bg-clip-text text-transparent">
-                forever chemicals
-              </span>
-              <span className="absolute top-0 left-0 w-full h-full opacity-30 lg:opacity-30 uppercase blur-[4px] font-black font-Poppins bg-gradient-to-tr from-red-900/80 via-pinkAccent to-purple-950/80 bg-clip-text text-transparent">
-                forever chemicals
-              </span>
-            <span className="block text-base sm:text-2xl md:text-3xl lg:text-4xl uppercase mb-2 font-medium  text-gray-600/80">
-            Industries
-            </span>
-            </span>
-          </h1>
-
-        <MovingAtom
-              width={60}
-              height={60}
-              hoverAmplitude={8}
-              hoverDuration={2}
-              shouldRotate={true}
-              rotationDuration={45}
-              shouldScale={true}
-              scaleRange={[0.9, 1.1]}
-              scaleDuration={4}
-              color="rgba(225,12,115,0.7)" //pinkAccent
-              className="absolute top-[30%] -left-[2%]"
-            />
-        </div>
-
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1, 1] }}
         transition={{
           times: [0, 0.1, 1],
@@ -104,9 +60,44 @@ export const HeroSection5 = ({
         }}
         className="absolute w-full h-full xl:-mt-[50px] xl:-ml-[2vw]"
       >
-        <div className="w-full h-full flex flex-col items-center pt-[33vh]">
-          {/* Logo container */}
-          <div className="flex flex-col w-[clamp(450px,60%,1600px)] relative">
+
+
+
+        <div className="w-full h-full flex flex-col items-center pt-[38vh]">
+
+
+                 
+                  {/* Logo container */}
+                  <div className="flex flex-col w-[clamp(450px,80%,1600px)] relative bg-red-500/0">
+                                    <div className="w-full h-full absolute top-0 left-0 bg-blue-500/0">
+
+                                              <div className="w-[65%] h-full absolute top-0 right-0 bg-pink-500/0">
+                                              <p className="w-full absolute right-0 bottom-0 tracking-widest text-[clamp(0.6rem,1.5vw,2rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-green-300/0">
+                                                Your Partner in{" "}
+                                                <span
+                                                  className="text-[clamp(0.8rem,1.9vw,2.5rem)] bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent 
+                                                uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
+                                                >
+                                                  Biohalogenation
+                                                </span>{" "}
+                                                Chemistry
+                                            </p>
+                                              <p className="w-full absolute right-0 bottom-[-12%] tracking-widest text-[clamp(0.3rem,1vw,1.3rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-green-300/0">
+                                                <span className="block uppercase mt-4 mb-2 font-medium text-gray-500/90 max-w-4xl mx-auto">
+                                                We disrupt the{" "}
+                                                <span className="font-black bg-pink-800 bg-gradient-to-br from-gray-800/60 via-gray-200/30 to-gray-900/30 bg-clip-text text-transparent">
+                                                  forever chemical
+                                                </span>{" "}
+                                                industry using{" "}
+                                                <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
+                                                  enzymes
+                                                </span>
+                                              </span>
+                                              </p>
+                                              </div>
+                                  
+
+                                  </div>
             <BioHaloLogo2
               styles={{
                 classNames: "w-full h-full opacity-1",
@@ -116,7 +107,7 @@ export const HeroSection5 = ({
                 animationdelay: "0.3s",
               }}
             />
-              <MovingAtom
+            <MovingAtom
               width={90}
               height={90}
               hoverAmplitude={6}
@@ -135,23 +126,12 @@ export const HeroSection5 = ({
               2xl:top-[40%] 2xl:right-[-6%] 
               translate-x-[-50%] translate-y-[-50%]"
             />
-          
 
-            {/* Centered text below logo */}
-            <div className="flex flex-col items-end w-full relative md:-mt-5  2xl:-mt-[2vw]">
-              <p className="w-[65%] right-0 tracking-widest text-[clamp(0.6rem,1.2vw,2rem)] font-medium text-center text-gray-700/80 whitespace-nowrap">
-                Your Partner in{" "}
-                <span
-                  className="text-[clamp(0.8rem,1.9vw,2.5rem)] bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent 
-                uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
-                >
-                  Biohalogenation
-                </span>{" "}
-                Chemistry
-              </p>
-            </div>
-          </div>
-        </div>
+
+           
+                
+              </div>
+              </div>
       </motion.div>
     </section>
   );
