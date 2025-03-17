@@ -21,6 +21,7 @@ import BeakerBlueprint from "@/assets/images/BluePrint with Color/beaker.png";
 import BioReactorSVG from "@/assets/images/BluePrintSVG/bio-reactor.svg";
 import DNALogo from "@/assets/images/BluePrintSVG/dna-logo.svg";
 import BioHaloStep2 from "@/assets/images/BluePrintSVG/BioHalo-step2.svg";
+import BioReactorBP from "@/assets/images/BluePrintSVG/bio-reactor.svg";
 
 
 
@@ -44,7 +45,10 @@ export const WhatWeDoSection = ({
   });
 
   return (
+    
+    
     <section className={`${className} overflow-visible`}>
+      <div className="max-w-[1280px] mx-auto px-14 ">
       {/* Title */}
       
       <MovingAtom
@@ -265,13 +269,7 @@ export const WhatWeDoSection = ({
       </div> */}
       <div className="absolute w-[800px] h-[400px] 
           bottom-[-11%] left-[30%]">
-        <div className="w-full h-full invert grayscale opacity-50"
-        style={{
-          backgroundImage: `url(${BioHaloStep2.src})`,
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          willChange: "opacity, transform",}}/>
+
       <MovingAtom
           width={80}
           height={80}
@@ -286,6 +284,18 @@ export const WhatWeDoSection = ({
           className="absolute top-[7%] right-[16%] opacity-90 z-5"
           />
           </div>
+    </div>
+
+    <div className="relative bottom-0 left-0 w-full h-[200px] bg-gradient-to-t from-black via-black/70 to-transparent">
+        <div className="w-full h-full opacity-1"
+        style={{
+          backgroundImage: `url(${BioReactorBP.src})`,
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          willChange: "opacity, transform",}}/>
+          </div>
     </section>
+    
   );
 };

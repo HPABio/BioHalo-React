@@ -153,13 +153,13 @@ export const Showcase4 = () => {
 
       <section id="what-we-do" className="pt-48">
         <WhatWeDoSection
-          className="min-h-[50vh] max-w-[1280px] mx-auto text-white px-14 relative border-2 border-green-500/0 "
+          className="min-h-[50vh] w-[100vw] text-white relative  "
           stats={stats}
         />
       </section>
 
           {/* Platform Technology Section */}
-          <section id="platform-technology" className="w-full pt-48">
+          <section id="platform-technology" className="w-full ">
         <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
       </section>
 
