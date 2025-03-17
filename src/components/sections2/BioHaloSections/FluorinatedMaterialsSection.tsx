@@ -47,10 +47,10 @@ const Circle1 = React.memo(function Circle1() {
         top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] "
       >
         <EcoliTripletsSVG
-          className="w-full h-full opacity-40 mix-blend-screen"
+          className="w-full h-full opacity-40 mix-blend-screen filter invert grayscale "
           style={{
             willChange: "opacity, transform",
-            transform: "translate3d(-3%, 2%, 0) scale(1.1)",
+            transform: "translate3d(-3%, 2%, 0) scale(1.1) rotate(56deg)",
           }}
         />
       </div>
@@ -81,7 +81,7 @@ const Circle2 = React.memo(function Circle2() {
         <EcoliTripletsSVG
           className="w-full h-full opacity-40 mix-blend-screen"
           style={{
-            transform: "translate3d(-3%, 2%, 0) scale(1.1)",
+            transform: "translate3d(-3%, 2%, 0) scale(1.1) rotate(32deg)",
             willChange: "opacity, transform",
           }}
         />
@@ -116,8 +116,8 @@ const Circle3Base = React.memo(function Circle3Base() {
           }}
         />
       </div>
-      <div className="absolute w-full h-full bg-gradient-to-tr from-tealAccent via-tealAccent to-mintAccent mix-blend-overlay opacity-70"></div>
-      <div className="absolute w-full h-full bg-gradient-to-t from-black via-tealAccent to-mintAccent/0 mix-blend-multiply opacity-1"></div>
+      <div className="absolute w-full h-full bg-gradient-to-tr from-tealAccent via-tealAccent to-mintAccent mix-blend-overlay opacity-20"></div>
+      <div className="absolute w-full h-full bg-gradient-to-t from-black via-slate-900 to-teal-950/20 mix-blend-multiply opacity-60"></div>
     </div>
   );
 });

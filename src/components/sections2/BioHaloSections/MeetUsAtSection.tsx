@@ -62,7 +62,7 @@ const EventCard = ({ event }: { event: Event }) => (
     transition={{ duration: 0.5 }}
     className="bg-white/10 backdrop-blur-sm border border-tealAccent/20 rounded-xl overflow-hidden hover:border-tealAccent/40 transition-all group"
   >
-    {event.imageUrl && (
+   {/*  {event.imageUrl && (
       <div className="relative h-48 overflow-hidden">
         <Image
           src={event.imageUrl}
@@ -72,7 +72,7 @@ const EventCard = ({ event }: { event: Event }) => (
           height={200}
         />
       </div>
-    )}
+    )} */}
     <div className="p-6">
       <h3 className="text-xl font-semibold mb-2 text-gray-800">
         {event.title}

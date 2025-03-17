@@ -163,37 +163,33 @@ export const Showcase4 = () => {
         <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
       </section>
 
-      <section className="w-full h-full relative hidden">
+      {/* <section className="w-full h-full relative hidden">
         <BentosPFASSection className="bg-black relative" />
-      </section>
+      </section> */}
 
 
-      <section id="feature-pfas" className="w-full h-full pt-48">
-        {/* <MemoizedTransitionSectionFour className="w-full h-[200px]" circleSize={700} /> */}
-
+      {/* <section id="feature-pfas" className="w-full h-full pt-48">
         <FeatureOfPFAS className="w-full min-h-[70vh] bg-black" />
-
         <MemoizedTransitionSectionFour
           className="w-full h-[200px] rotate-180"
-          circleSize={700}
-        />
-      </section>
+          circleSize={700}/>
+      </section> */}
 
-      <section id="health" className="w-full h-full relative pt-32">
+      {/* <section id="health" className="w-full h-full relative pt-32">
         <HealthSectionImgRight
           className="min-h-[50vh] max-w-[1280px] mx-auto px-14 relative overflow-hidden xl:overflow-visible"
           stats={stats}
         />
-      </section>
+      </section> */}
 
       {/* Pollution Section */}
 
-      <section id="pollution" className="min-h-screen">
+      {/* <section id="pollution" className="min-h-screen">
         <PollutionSection
           className="min-h-[50vh] max-w-[1280px] mx-auto px-14 relative overflow-visible z-10 xl:mt-32"
           stats={stats}
         />
-      </section>
+      </section> */}
 
   
 
@@ -212,9 +208,9 @@ export const Showcase4 = () => {
       </section>
 
       {/* Partners Marquee Section */}
-      <section id="partners" className="w-full">
+      {/* <section id="partners" className="w-full">
         <PartnersMarqueeSection />
-      </section>
+      </section> */}
 
       {/* Meet Us At Section */}
       <section id="meet-us-at" className="w-full">

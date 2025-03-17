@@ -34,17 +34,47 @@ const FeatureCard = ({ icon, title, description }: FeatureCardProps) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5 }}
-    className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-tealAccent/20 hover:border-tealAccent/40 transition-all group"
+    className="p-6 rounded-xl bg-white/40 backdrop-blur-sm border border-tealAccent/30 hover:border-tealAccent/60 transition-all group"
   >
-    <div className="w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center mb-4 group-hover:bg-tealAccent/20 transition-all">
+    <div className="w-12 h-12 rounded-full bg-tealAccent/20 flex items-center justify-center mb-4 group-hover:bg-tealAccent/40 transition-all">
       {icon}
     </div>
-    <h3 className="text-xl font-semibold mb-2 text-gray-800">{title}</h3>
-    <p className="text-gray-600">{description}</p>
+    <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+      {title}
+    </h3>
+    <p className="text-gray-700 dark:text-gray-200">{description}</p>
   </motion.div>
 );
 
+
 const features = [
+  
+  
+  {
+    icon: <Atom className="w-6 h-6 text-tealAccent" />,
+    title: "Minimal By-Products",
+    description:
+      "Our precision technology produces fewer unwanted by-products, increasing efficiency and reducing waste.",
+  },
+  
+  {
+    icon: <Atom className="w-6 h-6 text-tealAccent" />,
+    title: "Bio-Based Materials",
+    description:
+      "We utilize biological systems and renewable resources to create sustainable fluorinated polymers.",
+  },
+  {
+    icon: <Droplet className="w-6 h-6 text-pinkAccent" />,
+    title: "Reduced Fluorine Usage",
+    description:
+      "Our technology requires significantly less fluorine while maintaining or enhancing material performance.",
+  },
+  
+  
+];
+
+
+const features_arcived = [
   {
     icon: <Leaf className="w-6 h-6 text-tealAccent" />,
     title: "Eco-Friendly Process",
@@ -168,8 +198,8 @@ export const PlatformFeaturesSection = ({
 
   return (
     <section className={`w-full px-12 ${className}`}>
-      <div className="w-full max-w-7xl mx-auto px-6 py-24 bg-gradient-to-br from-lightGrey/90 via-mintAccent/40 to-tealAccent/20 rounded-xl relative">
-        <div className="absolute w-full h-full border-2 border-lightGrey/20 top-0 left-0 rounded-xl"></div>
+      <div className="w-full max-w-7xl mx-auto px-6 py-24 bg-gradient-to-br from-white via-mintAccent/30 to-tealAccent/10 dark:from-gray-900 dark:via-tealAccent/20 dark:to-tealAccent/10 rounded-xl relative">
+        <div className="absolute w-full h-full border-2 border-tealAccent/30 top-0 left-0 rounded-xl"></div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -177,13 +207,8 @@ export const PlatformFeaturesSection = ({
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl pb-4 font-bold bg-gradient-to-l from-tealAccent  via-tealAccent/70 to-mintAccent bg-clip-text text-transparent">
-            <span className="bg-gradient-to-r from-tealAccent via-tealAccent/20 to-mintAccent bg-clip-text text-transparent">
-              Our Platform Capabili
-            </span>
-            <span className="bg-gradient-to-l from-tealAccent/40 via-tealAccent/20 to-mintAccent bg-clip-text text-transparent">
-              ties
-            </span>
+          <h2 className="text-4xl md:text-5xl pb-4 font-bold text-tealAccent">
+            Our Platform Capabilities
           </h2>
         </motion.div>
 
@@ -204,7 +229,7 @@ export const PlatformFeaturesSection = ({
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 dark:text-gray-200 max-w-2xl mx-auto font-medium">
             Our biohalogenation platform represents a breakthrough in
             sustainable chemistry, offering a complete solution to replace PFAS
             while maintaining or exceeding performance requirements.
