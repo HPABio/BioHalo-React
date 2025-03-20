@@ -198,7 +198,7 @@ export const PlatformFeaturesSection = ({
 
   return (
     <section className={`w-full px-12 ${className}`}>
-      <div className="w-full max-w-7xl mx-auto px-6 py-24 bg-gradient-to-br from-white via-mintAccent/30 to-tealAccent/10 dark:from-gray-900 dark:via-tealAccent/20 dark:to-tealAccent/10 rounded-xl relative">
+      <div className="w-full max-w-7xl mx-auto px-6 py-24 bg-gradient-to-br from-white/70 via-mintAccent/30 to-tealAccent/10 rounded-xl relative">
         <div className="absolute w-full h-full border-2 border-tealAccent/30 top-0 left-0 rounded-xl"></div>
 
         <motion.div

@@ -191,16 +191,22 @@ export const Showcase4 = () => {
         />
       </section> */}
 
-  
-
       <section className="bg-red-500/0 w-full">
+        <div className="w-full h-[400px] pt-10 overflow-hidden flex items-center justify-center">
+          <IconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px]" />
+        </div>
+      </section>
+
+
+
+{/*       <section className="bg-red-500/0 w-full">
         <div className="w-full h-[700px] pt-10 overflow-hidden">
-          <IconCarousel className="w-[1200px] h-[1200px] -mb-[500px] mx-auto" />
+          <IconCarousel className="w-[1200px] h-[1200px] mb-[500px] mx-auto" />
         </div>
         <div id="platform-features">
           <PlatformFeaturesSection />
         </div>
-      </section>
+      </section> */}
 
       {/* Successes Section */}
       <section id="successes" className="w-full">

@@ -246,7 +246,10 @@ export const WhatWeDoSection = ({
                 <span className="bg-gradient-to-tr from-pinkAccent to-red-900/80 bg-clip-text text-transparent">
                   fluorine
                 </span>
-                -enhanced compound development.
+                -enhanced compound development. These incredible achievements
+                are made possible by advances in synthetic biology and
+                biotechnology. Bringing us closer to understanding nature's
+                fundamental principles and putting them to good use.
               </p>
             </div>
           </div>
