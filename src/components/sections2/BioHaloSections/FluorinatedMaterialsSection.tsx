@@ -182,12 +182,13 @@ export function FluorinatedMaterialsSection({
             {/* TEXT COLUMN */}
             <div className="w-full bg-red-500/0">
               <h1 className="max-w-[720px] font-black font-Arial text-4xl md:text-6xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
-                <span className="absolute bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm opacity-50">
+                <span className="absolute text-9xl scale-[1.2] opacity-20 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm">
                   PFAS{" "}
                 </span>
-                <span className="bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                <span className="text-9xl scale-[2] opacity-50 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
                   PFAS{" "}
                 </span>
+                <br />
                 <span className="">also known as</span>
                 <br />
                 "<span className="absolute bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm opacity-50">
