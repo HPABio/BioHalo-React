@@ -116,15 +116,14 @@ export const WhatWeDoSection = ({
         {/* Subtitle */}
         <div className="w-[720px] bg-red-500/0">
           <h2 className="text-gray-800/60 text-6xl font-poppins">
-            thruogh our enzyme-based biohalogenation platform
+          through our microbial-based biohalogenation platform
           </h2>
         </div>
 
         {/* Text */}
         <div className="h-[200px] w-[480px] bg-red-500/0 mt-10">
           <p className="text-gray-500/80 text-2xl font-poppins">
-            we can selectively halogenate organic molecules, opening up new
-            possibilities for{" "}
+          we can selectively halogenate organic molecules, opening up new possibilities for {" "}
             <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent">
               fluorine
             </span>
@@ -246,7 +245,11 @@ export const WhatWeDoSection = ({
                 <span className="bg-gradient-to-tr from-pinkAccent to-red-900/80 bg-clip-text text-transparent">
                   fluorine
                 </span>
-                -enhanced compound development.
+                -enhanced compound development. 
+                {/* These incredible achievements
+                are made possible by advances in synthetic biology and
+                biotechnology. Bringing us closer to understanding nature's
+                fundamental principles and putting them to good use. */}
               </p>
             </div>
           </div>

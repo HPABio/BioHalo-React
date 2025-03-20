@@ -24,6 +24,7 @@ import {
   Recycle,
   Zap,
   ArrowRight,
+  Droplet,
 } from "lucide-react";
 interface TechnologyFeature {
   id: number;
@@ -37,6 +38,13 @@ interface PlatformTechnologySectionProps {
 }
 
 const technologyFeatures: TechnologyFeature[] = [
+  {
+    id: 9,
+    title: "Reduced Fluorine Usage",
+    description:
+      "Our technology requires significantly less fluorine while maintaining or enhancing material performance.",
+    icon: <Droplet className="w-8 h-8 text-pinkAccent" />,
+  },
   {
     id: 1,
     title: "Bio-Based Enzyme Platform",
@@ -52,18 +60,18 @@ const technologyFeatures: TechnologyFeature[] = [
     icon: <Microscope className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
   },
   {
-    id: 3,
-    title: "Enzyme Engineering",
-    description:
-      "Our proprietary enzyme engineering platform enables precise control over fluorination reactions, targeting specific molecular positions.",
-    icon: <Atom className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
-  },
-  {
     id: 4,
     title: "Green Chemistry",
     description:
       "Our processes operate under mild conditions, using renewable resources and generating minimal waste.",
     icon: <Leaf className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+  },
+  {
+    id: 6,
+    title: "Circular Economy",
+    description:
+      "Our platform is designed with end-of-life considerations, enabling recyclability and biodegradability.",
+    icon: <Recycle className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
   },
   {
     id: 5,
@@ -73,11 +81,25 @@ const technologyFeatures: TechnologyFeature[] = [
     icon: <Beaker className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
   },
   {
-    id: 6,
-    title: "Circular Economy",
+    id: 7,
+    title: "Minimal By-Products",
     description:
-      "Our platform is designed with end-of-life considerations, enabling recyclability and biodegradability.",
-    icon: <Recycle className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+      "Our precision technology produces fewer unwanted by-products, increasing efficiency and reducing waste.",
+    icon: <Atom className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+  },
+  {
+    id: 8,
+    title: "Bio-Based Materials",
+    description:
+      "We utilize biological systems and renewable resources to create sustainable fluorinated polymers.",
+    icon: <Atom className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+  },
+  {
+    id: 3,
+    title: "Enzyme Engineering",
+    description:
+      "Our proprietary enzyme engineering platform enables precise control over fluorination reactions, targeting specific molecular positions.",
+    icon: <Atom className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
   },
 ];
 
@@ -94,25 +116,25 @@ interface TechnologyProcessStep {
 const technologyProcessSteps: TechnologyProcessStep[] = [
   {
     id: 1,
-    title: "DNA Engineering",
+    title: "Genetic Design",
     description:
-      "Our genetic engineering platform enables precise control over enzyme design and optimization.",
+      "We computationally design, test, and optimize genetic sequences to for initial enzyme/strain prototypes for your specific application.",
     image: DNALogo,
     alt: "DNA Structure",
   },
   {
     id: 2,
-    title: "Enzyme Technology",
+    title: "Metabolic and Enzymatic Engineering",
     description:
-      "We develop specialized enzymes with unique catalytic properties tailored for specific applications.",
+      "We rewire the metabolism of microorganisms tailored for the production of fluorinated monomers and polymers containing fluorine atoms at specific molecular positions.",
     image: enzymeImage,
     alt: "Enzyme Structure",
   },
   {
     id: 3,
-    title: "BioHalo Process",
+    title: "Screening & Optimization",
     description:
-      "Our proprietary BioHalo process introduces fluorine atoms at specific molecular positions.",
+      "In an itterative process, we screen and optimize the enzymes and strains for optimal performance.",
     image: BioHaloStep2,
     alt: "BioHalo Process",
   },
@@ -120,7 +142,7 @@ const technologyProcessSteps: TechnologyProcessStep[] = [
     id: 4,
     title: "Industrial Scaling",
     description:
-      "Our bioreactor technology enables sustainable industrial-scale production of enzymes and products.",
+      "Our fermentation process enables sustainable production compatible with industrial scale.",
     image: BioReactorBP,
     alt: "Bioreactor Blueprint",
   },
@@ -158,11 +180,11 @@ export const PlatformTechnologySection = ({
           className="text-center mb-16 relative"
         >
           <h1
-            className="text-5xl md:text-7xl font-bold mb-6 capitalize opacity-1 text-center xl:mt-[3vw]
+            className="text-5xl md:text-7xl font-bold mb-2 capitalize opacity-1 text-center xl:mt-[3vw]
                 bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent py-10"
           >
             <span className="text-4xl md:text-6xl">
-              With our revolutionary <br />
+              Discover our revolutionary <br />
             </span>
 
             <span
@@ -204,14 +226,19 @@ export const PlatformTechnologySection = ({
               <br />
             </span>
 
-            <span className="text-4xl md:text-6xl">
+            {/* <span className="text-4xl md:text-6xl">
               The{" "}
               <span className="text-4xl md:text-6xl bg-gradient-to-br from-mintAccent/40 to-mintAccent/70 bg-clip-text text-transparent">
                 Platform
               </span>{" "}
               Offers
-            </span>
+            </span> */}
           </h1>
+          <p className="text-gray-400 max-w-3xl mx-auto">
+          Harnessing the potential of biology for controlled <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+          fluorination
+          </span> which is deemed impossible by chemical approaches
+          </p>
           <MovingAtom
             width={60}
             height={60}
@@ -223,60 +250,17 @@ export const PlatformTechnologySection = ({
             scaleRange={[0.9, 1.1]}
             scaleDuration={4}
             color="rgba(18,110,119,1)"
-            className="absolute top-[22%] left-[17%]"
+            className="absolute top-[12%] right-[14%]"
           />
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-12 mb-20">
-          {/* Right side: Features list */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {technologyFeatures.map((feature) => (
-              <motion.div
-                key={feature.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: feature.id * 0.1 }}
-                className="p-6 bg-white/10 backdrop-blur-sm border border-mintAccent/0 rounded-xl hover:border-tealAccent transition-all group"
-              >
-                <div
-                  className="w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center mb-4 group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)]
-"
-                >
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-300">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-400">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-          <p className="text-md text-gray-700 max-w-3xl mx-auto text-center">
-            BioHalo's proprietary enzyme platform enables sustainable
-            fluorination through innovative biotechnology, replacing harmful
-            PFAS with eco-friendly alternatives without compromising
-            performance.
-          </p>
-        </div>
+
+       
+
+
 
         {/* Process Steps Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16 relative"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold capitalize bg-gradient-to-br from-mintAccent/60 to-mintAccent/80 bg-clip-text text-transparent py-6">
-            Our Technology Process
-          </h2>
-          <p className="text-gray-400 max-w-3xl mx-auto">
-            Discover how our platform transforms traditional chemistry into
-            sustainable bioprocesses
-          </p>
-        </motion.div>
-
-        <div className="space-y-24 mb-24">
+        <div className="space-y-24 mb-24 pt-16">
           {technologyProcessSteps.map((step, index) => (
             <motion.div
               key={step.id}
@@ -291,7 +275,7 @@ export const PlatformTechnologySection = ({
               {/* Image */}
               <div className="flex-1 relative group">
                 <div className="absolute inset-0 bg-tealAccent/20 rounded-2xl blur-3xl group-hover:blur-2xl opacity-70 transition-all duration-500 -z-10"></div>
-                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl border border-tealAccent/20 backdrop-blur-sm shadow-xl overflow-hidden">
+                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl border border-tealAccent/20 backdrop-blur-sm shadow-xl overflow-hidden h-[350px] flex items-center justify-center">
                   <Image
                     src={step.image}
                     alt={step.alt}
@@ -325,34 +309,53 @@ export const PlatformTechnologySection = ({
           ))}
         </div>
 
-        <div className="relative w-[100%] h-[50vh] overflow-visible">
-          <div className="w-full h-full flex">
-            {/* Left box */}
-            <div className="flex-1 bg-transparent flex items-end justify-center overflow-visible gap-14">
-              <div className="transform scale-125 origin-center ml-14">
-                <Image
-                  src={BioHaloStep2}
-                  alt="BioHaloStep2"
-                  width={500}
-                  height={500}
-                  className="opacity-80 max-w-none"
-                />
-              </div>
-            </div>
 
-            {/* Right box that extends beyond container */}
-            <div className="flex-1 min-width-[200px] relative bg-transparent flex items-end justify-center overflow-visible">
-              <div className="transform scale-150 origin-center translate-x-[45%] translate-y-[5%]">
-                <Image
-                  src={BioReactorBP}
-                  alt="BioReactorBP"
-                  width={650}
-                  height={600}
-                  className="opacity-80 max-w-none"
-                />
-              </div>
-            </div>
+        {/* Process Steps Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16 relative"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold capitalize bg-gradient-to-br from-mintAccent/60 to-mintAccent/80 bg-clip-text text-transparent py-6">
+            Our Technology Process
+          </h2>
+          <p className="text-gray-400 max-w-3xl mx-auto">
+            Discover how our platform transforms traditional chemistry into
+            sustainable bioprocesses
+          </p>
+        </motion.div>
+
+         {/* Features Section */}
+         <div className="grid grid-cols-1 gap-12 mb-20">
+          {/* Right side: Features list */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {technologyFeatures.map((feature) => (
+              <motion.div
+                key={feature.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: feature.id * 0.1 }}
+                className="p-6 bg-white/10 backdrop-blur-sm border border-mintAccent/0 rounded-xl hover:border-tealAccent transition-all group"
+              >
+                <div
+                  className="w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center mb-4 group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)]
+"
+                >
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-300">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-400">{feature.description}</p>
+              </motion.div>
+            ))}
           </div>
+          <p className="text-md text-gray-700 max-w-3xl mx-auto text-center">
+          Our technology enables the creation of bio-based alternatives to traditional fluorinated materials, offering superior performance while eliminating the environmental and health concerns associated with PFAS.
+
+          </p>
         </div>
 
         {/* <motion.div
@@ -381,7 +384,7 @@ export const PlatformTechnologySection = ({
         </motion.div>
  */}
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -410,7 +413,7 @@ export const PlatformTechnologySection = ({
               <Zap className="w-5 h-5 ml-2" />
             </a>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

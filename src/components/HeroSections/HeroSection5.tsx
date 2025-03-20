@@ -42,14 +42,15 @@ export const HeroSection5 = ({
           transition={{ delay: 1, duration: 1 }}
         >
           <SerenityShader
-            colors={["#BCE2E2", "#E10C73", "#115e59", "#134e4a"]}
+            colors={["#D2EDED", "#E953A0", "#4D8A87", "#4F7A77"]}
             className="z-0 opacity-1 w-[100vw] max-h-[1000px] md:max-h-[100vh] md:h-[100vh]"
             debug={false}
           />
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-b from-black/0 via-black/50 to-black" />
+      <div className="absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-t from-black via-black/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-t from-black via-black/30 to-transparent" />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -86,7 +87,7 @@ export const HeroSection5 = ({
                                                 <span className="block uppercase mt-4 mb-2 font-medium text-gray-500/90 max-w-4xl mx-auto">
                                                 We disrupt the{" "}
                                                 <span className="font-black bg-pink-800 bg-gradient-to-br from-gray-800/60 via-gray-200/30 to-gray-900/30 bg-clip-text text-transparent">
-                                                  forever chemical
+                                                  forever chemicals
                                                 </span>{" "}
                                                 industry using{" "}
                                                 <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
@@ -107,7 +108,7 @@ export const HeroSection5 = ({
                 animationdelay: "0.3s",
               }}
             />
-            <MovingAtom
+            <MovingAtom 
               width={90}
               height={90}
               hoverAmplitude={6}

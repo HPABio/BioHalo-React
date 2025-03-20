@@ -172,7 +172,7 @@ export function FluorinatedMaterialsSection({
     <section className={`${className} relative`}>
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
 
-        <div className="w-full md:h-[1200px] lg:h-[1400px]  relative">
+        <div className="w-full md:h-[1300px] lg:h-[1500px]  relative">
           <div className="w-full h-full relative bg-gradient-to-b bg-teal-950 from-black via-black/70 to-black">
             
           </div>
@@ -182,17 +182,23 @@ export function FluorinatedMaterialsSection({
             {/* TEXT COLUMN */}
             <div className="w-full bg-red-500/0">
               <h1 className="max-w-[720px] font-black font-Arial text-4xl md:text-6xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
-                <span className="">We encounter</span>
-                <br />
                 <span className="absolute bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm opacity-50">
-                  Fluorinated{" "}
+                  PFAS{" "}
                 </span>
                 <span className="bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
-                  Fluorinated{" "}
+                  PFAS{" "}
                 </span>
-                <span className=""> Materials</span>
+                <span className="">also known as</span>
                 <br />
-                in our lives every day
+                "<span className="absolute bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm opacity-50">
+                  Forever Chemicals
+                </span>
+                <span className="bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                  Forever Chemicals
+                </span>"
+                <span className=""> are fluorinated materials 
+                  that can be found everywhere
+                  </span>
               </h1>
             </div>
 
@@ -203,28 +209,14 @@ export function FluorinatedMaterialsSection({
                 <div className="space-y-4 ">
                   <p className="text-2xl md:text-3xl text-gray-300">
                     From coatings and textiles to <br />
-                    food packaging and electronics, <br />
-                    <span className="relative group">
-                      <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
-                        PFAS
-                      </span>
-                      <span className="invisible group-hover:visible absolute left-0 top-full mt-2 w-64 p-4 bg-white/90 backdrop-blur-md rounded-lg shadow-lg text-sm text-gray-800 transition-all duration-200 ease-in-out">
-                      <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
-                        PFAS
-                      </span> are Per- and PolyfluoroAlkyl Substances also known as "<span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
-                      forever chemicals
-                      </span>"
-                      </span>
-                    </span>{" "}
-                    are everywhere.
+                    food packaging and electronics
                   </p>
                   <p className="text-lg max-w-md pt-4 leading-relaxed text-gray-500">
-                    Due to their unique properties, like heat resistance, water
-                    repellency, and chemical stability, these so called "<span className="bg-gradient-to-tr from-fuchsia-700/70 via-pinkAccent to-red-900/80 bg-clip-text text-transparent">
-                  foever chemicals
-                </span>" are highly sought
-                    after and used in a wide range of materials and technologies. From industrial
-                    applications to consumer products, fluorinated-compounds are everywhere.
+                  Due to their unique properties, like heat resistance and water repellency, they are used in a wide range of products.
+                  However, these special properties also make them nearly impossible to degrade and <br/> <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                  highly toxic
+                </span>. PFAS accumulate in the environment and pose a threat to public health and the environment itself. 
+
                   </p>
                 </div>
               </div>
