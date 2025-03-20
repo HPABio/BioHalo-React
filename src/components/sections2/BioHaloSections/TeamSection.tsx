@@ -91,7 +91,7 @@ interface TeamSectionProps {
 export const TeamSection: React.FC<TeamSectionProps> = ({ className = "" }) => {
   return (
     <section
-      className={`py-24 bg-gradient-to-br from-gray-50 via-mintAccent/50 to-mintAccent/80 ${className}`}
+      className={`py-24 bg-gradient-to-br from-gray-50 via-gray-300 to-gray-100 ${className}`}
     >
       <div className="w-full h-[100px] bg-gradient-to-t from-gray-50/0 via-gray-50/30 to-gray-50 -mt-[100px]"></div>
       <div className="container mx-auto px-6">
@@ -110,7 +110,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ className = "" }) => {
           </span>
         </h1>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 justify-items-center md:max-w-[calc(580px+2rem)] xl:max-w-[calc(1160px+3rem)]">
           {teamMembers.map((member) => (
             <TeamMemberCard key={member.id} member={member} />
           ))}
@@ -125,7 +125,7 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
 
   return (
     <motion.div
-      className="rounded-xl overflow-hidden relative h-[420px] filter grayscale"
+      className="rounded-xl overflow-hidden relative h-[420px] w-[290px]"
       initial={{ y: 0 }}
       whileHover={{
         y: -8,
@@ -140,19 +140,23 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
       }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
+      style={{ filter: isHovered ? "grayscale(0%)" : "grayscale(20%)" }}
     >
       {/* Card background with gradient that changes on hover */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-br from-tealAccent to-mintAccent"
-        initial={{ opacity: 0.6 }}
+        initial={{
+          opacity: 0.6,
+          filter: "grayscale(20%)",
+        }}
         animate={{
           opacity: isHovered ? 1 : 0.6,
-          filter: isHovered ? "grayscale(0%)" : "grayscale(100%)",
+          filter: isHovered ? "grayscale(0%)" : "grayscale(20%)",
         }}
         transition={{ duration: 0.4 }}
       />
 
-      {/* Full-size image that spans the entire card (always grayscale) */}
+      {/* Full-size image that spans the entire card (grayscale controlled by parent) */}
       <div className="absolute inset-0 w-full h-full">
         <motion.div
           className="relative w-full h-full"
@@ -164,14 +168,14 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
           <Image
             src={member.image}
             alt={member.name}
-            className="w-full h-full object-cover object-top filter grayscale"
+            className="w-full h-full object-cover object-top grayscale"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
-            />
+          />
         </motion.div>
       </div>
-            
+
       {/* White overlay for text area */}
       <div className="absolute bottom-0 left-0 right-0 h-[130px] bg-lightGrey backdrop-blur-sm border-t border-gray-100 z-20"></div>
 
@@ -180,7 +184,7 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
         <motion.h3
           className="text-xl font-semibold mb-1 text-gray-800"
           animate={{
-            color: isHovered ? "rgb(20, 184, 166)" : "rgb(31, 41, 55)",
+            color: isHovered ? "rgb(34, 85, 102)" : "rgb(31, 41, 55)",
           }}
           transition={{ duration: 0.3 }}
         >

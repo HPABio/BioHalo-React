@@ -31,6 +31,7 @@ import { MeetUsAtSection } from "@/components/sections2/BioHaloSections/MeetUsAt
 import { PlatformTechnologySection } from "@/components/sections2/BioHaloSections/PlatformTechnologySection";
 import { PartnersMarqueeSection } from "@/components/sections2/BioHaloSections/PartnersMarqueeSection";
 import { SuccessesSection } from "@/components/sections2/BioHaloSections/SuccessesSection";
+import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSection";
 
 // ✅ Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
@@ -224,6 +225,11 @@ export const Showcase4 = () => {
       {/* Team Section */}
       <section id="team-section">
         <TeamSection className="w-full" />
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact-section">
+        <ContactSection className="w-full" />
       </section>
 
       {/* Bento Section 
