@@ -87,7 +87,7 @@ export const HeroSection5 = ({
                                                 <span className="block uppercase mt-4 mb-2 font-medium text-gray-500/90 max-w-4xl mx-auto">
                                                 We disrupt the{" "}
                                                 <span className="font-black bg-pink-800 bg-gradient-to-br from-gray-800/60 via-gray-200/30 to-gray-900/30 bg-clip-text text-transparent">
-                                                  forever chemical
+                                                  forever chemicals
                                                 </span>{" "}
                                                 industry using{" "}
                                                 <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
@@ -108,7 +108,7 @@ export const HeroSection5 = ({
                 animationdelay: "0.3s",
               }}
             />
-            <MovingAtom
+            <MovingAtom 
               width={90}
               height={90}
               hoverAmplitude={6}

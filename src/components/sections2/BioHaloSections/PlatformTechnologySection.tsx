@@ -116,17 +116,17 @@ interface TechnologyProcessStep {
 const technologyProcessSteps: TechnologyProcessStep[] = [
   {
     id: 1,
-    title: "Genetic Design & Engineering",
+    title: "Genetic Design",
     description:
-      "We computationally design, test, and optimize genetic sequences to for initial enzyme prototypes for your specific application.",
+      "We computationally design, test, and optimize genetic sequences to for initial enzyme/strain prototypes for your specific application.",
     image: DNALogo,
     alt: "DNA Structure",
   },
   {
     id: 2,
-    title: "Enzyme Technology",
+    title: "Metabolic and Enzymatic Engineering",
     description:
-      "We then use these designs to create a physical version of the enzyme prototype.",
+      "We rewire the metabolism of microorganisms tailored for the production of fluorinated monomers and polymers containing fluorine atoms at specific molecular positions.",
     image: enzymeImage,
     alt: "Enzyme Structure",
   },
@@ -134,7 +134,7 @@ const technologyProcessSteps: TechnologyProcessStep[] = [
     id: 3,
     title: "Screening & Optimization",
     description:
-      "In an itterative process, we screen and optimize the enzyme prototypes until we find the best variant.",
+      "In an itterative process, we screen and optimize the enzymes and strains for optimal performance.",
     image: BioHaloStep2,
     alt: "BioHalo Process",
   },
@@ -142,7 +142,7 @@ const technologyProcessSteps: TechnologyProcessStep[] = [
     id: 4,
     title: "Industrial Scaling",
     description:
-      "The final enzyme is then ready for final adjustments and use in a bioreactor to scale up production.",
+      "Our fermentation process enables sustainable production compatible with industrial scale.",
     image: BioReactorBP,
     alt: "Bioreactor Blueprint",
   },
@@ -235,8 +235,9 @@ export const PlatformTechnologySection = ({
             </span> */}
           </h1>
           <p className="text-gray-400 max-w-3xl mx-auto">
-            Our platform transforms traditional chemistry into
-            sustainable bioprocesses
+          Harnessing the potential of biology for controlled <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+          fluorination
+          </span> which is deemed impossible by chemical approaches
           </p>
           <MovingAtom
             width={60}
@@ -352,10 +353,8 @@ export const PlatformTechnologySection = ({
             ))}
           </div>
           <p className="text-md text-gray-700 max-w-3xl mx-auto text-center">
-            BioHalo's proprietary enzyme platform enables sustainable
-            fluorination through innovative biotechnology, replacing harmful
-            PFAS with eco-friendly alternatives without compromising
-            performance.
+          Our technology enables the creation of bio-based alternatives to traditional fluorinated materials, offering superior performance while eliminating the environmental and health concerns associated with PFAS.
+
           </p>
         </div>
 
