@@ -51,13 +51,8 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2">
               <li className="text-gray-400">
-                <a href="mailto:nico@biohalo.io" className="hover:text-mintAccent">
-                  nico@biohalo.io
-                </a>
-              </li>
-              <li className="text-gray-400">
-                <a href="mailto:johann@biohalo.io" className="hover:text-mintAccent">
-                  johann@biohalo.io
+                <a href="mailto:info@biohalo.io" className="hover:text-mintAccent">
+                  info@biohalo.io
                 </a>
               </li>
             </ul>

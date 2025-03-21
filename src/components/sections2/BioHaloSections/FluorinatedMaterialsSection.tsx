@@ -172,22 +172,23 @@ export function FluorinatedMaterialsSection({
     <section className={`${className} relative`}>
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
 
-        <div className="w-full md:h-[1300px] lg:h-[1500px]  relative">
+        <div className="w-full md:h-[1350px] lg:h-[1600px]  relative">
           <div className="w-full h-full relative bg-gradient-to-b bg-teal-950 from-black via-black/70 to-black">
             
           </div>
 
         <div className="absolute w-full h-full top-0 left-0 overflow-hidden xl:overflow-visible xl:bg-transparent bg-black  ">
-          <div className="w-full h-full max-w-[1280px] mx-auto px-14  pt-[50px] -mb-[0px]">
+          <div className="w-full h-full max-w-[1280px] mx-auto px-14  pt-[20px] -mb-[0px]">
             {/* TEXT COLUMN */}
             <div className="w-full bg-red-500/0">
               <h1 className="max-w-[720px] font-black font-Arial text-4xl md:text-6xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
-                <span className="absolute bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm opacity-50">
+                <span className="absolute text-9xl scale-[1.2] opacity-20 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm">
                   PFAS{" "}
                 </span>
-                <span className="bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                <span className="text-9xl scale-[2] opacity-50 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
                   PFAS{" "}
                 </span>
+                <br />
                 <span className="">also known as</span>
                 <br />
                 "<span className="absolute bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm opacity-50">
@@ -275,25 +276,7 @@ export function FluorinatedMaterialsSection({
                   </motion.div>
                 </div>
 
-                {/* Circle 4 */}
-                <div className="block xl:hidden w-[700px] h-[700px] absolute top-[50%] left-0 translate-y-[35%] -translate-x-[120%]">
-                  <div className="relative w-[700px] h-[700px] rounded-full overflow-hidden border-2 border-lightGrey/40 grid place-items-center">
-                    <Image
-                      src={WaterRepellantFabric}
-                      alt="WaterRepellantFabric"
-                      fill
-                      priority
-                      sizes="(max-width: 768px) 100vw, 700px"
-                      style={{ objectFit: "cover" }}
-                      className="w-full h-full absolute inset-0"
-                    />
-
-                    <div className="opacity-60 absolute inset-0 bg-gradient-to-tr from-tealAccent via-tealAccent to-mintAccent mix-blend-multiply"></div>
-                    <div className="opacity-10 w-full h-full flex items-center justify-center">
-                      {/* <EcoliTripletsSVG className="w-[100%] h-[100%] translate-x-[-3%] translate-y-[2%] opacity-40 mix-blend-screen" /> */}
-                    </div>
-                  </div>
-                </div>
+               
               </div>
             </div>
           </div>

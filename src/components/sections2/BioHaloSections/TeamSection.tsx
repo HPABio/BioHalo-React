@@ -94,19 +94,19 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ className = "" }) => {
       className={`py-24 bg-gradient-to-br from-gray-50 via-gray-300 to-gray-100 ${className}`}
     >
       <div className="w-full h-[100px] bg-gradient-to-t from-gray-50/0 via-gray-50/30 to-gray-50 -mt-[100px]"></div>
-      <div className="container mx-auto px-6">
-        <h1 className="font-black font-Arial text-6xl bg-gradient-to-br from-teal-800/80 via-tealAccent/80 to-tealAccent/70 bg-clip-text text-transparent pb-10 text-center">
+      <div className="container mx-auto px-4 sm:px-6">
+        <h1 className="font-black font-Arial text-3xl sm:text-4xl md:text-6xl bg-gradient-to-br from-teal-800/80 via-tealAccent/80 to-tealAccent/70 bg-clip-text text-transparent pb-6 sm:pb-10 text-center">
           Meet the Team behind <br />
           <span
-            className="font-poppins font-bold flex items-center justify-center
-          text-black text-[clamp(110px,10vw,150px)] mx-auto"
+            className="font-poppins font-bold flex flex-col sm:flex-row items-center justify-center
+          text-black text-[clamp(60px,8vw,150px)] sm:text-[clamp(110px,10vw,150px)] mx-auto"
           >
             <Image
               src={BioHaloLogoOnly}
               alt="BioHalo Logo"
-              className="h-[1em] w-auto ml-4"
+              className="h-[0.8em] sm:h-[1em] w-auto sm:ml-4"
             />
-            BioHalo
+            <span className="mt-2 sm:mt-0">BioHalo</span>
           </span>
         </h1>
 
