@@ -89,8 +89,8 @@ export const SimpleStatsBox = React.memo(
     scrollYProgress,
     scrollEndThreshold = 0.4,
     classNamesContainer = "backdrop-blur-sm bg-black/20 p-8 rounded-lg text-center shadow-xl",
-    classNamesTitle = "text-5xl md:text-7xl font-bold text-tealAccent mb-2",
-    classNamesSubTitle = "text-mintAccent text-lg font-bold -mt-4",
+    classNamesTitle = "text-4xl sm:text-5xl md:text-7xl font-bold text-tealAccent mb-2",
+    classNamesSubTitle = "text-mintAccent text-sm sm:text-lg font-bold -mt-2 sm:-mt-4",
   }: StatsBoxProps) {
     // State to hold the current displayed value
     const [displayValue, setDisplayValue] = useState(0);
@@ -104,10 +104,13 @@ export const SimpleStatsBox = React.memo(
     );
 
     // Memoize the numeric value parsing
-    const numericValue = useMemo(() => parseInt(stat.number, 10), [stat.number]);
+    const numericValue = useMemo(
+      () => parseInt(stat.number, 10),
+      [stat.number]
+    );
 
     // Create the motion value for the rounded number
-    const rounded = useTransform(progress, (latest) => 
+    const rounded = useTransform(progress, (latest) =>
       Math.round(isNaN(numericValue) ? 0 : numericValue * latest)
     );
 
@@ -127,7 +130,11 @@ export const SimpleStatsBox = React.memo(
           </span>
         </h3>
         <p className={classNamesSubTitle}>{stat.label}</p>
-        {text && <p className="text-white/80 text-sm mt-4">{text}</p>}
+        {text && (
+          <p className="text-white/80 text-xs sm:text-sm mt-2 sm:mt-4">
+            {text}
+          </p>
+        )}
       </div>
     );
   },
@@ -136,7 +143,6 @@ export const SimpleStatsBox = React.memo(
     return prevProps.stat.number === nextProps.stat.number;
   }
 );
-
 
 export function StaticStatsBox({
   stat,

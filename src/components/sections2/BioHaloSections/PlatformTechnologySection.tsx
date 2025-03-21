@@ -16,6 +16,7 @@ import enzymeImage from "@/assets/images/BluePrint with Color/Enzyme.png";
 
 import {
   Beaker,
+  Sprout,
   Dna,
   Microscope,
   Atom,
@@ -25,6 +26,7 @@ import {
   Zap,
   ArrowRight,
   Droplet,
+  TrendingDown,
 } from "lucide-react";
 interface TechnologyFeature {
   id: number;
@@ -43,29 +45,38 @@ const technologyFeatures: TechnologyFeature[] = [
     title: "Reduced Fluorine Usage",
     description:
       "Our technology requires significantly less fluorine while maintaining or enhancing material performance.",
-    icon: <Droplet className="w-8 h-8 text-pinkAccent" />,
+    icon: (
+      <TrendingDown className="w-8 h-8  text-teal-700 hover:text-teal-500" />
+    ),
   },
   {
+    id: 8,
+    title: "Bio-Based Materials",
+    description:
+      "We utilize biological systems and renewable resources to create sustainable and safe fluorinated polymers.",
+    icon: <Sprout className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+  },
+  {
+    id: 7,
+    title: "Minimal By-Products",
+    description:
+      "Our precision technology produces fewer unwanted by-products, increasing efficiency and reducing waste.",
+    icon: <Zap className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+  },
+  /* {
     id: 1,
     title: "Bio-Based Enzyme Platform",
     description:
       "Our computational platform predicts and optimizes enzyme performance for specific substrates and reaction conditions.",
     icon: <Dna className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
-  },
-  {
+  }, */
+  /* {
     id: 2,
     title: "Biocatalysis",
     description:
       "We harness the power of biocatalysts to perform chemical transformations with unprecedented selectivity and efficiency.",
     icon: <Microscope className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
-  },
-  {
-    id: 4,
-    title: "Green Chemistry",
-    description:
-      "Our processes operate under mild conditions, using renewable resources and generating minimal waste.",
-    icon: <Leaf className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
-  },
+  }, */
   {
     id: 6,
     title: "Circular Economy",
@@ -74,33 +85,27 @@ const technologyFeatures: TechnologyFeature[] = [
     icon: <Recycle className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
   },
   {
+    id: 4,
+    title: "Green Chemistry",
+    description:
+      "Our processes operate under mild conditions, using renewable resources and generating minimal waste.",
+    icon: <Leaf className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+  },
+  /* {
     id: 5,
     title: "Scalable Production",
     description:
       "Our technology seamlessly scales from laboratory to industrial production while maintaining performance and sustainability.",
     icon: <Beaker className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
-  },
-  {
-    id: 7,
-    title: "Minimal By-Products",
-    description:
-      "Our precision technology produces fewer unwanted by-products, increasing efficiency and reducing waste.",
-    icon: <Atom className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
-  },
-  {
-    id: 8,
-    title: "Bio-Based Materials",
-    description:
-      "We utilize biological systems and renewable resources to create sustainable fluorinated polymers.",
-    icon: <Atom className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
-  },
-  {
+  }, */
+
+  /* {
     id: 3,
     title: "Enzyme Engineering",
     description:
       "Our proprietary enzyme engineering platform enables precise control over fluorination reactions, targeting specific molecular positions.",
     icon: <Atom className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
-  },
+  }, */
 ];
 
 // Add new interface for technology process steps
@@ -116,15 +121,15 @@ interface TechnologyProcessStep {
 const technologyProcessSteps: TechnologyProcessStep[] = [
   {
     id: 1,
-    title: "Genetic Design",
+    title: "DNA Engineering",
     description:
-      "We computationally design, test, and optimize genetic sequences to for initial enzyme/strain prototypes for your specific application.",
+      "Our genetic engineering platform enables precise control over microbial gene expression.",
     image: DNALogo,
     alt: "DNA Structure",
   },
   {
     id: 2,
-    title: "Metabolic and Enzymatic Engineering",
+    title: "Metabolic Engineering Technology for controlled fluorination",
     description:
       "We rewire the metabolism of microorganisms tailored for the production of fluorinated monomers and polymers containing fluorine atoms at specific molecular positions.",
     image: enzymeImage,
@@ -134,7 +139,7 @@ const technologyProcessSteps: TechnologyProcessStep[] = [
     id: 3,
     title: "Screening & Optimization",
     description:
-      "In an itterative process, we screen and optimize the enzymes and strains for optimal performance.",
+      "In an iterative process, we screen and optimize the enzymes and strains for optimal performance.",
     image: BioHaloStep2,
     alt: "BioHalo Process",
   },
@@ -155,7 +160,7 @@ export const PlatformTechnologySection = ({
     <section className={`w-full relative ${className} overflow-hidden`}>
       <div className="relative bottom-0 left-0 w-full h-[200px] bg-gradient-to-b from-black/0 via-black/50 to-black">
         <div
-          className="relative top-0 left-[50%] translate-x-[-30%] translate-y-[-580px] w-[800px] h-[800px] opacity-70"
+          className="relative top-0 left-[50%] translate-x-[-50%] lg:translate-x-[-30%]  translate-y-[-380px] lg:translate-y-[-580px] w-[500px] h-[500px] lg:w-[800px] lg:h-[800px] "
           style={{
             backgroundImage: `url(${beaker.src})`,
             backgroundSize: "contain",
@@ -164,8 +169,9 @@ export const PlatformTechnologySection = ({
           }}
         />
       </div>
+      
 
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-8">
         <div className="absolute bottom-[100%] left-[100%] translate-x-[-50%] translate-y-[50%] opacity-[4%] mix-blend-screen">
           <AtomDiagram width={5300} height={5300} color="rgba(18,110,119,1)" />
         </div>
@@ -180,10 +186,10 @@ export const PlatformTechnologySection = ({
           className="text-center mb-16 relative"
         >
           <h1
-            className="text-5xl md:text-7xl font-bold mb-2 capitalize opacity-1 text-center xl:mt-[3vw]
-                bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent py-10"
+            className="text-3xl sm:text-5xl md:text-7xl font-bold mb-2 capitalize opacity-1 text-center xl:mt-[3vw]
+                bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent py-6 sm:py-10"
           >
-            <span className="text-4xl md:text-6xl">
+            <span className="text-2xl sm:text-4xl md:text-6xl">
               Discover our revolutionary <br />
             </span>
 
@@ -234,10 +240,12 @@ export const PlatformTechnologySection = ({
               Offers
             </span> */}
           </h1>
-          <p className="text-gray-400 max-w-3xl mx-auto">
-          Harnessing the potential of biology for controlled <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
-          fluorination
-          </span> which is deemed impossible by chemical approaches
+          <p className="text-gray-400 max-w-3xl mx-auto text-sm sm:text-base md:text-lg">
+            Harnessing the potential of biology for controlled{" "}
+            <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+              fluorination
+            </span>{" "}
+            which is deemed impossible by chemical approaches
           </p>
           <MovingAtom
             width={60}
@@ -253,11 +261,6 @@ export const PlatformTechnologySection = ({
             className="absolute top-[12%] right-[14%]"
           />
         </motion.div>
-
-
-       
-
-
 
         {/* Process Steps Section */}
         <div className="space-y-24 mb-24 pt-16">
@@ -300,15 +303,14 @@ export const PlatformTechnologySection = ({
 
                 {index < technologyProcessSteps.length - 1 && (
                   <div className="hidden md:flex items-center text-tealAccent/70">
-                    <span className="mr-2">Next Step</span>
-                    <ArrowRight className="w-5 h-5 animate-pulse" />
+                    {/* <span className="mr-2">Next Step</span>
+                    <ArrowRight className="w-5 h-5 animate-pulse" /> */}
                   </div>
                 )}
               </div>
             </motion.div>
           ))}
         </div>
-
 
         {/* Process Steps Section */}
         <motion.div
@@ -326,8 +328,8 @@ export const PlatformTechnologySection = ({
           </p>
         </motion.div>
 
-         {/* Features Section */}
-         <div className="grid grid-cols-1 gap-12 mb-20">
+        {/* Features Section */}
+        <div className="grid grid-cols-1 gap-12 mb-20">
           {/* Right side: Features list */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {technologyFeatures.map((feature) => (
@@ -353,8 +355,14 @@ export const PlatformTechnologySection = ({
             ))}
           </div>
           <p className="text-md text-gray-700 max-w-3xl mx-auto text-center">
-          Our technology enables the creation of bio-based alternatives to traditional fluorinated materials, offering superior performance while eliminating the environmental and health concerns associated with PFAS.
-
+            We use a combination of computational tools and experimental
+            techniques to optimize enzyme performance and metabolic pathways.
+            <br />
+            <br />
+            Our technology enables the creation of bio-based alternatives to
+            traditional fluorinated materials, offering superior performance
+            while eliminating the environmental and health concerns associated
+            with PFAS.
           </p>
         </div>
 

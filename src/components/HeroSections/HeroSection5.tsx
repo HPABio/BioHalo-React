@@ -42,7 +42,12 @@ export const HeroSection5 = ({
           transition={{ delay: 1, duration: 1 }}
         >
           <SerenityShader
-            colors={["#D2EDED", "#E953A0", "#4D8A87", "#4F7A77"]}
+            colors={[
+              "#D2EDED", // Light cyan - 5% lighter than #D2EDED
+              "#EB65AA", // Pink - 5% lighter than #E953A0
+              "#5A9693", // Teal - 5% lighter than #4D8A87
+              "#5C8683"  // Slate teal - 5% lighter than #4F7A77
+            ]}
             className="z-0 opacity-1 w-[100vw] max-h-[1000px] md:max-h-[100vh] md:h-[100vh]"
             debug={false}
           />
