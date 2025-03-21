@@ -30,6 +30,7 @@ interface WhatWeDoSectionProps {
 }
 
 export const WhatWeDoSection = ({
+
   stats,
   className,
   debug = false,
@@ -65,7 +66,7 @@ export const WhatWeDoSection = ({
           <Image
             src={BioHaloLogoOnly}
             alt="BioHalo Logo"
-            className="absolute w-[43%] right-0 -translate-x-[12%] 2xl:translate-x-[2vw] xl:-translate-y-[20%]"
+            className="absolute w-[43%] right-0 -translate-x-[12%] xl:-translate-y-[20%] max-w-[900px]"
           />
         </div>
         {/*       <div className="hidden lg:block xl:hidden absolute w-[400px] h-[400px] top-0 right-[5%]  rounded-full 

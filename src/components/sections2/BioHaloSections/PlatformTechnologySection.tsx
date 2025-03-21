@@ -263,7 +263,7 @@ export const PlatformTechnologySection = ({
         </motion.div>
 
         {/* Process Steps Section */}
-        <div className="space-y-24 mb-24 pt-16">
+        <div className="space-y-14 xl:space-y-24 mb-24 pt-16">
           {technologyProcessSteps.map((step, index) => (
             <motion.div
               key={step.id}
@@ -271,7 +271,7 @@ export const PlatformTechnologySection = ({
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`flex flex-col ${
+              className={`max-sm:text-center px-32 md:px-12 lg:px-32 flex flex-col ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               } items-center gap-8 md:gap-16`}
             >
