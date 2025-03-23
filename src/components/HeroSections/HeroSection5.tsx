@@ -75,8 +75,8 @@ export const HeroSection5 = ({
                  
                   {/* Logo container */}
                   <div className="flex flex-col w-[clamp(450px,80%,1600px)] relative bg-red-500/0">
-                                    <div className="w-full h-full absolute top-0 left-0 bg-blue-500/0">
-
+                                    {/* Desktop version */}
+                                    <div className="w-full h-full absolute top-0 left-0 bg-blue-500/0 hidden md:block">
                                               <div className="w-[65%] h-full absolute top-0 right-0 bg-pink-500/0">
                                               <p className="w-full absolute right-0 bottom-0 tracking-widest text-[clamp(0.6rem,1.5vw,2rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-green-300/0">
                                                 Your Partner in{" "}
@@ -101,12 +101,38 @@ export const HeroSection5 = ({
                                               </span>
                                               </p>
                                               </div>
-                                  
+                                    </div>
 
-                                  </div>
+                                    {/* Mobile version */}
+                                    <div className="w-full h-full absolute top-0 left-0 bg-blue-500/0 block md:hidden">
+                                              <div className="w-full h-full absolute top-0 left-0 bg-pink-500/0">
+                                              <p className="w-full absolute left-0 bottom-[-60%] tracking-widest text-[clamp(0.6rem,3vw,1.2rem)] font-medium uppercase text-center text-gray-700/80 bg-green-300/0">
+                                                Your Partner in<br />
+                                                <span
+                                                  className="text-[clamp(0.8rem,3.5vw,1.5rem)] bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent 
+                                                uppercase drop-shadow-sm font-black font-Poppins"
+                                                >
+                                                  Biohalogenation
+                                                </span><br />
+                                                Chemistry
+                                            </p>
+                                              <p className="w-full absolute left-0 bottom-[-110%] tracking-widest text-[clamp(0.3rem,2vw,0.9rem)] font-medium uppercase text-center text-gray-700/80 bg-green-300/0">
+                                                <span className="block uppercase mt-4 mb-2 font-medium text-gray-500/90 max-w-4xl mx-auto">
+                                                We disrupt the{" "}
+                                                <span className="font-black bg-pink-800 bg-gradient-to-br from-gray-800/60 via-gray-200/30 to-gray-900/30 bg-clip-text text-transparent">
+                                                  forever chemicals
+                                                </span><br />
+                                                industry using{" "}
+                                                <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
+                                                  enzymes
+                                                </span>
+                                              </span>
+                                              </p>
+                                              </div>
+                                    </div>
             <BioHaloLogo2
               styles={{
-                classNames: "w-full h-full opacity-1",
+                classNames: "w-[80%] h-[80%] md:w-full md:h-full opacity-1",
                 width: "100%",
                 height: "100%",
                 animationduration: "1.5s",

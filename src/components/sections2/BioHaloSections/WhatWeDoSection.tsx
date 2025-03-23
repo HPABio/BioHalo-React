@@ -79,17 +79,18 @@ export const WhatWeDoSection = ({
       }}
       /> */}
 
-        <div className="w-[720px] bg-red-500/0 mt-10 relative z-10">
-          <h2 className="relative font-black font-Arial text-6xl bg-gradient-to-tl from-tealAccent to-tealAccent/60 bg-clip-text text-transparent pb-10">
+        <div className="w-full sm:w-full md:w-[720px] bg-red-500/0 md:mt-10 relative z-10">
+          <h2 className="relative font-black font-Arial text-4xl sm:text-5xl md:text-6xl bg-gradient-to-tl from-tealAccent to-tealAccent/60 bg-clip-text text-transparent 
+          pb-6 md:pb-10">
             <span
-              className="font-poppins font-bold flex items-center -mb-14
-          text-black text-[clamp(110px,10vw,150px)] w-[560px]"
+              className="font-poppins font-bold flex items-center -mb-8 sm:-mb-10 md:-mb-14
+          text-black text-5xl md:text-[clamp(110px,10vw,150px)] w-full sm:w-[400px] md:w-[560px]"
             >
               BioHalo
               <Image
                 src={BioHaloLogoOnly}
                 alt="BioHalo Logo"
-                className="h-[1em] w-auto ml-4 xl:hidden"
+                className="h-[1em] w-auto ml-2 sm:ml-3 md:ml-4 xl:hidden"
               />
             </span>
             <br />
@@ -99,7 +100,7 @@ export const WhatWeDoSection = ({
               <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent cursor-help">
                 PFAS{" "}
               </span>
-              <span className="invisible font-normal group-hover:visible absolute left-0 top-full mt-2 w-64 p-4 bg-white/90 backdrop-blur-md rounded-lg shadow-lg text-sm text-gray-800 z-50 transition-all duration-200 ease-in-out">
+              <span className="invisible font-normal group-hover:visible absolute left-0 top-full mt-2 w-56 sm:w-60 md:w-64 p-3 md:p-4 bg-white/90 backdrop-blur-md rounded-lg shadow-lg text-xs sm:text-sm text-gray-800 z-50 transition-all duration-200 ease-in-out">
                 <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
                   PFAS
                 </span>{" "}
@@ -115,14 +116,14 @@ export const WhatWeDoSection = ({
         </div>
 
         {/* Subtitle */}
-        <div className="w-[720px] bg-red-500/0">
-          <h2 className="text-gray-800/60 text-6xl font-poppins">
+        <div className="w-full sm:w-full md:w-[720px] bg-red-500/0">
+          <h2 className="text-gray-800/60 text-4xl sm:text-5xl md:text-6xl font-poppins">
             through our microbial-based biohalogenation platform
           </h2>
         </div>
 
         {/* Text */}
-        <div className="h-[200px] w-[480px] bg-red-500/0 mt-10">
+        <div className="h-[200px] w-full md:w-[480px] bg-red-500/0 my-6 md:mt-10">
           <p className="text-gray-500/80 text-2xl font-poppins">
             we can selectively halogenate organic molecules, opening up new
             possibilities for{" "}
@@ -134,7 +135,7 @@ export const WhatWeDoSection = ({
         </div>
 
         {/* Circular Image Section */}
-        <div className="relative w-full md:w-[1200px] h-[600px] sm:h-[800px] bg-red-500/0 mt-10 sm:mt-16">
+        <div className="relative w-full md:w-[1200px] h-[600px] sm:h-[800px] bg-red-500/0 mt-16 md:mt-16">
           {/* Top/Middle Circle */}
           <div className="absolute h-[400px] w-[400px] sm:h-[600px] sm:w-[600px] md:h-[800px] md:w-[800px] rounded-full left-[10%] sm:left-[25%] -top-[15%] sm:-top-[22%] lg:-top-[15%] overflow-hidden drop-shadow-xl flex items-center justify-center">
             <Image
@@ -206,7 +207,7 @@ export const WhatWeDoSection = ({
         </div>
 
         {/* Text Section */}
-        <div className="bg-black/0 text-gray-800/70 pt-8 w-[1200px] relative">
+        <div className="bg-black/0 text-gray-800/70 pt-8 w-full md:w-[1200px] relative">
           {/* Header Section */}
           <div className="space-y-16 bg-red-500/0 relative">
             {/* Top Text Section */}
@@ -289,7 +290,8 @@ export const WhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(195,12,95,1)" //pink
-          className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-250%] lg:translate-x-[200%] lg:-translate-y-[50%] opacity-90 z-5"
+          className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-250%] 
+          lg:translate-x-[200%] lg:-translate-y-[50%] opacity-90 z-5"
         />
         <MovingAtom
           width={80}
@@ -302,7 +304,8 @@ export const WhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(18,110,119,1)" //teal
-          className="absolute top-[50%] left-[50%] translate-x-[50%] translate-y-[-80%] lg:translate-x-[350%] lg:-translate-y-[500%] opacity-90 z-5"
+          className="absolute top-[50%] left-[50%] translate-x-[50%] translate-y-[-80%] 
+          lg:translate-x-[350%] lg:-translate-y-[500%] opacity-90 z-5"
         />
         <MovingAtom
           width={50}
@@ -315,7 +318,8 @@ export const WhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(195,12,95,1)" //pink
-          className="absolute top-[50%] left-[50%] translate-x-[350%] translate-y-[-260%] lg:translate-x-[950%] lg:-translate-y-[500%] opacity-90 z-5"
+          className="absolute top-[50%] left-[50%] translate-x-[350%] translate-y-[-260%] 
+          lg:translate-x-[950%] lg:-translate-y-[500%] opacity-90 z-5"
         />
         <MovingAtom
           width={40}
@@ -328,7 +332,8 @@ export const WhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(195,12,95,1)" //pink
-          className="absolute top-[50%] left-[50%] translate-x-[100%] translate-y-[60%] lg:translate-x-[100%] lg:-translate-y-[690%] opacity-90 z-5"
+          className="absolute top-[50%] left-[50%] translate-x-[100%] translate-y-[60%] 
+          lg:translate-x-[100%] lg:-translate-y-[690%] opacity-90 z-5"
         />
         <MovingAtom
           width={50}
@@ -341,7 +346,8 @@ export const WhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(18,110,119,1)" //teal
-          className="absolute top-[50%] left-[50%] translate-x-[180%] translate-y-[-480%] lg:translate-x-[650%] lg:-translate-y-[350%] opacity-90 z-5"
+          className="absolute top-[50%] left-[50%] translate-x-[180%] translate-y-[-480%] 
+          lg:translate-x-[650%] lg:-translate-y-[350%] opacity-90 z-5"
         />
         <MovingAtom
           width={50}
@@ -354,10 +360,15 @@ export const WhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(18,110,119,1)" //teal
-          className="absolute top-[50%] left-[50%] translate-x-[-100%] translate-y-[-40%] lg:translate-x-[300%] lg:-translate-y-[800%] opacity-90 z-5"
+          className="absolute top-[50%] left-[50%] translate-x-[-100%] translate-y-[-40%] 
+          lg:translate-x-[300%] lg:-translate-y-[800%] opacity-90 z-5"
         />
         <div
-          className="relative bottom-0 left-[50%] translate-x-[-50%] lg:translate-x-[-30%]  translate-y-[-180px] lg:translate-y-[-380px] w-[500px] h-[500px] lg:w-[800px] lg:h-[800px] 
+          className="relative bottom-0 left-[50%] 
+          translate-x-[-50%] translate-y-[-50px] 
+          md:translate-x-[-50%] md:translate-y-[-180px] 
+          lg:translate-x-[-30%] lg:translate-y-[-380px] 
+          w-[300px] h-[300px] md:w-[500px] md:h-[500px] lg:w-[800px] lg:h-[800px] 
           filter invert grayscale opacity-50"
           style={{
             backgroundImage: `url(${beaker.src})`,

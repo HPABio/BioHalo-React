@@ -1,13 +1,19 @@
 "use client";
 
-import { Showcase4 } from "@/components/Showcase4"; 
+import { Showcase4 } from "@/components/Showcase4";
 import { ScreenSizeDEVTOOL } from "@/components/ui/ScreenSizeDEVTOOL";
+import { useEffect } from "react";
 
 export default function Home() {
+  // Add scroll padding to account for fixed navbar
+  useEffect(() => {
+    document.documentElement.style.scrollPaddingTop = "120px"; // Increased padding for better visual landing
+  }, []);
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-800 text-white">
       <div className="relative bg-gradient-to-br from-slate-50 to-slate-800 w-full h-full">
-        <ScreenSizeDEVTOOL />
+        {/* <ScreenSizeDEVTOOL /> */}
         {/* <HeroSection4 /> */}
         {/* <Showcase /> */}
         <Showcase4 />
