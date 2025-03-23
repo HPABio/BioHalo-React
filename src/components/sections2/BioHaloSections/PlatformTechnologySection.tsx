@@ -160,7 +160,11 @@ export const PlatformTechnologySection = ({
     <section className={`w-full relative ${className} overflow-hidden`}>
       <div className="relative bottom-0 left-0 w-full h-[200px] bg-gradient-to-b from-black/0 via-black/50 to-black">
         <div
-          className="relative top-0 left-[50%] translate-x-[-50%] lg:translate-x-[-30%]  translate-y-[-380px] lg:translate-y-[-580px] w-[500px] h-[500px] lg:w-[800px] lg:h-[800px] "
+          className="relative top-0 left-[50%] 
+          translate-x-[-50%] translate-y-[-250px] 
+          md:translate-x-[-50%] md:translate-y-[-380px] 
+          lg:translate-x-[-30%]  lg:translate-y-[-580px] 
+          w-[300px] h-[300px] md:w-[500px] md:h-[500px] lg:w-[800px] lg:h-[800px] "
           style={{
             backgroundImage: `url(${beaker.src})`,
             backgroundSize: "contain",
@@ -169,9 +173,8 @@ export const PlatformTechnologySection = ({
           }}
         />
       </div>
-      
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-8 -mt-32 md:mt-0">
         <div className="absolute bottom-[100%] left-[100%] translate-x-[-50%] translate-y-[50%] opacity-[4%] mix-blend-screen">
           <AtomDiagram width={5300} height={5300} color="rgba(18,110,119,1)" />
         </div>
@@ -263,7 +266,7 @@ export const PlatformTechnologySection = ({
         </motion.div>
 
         {/* Process Steps Section */}
-        <div className="space-y-14 xl:space-y-24 mb-24 pt-16">
+        <div className="space-y-14 xl:space-y-24 mb-24 md:pt-16">
           {technologyProcessSteps.map((step, index) => (
             <motion.div
               key={step.id}
@@ -271,7 +274,7 @@ export const PlatformTechnologySection = ({
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`max-sm:text-center px-32 md:px-12 lg:px-32 flex flex-col ${
+              className={`max-sm:text-center px-4 md:px-12 lg:px-32 flex flex-col ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               } items-center gap-8 md:gap-16`}
             >
@@ -312,24 +315,40 @@ export const PlatformTechnologySection = ({
           ))}
         </div>
 
-        {/* Process Steps Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16 relative"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold capitalize bg-gradient-to-br from-mintAccent/60 to-mintAccent/80 bg-clip-text text-transparent py-6">
-            Our Technology Process
-          </h2>
-          <p className="text-gray-400 max-w-3xl mx-auto">
-            Discover how our platform transforms traditional chemistry into
-            sustainable bioprocesses
-          </p>
-        </motion.div>
-
         {/* Features Section */}
-        <div className="grid grid-cols-1 gap-12 mb-20">
+        <div
+          className="grid grid-cols-1 gap-12 mb-20 px-4 md:px-12  md:pt-16 mt-16 relative"
+          id="platform-features-content"
+        >
+          {/* Section detection helper - invisible element to help with intersection detection */}
+          <div
+            className="absolute top-0 left-0 w-full h-24 -mt-16 pointer-events-none"
+            aria-hidden="true"
+          ></div>
+
+          {/* Background decorative elements */}
+          <div className="absolute inset-0 -z-10 overflow-hidden">
+            <div className="absolute top-0 left-0 w-64 h-64 bg-tealAccent/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute top-1/4 right-0 w-80 h-80 bg-tealAccent/10 rounded-full blur-3xl transform translate-x-1/3"></div>
+            <div className="absolute bottom-1/3 left-1/4 w-40 h-40 bg-pinkAccent/5 rounded-full blur-xl"></div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 relative"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold capitalize bg-gradient-to-br from-mintAccent/60 to-mintAccent/80 bg-clip-text text-transparent py-6">
+              Key Technology Features
+            </h2>
+            <p className="text-gray-400 max-w-3xl mx-auto">
+              Our revolutionary biohalogenation platform offers unique
+              advantages over traditional fluorination methods
+            </p>
+            <div className="absolute w-full h-0.5 bg-gradient-to-r from-transparent via-tealAccent to-transparent mt-6 opacity-30"></div>
+          </motion.div>
+
           {/* Right side: Features list */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {technologyFeatures.map((feature) => (
@@ -354,7 +373,7 @@ export const PlatformTechnologySection = ({
               </motion.div>
             ))}
           </div>
-          <p className="text-md text-gray-700 max-w-3xl mx-auto text-center">
+          <p className="text-md text-gray-700 max-w-3xl mx-auto text-center md:mt-12">
             We use a combination of computational tools and experimental
             techniques to optimize enzyme performance and metabolic pathways.
             <br />

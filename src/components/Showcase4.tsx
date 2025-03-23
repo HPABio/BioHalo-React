@@ -136,63 +136,63 @@ export const Showcase4 = () => {
   console.log("Showcase4 component rendering");
 
   return (
-    <main className="min-h-screen w-full h-full bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70 overflow-hidden">
+    <main
+      className="min-h-screen w-full h-full bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70 overflow-hidden"
+      id="top"
+    >
+      {/* Invisible element for top section detection */}
+      <div
+        className="absolute top-0 h-32 w-full pointer-events-none"
+        aria-hidden="true"
+      ></div>
+
       <HeroSection5 className="w-screen h-screen relative" />
 
       <section
-        className="py-16 bg-black text-center px-4"
+        className="py-16 bg-black text-center px-4 hidden md:block"
         id="transition-section-one"
       >
         <div className="w-full h-[300px]"></div>
       </section>
 
       <FluorinatedMaterialsSection
-        className="relative w-full h-full overflow-hidden z-0 "
+        className="relative w-full h-full overflow-hidden z-0 pt-6"
         stats={stats}
       />
 
-      <section id="what-we-do" className="pt-48">
+      <section id="what-we-do" className="pt-12 md:pt-48 min-h-[80vh] relative">
+        {/* Section detection helper */}
+        <div
+          className="absolute top-0 h-24 w-full pointer-events-none"
+          aria-hidden="true"
+        ></div>
+
         <WhatWeDoSection
-          className="min-h-[50vh] w-[100vw] text-white relative  "
+          className="min-h-[50vh] w-[100vw] text-white relative"
           stats={stats}
         />
       </section>
 
       {/* Platform Technology Section */}
-      <section id="platform-technology" className="w-full ">
+      <section
+        id="platform-technology"
+        className="w-full min-h-[80vh] relative"
+      >
+        {/* Section detection helper */}
+        <div
+          className="absolute top-0 h-24 w-full pointer-events-none"
+          aria-hidden="true"
+        ></div>
+
         <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
       </section>
 
-      {/* <section className="w-full h-full relative hidden">
-        <BentosPFASSection className="bg-black relative" />
-      </section> */}
-
-      {/* <section id="feature-pfas" className="w-full h-full pt-48">
-        <FeatureOfPFAS className="w-full min-h-[70vh] bg-black" />
-        <MemoizedTransitionSectionFour
-          className="w-full h-[200px] rotate-180"
-          circleSize={700}/>
-      </section> */}
-
-      {/* <section id="health" className="w-full h-full relative pt-32">
-        <HealthSectionImgRight
-          className="min-h-[50vh] max-w-[1280px] mx-auto px-14 relative overflow-hidden xl:overflow-visible"
-          stats={stats}
-        />
-      </section> */}
-
-      {/* Pollution Section */}
-
-      {/* <section id="pollution" className="min-h-screen">
-        <PollutionSection
-          className="min-h-[50vh] max-w-[1280px] mx-auto px-14 relative overflow-visible z-10 xl:mt-32"
-          stats={stats}
-        />
-      </section> */}
-
-      <section className="bg-red-500/0 w-full">
-        <div className="w-full h-[400px] pt-10 overflow-hidden flex items-center justify-center">
-          <IconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px]" />
+      {/* Icon Carousel Section - No ID here since it's not in the navigation */}
+      <section className="w-full">
+        <div className="bg-red-500/0 w-full">
+          <div className="w-full h-[400px] pt-10 overflow-hidden flex items-center justify-center">
+            <IconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100" />
+          </div>
         </div>
       </section>
 
@@ -223,7 +223,13 @@ export const Showcase4 = () => {
         */}
 
       {/* Team Section */}
-      <section id="team-section">
+      <section id="team-section" className="min-h-[80vh] relative">
+        {/* Section detection helper */}
+        <div
+          className="absolute top-0 h-24 w-full pointer-events-none"
+          aria-hidden="true"
+        ></div>
+
         <TeamSection className="w-full" />
       </section>
 

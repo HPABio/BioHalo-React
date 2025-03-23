@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import EnzymeImage2 from "@/assets/images/enzymeImage2.png";
+import enzymeImage from "@/assets/images/BluePrint with Color/Enzyme.png";
 
 export default function IconCarousel({ className }: { className?: string }) {
   // Animation speed controls (in seconds)
@@ -161,8 +162,8 @@ export default function IconCarousel({ className }: { className?: string }) {
                   {/* Center circle (no rotation needed) */}
                   <div className="flex items-center justify-center bg-red-500/10">
                     <Image
-                      src={EnzymeImage2}
-                      alt="Bio Reactor Blueprint"
+                      src={enzymeImage}
+                      alt="enzymeImage"
                       className="w-full h-full scale-[0.7] -mt-[60px] object-cover absolute top-0 left-0 overflow-visible bg-red-500/0 opacity-50"
                     />
                     {/* <Image
