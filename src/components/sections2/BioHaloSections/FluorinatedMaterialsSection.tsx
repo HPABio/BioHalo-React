@@ -21,7 +21,7 @@ import HikerOverlookingMistyValley from "@/assets/images/BGImagesTest/HikerOverl
 import TexturedGlassSurface from "@/assets/images/BGImagesTest/Textured Glass Surface.jpeg";
 import WaterRepellantFabric from "@/assets/images/water-repellant-fabric.png";
 import pollutionearth from "@/assets/images/BluePrintStyle/polutionEarth.svg";
-import IndustrialPollution from "@/assets/images/BGImagesTest/IndustrialPollution.png";
+import IndustrialPollution from "@/assets/images/BGImages/IndustrialPollution_960678749.png";
 
 
 interface FluorinatedMaterialsSectionProps {
@@ -99,11 +99,10 @@ const Circle3Base = React.memo(function Circle3Base() {
         alt="IndustrialPollution"
         fill
         priority
-        sizes="(max-width: 768px) 100vw, 900px"
         style={{ objectFit: "cover" }}
         className="rounded-full"
       />
-      <div className="w-full h-full border-2 border-lightGrey opacity-80 absolute inset-0"></div>
+      <div className="w-full h-full border-2 border-lightGrey opacity-80 absolute inset-0 rounded-full"></div>
       <div
         className="w-[110%] h-[110%] min-w-[110%] min-h-[110%] 
         absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rotate-180"

@@ -44,7 +44,7 @@ const stats = [
     suffix: "",
     label: (
       <>
-        known <span className="text-lightGrey/80">fluorinated</span> compounds
+        <span className="text-lightGrey/80">fluorinated</span> compounds <br className="md:hidden block" /> are already known
       </>
     ),
   },
