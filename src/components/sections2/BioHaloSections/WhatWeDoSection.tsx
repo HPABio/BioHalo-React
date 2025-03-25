@@ -8,9 +8,13 @@ import {
 } from "@/components/ui/StatsBox";
 import { MovingAtom } from "../../ui/MovingAtom";
 import WaterColorReveal from "@/components/WaterColorReveal";
-import MeshFabric from "@/assets/images/Mesh-fabric.png";
-import BGFabricTealPink from "@/assets/images/BGImagesTest/BGFabricTealPink.png";
 import EnzymeImage2 from "@/assets/images/enzymeImage2.png";
+
+
+import enzymeImage from "@/assets/images/BluePrint with Color/Enzyme.png";
+import BGFabricTealPink from "@/assets/images/BGImages/BGFabricTealPink_222564810.png";
+import MeshFabric from "@/assets/images/BGImages/Mesh-fabric_1020623350.png";
+
 import BioFMonomer from "@/assets/images/BluePrintSVG/BioF-Monomer.svg";
 import EcoliTripletsSVG from "../../ui/EcoliTripletsSVG";
 import beaker from "@/assets/images/BluePrintSVG/beaker.svg";
@@ -188,7 +192,7 @@ export const WhatWeDoSection = ({
           {/* Right/Bottom Circle */}
           <div className="hidden lg:flex absolute h-[500px] w-[500px] rounded-full bg-mintAccent -right-[5%] lg:top-[60%] items-center justify-center overflow-hidden drop-shadow-xl  border-2 border-lightGrey">
             <Image
-              src={EnzymeImage2}
+              src={enzymeImage}
               alt="EnzymeImage"
               className="w-full h-full object-cover bg-yellow-400/0"
             />
