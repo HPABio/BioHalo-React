@@ -5,6 +5,7 @@ import Image from "next/image";
 import React, { Suspense, memo } from "react";
 import dynamic from "next/dynamic";
 import { HeroSection5 } from "@/components/HeroSections/HeroSection5";
+import { HeroSection1, HeroSection2 } from "@/components/HeroSections/HeroSections";
 import { FluorinatedMaterialsSection } from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection";
 import {
   PollutionSection,
@@ -78,17 +79,17 @@ const stats = [
     prefix: "+",
     suffix: (
       <>
-        <span className="text-7xl ">k</span>
+        <span className="text-4xl md:text-7xl ">k</span>
       </>
     ),
     label: (
       <>
-        <span className="text-5xl uppercase font-normal">tons of </span>
-        <span className="text-5xl uppercase font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+        <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-normal">tons of </span>
+        <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
           Fluoropolymers
         </span>
         <br />
-        <span className="font-normal">Are Exported from the EU annually</span>
+        <span className="font-normal text-lg md:text-2xl lg:text-3xl">Are Exported from the EU annually</span>
       </>
     ),
     note: (
@@ -146,8 +147,8 @@ export const Showcase4 = () => {
         aria-hidden="true"
       ></div>
 
-      <HeroSection5 className="w-screen h-screen relative" />
-
+      {/* <HeroSection1 className="w-screen h-screen relative" /> */}
+      <HeroSection2 className="w-screen h-screen relative overflow-hidden" />
       <section
         className="py-16 bg-black text-center px-4 hidden md:block"
         id="transition-section-one"
@@ -156,11 +157,11 @@ export const Showcase4 = () => {
       </section>
 
       <FluorinatedMaterialsSection
-        className="relative w-full h-full overflow-hidden z-0 pt-6"
+        className="relative w-full h-full overflow-hidden z-10 pt-6"
         stats={stats}
       />
 
-      <section id="what-we-do" className="pt-12 md:pt-48 min-h-[80vh] relative">
+      <section id="what-we-do" className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative">
         {/* Section detection helper */}
         <div
           className="absolute top-0 h-24 w-full pointer-events-none"

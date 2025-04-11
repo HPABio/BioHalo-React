@@ -83,12 +83,12 @@ export const WhatWeDoSection = ({
       }}
       /> */}
 
-        <div className="w-full sm:w-full md:w-[720px] bg-red-500/0 md:mt-10 relative z-10">
+        <div className="w-full sm:w-full md:w-[720px] bg-red-500/0 xl:mt-10 relative z-10">
           <h2 className="relative font-black font-Arial text-4xl sm:text-5xl md:text-6xl bg-gradient-to-tl from-tealAccent to-tealAccent/60 bg-clip-text text-transparent 
           pb-6 md:pb-10">
             <span
               className="font-poppins font-bold flex items-center -mb-8 sm:-mb-10 md:-mb-14
-          text-black text-5xl md:text-[clamp(110px,10vw,150px)] w-full sm:w-[400px] md:w-[560px]"
+          text-black text-6xl md:text-[clamp(110px,10vw,150px)] w-full sm:w-[400px] md:w-[560px]"
             >
               BioHalo
               <Image
@@ -287,7 +287,7 @@ export const WhatWeDoSection = ({
           width={80}
           height={80}
           hoverAmplitude={7}
-          hoverDuration={4}
+          hoverDuration={5}
           shouldRotate={true}
           rotationDuration={25}
           shouldScale={false}
@@ -301,9 +301,9 @@ export const WhatWeDoSection = ({
           width={80}
           height={80}
           hoverAmplitude={7}
-          hoverDuration={4}
+          hoverDuration={6}
           shouldRotate={true}
-          rotationDuration={25}
+          rotationDuration={20}
           shouldScale={false}
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
@@ -317,7 +317,7 @@ export const WhatWeDoSection = ({
           hoverAmplitude={7}
           hoverDuration={4}
           shouldRotate={true}
-          rotationDuration={25}
+          rotationDuration={21}
           shouldScale={false}
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
@@ -329,9 +329,9 @@ export const WhatWeDoSection = ({
           width={40}
           height={40}
           hoverAmplitude={7}
-          hoverDuration={4}
+          hoverDuration={7}
           shouldRotate={true}
-          rotationDuration={25}
+          rotationDuration={15}
           shouldScale={false}
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
@@ -357,9 +357,9 @@ export const WhatWeDoSection = ({
           width={50}
           height={50}
           hoverAmplitude={7}
-          hoverDuration={4}
+          hoverDuration={5}
           shouldRotate={true}
-          rotationDuration={25}
+          rotationDuration={16}
           shouldScale={false}
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
