@@ -36,6 +36,8 @@ import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSe
 
 
 import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import ribbonImage from "@/assets/images/BGImagesTest/Twisted Ribbon Structure transparent.png";
+import abstractImage from "@/assets/images/BGImagesTest/Abstract Black and White Design Transition.png";
 
 
 // ✅ Memoize static sections to prevent re-renders
@@ -154,7 +156,7 @@ export const Showcase4 = () => {
       {/* <HeroSection1 className="w-screen h-screen relative" /> */}
       <HeroSection2 className="w-screen h-screen relative overflow-hidden" />
       <section
-        className="pb-16 bg-black text-center hidden md:block "
+        className="pb-16 bg-black"
         id="transition-section-one"
       >
         <div className="relative w-full h-[100px] lg:h-[200px]">
@@ -168,6 +170,22 @@ export const Showcase4 = () => {
             className="object-contain"
           />
         </div>
+{/*         <div className="absolute w-[110vw] h-[400px] top-[50%] left-[50%] opacity-1 translate-x-[-50%] translate-y-[-64%]">
+          <Image 
+            src={abstractImage} 
+            alt="Abstract" 
+            fill 
+            className="object-fill "
+          />
+        </div>
+        <div className="absolute w-[300px] h-[100vw] top-[50%] left-[50%] opacity-1 translate-x-[-50%] translate-y-[-58%]">
+          <Image 
+            src={ribbonImage} 
+            alt="Ribbon" 
+            fill 
+            className="object-fill rotate-[-90deg] hidden"
+          />
+        </div> */}
 
         <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0"/>
 
