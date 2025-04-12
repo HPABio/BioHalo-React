@@ -34,6 +34,10 @@ import { PartnersMarqueeSection } from "@/components/sections2/BioHaloSections/P
 import { SuccessesSection } from "@/components/sections2/BioHaloSections/SuccessesSection";
 import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSection";
 
+
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+
+
 // ✅ Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
 
@@ -150,10 +154,24 @@ export const Showcase4 = () => {
       {/* <HeroSection1 className="w-screen h-screen relative" /> */}
       <HeroSection2 className="w-screen h-screen relative overflow-hidden" />
       <section
-        className="py-16 bg-black text-center px-4 hidden md:block"
+        className="pb-16 bg-black text-center hidden md:block "
         id="transition-section-one"
       >
-        <div className="w-full h-[300px]"></div>
+        <div className="relative w-full h-[100px] lg:h-[200px]">
+
+        <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px]
+        translate-x-[35%] translate-y-[-50%]">
+          <Image 
+            src={enzymeImage} 
+            alt="Enzyme" 
+            fill 
+            className="object-contain"
+          />
+        </div>
+
+        <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0"/>
+
+        </div>
       </section>
 
       <FluorinatedMaterialsSection

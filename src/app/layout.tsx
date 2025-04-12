@@ -5,7 +5,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ShowcaseNavbar } from "@/components/ShowcaseNavbar";
 
-
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -26,13 +25,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable}`}>
       <head>
+        <meta name="color-scheme" content="light only" />
         {/* <script src="https://unpkg.com/react-scan/dist/auto.global.js" /> */}
         {/* rest of your scripts go under */}
       </head>
       <body className="min-h-screen min-w-screen bg-lightGrey text-darkGrey font-sans antialiased">
         <div className="fixed top-0 left-0 w-full z-[100]">
           {/* <Header /> */}
-          <ShowcaseNavbar /> 
+          <ShowcaseNavbar />
         </div>
         <main className="pt-0">{children}</main>
         <Footer />
@@ -40,4 +40,3 @@ export default function RootLayout({
     </html>
   );
 }
- 

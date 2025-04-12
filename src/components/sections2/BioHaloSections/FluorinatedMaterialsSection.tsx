@@ -24,6 +24,7 @@ import pollutionearth from "@/assets/images/BluePrintStyle/polutionEarth.svg";
 import IndustrialPollution from "@/assets/images/BGImages/IndustrialPollution_960678749.png";
 
 
+
 interface FluorinatedMaterialsSectionProps {
   stats: any[];
   className?: string;
@@ -170,6 +171,7 @@ export function FluorinatedMaterialsSection({
     
     <section className={`${className} relative`}>
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
+      
 
         <div className="w-full h-[1150px] md:h-[1350px] lg:h-[1600px]  relative">
           <div className="w-full h-full relative bg-gradient-to-b bg-teal-950 from-black via-black/70 to-black">

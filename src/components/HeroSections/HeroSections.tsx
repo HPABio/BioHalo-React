@@ -181,7 +181,7 @@ export const HeroSection2 = ({
   return (
     <section
       ref={sectionRef}
-      className={`relative w-[100vw] max-h-[1000px] md:max-h-[100vh] md:h-[100vh]  ${className}`}
+      className={`relative w-[100vw] max-h-[1000px] md:max-h-[100vh] md:h-[100vh] min-h-[600px] 2xl:min-h-[900px]  ${className}`}
     >
       <div className="relative bottom-0 left-0 w-full h-full" />
 
@@ -195,7 +195,7 @@ export const HeroSection2 = ({
           />
         </div>
         {/* Bottom image */}
-      <div className="absolute w-full h-full bottom-0 right-[-90%] translate-x-[-50vw] translate-y-[55%] 
+      <div className="md:hidden block absolute w-full h-full bottom-0 right-[-90%] translate-x-[-50vw] translate-y-[55%] 
       opacity-1 blur-[6px]">
           <Image 
             src={enzymeImage} 
@@ -205,31 +205,36 @@ export const HeroSection2 = ({
           />
         </div>
         {/* Center image */}
-      <div className="absolute w-[80%] h-[80%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] overflow-visible">
-              <div className="relative w-full h-full overflow-visible">
+      <div className="absolute w-[80%] h-[80%] min-h-[500px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] overflow-visible bg-red-500/0">
+              <div className="relative w-full h-full overflow-visible bg-blue-500/0">
                   <Image 
                     src={enzymeImage} 
                     alt="Enzyme" 
                     fill 
-                    className="object-contain overflow-visible"
+                    className="object-contain overflow-visible bg-green-500/0"
                   />
               </div>
+              
         </div>
         {/* Logo container */}
-      <div className="absolute inset-0 flex items-center justify-center bg-green-500/0">
-          <div className="relative w-[80%] h-[80%] bg-blue-500/0 flex flex-col items-center justify-center">
-            <BioHaloLogo2 
-              styles={{
-                classNames: "w-[70vw] h-auto",
-                width: "100%",  
-                height: "100%",
-                animationduration: "1.5s",
-                animationdelay: "0.3s",
-              }}
-            />
+      
+      <div className="absolute inset-0 flex items-center justify-center bg-green-500/0 pt-[80px]">
+          <div className="relative w-[80%] h-[80%] flex flex-col items-center justify-center bg-blue-500/0">
+            <div className="relative w-full h-auto 
+            before:content-[''] before:absolute before:w-[50%] before:h-[10px] before:bg-gradient-to-r before:from-transparent before:via-black/40 before:to-transparent 
+            before:blur-[10px] before:bottom-[-50%] before:left-[25%] before:rounded-[50%]">
+              <BioHaloLogo2 
+                styles={{
+                  classNames: "w-[70vw] h-auto",
+                  animationduration: "1.5s",
+                  animationdelay: "0.3s",
+                }}
+              />
+            </div>
           <h2 className="text-center text-black text-[2.7vw] font-bold translate-x-[27%] translate-y-[-80%]">The Biohalogenation Company</h2>
           </div>
         </div>
+      
     </section>
   );
 };

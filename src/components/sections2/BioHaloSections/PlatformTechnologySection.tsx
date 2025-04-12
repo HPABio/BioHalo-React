@@ -261,7 +261,11 @@ export const PlatformTechnologySection = ({
             scaleRange={[0.9, 1.1]}
             scaleDuration={4}
             color="rgba(18,110,119,1)"
-            className="absolute top-[12%] right-[14%]"
+            className="absolute top-[12%] right-[14%]
+            lg:top-[12%] lg:left-[50%]
+            md:translate-x-[220%] md:translate-y-[170%]
+            lg:translate-x-[100%] lg:translate-y-[90%]
+            xl:translate-x-[80%] xl:translate-y-[90%]"
           />
         </motion.div>
 
@@ -373,7 +377,7 @@ export const PlatformTechnologySection = ({
               </motion.div>
             ))}
           </div>
-          <p className="text-md text-gray-700 max-w-3xl mx-auto text-center md:mt-12">
+          <p className="text-md text-gray-400 max-w-3xl mx-auto text-center md:mt-12">
             We use a combination of computational tools and experimental
             techniques to optimize enzyme performance and metabolic pathways.
             <br />

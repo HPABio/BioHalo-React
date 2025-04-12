@@ -14,6 +14,7 @@ import EnzymeImage2 from "@/assets/images/enzymeImage2.png";
 import enzymeImage from "@/assets/images/BluePrint with Color/Enzyme.png";
 import BGFabricTealPink from "@/assets/images/BGImages/BGFabricTealPink_222564810.png";
 import MeshFabric from "@/assets/images/BGImages/Mesh-fabric_1020623350.png";
+import LightBGWithDroplets from "@/assets/images/AdobeStock/AdobeStock_291137317.jpeg";
 
 import BioFMonomer from "@/assets/images/BluePrintSVG/BioF-Monomer.svg";
 import EcoliTripletsSVG from "../../ui/EcoliTripletsSVG";
@@ -49,6 +50,18 @@ export const WhatWeDoSection = ({
 
   return (
     <section className={`${className} overflow-visible`}>
+      <div className="absolute top-[-10%] left-0 w-full">
+        <div className="relative w-full h-full
+          [mask-image:linear-gradient(to_bottom_right,black,black,transparent)]
+        ">
+          <Image
+            src={LightBGWithDroplets}
+            alt="LightBGWithDroplets"
+            className="w-full h-full object-contain -scale-x-100 mix-blend-overlay opacity-20
+            [mask-image:linear-gradient(to_bottom,black,black,transparent)]"
+          />
+        </div>
+      </div>
       <div className="max-w-[1280px] mx-auto px-14 ">
         {/* Title */}
 
@@ -273,7 +286,7 @@ export const WhatWeDoSection = ({
         ></div>
       </div>
 
-      <div className="relative bottom-0 left-0 w-full h-[200px]">
+      <div className="relative bottom-0 left-0 w-full h-[100px] md:h-[200px]">
         {/*   <div className="w-full h-full opacity-1"
         style={{
           backgroundImage: `url(${BioReactorBP.src})`,
@@ -294,7 +307,9 @@ export const WhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(195,12,95,1)" //pink
-          className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-250%] 
+          className="absolute top-[50%] left-[50%] 
+          translate-x-[-50%] translate-y-[-150%] 
+          md:translate-x-[-50%] md:translate-y-[-250%] 
           lg:translate-x-[200%] lg:-translate-y-[50%] opacity-90 z-5"
         />
         <MovingAtom
@@ -322,7 +337,8 @@ export const WhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(195,12,95,1)" //pink
-          className="absolute top-[50%] left-[50%] translate-x-[350%] translate-y-[-260%] 
+          className="hidden md:block
+          absolute top-[50%] left-[50%] translate-x-[350%] translate-y-[-260%] 
           lg:translate-x-[950%] lg:-translate-y-[500%] opacity-90 z-5"
         />
         <MovingAtom
@@ -350,7 +366,8 @@ export const WhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(18,110,119,1)" //teal
-          className="absolute top-[50%] left-[50%] translate-x-[180%] translate-y-[-480%] 
+          className="hidden md:block
+          absolute top-[50%] left-[50%] translate-x-[180%] translate-y-[-480%] 
           lg:translate-x-[650%] lg:-translate-y-[350%] opacity-90 z-5"
         />
         <MovingAtom
