@@ -27,6 +27,7 @@ import BioReactorSVG from "@/assets/images/BluePrintSVG/bio-reactor.svg";
 import DNALogo from "@/assets/images/BluePrintSVG/dna-logo.svg";
 import BioHaloStep2 from "@/assets/images/BluePrintSVG/BioHalo-step2.svg";
 import BioReactorBP from "@/assets/images/BluePrintSVG/bio-reactor.svg";
+import NetworkDiagramWithNodes from "@/components/ui/NetworkDiagramWithNodes";
 
 interface WhatWeDoSectionProps {
   stats: any[];

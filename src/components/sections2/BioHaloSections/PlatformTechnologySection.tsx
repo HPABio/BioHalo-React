@@ -28,6 +28,7 @@ import {
   Droplet,
   TrendingDown,
 } from "lucide-react";
+import NetworkDiagramWithNodes from "@/components/ui/NetworkDiagramWithNodes";
 interface TechnologyFeature {
   id: number;
   title: string;
@@ -354,6 +355,15 @@ export const PlatformTechnologySection = ({
           </motion.div>
 
           {/* Right side: Features list */}
+            <div className="flex justify-center items-center w-full">
+              <NetworkDiagramWithNodes
+                enzymeImage={enzymeImage.src}
+                enzymeImageAlt="Enzyme"
+                width="max-w-3xl"
+                imageWidth={600}
+                imageHeight={400}
+              />
+            </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {technologyFeatures.map((feature) => (
               <motion.div
