@@ -11,7 +11,6 @@ import WaterColorReveal from "@/components/WaterColorReveal";
 import EnzymeImage2 from "@/assets/images/enzymeImage2.png";
 
 
-import enzymeImage from "@/assets/images/BluePrint with Color/Enzyme.png";
 import BGFabricTealPink from "@/assets/images/BGImages/BGFabricTealPink_222564810.png";
 import MeshFabric from "@/assets/images/BGImages/Mesh-fabric_1020623350.png";
 import LightBGWithDroplets from "@/assets/images/AdobeStock/AdobeStock_291137317.jpeg";
@@ -28,6 +27,7 @@ import DNALogo from "@/assets/images/BluePrintSVG/dna-logo.svg";
 import BioHaloStep2 from "@/assets/images/BluePrintSVG/BioHalo-step2.svg";
 import BioReactorBP from "@/assets/images/BluePrintSVG/bio-reactor.svg";
 import NetworkDiagramWithNodes from "@/components/ui/NetworkDiagramWithNodes";
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
 
 interface WhatWeDoSectionProps {
   stats: any[];
@@ -36,7 +36,6 @@ interface WhatWeDoSectionProps {
 }
 
 export const WhatWeDoSection = ({
-
   stats,
   className,
   debug = false,
@@ -52,9 +51,11 @@ export const WhatWeDoSection = ({
   return (
     <section className={`${className} overflow-visible`}>
       <div className="absolute top-[-10%] left-0 w-full">
-        <div className="relative w-full h-full
+        <div
+          className="relative w-full h-full
           [mask-image:linear-gradient(to_bottom_right,black,black,transparent)]
-        ">
+        "
+        >
           <Image
             src={LightBGWithDroplets}
             alt="LightBGWithDroplets"
@@ -80,11 +81,12 @@ export const WhatWeDoSection = ({
           className="absolute bg-red-500/0 top-[10%] left-[50%] translate-x-[-1220%] translate-y-[-10%] bg-pinkAccent"
         />
 
-        <div className="hidden xl:block absolute top-0 right-0 w-full bg-red-500/0">
+        <div className="absolute hidden lg:block
+        top-10 xl:top-0 left-[45%] w-[45%] xl:w-[55%]  max-w-[900px] translate-x-[12vw] xl:translate-x-[5vw]">
           <Image
-            src={BioHaloLogoOnly}
-            alt="BioHalo Logo"
-            className="absolute w-[43%] right-0 -translate-x-[12%] xl:-translate-y-[20%] max-w-[900px]"
+            src={enzymeImage}
+            alt="EnzymeImage"
+            className="w-full h-full object-cover"
           />
         </div>
         {/*       <div className="hidden lg:block xl:hidden absolute w-[400px] h-[400px] top-0 right-[5%]  rounded-full 
@@ -98,8 +100,10 @@ export const WhatWeDoSection = ({
       /> */}
 
         <div className="w-full sm:w-full md:w-[720px] bg-red-500/0 xl:mt-10 relative z-10">
-          <h2 className="relative font-black font-Arial text-4xl sm:text-5xl md:text-6xl bg-gradient-to-tl from-tealAccent to-tealAccent/60 bg-clip-text text-transparent 
-          pb-6 md:pb-10">
+          <h2
+            className="relative font-black font-Arial text-4xl sm:text-5xl md:text-6xl bg-gradient-to-tl from-tealAccent to-tealAccent/60 bg-clip-text text-transparent 
+          pb-6 md:pb-10"
+          >
             <span
               className="font-poppins font-bold flex items-center -mb-8 sm:-mb-10 md:-mb-14
           text-black text-6xl md:text-[clamp(110px,10vw,150px)] w-full sm:w-[400px] md:w-[560px]"
@@ -108,7 +112,7 @@ export const WhatWeDoSection = ({
               <Image
                 src={BioHaloLogoOnly}
                 alt="BioHalo Logo"
-                className="h-[1em] w-auto ml-2 sm:ml-3 md:ml-4 xl:hidden"
+                className="h-[1em] w-auto ml-2 sm:ml-3 md:ml-4 "
               />
             </span>
             <br />
@@ -153,9 +157,9 @@ export const WhatWeDoSection = ({
         </div>
 
         {/* Circular Image Section */}
-        <div className="relative w-full md:w-[1200px] h-[600px] sm:h-[800px] bg-red-500/0 mt-16 md:mt-16">
+        <div className="relative w-full md:w-[1200px] h-[600px] sm:h-[700px] md:h-[750px] lg:h-[800px] bg-red-500/0 mt-16 md:mt-16">
           {/* Top/Middle Circle */}
-          <div className="absolute h-[400px] w-[400px] sm:h-[600px] sm:w-[600px] lg:h-[800px] lg:w-[800px] rounded-full left-[10%] sm:left-[25%] -top-[15%] sm:-top-[22%] lg:-top-[15%] overflow-hidden drop-shadow-xl flex items-center justify-center">
+          <div className="absolute h-[400px] w-[400px] sm:h-[500px] sm:w-[500px] md:h-[600px] md:w-[600px] lg:h-[700px] lg:w-[700px] xl:h-[800px] xl:w-[800px] rounded-full left-[10%] sm:left-[15%] md:left-[10%] lg:left-[15%] xl:left-[25%] -top-[15%] sm:-top-[18%] md:-top-[20%] lg:-top-[17%] xl:-top-[15%] overflow-hidden drop-shadow-xl flex items-center justify-center">
             <Image
               src={BGFabricTealPink}
               alt="BGFabricTealPink"
@@ -173,9 +177,9 @@ export const WhatWeDoSection = ({
 
           {/* Left Circle */}
           <div
-            className="absolute h-[300px] w-[300px] sm:h-[450px] sm:w-[450px] md:h-[600px] md:w-[600px] rounded-full 
+            className="absolute h-[300px] w-[300px] sm:h-[350px] sm:w-[350px] md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px] xl:h-[600px] xl:w-[600px] rounded-full 
           bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-tealAccent via-transparent to-transparent
-          left-[0%] top-[30%] sm:top-[15%] overflow-hidden"
+          left-[0%] sm:left-[5%] md:left-[0%] lg:left-[5%] xl:left-[0%] top-[30%] sm:top-[25%] md:top-[20%] lg:top-[17%] xl:top-[15%] overflow-hidden"
           >
             <div className="opacity-1 absolute h-full w-full rounded-full left-0 top-0 overflow-hidden border-2 border-mintAccent flex items-center justify-center">
               <Image
@@ -190,9 +194,9 @@ export const WhatWeDoSection = ({
             >
               <SimpleStatsBox
                 classNamesContainer="w-fit z-10 h-fit"
-                classNamesTitle="text-6xl sm:text-7xl md:text-8xl lg:text-9xl w-full sm:w-[800px] mt-5 sm:scale-[1.2] text-center
-              font-bold mb-6 bg-gradient-to-tl from-tealAccent to-lightGrey bg-clip-text text-transparent [-webkit-text-stroke:1px_rgb(229,231,235,0.1)] sm:[-webkit-text-stroke:2px_rgb(229,231,235,0.1)] [text-stroke:1px_rgb(229,231,235,0.1)] sm:[text-stroke:2px_rgb(229,231,235,0.1)]"
-                classNamesSubTitle="text-center text-lightGrey/60 text-sm sm:text-xl md:text-2xl font-bold -mt-3 sm:-mt-5 capitalize"
+                classNamesTitle="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl w-full sm:w-[400px] md:w-[500px] lg:w-[700px] xl:w-[800px] mt-5 sm:scale-[1.1] md:scale-[1.15] lg:scale-[1.2] text-center
+              font-bold mb-6 bg-gradient-to-tl from-tealAccent to-lightGrey bg-clip-text text-transparent [-webkit-text-stroke:1px_rgb(229,231,235,0.1)] sm:[-webkit-text-stroke:1.5px_rgb(229,231,235,0.1)] md:[-webkit-text-stroke:2px_rgb(229,231,235,0.1)] [text-stroke:1px_rgb(229,231,235,0.1)] sm:[text-stroke:1.5px_rgb(229,231,235,0.1)] md:[text-stroke:2px_rgb(229,231,235,0.1)]"
+                classNamesSubTitle="text-center text-lightGrey/60 text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-bold -mt-2 sm:-mt-3 md:-mt-4 lg:-mt-5 capitalize"
                 stat={stats[0]}
                 scrollYProgress={scrollYProgress}
                 scrollEndThreshold={0.6}
@@ -204,7 +208,7 @@ export const WhatWeDoSection = ({
           </div>
 
           {/* Right/Bottom Circle */}
-          <div className="hidden lg:flex absolute h-[500px] w-[500px] rounded-full bg-mintAccent -right-[5%] lg:top-[60%] items-center justify-center overflow-hidden drop-shadow-xl  border-2 border-lightGrey">
+          <div className="hidden xl:flex absolute h-[500px] w-[500px] rounded-full bg-mintAccent -right-[5%] lg:top-[60%] items-center justify-center overflow-hidden drop-shadow-xl  border-2 border-lightGrey">
             <Image
               src={enzymeImage}
               alt="EnzymeImage"
@@ -212,10 +216,10 @@ export const WhatWeDoSection = ({
             />
           </div>
           <div
-            className="hidden lg:flex absolute opacity-80 h-[500px] w-[500px] rounded-full -right-[5%] top-[60%] items-center justify-center overflow-hidden 
+            className="hidden xl:flex absolute opacity-80 h-[500px] w-[500px] rounded-full -right-[5%] top-[60%] items-center justify-center overflow-hidden 
           bg-gradient-to-tr from-black via-tealAccent to-tealAccent/90 mix-blend-multiply border-2 border-mintAccent/90"
           ></div>
-          <div className="hidden lg:flex absolute h-[500px] w-[500px] rounded-full bg-mintAccent/0 -right-[5%] top-[60%] items-center justify-center overflow-hidden">
+          <div className="hidden xl:flex absolute h-[500px] w-[500px] rounded-full bg-mintAccent/0 -right-[5%] top-[60%] items-center justify-center overflow-hidden">
             <Image
               src={BioFMonomer}
               alt="BioFMonomer"
@@ -225,7 +229,7 @@ export const WhatWeDoSection = ({
         </div>
 
         {/* Text Section */}
-        <div className="bg-black/0 text-gray-800/70 pt-8 w-full md:w-[1200px] relative">
+        <div className="bg-black/0 text-gray-800/70 pt-0 -mt-24 lg:mt-0 lg:pt-8 w-full md:w-[1200px] relative">
           {/* Header Section */}
           <div className="space-y-16 bg-red-500/0 relative">
             {/* Top Text Section */}

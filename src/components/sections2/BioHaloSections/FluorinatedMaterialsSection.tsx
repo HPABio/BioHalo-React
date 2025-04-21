@@ -182,7 +182,7 @@ export function FluorinatedMaterialsSection({
           <div className="w-full h-full max-w-[1280px] mx-auto px-14  pt-[20px] -mb-[0px]">
             {/* TEXT COLUMN */}
             <div className="w-full bg-red-500/0">
-              <h1 className="max-w-[720px] font-black font-Arial text-4xl md:text-6xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
+              <h1 className="max-w-[720px] font-black font-Arial text-4xl xl:text-6xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
                 <span className="text-9xl scale-[2] opacity-80 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
                   PFAS{" "}
                 </span>
