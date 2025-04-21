@@ -56,12 +56,12 @@ const NetworkDiagramWithNodes: React.FC<NetworkDiagramWithNodesProps> = ({
         </div>
 
         {/* Second row: Network Diagram */}
-        <div className="w-full h-[400px] flex items-center justify-center z-0 mt-[-120px] md:mt-[-100px]">
+        <div className="w-full h-[400px] flex items-center justify-center z-0 mt-[-125px] md:mt-[-100px]">
           <NetworkDiagram className="w-full h-full" />
         </div>
 
         {/* Third row: One centered square div */}
-        <div className="w-full flex justify-center z-10 mt-[-35%] bg-red-500/0">
+        <div className="w-full flex justify-center z-10 mt-[-230px] md:mt-[-35%] bg-red-500/0">
           <div className="w-[70%] rounded-lg flex items-center justify-center bg-blue-500/0">
             {enzymeImage && (
               <Image

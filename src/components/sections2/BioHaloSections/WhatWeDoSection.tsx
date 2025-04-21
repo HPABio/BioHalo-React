@@ -155,7 +155,7 @@ export const WhatWeDoSection = ({
         {/* Circular Image Section */}
         <div className="relative w-full md:w-[1200px] h-[600px] sm:h-[800px] bg-red-500/0 mt-16 md:mt-16">
           {/* Top/Middle Circle */}
-          <div className="absolute h-[400px] w-[400px] sm:h-[600px] sm:w-[600px] md:h-[800px] md:w-[800px] rounded-full left-[10%] sm:left-[25%] -top-[15%] sm:-top-[22%] lg:-top-[15%] overflow-hidden drop-shadow-xl flex items-center justify-center">
+          <div className="absolute h-[400px] w-[400px] sm:h-[600px] sm:w-[600px] lg:h-[800px] lg:w-[800px] rounded-full left-[10%] sm:left-[25%] -top-[15%] sm:-top-[22%] lg:-top-[15%] overflow-hidden drop-shadow-xl flex items-center justify-center">
             <Image
               src={BGFabricTealPink}
               alt="BGFabricTealPink"
