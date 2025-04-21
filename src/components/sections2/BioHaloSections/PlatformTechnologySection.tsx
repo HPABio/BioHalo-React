@@ -179,8 +179,8 @@ export const PlatformTechnologySection = ({
         <div className="absolute bottom-[100%] left-[100%] translate-x-[-50%] translate-y-[50%] opacity-[4%] mix-blend-screen">
           <AtomDiagram width={5300} height={5300} color="rgba(18,110,119,1)" />
         </div>
-        <div className="absolute top-[100%] right-[100%] translate-x-[50%] -translate-y-[50%] opacity-[2%]">
-          <AtomDiagram width={2300} height={2300} color="rgba(18,110,119,1)" />
+        <div className="absolute top-[100%] right-[100%] translate-x-[50%] -translate-y-[50%] opacity-[50%]">
+          <AtomDiagram width={2300} height={2300} color="rgba(20,40,50,1)" />
         </div>
 
         <motion.div
@@ -279,14 +279,14 @@ export const PlatformTechnologySection = ({
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`max-sm:text-center px-4 md:px-12 lg:px-32 flex flex-col ${
+              className={`max-sm:text-center px-4 md:px-12 lg:px-24 flex flex-col ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               } items-center gap-8 md:gap-16`}
             >
               {/* Image */}
               <div className="flex-1 relative group">
                 <div className="absolute inset-0 bg-tealAccent/20 rounded-2xl blur-3xl group-hover:blur-2xl opacity-70 transition-all duration-500 -z-10"></div>
-                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl border border-tealAccent/20 backdrop-blur-sm shadow-xl overflow-hidden h-[350px] flex items-center justify-center">
+                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl border border-tealAccent/20 backdrop-blur-sm shadow-xl overflow-hidden h-[250px] lg:h-[350px] flex items-center justify-center">
                   <Image
                     src={step.image}
                     alt={step.alt}
@@ -355,48 +355,77 @@ export const PlatformTechnologySection = ({
           </motion.div>
 
           {/* Right side: Features list */}
-            <div className="flex justify-center items-center w-full">
-              <NetworkDiagramWithNodes
-                enzymeImage={enzymeImage.src}
-                enzymeImageAlt="Enzyme"
-                width="max-w-3xl"
-                imageWidth={600}
-                imageHeight={400}
-              />
-            </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {technologyFeatures.map((feature) => (
+          <div className="flex justify-center items-center w-full">
+            <NetworkDiagramWithNodes
+              enzymeImage={enzymeImage.src}
+              enzymeImageAlt="Enzyme"
+              width="max-w-3xl"
+              imageWidth={600}
+              imageHeight={400}
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 -mt-14">
+            {technologyFeatures.map((feature, index) => (
               <motion.div
                 key={feature.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: feature.id * 0.1 }}
-                className="p-6 bg-white/10 backdrop-blur-sm border border-mintAccent/0 rounded-xl hover:border-tealAccent transition-all group"
+                className={`p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-tealAccent/10 rounded-xl hover:border-tealAccent/30 transition-all group ${
+                  index === technologyFeatures.length - 1
+                    ? "md:col-span-2 md:max-w-[calc(50%-12px)] md:mx-auto"
+                    : ""
+                }`}
               >
-                <div
-                  className="w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center mb-4 group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)]
-"
-                >
-                  {feature.icon}
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)]">
+                    {feature.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold mb-2 text-gray-300">
+                      {feature.title}
+                    </h3>
+                    <div className="w-full h-px bg-gradient-to-r from-transparent via-tealAccent/20 to-transparent mb-3" />
+                    <p className="text-gray-400">{feature.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-300">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-400">{feature.description}</p>
               </motion.div>
             ))}
           </div>
-          <p className="text-md text-gray-400 max-w-3xl mx-auto text-center md:mt-12">
-            We use a combination of computational tools and experimental
-            techniques to optimize enzyme performance and metabolic pathways.
-            <br />
-            <br />
-            Our technology enables the creation of bio-based alternatives to
-            traditional fluorinated materials, offering superior performance
-            while eliminating the environmental and health concerns associated
-            with PFAS.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-md text-gray-400 max-w-3xl mx-auto md:mt-12 p-6 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-tealAccent/10 backdrop-blur-sm"
+          >
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 mt-1">
+                  <Microscope className="w-6 h-6 text-tealAccent/70" />
+                </div>
+                <p>
+                  We use a combination of computational tools and experimental
+                  techniques to optimize enzyme performance and metabolic
+                  pathways.
+                </p>
+              </div>
+
+              <div className="w-full h-px bg-gradient-to-r from-transparent via-tealAccent/20 to-transparent" />
+
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 mt-1">
+                  <Leaf className="w-6 h-6 text-tealAccent/70" />
+                </div>
+                <p>
+                  Our technology enables the creation of bio-based alternatives
+                  to traditional fluorinated materials, offering superior
+                  performance while eliminating the environmental and health
+                  concerns associated with PFAS.
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
 
         {/* <motion.div

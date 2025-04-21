@@ -56,7 +56,7 @@ const NetworkDiagramWithNodes: React.FC<NetworkDiagramWithNodesProps> = ({
         </div>
 
         {/* Second row: Network Diagram */}
-        <div className="w-full h-[400px] flex items-center justify-center z-0 mt-[-15%]">
+        <div className="w-full h-[400px] flex items-center justify-center z-0 mt-[-120px] md:mt-[-100px]">
           <NetworkDiagram className="w-full h-full" />
         </div>
 

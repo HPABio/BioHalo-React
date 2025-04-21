@@ -22,7 +22,7 @@ const NetworkDiagram = ({
     <defs>
       <style>
         {
-          ".cls-1{fill:#fff}.cls-2{fill:none;stroke:#4B5563;stroke-miterlimit:10;stroke-width:3px}"
+          ".diagram-cls-1{fill:#fff}.diagram-cls-2{fill:none;stroke:#4B5563;stroke-miterlimit:10;stroke-width:3px}"
             }
       </style>
 
@@ -110,25 +110,25 @@ const NetworkDiagram = ({
       {/* First path */}
       <path
         d="M113 199.25v112.84c0 22.32 18.09 40.41 40.41 40.41h414.68c22.32 0 40.41 18.09 40.41 40.41V660.5"
-        className="cls-2"
+        className="diagram-cls-2"
       />
       {/* Second path */}
       <path
         d="M1225.5 199.25v112.84c0 22.32-18.09 40.41-40.41 40.41H770.41c-22.32 0-40.41 18.09-40.41 40.41V660.5"
-        className="cls-2"
+        className="diagram-cls-2"
       />
       {/* Third path */}
       <path
         d="M947 199.25v52.34c0 22.32-18.09 40.41-40.41 40.41H738.41c-22.32 0-40.41 18.09-40.41 40.41V660.5"
-        className="cls-2"
+        className="diagram-cls-2"
       />
       {/* Fourth path */}
       <path
         d="M391.5 199.75v52.34c0 22.32 18.09 40.41 40.41 40.41h168.18c22.32 0 40.41 18.09 40.41 40.41V661"
-        className="cls-2"
+        className="diagram-cls-2"
       />
       {/* Fifth path */}
-      <path d="M668.5 105.5v570" className="cls-2" />
+      <path d="M668.5 105.5v570" className="diagram-cls-2" />
     </g>
 
     {/* Animated circles along paths - Updated colors and sizes */}
