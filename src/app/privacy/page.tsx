@@ -21,130 +21,238 @@ export default function PrivacyPolicy() {
           </h1>
 
           <div className="bg-white rounded-xl shadow-md p-6 md:p-8">
-            <p className="text-gray-600 mb-6">
-              Last Updated:{" "}
-              {new Date().toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              })}
-            </p>
+            <p className="text-gray-600 mb-6">Last Updated: March, 2025</p>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-darkGrey">
-                1. Introduction
+                Introduction
               </h2>
               <p className="text-gray-700 mb-4">
-                At BioHalo, we value your privacy and are committed to
-                protecting your personal data. This Privacy Policy explains how
-                we collect, use, and safeguard your information when you visit
-                our website or use our services.
+                BioHalo is committed to protecting the privacy of our users.
+                This Privacy Policy outlines the types of personal information
+                ("data") we collect, how we use and protect that information,
+                and your rights concerning your personal data. By using our
+                services, you agree to the terms outlined in this Privacy
+                Policy.
+              </p>
+              <p className="text-gray-700 mb-4">
+                BioHalo ApS is the data controller. If you have any questions
+                regarding our processing of your personal data, please contact
+                us at:
+              </p>
+              <div className="text-gray-700 mb-4">
+                <p>BioHalo ApS</p>
+                <p>Rentemestervej 3</p>
+                <p>2200 København, Denmark</p>
+                <p>E-mail: info@BioHalo.io</p>
+              </div>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-semibold mb-4 text-darkGrey">
+                Information We Collect
+              </h2>
+              <p className="text-gray-700 mb-4">
+                We may collect and process the following types of regular
+                personal information:
+              </p>
+              <p className="text-gray-700 mb-4">
+                Personal Information: Name, email address, contact details, and
+                any other information you provide voluntarily when using our
+                services.
+              </p>
+              <p className="text-gray-700 mb-4">
+                Usage Data: Information about your interaction with our website,
+                applications, and services, including the pages you visit and
+                the actions you take.
               </p>
               <p className="text-gray-700">
-                We reserve the right to update this policy at any time. We will
-                notify you of any changes by posting the new policy on this page
-                and updating the "Last Updated" date.
+                BioHalo will as a starting point not process any sensitive or
+                confidential information about you.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-darkGrey">
-                2. Information We Collect
+                Purposes for the Processing and How We Use Your Data
               </h2>
               <p className="text-gray-700 mb-4">
-                <strong>Personal Information:</strong> We may collect personal
-                information that you provide to us, such as your name, email
-                address, phone number, and company information when you fill out
-                a contact form or subscribe to our newsletter.
-              </p>
-              <p className="text-gray-700 mb-4">
-                <strong>Usage Data:</strong> We automatically collect certain
-                information about how you interact with our website, including
-                your IP address, browser type, pages visited, and time spent on
-                our site.
-              </p>
-              <p className="text-gray-700">
-                <strong>Cookies:</strong> We use cookies and similar tracking
-                technologies to enhance your experience on our website and
-                collect information about how you use it.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold mb-4 text-darkGrey">
-                3. How We Use Your Information
-              </h2>
-              <p className="text-gray-700 mb-2">
-                We use the information we collect to:
+                We use the information we collect for various purposes,
+                including:
               </p>
               <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-2">
-                <li>Provide, maintain, and improve our services</li>
-                <li>Respond to your inquiries and provide customer support</li>
                 <li>
-                  Send you updates, marketing communications, and other
-                  information about our products and services
+                  Providing and maintaining our services, cf. Article 6(1)(f) of
+                  the GDPR
                 </li>
                 <li>
-                  Monitor and analyze trends, usage, and activities in
-                  connection with our website
+                  Improving and optimizing our website and services, cf. Article
+                  6(1)(f) of the GDPR
                 </li>
                 <li>
-                  Detect, investigate, and prevent fraudulent transactions and
-                  other illegal activities
+                  Sending newsletters and promotional materials if you have
+                  subscribed to our mailing list, cf. Article 6(1)(a) of the
+                  GDPR
                 </li>
+                <li>
+                  Responding to inquiries and providing customer support, cf.
+                  Article 6(1)(f) of the GDPR
+                </li>
+                <li>Complying with legal obligations, cf. Article 6(1)(c)</li>
               </ul>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-darkGrey">
-                4. Data Security
+                Third-Party Services
               </h2>
+              <p className="text-gray-700 mb-4">
+                In some instances, we disclose your personal data to BioHalo's
+                business partners and suppliers, such as IT suppliers, marketing
+                agencies, providers of customer satisfaction surveys, suppliers
+                of newsletter services, etc. These business partners solely
+                process the personal data on behalf of BioHalo and in accordance
+                with BioHalo's instructions.
+              </p>
               <p className="text-gray-700">
-                We implement appropriate technical and organizational measures
-                to protect your personal data against unauthorized or unlawful
-                processing, accidental loss, destruction, or damage. However, no
-                method of transmission over the Internet or electronic storage
-                is 100% secure, and we cannot guarantee absolute security.
+                We may also disclose your data to external third parties if we
+                are required to do so or if it is part of our services provided
+                to you. Such external third parties may be public authorities,
+                advisors, accountants etc.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-darkGrey">
-                5. Your Rights
+                Storage Period
               </h2>
-              <p className="text-gray-700 mb-4">
-                Depending on your location, you may have certain rights
-                regarding your personal data, including:
+              <p className="text-gray-700">
+                BioHalo will process your personal data as long as it is
+                necessary to fulfill the purpose. Thereafter, BioHalo will
+                delete the information. This is only relevant if you subscribe
+                to the newsletter. If you unsubscribe, then BioHalo will delete
+                your information.
               </p>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-semibold mb-4 text-darkGrey">
+                Your Rights
+              </h2>
+              <p className="text-gray-700 mb-4">You have the right to:</p>
               <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-2">
-                <li>Right to access the personal data we hold about you</li>
-                <li>Right to rectification of inaccurate or incomplete data</li>
-                <li>Right to erasure ("right to be forgotten")</li>
-                <li>Right to restrict processing of your data</li>
-                <li>Right to data portability</li>
                 <li>
-                  Right to object to processing based on legitimate interests
+                  Ask for access to the information that we process about you,
+                  cf. Article 15 of the GDPR
+                </li>
+                <li>
+                  Ask for correction if the information that we process about
+                  you is incorrect, cf. Article 16 of the GDPR
+                </li>
+                <li>
+                  Ask for deletion of your personal information, cf. Article 17
+                  of the GDPR
+                </li>
+                <li>
+                  You also have the right to object to the processing of your
+                  personal data, cf. Article 21 of the GDPR
                 </li>
               </ul>
               <p className="text-gray-700">
-                To exercise any of these rights, please contact us using the
-                information provided below.
+                When the processing is based on your consent, you always have
+                the right to withdraw your consent. If you withdraw your
+                consent, BioHalo must stop the processing of your personal data.
+                To exercise these rights, please contact us at{" "}
+                <a
+                  href="mailto:info@BioHalo.io"
+                  className="text-tealAccent hover:text-pinkAccent"
+                >
+                  info@BioHalo.io
+                </a>
+                .
               </p>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-semibold mb-4 text-darkGrey">
+                Data Security
+              </h2>
+              <p className="text-gray-700">
+                We take appropriate measures to protect your personal
+                information from unauthorized access, disclosure, alteration,
+                and destruction. However, no data transmission over the internet
+                or storage system can be guaranteed as 100% secure.
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-semibold mb-4 text-darkGrey">
+                Changes to this Privacy Policy
+              </h2>
+              <p className="text-gray-700">
+                We may update this Privacy Policy periodically. Any changes will
+                be effective upon posting the revised policy on our website. We
+                encourage you to review this Privacy Policy regularly.
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-semibold mb-4 text-darkGrey">
+                Cookies
+              </h2>
+              <p className="text-gray-700 mb-4">
+                BioHalo prioritizes your privacy and security. We want to
+                clarify that no personal information regarding you, the user, is
+                stored in any way through our use of cookies.
+              </p>
+              <p className="text-gray-700 mb-4">
+                The cookies employed on BioHalo are solely for enhancing your
+                user experience, allowing us to better understand how you
+                navigate our site and improve its functionality.
+              </p>
+              <p className="text-gray-700">
+                By continuing to use BioHalo, you consent to the utilization of
+                cookies for the sole purpose of enhancing your browsing
+                experience. If you have any concerns or questions regarding our
+                cookie usage, please don't hesitate to contact us.
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-semibold mb-4 text-darkGrey">
+                Complaints
+              </h2>
+              <p className="text-gray-700 mb-4">
+                If you wish to complain about BioHalo's processing of your
+                personal data, please contact:
+              </p>
+              <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-2">
+                <li>
+                  The Danish Data Protection Agency ("Datatilsynet"), Carl
+                  Jacobsens vej 35, 2500 Valby
+                </li>
+                <li>Telephone number: 33 19 32 00</li>
+                <li>E-mail: dt@datatilsynet.dk</li>
+              </ul>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold mb-4 text-darkGrey">
-                6. Contact Us
+                Contact Us
               </h2>
-              <p className="text-gray-700">
-                If you have any questions or concerns about this Privacy Policy,
-                please contact us at{" "}
+              <p className="text-gray-700 mb-4">
+                If you have any questions, concerns, or requests regarding this
+                Privacy Policy or our data practices, please contact us at{" "}
                 <a
-                  href="mailto:info@biohalo.io"
+                  href="mailto:info@BioHalo.io"
                   className="text-tealAccent hover:text-pinkAccent"
                 >
-                  info@biohalo.io
+                  info@BioHalo.io
                 </a>
+                .
+              </p>
+              <p className="text-gray-700 italic">
+                Thank you for trusting BioHalo with your information.
               </p>
             </section>
           </div>

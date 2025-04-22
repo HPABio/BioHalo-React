@@ -24,6 +24,7 @@ import pollutionearth from "@/assets/images/BluePrintStyle/polutionEarth.svg";
 import IndustrialPollution from "@/assets/images/BGImages/IndustrialPollution_960678749.png";
 
 
+
 interface FluorinatedMaterialsSectionProps {
   stats: any[];
   className?: string;
@@ -93,7 +94,7 @@ const Circle2 = React.memo(function Circle2() {
 const Circle3Base = React.memo(function Circle3Base() {
   console.log("Rendering Circle3Base component");
   return (
-    <div className="relative w-[900px] h-[900px] grid place-items-center rounded-full overflow-hidden">
+    <div className="relative w-[400px] h-[400px] md:w-[650px] md:h-[650px] lg:w-[900px] lg:h-[900px] grid place-items-center rounded-full overflow-hidden">
       <Image
         src={IndustrialPollution}
         alt="IndustrialPollution"
@@ -170,8 +171,9 @@ export function FluorinatedMaterialsSection({
     
     <section className={`${className} relative`}>
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
+      
 
-        <div className="w-full md:h-[1350px] lg:h-[1600px]  relative">
+        <div className="w-full h-[1150px] md:h-[1350px] lg:h-[1600px]  relative">
           <div className="w-full h-full relative bg-gradient-to-b bg-teal-950 from-black via-black/70 to-black">
             
           </div>
@@ -180,11 +182,8 @@ export function FluorinatedMaterialsSection({
           <div className="w-full h-full max-w-[1280px] mx-auto px-14  pt-[20px] -mb-[0px]">
             {/* TEXT COLUMN */}
             <div className="w-full bg-red-500/0">
-              <h1 className="max-w-[720px] font-black font-Arial text-4xl md:text-6xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
-                <span className="absolute text-9xl scale-[1.2] opacity-20 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm">
-                  PFAS{" "}
-                </span>
-                <span className="text-9xl scale-[2] opacity-50 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+              <h1 className="max-w-[720px] font-black font-Arial text-4xl xl:text-6xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
+                <span className="text-9xl scale-[2] opacity-80 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
                   PFAS{" "}
                 </span>
                 <br />
@@ -224,12 +223,12 @@ export function FluorinatedMaterialsSection({
               {/* right column */}
               <div className="w-1/2 h-[1400px] bg-green-600/0 relative lg:mt-0 -mt-32">
                 {/* Circle 1 */}
-                <div className="w-[350px] h-[350px] absolute top-[-10%] right-[0%] ml-auto translate-y-[15%] translate-x-[5%] bg-green-500/0">
+                <div className="lg:block hidden w-[350px] h-[350px] absolute top-[-10%] right-[0%] ml-auto translate-y-[15%] translate-x-[5%] bg-green-500/0">
                   <Circle1 />
                 </div>
 
                 {/* Circle 2 */}
-                <div className="w-[550px] h-[550px] absolute top-[0] right-[18%] ml-auto translate-y-[15%] translate-x-[5%] bg-green-500/0">
+                <div className="lg:block hidden w-[550px] h-[550px] absolute top-[0] right-[18%] ml-auto translate-y-[15%] translate-x-[5%] bg-green-500/0">
                   <Circle2 />
                 </div>
 
@@ -237,12 +236,13 @@ export function FluorinatedMaterialsSection({
 
                 {/* Circle 3 */}
                 <div
-                  className="w-[900px] h-[900px] absolute bottom-[20%] right-[45%] ml-auto translate-y-[15%] translate-x-[0%] bg-green-500/0
-                  lg:translate-y-[15%] lg:translate-x-[5%]"
+                  className="absolute w-[400px] h-[400px] bottom-[40%] right-[880px] ml-auto translate-y-[15%] translate-x-[0%]
+                  md:w-[650px] md:h-[650px] md:bottom-[30%] md:right-[650px] md:ml-auto md:translate-y-[15%] md:translate-x-[0%]
+                  lg:w-[900px] lg:h-[900px] lg:bottom-[20%] lg:right-[45%] lg:ml-auto lg:translate-y-[15%] lg:translate-x-[0%] bg-green-500/0"
                   style={{ willChange: "transform" }}
                 >
                   <motion.div
-                    className="relative w-[900px] h-[900px]"
+                    className="relative w-[400px] h-[400px] md:w-[650px] md:h-[650px] lg:w-[900px] lg:h-[900px]"
                     ref={ref2}
                   >
                     <Circle3Base />
@@ -251,7 +251,7 @@ export function FluorinatedMaterialsSection({
                       {/* Blurred Title */}
                       <SimpleStatsBox
                         classNamesContainer="w-fit h-fit mt-14"
-                        classNamesTitle="lg-9xl w-[800px] scale-[2.2] blur-sm opacity-35 text-center text-9xl font-Arial
+                        classNamesTitle="w-[600px] lg:w-[800px] scale-[2.2] blur-sm opacity-35 text-center text-6xl md:text-8xl lg:text-9xl   font-Arial
                                     font-black -mb-8 bg-gradient-to-tl from-lightGrey via-gray-400 to-lightGrey/70 bg-clip-text text-transparent"
                         classNamesSubTitle="text-center text-lightGrey/60 text-3xl font-bold mt-20 capitalize"
                         stat={stats[4]}
@@ -263,7 +263,7 @@ export function FluorinatedMaterialsSection({
                       {/* Primary Title */}
                         <SimpleStatsBox
                           classNamesContainer="absolute w-fit h-fit mt-14"
-                          classNamesTitle="lg-9xl w-[800px] scale-[2.2] text-center text-9xl font-Arial
+                          classNamesTitle="w-[600px] lg:w-[800px] scale-[2.2] text-center text-6xl md:text-8xl lg:text-9xl   font-Arial
                                   font-black -mb-8 bg-gradient-to-tl from-lightGrey via-gray-400 to-lightGrey/70 bg-clip-text text-transparent"
                           classNamesSubTitle="text-center text-lightGrey/60 text-3xl font-bold mt-20 capitalize"
                           stat={stats[4]}
@@ -282,7 +282,7 @@ export function FluorinatedMaterialsSection({
         </div>
       </div>
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
-      <div className="absolute hidden lg:block bottom-0 right-0 w-full h-[200px] bg-gradient-to-t from-black via-black/90 to-transparent"></div>
+      <div className="absolute bottom-0 right-0 w-full h-[100px] lg:h-[200px] bg-gradient-to-t from-black via-black/90 to-transparent"></div>
       {/* <div className="w-full h-[100px] absolute bottom-0 left-0 bg-gradient-to-t from-black/0 via-black/70 to-black/100"/> */}
     </section>
   );

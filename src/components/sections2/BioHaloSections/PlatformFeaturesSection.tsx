@@ -229,7 +229,7 @@ export const PlatformFeaturesSection = ({
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <p className="text-lg text-gray-700 dark:text-gray-200 max-w-2xl mx-auto font-medium">
+          <p className="text-lg text-gray-300 dark:text-gray-200 max-w-2xl mx-auto font-medium">
             Our biohalogenation platform represents a breakthrough in
             sustainable chemistry, offering a complete solution to replace PFAS
             while maintaining or exceeding performance requirements.

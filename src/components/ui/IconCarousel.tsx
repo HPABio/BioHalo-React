@@ -12,10 +12,12 @@ import {
   Settings,
   Gauge,
   Trees,
+  Microscope,
 } from "lucide-react";
 import Image from "next/image";
 import EnzymeImage2 from "@/assets/images/enzymeImage2.png";
 import enzymeImage from "@/assets/images/BluePrint with Color/Enzyme.png";
+import { motion } from "framer-motion";
 
 export default function IconCarousel({ className }: { className?: string }) {
   // Animation speed controls (in seconds)
@@ -30,6 +32,7 @@ export default function IconCarousel({ className }: { className?: string }) {
   return (
     <div className={`${className} flex items-center justify-center relative`}>
       <div className="w-[1200px] h-[1200px] flex items-center justify-center">
+        
         {/* Ring 1 - Outermost */}
         <div className="w-full h-full rounded-full border-2 border-black/5 flex items-center justify-center relative">
           <div
@@ -176,6 +179,41 @@ export default function IconCarousel({ className }: { className?: string }) {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Bio Reactor Blueprint */}
+        <div className="absolute top-0 left-0 w-full h-full bg-red-500/0 flex items-center justify-center translate-y-[-50px]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-md text-gray-300 max-w-3xl mx-auto p-6 rounded-xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-tealAccent/10 backdrop-blur-sm"
+          >
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                {/* 6 */}
+                <p>
+                  We use a combination of computational tools and experimental
+                  techniques to optimize enzyme performance and metabolic
+                  pathways.
+                </p>
+              </div>
+
+              <div className="w-full h-px bg-gradient-to-r from-transparent via-mintAccent/20 to-transparent" />
+
+              <div className="flex items-start space-x-4">
+                {/* <div className="flex-shrink-0 mt-1">
+                  <Leaf className="w-6 h-6 text-tealAccent/70" />
+                </div> */}
+                <p>
+                  Our technology enables the creation of bio-based alternatives
+                  to traditional fluorinated materials, offering superior
+                  performance while eliminating the environmental and health
+                  concerns associated with PFAS.
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>

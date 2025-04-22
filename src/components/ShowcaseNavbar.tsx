@@ -10,6 +10,7 @@ import { ContactOverlay } from "@/components/ui/ContactOverlay";
 
 export const ShowcaseNavbar = () => {
   const [isContactOverlayOpen, setIsContactOverlayOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollYProgress } = useScroll();
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -77,6 +78,51 @@ export const ShowcaseNavbar = () => {
     }
   };
 
+  // Mobile-specific scroll handler
+  const handleMobileScrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+
+    // Remove the '#' from the href
+    const targetId = href.substring(1);
+
+    // Handle top case separately
+    if (targetId === "top") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      return;
+    }
+
+    // Mobile-specific scroll destinations
+    const mobileDestinations: { [key: string]: string } = {
+      "what-we-do": "what-we-do", // Keep About at its original position
+      "platform-technology": "platform-technology", // Keep Technology at its original position
+      "platform-features-content": "platform-features-content", // Keep Features at its original position
+      "team-section": "team-section", // Keep Team at its original position
+    };
+
+    // Get the mobile destination or use the original target
+    const mobileTargetId = mobileDestinations[targetId] || targetId;
+    const targetElement = document.getElementById(mobileTargetId);
+
+    if (targetElement) {
+      // Get the element's position with offset for the fixed header
+      // The 80px offset accounts for the navbar height
+      const yPosition =
+        targetElement.getBoundingClientRect().top + window.scrollY - 80;
+
+      // Scroll to the element
+      window.scrollTo({
+        top: yPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       <motion.header
@@ -120,19 +166,80 @@ export const ShowcaseNavbar = () => {
                 </a>
               ))}
               <Button
-                className="bg-tealAccent hover:bg-pinkAccent/90 text-white"
+                className="bg-tealAccent hover:bg-pinkAccent/90 text-white rounded-full"
                 onClick={handleOpenContactOverlay}
               >
                 Get in Touch
               </Button>
             </div>
 
-            {/* Mobile menu button - to be implemented */}
-            <Button variant="outline" className="md:hidden">
-              Menu
-            </Button>
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 text-darkGrey hover:text-tealAccent transition-colors"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                {isMobileMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
           </nav>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="md:hidden absolute top-full left-0 right-0 bg-lightGrey/80 backdrop-blur-lg border-b border-mediumGrey/5"
+          >
+            <div className="container mx-auto px-4 py-4">
+              <div className="flex flex-col space-y-4 items-center">
+                {navItems.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={(e) => {
+                      handleMobileScrollToSection(e, item.href);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="text-darkGrey hover:text-tealAccent transition-colors py-2"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+                <Button
+                  className="bg-tealAccent hover:bg-pinkAccent/90 text-white rounded-full"
+                  onClick={() => {
+                    handleOpenContactOverlay();
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  Get in Touch
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        )}
       </motion.header>
 
       {/* Contact Overlay */}

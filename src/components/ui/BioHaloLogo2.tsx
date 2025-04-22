@@ -15,8 +15,6 @@ interface StyleProps {
 }
 
 const defaultStyles: StyleProps = {
-  width: "300",
-  height: "300",
   strokewidth: "14",
   strokedasharray: "1000",
   strokedashoffset: "1000",

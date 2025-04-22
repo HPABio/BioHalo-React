@@ -1,0 +1,53 @@
+.network-path {
+  offset-anchor: 10px 0px;
+  animation: animation-path;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.75, -0.01, 0, 0.99);
+}
+
+.network-line-1 {
+  offset-path: path(
+    "M113 199.25v112.84c0 22.32 18.09 40.41 40.41 40.41h414.68c22.32 0 40.41 18.09 40.41 40.41V660.5"
+  );
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.network-line-2 {
+  offset-path: path(
+    "M1225.5 199.25v112.84c0 22.32-18.09 40.41-40.41 40.41H770.41c-22.32 0-40.41 18.09-40.41 40.41V660.5"
+  );
+  animation-delay: 6s;
+  animation-duration: 2s;
+}
+
+.network-line-3 {
+  offset-path: path(
+    "M947 199.25v52.34c0 22.32-18.09 40.41-40.41 40.41H738.41c-22.32 0-40.41 18.09-40.41 40.41V660.5"
+  );
+  animation-delay: 4s;
+  animation-duration: 6s;
+}
+
+.network-line-4 {
+  offset-path: path(
+    "M391.5 199.75v52.34c0 22.32 18.09 40.41 40.41 40.41h168.18c22.32 0 40.41 18.09 40.41 40.41V661"
+  );
+  animation-delay: 3s;
+  animation-duration: 3s;
+}
+
+.network-line-5 {
+  offset-path: path("M668.5 105.5v570");
+  animation-delay: 9s;
+  animation-duration: 4s;
+}
+
+@keyframes animation-path {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
