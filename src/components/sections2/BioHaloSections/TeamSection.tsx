@@ -110,7 +110,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ className = "" }) => {
           </span>
         </h1>
 
-        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 justify-items-center md:max-w-[calc(580px+2rem)] xl:max-w-[calc(1160px+3rem)]">
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center md:max-w-[calc(580px+2rem)] lg:max-w-[calc(870px+2rem)] xl:max-w-[calc(1160px+3rem)]">
           {teamMembers.map((member) => (
             <TeamMemberCard key={member.id} member={member} />
           ))}
