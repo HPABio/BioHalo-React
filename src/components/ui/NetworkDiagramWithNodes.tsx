@@ -38,7 +38,7 @@ const NetworkDiagramWithNodes: React.FC<NetworkDiagramWithNodesProps> = ({
 
   return (
     <div
-      className={`bg-gray-800/0 px-8 rounded-lg shadow-lg w-full ${width} ${className}`}
+      className={`bg-gray-800/0 px-8 rounded-lg shadow-lg w-[350px] sm:w-full ${width} ${className}`}
     >
       <div className="w-full flex flex-col gap-0 relative">
         {/* First row: 5 square divs */}
@@ -56,7 +56,7 @@ const NetworkDiagramWithNodes: React.FC<NetworkDiagramWithNodesProps> = ({
         </div>
 
         {/* Second row: Network Diagram */}
-        <div className="w-full h-[400px] flex items-center justify-center z-0 mt-[-125px] md:mt-[-100px]">
+        <div className="w-full h-[400px] flex items-center justify-center z-0 mt-[-140px] sm:mt-[-125px] md:mt-[-100px]">
           <NetworkDiagram className="w-full h-full" />
         </div>
 

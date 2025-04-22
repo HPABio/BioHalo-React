@@ -393,39 +393,7 @@ export const PlatformTechnologySection = ({
               </motion.div>
             ))}
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-md text-gray-400 max-w-3xl mx-auto md:mt-12 p-6 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-tealAccent/10 backdrop-blur-sm"
-          >
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 mt-1">
-                  <Microscope className="w-6 h-6 text-tealAccent/70" />
-                </div>
-                <p>
-                  We use a combination of computational tools and experimental
-                  techniques to optimize enzyme performance and metabolic
-                  pathways.
-                </p>
-              </div>
-
-              <div className="w-full h-px bg-gradient-to-r from-transparent via-tealAccent/20 to-transparent" />
-
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 mt-1">
-                  <Leaf className="w-6 h-6 text-tealAccent/70" />
-                </div>
-                <p>
-                  Our technology enables the creation of bio-based alternatives
-                  to traditional fluorinated materials, offering superior
-                  performance while eliminating the environmental and health
-                  concerns associated with PFAS.
-                </p>
-              </div>
-            </div>
-          </motion.div>
+          
         </div>
 
         {/* <motion.div
