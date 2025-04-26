@@ -16,6 +16,8 @@ import BioHaloLogo3 from "@/components/ui/BioHaloLogo3";
 import BioReactorBP from "@/components/ui/BioReactorBP";
 import BioReactorProductBP from "@/assets/images/BluePrintSVG/bio-reactor-product.svg";
 
+import { HeroSection4 } from "@/components/HeroSections/HeroSections";
+
 
 
 
@@ -35,14 +37,10 @@ export default function Page() {
   }, []); */
 
   return (
-    <div className="min-h-screen bg-gray-900 flex justify-center items-center">
-      <div className="w-1/2 h-1/2 bg-red-500/0">
-      <BioReactorBP className="w-full h-full" />
-      </div>
-      <div className="w-1/2 h-1/2 bg-red-500/0">
-      <Image src={BioReactorProductBP} alt="BioReactorProductBP" className="w-full h-full" />
-
-      </div>
+    <div className="relative min-h-screen h-[200vh] bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70">
+     <div className="w-screen h-screen top-0 left-0 bg-red-500/0 flex justify-center items-center">
+      <HeroSection4 className="w-screen h-screen relative overflow-hidden" />
+     </div>
     </div>
   );
 }

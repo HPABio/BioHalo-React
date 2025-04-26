@@ -320,8 +320,8 @@ export const HeroSection3 = ({
           </div>
           <div className="flex flex-col md:flex-row gap-4 mt-60 md:mt-2 items-center justify-center">
             <Button
-              className="px-8 py-6 font-poppins text-lg font-medium bg-gradient-to-r from-tealAccent to-teal-600 hover:from-teal-600 hover:to-tealAccent 
-                        text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-6 font-poppins text-lg font-medium bg-tealAccent bg-gradient-to-r from-tealAccent via-mintAccent/50 to-mintAccent/80 hover:from-teal-600 hover:to-tealAccent 
+                          text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               onClick={(e) => {
                 e.preventDefault();
                 const targetElement = document.getElementById(
@@ -343,7 +343,139 @@ export const HeroSection3 = ({
             </Button>
             <Button
               className="px-8 py-6 font-poppins text-lg font-medium bg-white/10 backdrop-blur-sm hover:bg-white/20 
-                        text-white border border-white/20 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                        text-tealAccent/70 border border-white/20 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              onClick={(e) => {
+                e.preventDefault();
+                const targetElement = document.getElementById(
+                  "platform-features-content"
+                );
+                if (targetElement) {
+                  const yPosition =
+                    targetElement.getBoundingClientRect().top +
+                    window.scrollY -
+                    80;
+                  window.scrollTo({
+                    top: yPosition,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+            >
+              Features
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const HeroSection4 = ({
+  className,
+  debug = false,
+}: HeroSectionsProps) => {
+  if (debug) console.log("Rendering HeroSection5");
+
+  const sectionRef = useRef<HTMLElement>(null);
+
+  return (
+    <section
+      ref={sectionRef}
+      className={`relative w-[100vw] max-h-[1000px] md:max-h-[100vh] md:h-[100vh] min-h-[600px] 2xl:min-h-[900px]  ${className}`}
+    >
+      <div className="relative bottom-0 left-0 w-full h-full" />
+
+      {/* Top left image */}
+      <div className="absolute w-[80%] h-[80%] top-0 left-0 translate-x-[-50%] translate-y-[-50%] blur-[7px] opacity-60 brightness-[1.4]">
+        <Image src={enzymeImage} alt="Enzyme" fill className="object-contain" />
+      </div>
+      {/* Bottom image */}
+      <div
+        className="md:hidden block absolute w-full h-full bottom-0 right-[-90%] translate-x-[-50vw] translate-y-[55%] 
+      opacity-1 blur-[6px]"
+      >
+        <Image src={enzymeImage} alt="Enzyme" fill className="object-contain" />
+      </div>
+
+      {/* Logo container, Subtitle, and Buttons */}
+      <div className="absolute inset-0 flex items-center justify-center bg-green-500/0 pt-[80px] z-10">
+        <div className="relative w-[80%] h-[80%] flex flex-col items-center justify-center bg-blue-500/0">
+          <div className="relative w-[50%] md:w-[60%] h-auto max-w-[600px] mb-3">
+            <BioHaloLogo3 />
+          </div>
+          <div className="w-full bg-transparent hidden md:block">
+            <div className="w-full h-full relative bg-transparent">
+              <p className="w-full relative tracking-widest text-[clamp(0.7rem,1.5vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
+                Your Partner in{" "}
+                <span
+                  className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent 
+                          uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
+                >
+                  Biohalogenation
+                </span>{" "}
+                Chemistry
+              </p>
+              <p className="w-full relative tracking-widest text-[clamp(0.4rem,0.9vw,1.2rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent mt-0">
+                <span className="block uppercase font-medium text-gray-500/90 max-w-4xl mx-auto">
+                  We disrupt the{" "}
+                  <span className="font-black bg-slate-800 bg-gradient-to-br from-gray-800/60 via-gray-200/30 to-gray-900/30 bg-clip-text text-transparent">
+                    forever chemicals
+                  </span>{" "}
+                  industry using{" "}
+                  <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
+                    enzymes
+                  </span>
+                </span>
+              </p>
+            </div>
+          </div>
+          {/* Center image */}
+          <div className="relative w-[120%] md:w-[80%] h-[60%] md:h-[60%] overflow-visible bg-red-500/0 -mt-24">
+            <motion.div
+              className="relative w-full h-full mt-14 overflow-visible bg-blue-500/0"
+              animate={{
+                y: [0, -30, 0],
+              }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={enzymeImage}
+                alt="Enzyme"
+                fill
+                className="object-contain overflow-visible bg-green-500/0"
+              />
+            </motion.div>
+          </div>
+          <div className="flex flex-col md:flex-row gap-4 mt-4 items-center justify-center">
+            <Button
+              className="px-8 py-6 font-poppins text-lg font-medium bg-tealAccent bg-gradient-to-r from-tealAccent via-mintAccent/50 to-mintAccent/80 hover:from-teal-600 hover:to-tealAccent 
+                          text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              onClick={(e) => {
+                e.preventDefault();
+                const targetElement = document.getElementById(
+                  "platform-technology"
+                );
+                if (targetElement) {
+                  const yPosition =
+                    targetElement.getBoundingClientRect().top +
+                    window.scrollY -
+                    80;
+                  window.scrollTo({
+                    top: yPosition,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+            >
+              Technology
+            </Button>
+            <Button
+              className="px-8 py-6 font-poppins text-lg font-medium bg-white/10 backdrop-blur-sm hover:bg-white/20 
+                        text-tealAccent/70 border border-white/20 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               onClick={(e) => {
                 e.preventDefault();
                 const targetElement = document.getElementById(
