@@ -262,7 +262,7 @@ export const HeroSection3 = ({
         <Image src={enzymeImage} alt="Enzyme" fill className="object-contain" />
       </div>
       {/* Center image */}
-      <div className="absolute w-[50%] h-[50%] min-h-[500px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-40%] overflow-visible bg-red-500/0">
+      <div className="absolute  w-[70%] h-[70%] md:w-[50%] md:h-[50%] min-h-[500px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-48%] md:translate-y-[-40%] overflow-visible bg-red-500/0">
         <motion.div
           className="relative w-full h-full overflow-visible bg-blue-500/0"
           animate={{
@@ -282,9 +282,8 @@ export const HeroSection3 = ({
           />
         </motion.div>
       </div>
-      {/* Logo container */}
-
-      <div className="absolute inset-0 flex items-center justify-center bg-green-500/0 pt-[80px]">
+      {/* Logo container, Subtitle, and Buttons */}
+      <div className="absolute inset-0 flex items-center justify-center bg-green-500/0 pt-[80px] z-10">
         <div className="relative w-[80%] h-[80%] flex flex-col items-center justify-center bg-blue-500/0">
           <div
             className="relative w-[80%] h-auto max-w-[1000px]"
@@ -293,7 +292,7 @@ export const HeroSection3 = ({
           >
             <BioHaloLogo3 />
           </div>
-          <div className="w-full mt-52 bg-transparent hidden md:block">
+          <div className="w-full mt-32 md:mt-52 bg-transparent hidden md:block">
             <div className="w-full h-full relative bg-transparent">
               <p className="w-full relative tracking-widest text-[clamp(0.8rem,2vw,2.5rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
                 Your Partner in{" "}
@@ -319,9 +318,9 @@ export const HeroSection3 = ({
               </p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 mt-2 items-center justify-center">
+          <div className="flex flex-col md:flex-row gap-4 mt-60 md:mt-2 items-center justify-center">
             <Button
-              className="px-8 py-6 text-lg font-medium bg-gradient-to-r from-tealAccent to-teal-600 hover:from-teal-600 hover:to-tealAccent 
+              className="px-8 py-6 font-poppins text-lg font-medium bg-gradient-to-r from-tealAccent to-teal-600 hover:from-teal-600 hover:to-tealAccent 
                         text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               onClick={(e) => {
                 e.preventDefault();
@@ -343,7 +342,7 @@ export const HeroSection3 = ({
               Technology
             </Button>
             <Button
-              className="px-8 py-6 text-lg font-medium bg-white/10 backdrop-blur-sm hover:bg-white/20 
+              className="px-8 py-6 font-poppins text-lg font-medium bg-white/10 backdrop-blur-sm hover:bg-white/20 
                         text-white border border-white/20 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               onClick={(e) => {
                 e.preventDefault();
