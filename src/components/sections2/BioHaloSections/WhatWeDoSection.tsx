@@ -17,7 +17,7 @@ import LightBGWithDroplets from "@/assets/images/AdobeStock/AdobeStock_291137317
 
 import BioFMonomer from "@/assets/images/BluePrintSVG/BioF-Monomer.svg";
 import EcoliTripletsSVG from "../../ui/EcoliTripletsSVG";
-import beaker from "@/assets/images/BluePrintSVG/beaker.svg";
+import beaker2 from "@/assets/images/BluePrintSVG/beaker-product.svg";
 import BioHaloLogoOnly from "@/assets/BioHaloLogoOnly.svg";
 import logo from "@/assets/images/logo.png";
 import BioReactorBlueprint from "@/assets/images/BluePrint with Color/bio-reactor.png";
@@ -394,10 +394,9 @@ export const WhatWeDoSection = ({
           translate-x-[-50%] translate-y-[-50px] 
           md:translate-x-[-50%] md:translate-y-[-180px] 
           lg:translate-x-[-30%] lg:translate-y-[-380px] 
-          w-[300px] h-[300px] md:w-[500px] md:h-[500px] lg:w-[800px] lg:h-[800px] 
-          filter invert grayscale opacity-50"
+          w-[300px] h-[300px] md:w-[500px] md:h-[500px] lg:w-[800px] lg:h-[800px]"
           style={{
-            backgroundImage: `url(${beaker.src})`,
+            backgroundImage: `url(${beaker2.src})`,
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

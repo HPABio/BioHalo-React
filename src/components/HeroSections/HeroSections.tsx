@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
 import { BioHaloLogo } from "../ui/BioHaloLogo";
 import { BioHaloLogo2 } from "../ui/BioHaloLogo2";
+import BioHaloLogo3 from "../ui/BioHaloLogo3";
 import { HeroLayout } from "../pageLayouts/HeroLayout";
 import SerenityShader from "../backgroundAnimations/SerenityShader";
 import EcoliTripletsSVG from "@/components/ui/EcoliTripletsSVG";
@@ -219,17 +220,151 @@ export const HeroSection2 = ({
           before:content-[''] before:absolute before:w-[50%] before:h-[10px] before:bg-gradient-to-r before:from-transparent before:via-black/40 before:to-transparent 
           before:blur-[10px] before:bottom-[-50%] before:left-[25%] before:rounded-[50%]"
           >
-            <BioHaloLogo2
+            <BioHaloLogo3 />
+            {/* <BioHaloLogo2
               styles={{
                 classNames: "w-[70vw] h-auto",
                 animationduration: "1.5s",
                 animationdelay: "0.3s",
               }}
-            />
+            /> */}
           </div>
-          <h2 className="text-center text-black text-[2.7vw] font-bold translate-x-[27%] translate-y-[-80%]">
-            The Biohalogenation Company
-          </h2>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const HeroSection3 = ({
+  className,
+  debug = false,
+}: HeroSectionsProps) => {
+  if (debug) console.log("Rendering HeroSection5");
+
+  const sectionRef = useRef<HTMLElement>(null);
+
+  return (
+    <section
+      ref={sectionRef}
+      className={`relative w-[100vw] max-h-[1000px] md:max-h-[100vh] md:h-[100vh] min-h-[600px] 2xl:min-h-[900px]  ${className}`}
+    >
+      <div className="relative bottom-0 left-0 w-full h-full" />
+
+      {/* Top left image */}
+      <div className="absolute w-[80%] h-[80%] top-0 left-0 translate-x-[-50%] translate-y-[-50%] blur-[7px] opacity-60 brightness-[1.4]">
+        <Image src={enzymeImage} alt="Enzyme" fill className="object-contain" />
+      </div>
+      {/* Bottom image */}
+      <div
+        className="md:hidden block absolute w-full h-full bottom-0 right-[-90%] translate-x-[-50vw] translate-y-[55%] 
+      opacity-1 blur-[6px]"
+      >
+        <Image src={enzymeImage} alt="Enzyme" fill className="object-contain" />
+      </div>
+      {/* Center image */}
+      <div className="absolute w-[50%] h-[50%] min-h-[500px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-40%] overflow-visible bg-red-500/0">
+        <motion.div
+          className="relative w-full h-full overflow-visible bg-blue-500/0"
+          animate={{
+            y: [0, -30, 0],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <Image
+            src={enzymeImage}
+            alt="Enzyme"
+            fill
+            className="object-contain overflow-visible bg-green-500/0"
+          />
+        </motion.div>
+      </div>
+      {/* Logo container */}
+
+      <div className="absolute inset-0 flex items-center justify-center bg-green-500/0 pt-[80px]">
+        <div className="relative w-[80%] h-[80%] flex flex-col items-center justify-center bg-blue-500/0">
+          <div
+            className="relative w-[80%] h-auto max-w-[1000px]"
+            /* before:content-[''] before:absolute before:w-[50%] before:h-[10px] before:bg-gradient-to-r before:from-transparent before:via-black/40 before:to-transparent 
+            before:blur-[10px] before:bottom-[-50%] before:left-[25%] before:rounded-[50%]" */
+          >
+            <BioHaloLogo3 />
+          </div>
+          <div className="w-full mt-52 bg-transparent hidden md:block">
+            <div className="w-full h-full relative bg-transparent">
+              <p className="w-full relative tracking-widest text-[clamp(0.8rem,2vw,2.5rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
+                Your Partner in{" "}
+                <span
+                  className="text-[clamp(1.2rem,2.5vw,3.2rem)] bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent 
+                          uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
+                >
+                  Biohalogenation
+                </span>{" "}
+                Chemistry
+              </p>
+              <p className="w-full relative tracking-widest text-[clamp(0.5rem,1.3vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
+                <span className="block uppercase mt-0 mb-3 font-medium text-gray-500/90 max-w-5xl mx-auto">
+                  We disrupt the{" "}
+                  <span className="font-black bg-slate-800 bg-gradient-to-br from-gray-800/60 via-gray-200/30 to-gray-900/30 bg-clip-text text-transparent">
+                    forever chemicals
+                  </span>{" "}
+                  industry using{" "}
+                  <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
+                    enzymes
+                  </span>
+                </span>
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row gap-4 mt-2 items-center justify-center">
+            <Button
+              className="px-8 py-6 text-lg font-medium bg-gradient-to-r from-tealAccent to-teal-600 hover:from-teal-600 hover:to-tealAccent 
+                        text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              onClick={(e) => {
+                e.preventDefault();
+                const targetElement = document.getElementById(
+                  "platform-technology"
+                );
+                if (targetElement) {
+                  const yPosition =
+                    targetElement.getBoundingClientRect().top +
+                    window.scrollY -
+                    80;
+                  window.scrollTo({
+                    top: yPosition,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+            >
+              Technology
+            </Button>
+            <Button
+              className="px-8 py-6 text-lg font-medium bg-white/10 backdrop-blur-sm hover:bg-white/20 
+                        text-white border border-white/20 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              onClick={(e) => {
+                e.preventDefault();
+                const targetElement = document.getElementById(
+                  "platform-features-content"
+                );
+                if (targetElement) {
+                  const yPosition =
+                    targetElement.getBoundingClientRect().top +
+                    window.scrollY -
+                    80;
+                  window.scrollTo({
+                    top: yPosition,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+            >
+              Features
+            </Button>
+          </div>
         </div>
       </div>
     </section>

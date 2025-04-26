@@ -5,8 +5,9 @@ import Image from "next/image";
 import React, { Suspense, memo } from "react";
 import dynamic from "next/dynamic";
 import { HeroSection5 } from "@/components/HeroSections/HeroSection5";
-import { HeroSection1, HeroSection2 } from "@/components/HeroSections/HeroSections";
+import { HeroSection1, HeroSection2, HeroSection3 } from "@/components/HeroSections/HeroSections";
 import { FluorinatedMaterialsSection } from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection";
+import { FluorinatedMaterialsSection2 } from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection2";
 import {
   PollutionSection,
   PollutionSectionBACKUP,
@@ -154,7 +155,8 @@ export const Showcase4 = () => {
       ></div>
 
       {/* <HeroSection1 className="w-screen h-screen relative" /> */}
-      <HeroSection2 className="w-screen h-screen relative overflow-hidden" />
+      {/* <HeroSection2 className="w-screen h-screen relative overflow-hidden" /> */}
+      <HeroSection3 className="w-screen h-screen relative overflow-hidden" />
       <section
         className="pb-16 bg-black"
         id="transition-section-one"

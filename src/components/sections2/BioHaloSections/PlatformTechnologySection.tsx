@@ -7,7 +7,8 @@ import { MovingAtom } from "@/components/ui/MovingAtom";
 import AtomDiagram from "@/components/ui/AtomDiagram";
 import Barrels from "@/assets/images/BluePrintSVG/Barrels.svg";
 import beaker from "@/assets/images/BluePrintSVG/beaker.svg";
-import BioReactorBP from "@/assets/images/BluePrintSVG/bio-reactor.svg";
+// import BioReactorBP from "@/assets/images/BluePrintSVG/bio-reactor.svg";
+import BioReactorBP2 from "@/assets/images/BluePrintSVG/bio-reactor-product.svg";
 import DNALogo from "@/assets/images/BluePrintSVG/dna-logo.svg";
 import DNA_Logo_long from "@/components/ui/DNA-Logo-long";
 import BioHaloStep2 from "@/assets/images/BluePrintSVG/BioHalo-step2.svg";
@@ -149,7 +150,7 @@ const technologyProcessSteps: TechnologyProcessStep[] = [
     title: "Industrial Scaling",
     description:
       "Our fermentation process enables sustainable production compatible with industrial scale.",
-    image: BioReactorBP,
+    image: BioReactorBP2,
     alt: "Bioreactor Blueprint",
   },
 ];
