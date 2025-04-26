@@ -16,7 +16,7 @@ import BioHaloLogo3 from "@/components/ui/BioHaloLogo3";
 import BioReactorBP from "@/components/ui/BioReactorBP";
 import BioReactorProductBP from "@/assets/images/BluePrintSVG/bio-reactor-product.svg";
 
-import { HeroSection4 } from "@/components/HeroSections/HeroSections";
+import { HeroSection1, HeroSection2, HeroSection3, HeroSection4, HeroSection5 } from "@/components/HeroSections/HeroSections";
 
 
 
@@ -39,7 +39,10 @@ export default function Page() {
   return (
     <div className="relative min-h-screen h-[200vh] bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70">
      <div className="w-screen h-screen top-0 left-0 bg-red-500/0 flex justify-center items-center">
-      <HeroSection4 className="w-screen h-screen relative overflow-hidden" />
+      <HeroSection5 className="w-screen h-screen relative overflow-hidden" />
+     </div>
+     <div className="w-screen h-screen top-0 left-0 bg-red-500/0 flex justify-center items-center">
+      <HeroSection5 className="w-screen h-screen relative overflow-hidden" />
      </div>
     </div>
   );
