@@ -403,32 +403,8 @@ export const HeroSection4 = ({
           <div className="relative w-[50%] md:w-[60%] h-auto max-w-[600px] mb-3">
             <BioHaloLogo3 />
           </div>
-          <div className="w-full bg-transparent hidden md:block">
-            <div className="w-full h-full relative bg-transparent">
-              <p className="w-full relative tracking-widest text-[clamp(0.7rem,1.5vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
-                Your Partner in{" "}
-                <span
-                  className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent 
-                          uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
-                >
-                  Biohalogenation
-                </span>{" "}
-                Chemistry
-              </p>
-              <p className="w-full relative tracking-widest text-[clamp(0.4rem,0.9vw,1.2rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent mt-0">
-                <span className="block uppercase font-medium text-gray-500/90 max-w-4xl mx-auto">
-                  We disrupt the{" "}
-                  <span className="font-black bg-slate-800 bg-gradient-to-br from-gray-800/60 via-gray-200/30 to-gray-900/30 bg-clip-text text-transparent">
-                    forever chemicals
-                  </span>{" "}
-                  industry using{" "}
-                  <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
-                    enzymes
-                  </span>
-                </span>
-              </p>
-            </div>
-          </div>
+
+
           {/* Center image */}
           <div className="relative w-[120%] md:w-[80%] h-[60%] md:h-[60%] overflow-visible bg-red-500/0 -mt-24">
             <motion.div
@@ -450,6 +426,138 @@ export const HeroSection4 = ({
               />
             </motion.div>
           </div>
+
+          {/* subtitle */}
+          <div className="w-full bg-transparent hidden md:block">
+            
+            {/* subtitle version 1 */}
+            <div className="w-full h-full relative bg-transparent hidden">
+              <p className="w-full relative tracking-widest text-[clamp(0.7rem,1.5vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
+              We disrupt the{" "}
+                <span
+                  className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent 
+                          uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
+                >
+                 forever chemicals
+                </span>{" "}
+                industry using{" "}
+                <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
+                  enzymes
+                </span>
+              </p>
+              <p className="w-full relative tracking-widest text-[clamp(0.4rem,0.9vw,1.2rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent mt-0">
+                <span className="block uppercase font-medium text-gray-500/90 max-w-4xl mx-auto">
+                  We disrupt the{" "}
+                  <span className="font-black bg-slate-800 bg-gradient-to-br from-gray-800/60 via-gray-200/30 to-gray-900/30 bg-clip-text text-transparent">
+                    forever chemicals
+                  </span>{" "}
+                  industry using{" "}
+                  <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
+                    enzymes
+                  </span>
+                </span>
+              </p>
+            </div>
+            
+            {/* subtitle version 2 */}
+            <div className="w-full h-full relative bg-transparent hidden">
+              <p className="w-full relative tracking-widest text-[clamp(0.7rem,1.5vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
+              disrupting the{" "}
+                <span
+                  className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent 
+                          uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
+                >
+                 forever chemicals
+                </span>{" "}
+                industry with{" "}
+                <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
+                  biology
+                </span>
+              </p>
+              <p className="w-full relative tracking-widest text-[clamp(0.4rem,0.9vw,1.2rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent mt-0">
+                <span className="block uppercase font-medium text-gray-500/90 max-w-4xl mx-auto">
+                  disrupting the{" "}
+                  <span className="font-black bg-slate-800 bg-gradient-to-br from-gray-800/60 via-gray-200/30 to-gray-900/30 bg-clip-text text-transparent">
+                    forever chemicals
+                  </span>{" "}
+                  industry with{" "}
+                  <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
+                    biology
+                  </span>
+                </span>
+              </p>
+            </div>
+
+            {/* subtitle version 2.5 */}
+            <div className="w-full h-full relative bg-transparent hidden">
+              <p className="w-full relative tracking-widest text-[clamp(0.7rem,1.5vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
+              disrupting the<br />
+                <span
+                  className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent 
+                          uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
+                >
+                 forever chemicals
+                </span>{" "}
+                industry <br /> with{" "}
+                <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
+                  biology
+                </span>
+              </p>
+              <p className="w-full hidden tracking-widest text-[clamp(0.4rem,0.9vw,1.2rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent mt-0">
+                <span className="block uppercase font-medium text-gray-500/90 max-w-4xl mx-auto">
+                  disrupting the{" "}
+                  <span className="font-black bg-slate-800 bg-gradient-to-br from-gray-800/60 via-gray-200/30 to-gray-900/30 bg-clip-text text-transparent">
+                    forever chemicals
+                  </span>{" "}
+                  industry with{" "}
+                  <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
+                    biology
+                  </span>
+                </span>
+              </p>
+            </div>
+            
+            {/* subtitle version 3 */}
+            <div className="w-full h-full relative bg-transparent hidden">
+              <p className="w-full relative tracking-widest text-[clamp(0.7rem,1.5vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
+              using{" "}
+                <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
+                  biology
+                </span>{" "}
+                to disrupt <br /> the{" "}
+                <span
+                  className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent 
+                          uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
+                >
+                 forever chemicals
+                </span>{" "}
+                industry
+              </p>
+            </div>
+            
+            {/* subtitle version 4 */}
+            <div className="w-full h-full relative bg-transparent">
+              <p className="w-full relative tracking-widest text-[clamp(0.7rem,1.5vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
+                <span className="font-black bg-gradient-to-r from-tealAccent via-teal-900 to-tealAccent bg-clip-text text-transparent">
+                  the forever chemicals industry
+                </span>{" "}
+                <br />
+                <span
+                  className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent 
+                          uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
+                >
+                 disrupted by biology
+                </span>
+              </p>
+            </div>
+          </div>
+          
+          
+
+
+
+
+          {/* Buttons */}
           <div className="flex flex-col md:flex-row gap-4 mt-4 items-center justify-center">
             <Button
               className="px-8 py-6 font-poppins text-lg font-medium bg-tealAccent bg-gradient-to-r from-tealAccent via-mintAccent/50 to-mintAccent/80 hover:from-teal-600 hover:to-tealAccent 
@@ -475,7 +583,7 @@ export const HeroSection4 = ({
             </Button>
             <Button
               className="px-8 py-6 font-poppins text-lg font-medium bg-white/10 backdrop-blur-sm hover:bg-white/20 
-                        text-tealAccent/70 border border-white/20 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                        text-tealAccent/70 border border-white/20 rounded-full shadow-lg hover:shadow-xl hover:shadow-pinkAccent/30 hover:text-pinkAccent/50 transition-all duration-300 transform hover:scale-105"
               onClick={(e) => {
                 e.preventDefault();
                 const targetElement = document.getElementById(

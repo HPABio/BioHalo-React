@@ -380,7 +380,8 @@ export const PlatformTechnologySection = ({
                 }`}
               >
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)]">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center 
+                  group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)]">
                     {feature.icon}
                   </div>
                   <div className="flex-1">
