@@ -300,7 +300,7 @@ export const WhatWeDoSection = ({
           backgroundRepeat: "no-repeat",
           willChange: "opacity, transform",}}/> */}
       </div>
-      <div className="relative bottom-0 left-0 w-full h-[200px] bg-red-600/0">
+      <div className="relative bottom-0 left-0 w-full h-[200px] bg-red-600/0 hidden">
         <MovingAtom
           width={80}
           height={80}

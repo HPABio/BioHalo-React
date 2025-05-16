@@ -150,7 +150,7 @@ export const MobileWhatWeDoSection = ({
         </div>
 
         {/* Circular Image Section */}
-        <div className="relative w-full bg-red-500/0 mt-16">
+        <div className="relative w-full bg-red-500/0 mt-16 hidden">
           <div className="flex flex-col items-center gap-32 sm:gap-40">
             {/* Top Circle */}
             <div className="h-[400px] w-[400px] sm:h-[500px] sm:w-[500px] rounded-full overflow-hidden drop-shadow-xl flex items-center justify-center">
@@ -272,7 +272,7 @@ export const MobileWhatWeDoSection = ({
 
       <div className="relative bottom-0 left-0 w-full h-[100px]">
       </div>
-      <div className="relative bottom-0 left-0 w-full h-[200px] bg-red-600/0">
+      <div className="relative bottom-0 left-0 w-full h-[200px] bg-red-600/0 hidden">
         <MovingAtom
           width={80}
           height={80}
