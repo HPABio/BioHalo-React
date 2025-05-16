@@ -24,7 +24,7 @@ export const ContactSection = ({ className = "" }: ContactSectionProps) => {
         <AtomDiagram width={2000} height={2000} color="rgba(18,110,119,1)" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-12 md:px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

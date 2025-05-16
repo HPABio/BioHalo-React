@@ -29,7 +29,7 @@ import {
   Droplet,
   TrendingDown,
 } from "lucide-react";
-import NetworkDiagramWithNodes from "@/components/ui/NetworkDiagramWithNodes";
+import MobileNetworkDiagramWithNodes from "@/components/mobileVersion/mobileNetworkDiagramWithNodes";
 interface TechnologyFeature {
   id: number;
   title: string;
@@ -37,7 +37,7 @@ interface TechnologyFeature {
   description: string;
 }
 
-interface PlatformTechnologySectionProps {
+interface MobilePlatformTechnologySectionProps {
   className?: string;
 }
 
@@ -155,18 +155,16 @@ const technologyProcessSteps: TechnologyProcessStep[] = [
   },
 ];
 
-export const PlatformTechnologySection = ({
+export const MobilePlatformTechnologySection = ({
   className = "",
-}: PlatformTechnologySectionProps) => {
+}: MobilePlatformTechnologySectionProps) => {
   return (
     <section className={`w-full relative ${className} overflow-hidden`}>
       <div className="relative bottom-0 left-0 w-full h-[200px] bg-gradient-to-b from-black/0 via-black/50 to-black">
         <div
-          className="relative top-0 left-[50%] hidden
+          className="relative top-0 left-[50%] 
           translate-x-[-50%] translate-y-[-250px] 
-          md:translate-x-[-50%] md:translate-y-[-380px] 
-          lg:translate-x-[-30%]  lg:translate-y-[-580px] 
-          w-[300px] h-[300px] md:w-[500px] md:h-[500px] lg:w-[800px] lg:h-[800px] "
+          w-[300px] h-[300px]"
           style={{
             backgroundImage: `url(${beaker.src})`,
             backgroundSize: "contain",
@@ -176,7 +174,7 @@ export const PlatformTechnologySection = ({
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-8 -mt-32 md:mt-0">
+      <div className="max-w-7xl mx-auto px-12 -mt-32">
         <div className="absolute bottom-[100%] left-[100%] translate-x-[-50%] translate-y-[50%] opacity-[4%] mix-blend-screen">
           <AtomDiagram width={5300} height={5300} color="rgba(18,110,119,1)" />
         </div>
@@ -191,21 +189,21 @@ export const PlatformTechnologySection = ({
           className="text-center mb-16 relative"
         >
           <h1
-            className="text-3xl sm:text-5xl md:text-7xl font-bold mb-2 capitalize opacity-1 text-center xl:mt-[3vw]
-                bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent py-6 sm:py-10"
+            className="text-3xl font-bold mb-2 capitalize opacity-1 text-center
+                bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent py-6"
           >
-            <span className="text-2xl sm:text-4xl md:text-6xl">
+            <span className="text-2xl">
               Discover our revolutionary <br />
             </span>
 
             <span
-              className="absolute opacity-0 lg:opacity-50 uppercase blur-[2px] font-black font-Poppins  
+              className="absolute opacity-0 uppercase blur-[2px] font-black font-Poppins  
               bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent "
             >
               biohalogenation <br />
             </span>
             <span
-              className="absolute opacity-0 lg:opacity-30 uppercase blur-[4px] font-black font-Poppins
+              className="absolute opacity-0 uppercase blur-[4px] font-black font-Poppins
               bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent "
             >
               biohalogenation <br />
@@ -218,13 +216,13 @@ export const PlatformTechnologySection = ({
             </span>
 
             <span
-              className="absolute opacity-0 lg:opacity-50 uppercase blur-[2px] font-black font-Poppins  
+              className="absolute opacity-0 uppercase blur-[2px] font-black font-Poppins  
                 bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent "
             >
               Technology
             </span>
             <span
-              className="absolute opacity-0 lg:opacity-30 uppercase blur-[4px] font-black font-Poppins
+              className="absolute opacity-0 uppercase blur-[4px] font-black font-Poppins
               bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent"
             >
               Technology
@@ -245,7 +243,7 @@ export const PlatformTechnologySection = ({
               Offers
             </span> */}
           </h1>
-          <p className="text-gray-400 max-w-3xl mx-auto text-sm sm:text-base md:text-lg">
+          <p className="text-gray-400 max-w-3xl mx-auto text-sm">
             Harnessing the potential of biology for controlled{" "}
             <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
               fluorination
@@ -263,16 +261,12 @@ export const PlatformTechnologySection = ({
             scaleRange={[0.9, 1.1]}
             scaleDuration={4}
             color="rgba(18,110,119,1)"
-            className="absolute top-[12%] right-[14%]
-            lg:top-[12%] lg:left-[50%]
-            md:translate-x-[220%] md:translate-y-[170%]
-            lg:translate-x-[100%] lg:translate-y-[90%]
-            xl:translate-x-[80%] xl:translate-y-[90%]"
+            className="absolute top-[12%] right-[14%]"
           />
         </motion.div>
 
         {/* Process Steps Section */}
-        <div className="space-y-14 xl:space-y-24 mb-24 md:pt-16">
+        <div className="space-y-14 mb-24">
           {technologyProcessSteps.map((step, index) => (
             <motion.div
               key={step.id}
@@ -280,14 +274,12 @@ export const PlatformTechnologySection = ({
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`max-sm:text-center px-4 md:px-12 lg:px-24 flex flex-col ${
-                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } items-center gap-8 md:gap-16`}
+              className="max-sm:text-center px-4 flex flex-col items-center gap-8"
             >
               {/* Image */}
               <div className="flex-1 relative group">
                 <div className="absolute inset-0 bg-tealAccent/20 rounded-2xl blur-3xl group-hover:blur-2xl opacity-70 transition-all duration-500 -z-10"></div>
-                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl border border-tealAccent/20 backdrop-blur-sm shadow-xl overflow-hidden h-[250px] lg:h-[350px] flex items-center justify-center">
+                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl border border-tealAccent/20 backdrop-blur-sm shadow-xl overflow-hidden h-[250px] flex items-center justify-center">
                   <Image
                     src={step.image}
                     alt={step.alt}
@@ -304,18 +296,11 @@ export const PlatformTechnologySection = ({
 
               {/* Text content */}
               <div className="flex-1 text-left">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-gray-200 to-gray-400 bg-clip-text text-transparent">
+                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-gray-200 to-gray-400 bg-clip-text text-transparent">
                   {step.title}
                 </h3>
                 <p className="text-gray-400 text-lg mb-6">{step.description}</p>
                 <div className="w-24 h-1 bg-gradient-to-r from-tealAccent to-mintAccent/50 rounded-full mb-6"></div>
-
-                {index < technologyProcessSteps.length - 1 && (
-                  <div className="hidden md:flex items-center text-tealAccent/70">
-                    {/* <span className="mr-2">Next Step</span>
-                    <ArrowRight className="w-5 h-5 animate-pulse" /> */}
-                  </div>
-                )}
               </div>
             </motion.div>
           ))}
@@ -323,7 +308,7 @@ export const PlatformTechnologySection = ({
 
         {/* Features Section */}
         <div
-          className="grid grid-cols-1 gap-12 mb-20 px-4 md:px-12  md:pt-16 mt-16 relative"
+          className="grid grid-cols-1 gap-12 mb-20 px-4 mt-16 relative"
           id="platform-features-content"
         >
           {/* Section detection helper - invisible element to help with intersection detection */}
@@ -345,7 +330,7 @@ export const PlatformTechnologySection = ({
             viewport={{ once: true }}
             className="text-center mb-12 relative"
           >
-            <h2 className="text-3xl md:text-5xl font-bold capitalize bg-gradient-to-br from-mintAccent/60 to-mintAccent/80 bg-clip-text text-transparent py-6">
+            <h2 className="text-3xl font-bold capitalize bg-gradient-to-br from-mintAccent/60 to-mintAccent/80 bg-clip-text text-transparent py-6">
               Key Technology Features
             </h2>
             <p className="text-gray-400 max-w-3xl mx-auto">
@@ -357,7 +342,7 @@ export const PlatformTechnologySection = ({
 
           {/* Right side: Features list */}
           <div className="flex justify-center items-center w-full">
-            <NetworkDiagramWithNodes
+            <MobileNetworkDiagramWithNodes
               enzymeImage={enzymeImage.src}
               enzymeImageAlt="Enzyme"
               width="max-w-3xl"
@@ -365,7 +350,7 @@ export const PlatformTechnologySection = ({
               imageHeight={400}
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 -mt-14">
+          <div className="grid grid-cols-1 gap-6 -mt-14">
             {technologyFeatures.map((feature, index) => (
               <motion.div
                 key={feature.id}
@@ -373,11 +358,7 @@ export const PlatformTechnologySection = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: feature.id * 0.1 }}
-                className={`p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-tealAccent/10 rounded-xl hover:border-tealAccent/30 transition-all group ${
-                  index === technologyFeatures.length - 1
-                    ? "md:col-span-2 md:max-w-[calc(50%-12px)] md:mx-auto"
-                    : ""
-                }`}
+                className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-tealAccent/10 rounded-xl hover:border-tealAccent/30 transition-all group"
               >
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center 
@@ -397,63 +378,6 @@ export const PlatformTechnologySection = ({
           </div>
           
         </div>
-
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="relative text-center bg-gradient-to-br from-tealAccent/10 to-mintAccent/20 p-8 rounded-xl">
-          <h3 className="text-2xl font-semibold mb-4 text-gray-400">
-            Transforming Industries with Sustainable Solutions
-          </h3>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Our platform technology enables the creation of bio-based
-            alternatives to traditional fluorinated materials, offering superior
-            performance while eliminating the environmental and health concerns
-            associated with PFAS.
-          </p>
-          <div className="mt-6">
-            <a
-              href="#contact"
-              className="inline-flex capitalize items-center justify-center px-6 py-3 bg-tealAccent text-white font-medium rounded-lg hover:bg-tealAccent/90 transition-colors"
-            >
-              Learn More About Our Technology via our newsletter
-              <Zap className="w-5 h-5 ml-2" />
-            </a>
-          </div>
-        </motion.div>
- */}
-
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="relative text-center bg-gradient-to-br from-tealAccent/10 to-mintAccent/20 p-8 rounded-xl"
-        >
-          <p className="text-lg font-semibold mb-4 text-gray-400">
-            When working with our highly specialized enzyme platform, our team
-            of highly skilled scientists and engineers scout and tailor
-            enzymatic functions for your specific application. We use a
-            combination of computational tools and experimental techniques to
-            optimize enzyme performance, ensuring that your application receives
-            the best possible variant for your specific usecase.
-          </p>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Our platform technology enables the creation of bio-based
-            alternatives to traditional fluorinated materials, offering superior
-            performance while eliminating the environmental and health concerns
-            associated with PFAS.
-          </p>
-          <div className="mt-6">
-            <a
-              href="#contact"
-              className="inline-flex capitalize items-center justify-center px-6 py-3 bg-tealAccent text-white font-medium rounded-lg hover:bg-tealAccent/90 transition-colors"
-            >
-              Learn More About Our Technology via our newsletter
-              <Zap className="w-5 h-5 ml-2" />
-            </a>
-          </div>
-        </motion.div> */}
       </div>
     </section>
   );

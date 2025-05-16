@@ -166,7 +166,8 @@ export const ShowcaseNavbar = () => {
                 </a>
               ))}
               <Button
-                className="bg-tealAccent hover:bg-pinkAccent/90 text-white rounded-full"
+                className="px-6 py-3 text-lg font-medium bg-tealAccent bg-gradient-to-l from-tealAccent to-mintAccent/90 hover:from-teal-600 hover:to-tealAccent 
+                          text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 onClick={handleOpenContactOverlay}
               >
                 Get in Touch
@@ -228,7 +229,8 @@ export const ShowcaseNavbar = () => {
                   </a>
                 ))}
                 <Button
-                  className="bg-tealAccent hover:bg-pinkAccent/90 text-white rounded-full"
+                  className="px-6 py-3 text-lg font-medium bg-gradient-to-r from-tealAccent to-teal-600 hover:from-tealAccent hover:to-teal-600 
+                            text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   onClick={() => {
                     handleOpenContactOverlay();
                     setIsMobileMenuOpen(false);

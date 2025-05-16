@@ -19,6 +19,7 @@ import { FluorinatedMaterialsSection } from "../sections2/BioHaloSections/Fluori
 import { BentoFourBoxSectionR } from "../sections2/BentoFourBoxSectionR";
 import { BentoFourBoxSectionL } from "../sections2/BentoFourBoxSectionL";
 
+
 export default function ComponentTestbed() {
   const containerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);

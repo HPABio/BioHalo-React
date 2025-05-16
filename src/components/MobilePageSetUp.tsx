@@ -1,44 +1,26 @@
 "use client";
 
-import WomanWhiteRainJacket from "@/assets/images/BGImagesTest/WomanWhiteRainJacket.jpeg";
+
 import Image from "next/image";
 import React, { Suspense, memo } from "react";
-import dynamic from "next/dynamic";
-import { HeroSection1, HeroSection2, HeroSection3, HeroSection4, HeroSection5 } from "@/components/HeroSections/HeroSections";
-import { FluorinatedMaterialsSection } from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection";
-import { FluorinatedMaterialsSection2 } from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection2";
-import {
-  PollutionSection,
-  PollutionSectionBACKUP,
-} from "@/components/sections2/BioHaloSections/PollutionSection";
-import { FollowingCircle } from "@/components/ui/FollowingCircle";
-import { TransitionSectionOne } from "@/components/sections2/BioHaloSections/TransitionSectionOne";
-import { TransitionSectionTwo } from "@/components/sections2/BioHaloSections/TransitionSectionTwo";
-import { TransitionSectionThree } from "@/components/sections2/BioHaloSections/TransitionSectionThree";
 
-import { WhatWeDoSection } from "@/components/sections2/BioHaloSections/WhatWeDoSection";
-import { FeatureOfPFAS } from "@/components/sections2/BioHaloSections/FeatureOfPFAS";
-import { PollutionSection2 } from "@/components/sections2/BioHaloSections/PollutionSection2";
-import { HealthSectionImgRight } from "@/components/sections2/BioHaloSections/HealthSection";
-import { PlatformFeaturesSection } from "@/components/sections2/BioHaloSections/PlatformFeaturesSection";
-import { BentoSection2 } from "@/components/sections2/BentoSection2";
+import { HeroSection4 } from "@/components/HeroSections/HeroSections";
+
 import { TransitionSectionFour } from "@/components/sections2/BioHaloSections/TransitionSectionFour";
 import IconCarousel from "@/components/ui/IconCarousel";
-import { BentosPFASSection } from "@/components/sections2/BentosPFASSection";
+
 import { TeamSection } from "@/components/sections2/BioHaloSections/TeamSection";
 
 // Import the new sections
-import { MeetUsAtSection } from "@/components/sections2/BioHaloSections/MeetUsAtSection";
-import { PlatformTechnologySection } from "@/components/sections2/BioHaloSections/PlatformTechnologySection";
-import { PartnersMarqueeSection } from "@/components/sections2/BioHaloSections/PartnersMarqueeSection";
-import { SuccessesSection } from "@/components/sections2/BioHaloSections/SuccessesSection";
+
+
 import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSection";
 
 
 import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
-import ribbonImage from "@/assets/images/BGImagesTest/Twisted Ribbon Structure transparent.png";
-import abstractImage from "@/assets/images/BGImagesTest/Abstract Black and White Design Transition.png";
-
+import { MobileFluorinatedMaterialsSection } from "./mobileVersion/mobileFluorinatedMaterialsSection";
+import { MobileWhatWeDoSection } from "@/components/mobileVersion/mobileWhatWeDoSection";
+import { MobilePlatformTechnologySection } from "@/components/mobileVersion/mobilePlatformTechnologySection";
 
 // ✅ Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
@@ -139,7 +121,7 @@ const stats = [
   },
 ];
 
-export const Showcase4 = () => {
+export const MobilePageSetUp = () => {
   console.log("Showcase4 component rendering");
 
   return (
@@ -156,8 +138,11 @@ export const Showcase4 = () => {
       {/* <HeroSection1 className="w-screen h-screen relative" /> */}
       {/* <HeroSection2 className="w-screen h-screen relative overflow-hidden" /> */}
       {/* <HeroSection4 className=" block w-screen h-screen relative overflow-hidden" /> */}
-      <HeroSection4 className=" md:hidden block w-screen h-screen relative overflow-hidden" />
-      <HeroSection5 className=" hidden md:block w-screen h-screen relative overflow-hidden" />
+      <HeroSection4 className="block w-screen h-screen relative overflow-hidden" />
+
+
+
+
       <section
         className="pb-16 bg-black"
         id="transition-section-one"
@@ -173,29 +158,18 @@ export const Showcase4 = () => {
             className="object-contain"
           />
         </div>
-{/*         <div className="absolute w-[110vw] h-[400px] top-[50%] left-[50%] opacity-1 translate-x-[-50%] translate-y-[-64%]">
-          <Image 
-            src={abstractImage} 
-            alt="Abstract" 
-            fill 
-            className="object-fill "
-          />
-        </div>
-        <div className="absolute w-[300px] h-[100vw] top-[50%] left-[50%] opacity-1 translate-x-[-50%] translate-y-[-58%]">
-          <Image 
-            src={ribbonImage} 
-            alt="Ribbon" 
-            fill 
-            className="object-fill rotate-[-90deg] hidden"
-          />
-        </div> */}
 
         <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0"/>
 
         </div>
       </section>
 
-      <FluorinatedMaterialsSection
+
+
+
+
+
+      <MobileFluorinatedMaterialsSection
         className="relative w-full h-full overflow-hidden z-10 pt-6"
         stats={stats}
       />
@@ -207,7 +181,7 @@ export const Showcase4 = () => {
           aria-hidden="true"
         ></div>
 
-        <WhatWeDoSection
+        <MobileWhatWeDoSection
           className="min-h-[50vh] w-[100vw] text-white relative"
           stats={stats}
         />
@@ -224,7 +198,7 @@ export const Showcase4 = () => {
           aria-hidden="true"
         ></div>
 
-        <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
+        <MobilePlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
       </section>
 
       {/* Icon Carousel Section - No ID here since it's not in the navigation */}

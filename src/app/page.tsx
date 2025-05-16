@@ -1,6 +1,7 @@
 "use client";
 
-import { Showcase4 } from "@/components/Showcase4";
+import { Showcase4 as DesktopPage } from "@/components/Showcase4";
+import { MobilePageSetUp as MobilePage } from "@/components/MobilePageSetUp";
 import { ScreenSizeDEVTOOL } from "@/components/ui/ScreenSizeDEVTOOL";
 import { useEffect } from "react";
 
@@ -13,10 +14,15 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-800 text-white">
       <div className="relative bg-gradient-to-br from-slate-50 to-slate-800 w-full h-full">
-        {/* <ScreenSizeDEVTOOL /> */}
+        <ScreenSizeDEVTOOL />
         {/* <HeroSection4 /> */}
         {/* <Showcase /> */}
-        <Showcase4 />
+        <section className="hidden md:block">
+          <DesktopPage />
+        </section>
+        <section className="md:hidden">
+          <MobilePage />
+        </section>
         {/* <StatsSection6 className="z-10  overflow-visible" />
         <StatsSection5 className="z-3" />
         

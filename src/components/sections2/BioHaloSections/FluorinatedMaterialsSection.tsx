@@ -281,7 +281,6 @@ export function FluorinatedMaterialsSection({
           </div>
         </div>
       </div>
-      <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
       <div className="absolute bottom-0 right-0 w-full h-[100px] lg:h-[200px] bg-gradient-to-t from-black via-black/90 to-transparent"></div>
       {/* <div className="w-full h-[100px] absolute bottom-0 left-0 bg-gradient-to-t from-black/0 via-black/70 to-black/100"/> */}
     </section>
