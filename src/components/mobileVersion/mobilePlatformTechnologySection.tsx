@@ -164,7 +164,7 @@ export const MobilePlatformTechnologySection = ({
         <div
           className="relative top-0 left-[50%] 
           translate-x-[-50%] translate-y-[-250px] 
-          w-[300px] h-[300px]"
+          w-[300px] h-[300px] hidden"
           style={{
             backgroundImage: `url(${beaker.src})`,
             backgroundSize: "contain",
