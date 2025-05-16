@@ -427,51 +427,57 @@ export const HeroSection3 = ({
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col md:flex-row gap-4 mt-60 md:mt-2 items-center justify-center">
-            <Button
-              className="px-8 py-6 font-poppins text-lg font-medium bg-tealAccent bg-gradient-to-r from-tealAccent via-mintAccent/50 to-mintAccent/80 hover:from-teal-600 hover:to-tealAccent 
-                          text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              onClick={(e) => {
-                e.preventDefault();
-                const targetElement = document.getElementById(
-                  "platform-technology"
-                );
-                if (targetElement) {
-                  const yPosition =
-                    targetElement.getBoundingClientRect().top +
-                    window.scrollY -
-                    80;
-                  window.scrollTo({
-                    top: yPosition,
-                    behavior: "smooth",
-                  });
-                }
-              }}
-            >
-              Technology
-            </Button>
-            <Button
-              className="px-8 py-6 font-poppins text-lg font-medium bg-white/10 backdrop-blur-sm hover:bg-white/20 
-                        text-tealAccent/70 border border-white/20 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              onClick={(e) => {
-                e.preventDefault();
-                const targetElement = document.getElementById(
-                  "platform-features-content"
-                );
-                if (targetElement) {
-                  const yPosition =
-                    targetElement.getBoundingClientRect().top +
-                    window.scrollY -
-                    80;
-                  window.scrollTo({
-                    top: yPosition,
-                    behavior: "smooth",
-                  });
-                }
-              }}
-            >
-              Features
-            </Button>
+          <div className="flex flex-col md:flex-row gap-4 md:gap-2 xl:gap-4 mt-60 md:mt-2 items-center justify-center">
+            <div>
+              <Button
+                className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
+                            bg-tealAccent bg-gradient-to-r from-tealAccent via-mintAccent/50 to-mintAccent/80 hover:from-teal-600 hover:to-tealAccent 
+                            text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const targetElement = document.getElementById(
+                    "platform-technology"
+                  );
+                  if (targetElement) {
+                    const yPosition =
+                      targetElement.getBoundingClientRect().top +
+                      window.scrollY -
+                      80;
+                    window.scrollTo({
+                      top: yPosition,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+              >
+                Technology
+              </Button>
+            </div>
+            <div>
+              <Button
+                className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
+                            bg-white/10 backdrop-blur-sm hover:bg-white/20 text-tealAccent/70 border border-white/20 
+                            rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const targetElement = document.getElementById(
+                    "platform-features-content"
+                  );
+                  if (targetElement) {
+                    const yPosition =
+                      targetElement.getBoundingClientRect().top +
+                      window.scrollY -
+                      80;
+                    window.scrollTo({
+                      top: yPosition,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+              >
+                Features
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -720,57 +726,59 @@ export const HeroSection4 = ({
           </div>
 
           {/* Buttons */}
-          <div
-            className="flex flex-col md:flex-row gap-4 md:gap-2 xl:gap-4 mt-60 md:mt-2 items-center justify-center 
-          bg-red-500/0 "
-          >
-            <Button
-              className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
-              bg-tealAccent bg-gradient-to-r from-tealAccent via-mintAccent/50 to-mintAccent/80 hover:from-teal-600 hover:to-tealAccent 
-                          text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              onClick={(e) => {
-                e.preventDefault();
-                const targetElement = document.getElementById(
-                  "platform-technology"
-                );
-                if (targetElement) {
-                  const yPosition =
-                    targetElement.getBoundingClientRect().top +
-                    window.scrollY -
-                    80;
-                  window.scrollTo({
-                    top: yPosition,
-                    behavior: "smooth",
-                  });
-                }
-              }}
-            >
-              Technology
-            </Button>
-            <Button
-              className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
-              bg-white/10 backdrop-blur-sm hover:bg-white/20 text-tealAccent/70 border border-white/20 
-              rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              onClick={(e) => {
-                e.preventDefault();
-                const targetElement = document.getElementById(
-                  "platform-features-content"
-                );
-                if (targetElement) {
-                  const yPosition =
-                    targetElement.getBoundingClientRect().top +
-                    window.scrollY -
-                    80;
-                  window.scrollTo({
-                    top: yPosition,
-                    behavior: "smooth",
-                  });
-                }
-              }}
-            >
-              Features
-            </Button>
+          <div className="flex flex-col md:flex-row gap-4 md:gap-2 xl:gap-4 mt-60 md:mt-2 items-center justify-center">
+            <div>
+              <Button
+                className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
+                            bg-tealAccent bg-gradient-to-r from-tealAccent via-mintAccent/50 to-mintAccent/80 hover:from-teal-600 hover:to-tealAccent 
+                            text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const targetElement = document.getElementById(
+                    "platform-technology"
+                  );
+                  if (targetElement) {
+                    const yPosition =
+                      targetElement.getBoundingClientRect().top +
+                      window.scrollY -
+                      80;
+                    window.scrollTo({
+                      top: yPosition,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+              >
+                Technology
+              </Button>
+            </div>
+            <div>
+              <Button
+                className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
+                            bg-white/10 backdrop-blur-sm hover:bg-white/20 text-tealAccent/70 border border-white/20 
+                            rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const targetElement = document.getElementById(
+                    "platform-features-content"
+                  );
+                  if (targetElement) {
+                    const yPosition =
+                      targetElement.getBoundingClientRect().top +
+                      window.scrollY -
+                      80;
+                    window.scrollTo({
+                      top: yPosition,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+              >
+                Features
+              </Button>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -805,8 +813,10 @@ export const HeroSection5 = ({
       </div>
 
       {/* Center image */}
-      <div className="absolute w-[80%] h-[80%] lg:w-[70%] lg:h-[70%] min-h-[500px] max-h-[800px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-60%] 
-      overflow-visible bg-red-500/0">
+      <div
+        className="absolute w-[80%] h-[80%] lg:w-[70%] lg:h-[70%] min-h-[500px] max-h-[800px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-60%] 
+      overflow-visible bg-red-500/0"
+      >
         <motion.div
           className="relative w-full h-full overflow-visible bg-blue-500/0"
           animate={{
@@ -824,106 +834,110 @@ export const HeroSection5 = ({
             fill
             className="object-contain overflow-visible bg-green-500/0"
           />
-          
         </motion.div>
       </div>
 
       {/* Logo and subtitle container */}
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-green-500/0 pt-[80px]">
-        <div className="relative w-[80%] xl:w-[70%] h-[40%] flex flex-col items-center justify-center 
-        md:translate-y-[-30%] lg:translate-y-[-38%] xl:translate-y-[-45%] lg:px-12 bg-blue-500/0 max-w-[1400px]">
-       
-        {/* Logo */}
+        <div
+          className="relative w-[80%] xl:w-[70%] h-[40%] flex flex-col items-center justify-center 
+        md:translate-y-[-30%] lg:translate-y-[-38%] xl:translate-y-[-45%] lg:px-12 bg-blue-500/0 max-w-[1400px]"
+        >
+          {/* Logo */}
           <div
-            className="relative w-full h-auto bg-red-500/0
+            className="relative w-full h-auto bg-green-500/0 border border-green-500/0 md:mt-0 -mt-36
           before:content-[''] before:absolute before:w-[60%] before:h-[10px] before:bg-gradient-to-r before:from-transparent before:via-black/40 before:to-transparent 
           before:blur-[10px] before:bottom-[-30%] before:left-[15%] before:rounded-[50%]"
           >
-          <BioHaloLogo3 />
+            <BioHaloLogo3 />
 
-          {/* Subtitle container */}
-          <div className="absolute w-full h-[90%] max-h-[180px] mt-12 lg:mt-16 xl:mt-24 flex flex-col items-center justify-start bg-yellow-500/0 mx-auto">
-                  {/* Subtitle */}
-                  <div className="w-full h-fit bg-red-500/0">
-                    <p className="w-full relative tracking-widest text-[clamp(1.2rem,2vw,2.4rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
-                      <span
-                        className="text-[clamp(1.4rem,2.5vw,3rem)] bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent 
+            {/* Subtitle container */}
+            <div
+              className="absolute w-full h-[90%] max-h-[180px] mt-12 lg:mt-16 xl:mt-24  hidden md:flex flex-col items-center justify-start mx-auto
+          bg-yellow-500/0  border border-yellow-500/0"
+            >
+              {/* Subtitle */}
+              <div className="w-full h-fit bg-red-500/0 lg:mt-[5vh]">
+                <p className="w-full relative tracking-widest text-[clamp(1.2rem,2vw,2.4rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
+                  <span
+                    className="text-[clamp(1.4rem,2.5vw,3rem)] bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent 
                                                       uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
-                      >
-                        forever chemicals
-                      </span>{" "}
-                      <span className="text-[clamp(0.9rem,1.7vw,2rem)]">
-                        disrupted by
-                      </span>{" "}
-                      <span
-                        className="text-[clamp(1.4rem,2.5vw,3rem)] bg-gradient-to-r from-tealAccent to-teal-600  bg-clip-text text-transparent 
+                  >
+                    forever chemicals
+                  </span>{" "}
+                  <span className="text-[clamp(0.9rem,1.7vw,2rem)]">
+                    disrupted by
+                  </span>{" "}
+                  <span
+                    className="text-[clamp(1.4rem,2.5vw,3rem)] bg-gradient-to-r from-tealAccent to-teal-600  bg-clip-text text-transparent 
                                                       uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
-                      >
-                        biology
-                      </span>
-                    </p>
-                  </div>
+                  >
+                    biology
+                  </span>
+                </p>
+              </div>
 
-                  {/* Buttons */}
-                  <div className="flex flex-col md:flex-row gap-4 md:gap-2 xl:gap-4 mt-60 md:mt-2 items-center justify-center">
-                    <Button
-                      className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
-                          bg-tealAccent bg-gradient-to-r from-tealAccent via-mintAccent/50 to-mintAccent/80 hover:from-teal-600 hover:to-tealAccent 
-                          text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        const targetElement = document.getElementById(
-                          "platform-technology"
-                        );
-                        if (targetElement) {
-                          const yPosition =
-                            targetElement.getBoundingClientRect().top +
-                            window.scrollY -
-                            80;
-                          window.scrollTo({
-                            top: yPosition,
-                            behavior: "smooth",
-                          });
-                        }
-                      }}
-                    >
-                      Technology
-                    </Button>
-                    <Button
-                      className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
-                          bg-white/10 backdrop-blur-sm hover:bg-white/20 text-tealAccent/70 border border-white/20 
-                          rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        const targetElement = document.getElementById(
-                          "platform-features-content"
-                        );
-                        if (targetElement) {
-                          const yPosition =
-                            targetElement.getBoundingClientRect().top +
-                            window.scrollY -
-                            80;
-                          window.scrollTo({
-                            top: yPosition,
-                            behavior: "smooth",
-                          });
-                        }
-                      }}
-                    >
-                      Features
-                    </Button>
-                  </div>
-        
+              {/* Buttons */}
+          <div className="flex flex-col md:flex-row gap-4 md:gap-2 xl:gap-4 mt-60 md:mt-2 items-center justify-center">
+            <div>
+              <Button
+                className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
+                            bg-tealAccent bg-gradient-to-r from-tealAccent via-mintAccent/50 to-mintAccent/80 hover:from-teal-600 hover:to-tealAccent 
+                            text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const targetElement = document.getElementById(
+                    "platform-technology"
+                  );
+                  if (targetElement) {
+                    const yPosition =
+                      targetElement.getBoundingClientRect().top +
+                      window.scrollY -
+                      80;
+                    window.scrollTo({
+                      top: yPosition,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+              >
+                Technology
+              </Button>
+            </div>
+            <div>
+              <Button
+                className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
+                            bg-white/10 backdrop-blur-sm hover:bg-white/20 text-tealAccent/70 border border-white/20 
+                            rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const targetElement = document.getElementById(
+                    "platform-features-content"
+                  );
+                  if (targetElement) {
+                    const yPosition =
+                      targetElement.getBoundingClientRect().top +
+                      window.scrollY -
+                      80;
+                    window.scrollTo({
+                      top: yPosition,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+              >
+                Features
+              </Button>
+            </div>
           </div>
-          
+
+            </div>
           </div>
         </div>
-       
-        
       </div>
       <div className="absolute inset-0 pointer-events-none">
-        <div className="w-full h-full bg-red-500/10 border border-red-500 flex items-center justify-center">
-          <div className="w-[70%] aspect-video bg-blue-500/10 border border-blue-500"></div>
+        <div className="w-full h-full bg-red-500/0 border border-red-500/0 flex items-center justify-center">
+          <div className="w-[70%] aspect-video bg-blue-500/0 border border-blue-500/0"></div>
         </div>
       </div>
     </section>
