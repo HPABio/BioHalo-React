@@ -83,11 +83,22 @@ export const WhatWeDoSection = ({
 
         <div className="absolute hidden lg:block
         top-10 xl:top-0 left-[45%] w-[45%] xl:w-[55%]  max-w-[900px] translate-x-[12vw] xl:translate-x-[5vw]">
-          <Image
-            src={enzymeImage}
-            alt="EnzymeImage"
-            className="w-full h-full object-cover"
-          />
+          <motion.div
+            animate={{
+              y: [0, -30, 0],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <Image
+              src={enzymeImage}
+              alt="EnzymeImage"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
         </div>
         {/*       <div className="hidden lg:block xl:hidden absolute w-[400px] h-[400px] top-0 right-[5%]  rounded-full 
       border-2 border-lightGrey"

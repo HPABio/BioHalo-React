@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef, useState } from "react";
 import { BioHaloLogo } from "../ui/BioHaloLogo";
@@ -778,7 +778,6 @@ export const HeroSection4 = ({
               </Button>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -793,6 +792,7 @@ export const HeroSection5 = ({
 
   const sectionRef = useRef<HTMLElement>(null);
 
+
   return (
     <section
       ref={sectionRef}
@@ -805,12 +805,11 @@ export const HeroSection5 = ({
         <Image src={enzymeImage} alt="Enzyme" fill className="object-contain" />
       </div>
       {/* Bottom image */}
-      <div
+      <motion.div
         className="md:hidden block absolute w-full h-full bottom-0 right-[-90%] translate-x-[-50vw] translate-y-[55%] 
-      opacity-1 blur-[6px]"
-      >
+      opacity-1 blur-[6px]">
         <Image src={enzymeImage} alt="Enzyme" fill className="object-contain" />
-      </div>
+      </motion.div>
 
       {/* Center image */}
       <div
@@ -878,59 +877,58 @@ export const HeroSection5 = ({
               </div>
 
               {/* Buttons */}
-          <div className="flex flex-col md:flex-row gap-4 md:gap-2 xl:gap-4 mt-60 md:mt-2 items-center justify-center">
-            <div>
-              <Button
-                className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
+              <div className="flex flex-col md:flex-row gap-4 md:gap-2 xl:gap-4 mt-60 md:mt-2 items-center justify-center">
+                <div>
+                  <Button
+                    className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
                             bg-tealAccent bg-gradient-to-r from-tealAccent via-mintAccent/50 to-mintAccent/80 hover:from-teal-600 hover:to-tealAccent 
                             text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const targetElement = document.getElementById(
-                    "platform-technology"
-                  );
-                  if (targetElement) {
-                    const yPosition =
-                      targetElement.getBoundingClientRect().top +
-                      window.scrollY -
-                      80;
-                    window.scrollTo({
-                      top: yPosition,
-                      behavior: "smooth",
-                    });
-                  }
-                }}
-              >
-                Technology
-              </Button>
-            </div>
-            <div>
-              <Button
-                className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const targetElement = document.getElementById(
+                        "platform-technology"
+                      );
+                      if (targetElement) {
+                        const yPosition =
+                          targetElement.getBoundingClientRect().top +
+                          window.scrollY -
+                          80;
+                        window.scrollTo({
+                          top: yPosition,
+                          behavior: "smooth",
+                        });
+                      }
+                    }}
+                  >
+                    Technology
+                  </Button>
+                </div>
+                <div>
+                  <Button
+                    className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
                             bg-white/10 backdrop-blur-sm hover:bg-white/20 text-tealAccent/70 border border-white/20 
                             rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const targetElement = document.getElementById(
-                    "platform-features-content"
-                  );
-                  if (targetElement) {
-                    const yPosition =
-                      targetElement.getBoundingClientRect().top +
-                      window.scrollY -
-                      80;
-                    window.scrollTo({
-                      top: yPosition,
-                      behavior: "smooth",
-                    });
-                  }
-                }}
-              >
-                Features
-              </Button>
-            </div>
-          </div>
-
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const targetElement = document.getElementById(
+                        "platform-features-content"
+                      );
+                      if (targetElement) {
+                        const yPosition =
+                          targetElement.getBoundingClientRect().top +
+                          window.scrollY -
+                          80;
+                        window.scrollTo({
+                          top: yPosition,
+                          behavior: "smooth",
+                        });
+                      }
+                    }}
+                  >
+                    Features
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
