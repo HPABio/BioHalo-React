@@ -2,7 +2,7 @@
 
 import WomanWhiteRainJacket from "@/assets/images/BGImagesTest/WomanWhiteRainJacket.jpeg";
 import Image from "next/image";
-import React, { Suspense, memo } from "react";
+import React, { Suspense, memo, useRef } from "react";
 import dynamic from "next/dynamic";
 import { HeroSection1, HeroSection2, HeroSection3, HeroSection4, HeroSection5 } from "@/components/HeroSections/HeroSections";
 import { FluorinatedMaterialsSection, FluorinatedMaterialsSectionV2 } from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection";
@@ -36,13 +36,62 @@ import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSe
 
 
 import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import industrialPollutionImage from "@/assets/images/VariousImages/IndustrialPollution.png";
+import industrialPollutionImageV2 from "@/assets/images/VariousImages/IndutrialPollutionV2.png";
+import industrialPollutionImageV3 from "@/assets/images/VariousImages/IndustrialPollutionV3.png";
+import industrialPollutionImageV3flipped from "@/assets/images/VariousImages/IndustrialPollutionV3flipped.png";
 import ribbonImage from "@/assets/images/BGImagesTest/Twisted Ribbon Structure transparent.png";
 import abstractImage from "@/assets/images/BGImagesTest/Abstract Black and White Design Transition.png";
 import { motion, useScroll, useTransform } from "framer-motion";
-
+import { SimpleStatsBox } from "./ui/StatsBox";
+import WaterRepellantFabric from "@/assets/images/water-repellant-fabric.png";
+import Pharma from "@/assets/images/BluePrintSVG/Pharma.svg";
+import MeshFabric from "@/assets/images/Mesh-fabric.png";
+import Droplets1 from "@/assets/images/Droplets1.jpg";
+import EcoliTripletsSVG from "@/components/ui/EcoliTripletsSVG";
+import BGFabricTealPink from "@/assets/images/BGImagesTest/BGFabricTealPink.png";
+import BlackSmokeDivider from "@/assets/images/VariousImages/BlackSmokeDivider.png";
+import A from "@/assets/images/Lettering/A.png";
+import C from "@/assets/images/Lettering/C.png";
+import C2 from "@/assets/images/Lettering/C2.png";
+import E from "@/assets/images/Lettering/E.png";
+import E2 from "@/assets/images/Lettering/E2.png";
+import F from "@/assets/images/Lettering/F.png";
+import H from "@/assets/images/Lettering/H.png";
+import I from "@/assets/images/Lettering/I.png";
+import I2 from "@/assets/images/Lettering/I2.png";
+import M from "@/assets/images/Lettering/M.png";
+import L from "@/assets/images/Lettering/L.png";
+import O from "@/assets/images/Lettering/O.png";
+import R from "@/assets/images/Lettering/R.png";
+import S from "@/assets/images/Lettering/S.png";
+import V from "@/assets/images/Lettering/V.png";
 
 // ✅ Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
+
+// Array of letter images for the "FOREVER CHEMICALS" display
+const letterImages = [
+
+  F, // F
+  O, // O
+  R, // R
+  E, // E
+  V, // V
+  E2, // E
+  R, // R
+  
+  C, // C
+  C, // C
+  H, // H
+  E, // E
+  M, // M (Note: M is not in the imports, would need to be added)
+  I, // I
+  C2, // C
+  A, // A
+  L, // L
+  S  // S
+];
 
 // Copy all the content from page.tsx here
 const stats = [
@@ -52,7 +101,8 @@ const stats = [
     suffix: "",
     label: (
       <>
-        <span className="text-lightGrey/80">fluorinated</span> compounds <br className="md:hidden block" /> are already known
+        <span className="text-lg md:text-xl lg:text-2xl xl:text-4xl  uppercase font-bold text-center bg-gradient-to-bl 
+        from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">fluorinated  compounds</span> <br/> are already known
       </>
     ),
   },
@@ -174,6 +224,12 @@ const stats = [
 export const Showcase4 = () => {
   console.log("Showcase4 component rendering");
 
+  const ref4 = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref4,
+    offset: ["start end", "end start"],
+  });
+
   return (
     <main
       className="min-h-screen w-full h-full bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70 overflow-hidden"
@@ -191,10 +247,12 @@ export const Showcase4 = () => {
       <HeroSection4 className=" md:hidden block w-screen h-screen relative overflow-hidden" />
       <HeroSection5 className=" hidden md:block w-screen h-screen relative overflow-hidden" />
       <section
-        className="pb-16 bg-black"
+        className=""
         id="transition-section-one"
       >
-        <div className="relative w-full h-[100px] lg:h-[100px]">
+       
+        <div className="relative w-full h-full">
+
 
         <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px]
         translate-x-[35%] translate-y-[-50%]">
@@ -212,26 +270,47 @@ export const Showcase4 = () => {
             />
           </motion.div>
         </div>
-{/*         <div className="absolute w-[110vw] h-[400px] top-[50%] left-[50%] opacity-1 translate-x-[-50%] translate-y-[-64%]">
-          <Image 
-            src={abstractImage} 
-            alt="Abstract" 
-            fill 
-            className="object-fill "
-          />
-        </div>
-        <div className="absolute w-[300px] h-[100vw] top-[50%] left-[50%] opacity-1 translate-x-[-50%] translate-y-[-58%]">
-          <Image 
-            src={ribbonImage} 
-            alt="Ribbon" 
-            fill 
-            className="object-fill rotate-[-90deg] hidden"
-          />
-        </div> */}
 
-        <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0"/>
+        {/* <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0"/> */}
 
         </div>
+
+        <div className="relative w-full h-screen pt-24">
+
+          <h1 className="text-white text-4xl font-bold text-center">
+            "FOREVER CHEMICALS"
+          </h1>
+          <div className="w-full h-[90px] flex justify-center items-center mt-8 border border-red-500">
+            <div className="flex flex-row w-full h-full max-w-[1200px] px-4 mix-blend-darken relative">
+              {letterImages.map((Letter, index) => (
+                <div 
+                  key={index} 
+                  className="flex-1 w-full h-full flex justify-center items-center relative -ml-4 first:ml-0 hover:z-10 transition-transform hover:scale-110"
+                  style={{ zIndex: index }}
+                >
+                  {index === 7 ? (
+                    // Empty div for space between "FOREVER" and "CHEMICALS"
+                    <div className="w-full h-full"></div>
+                  ) : (
+                    <div className="relative w-full h-full">
+                      <Image src={Letter} alt={`Letter ${index}`} fill className="object-contain" />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+          </div>
+
+
+
+        <div className="relative w-full min-h-[200px] h-[30vw] xl:h-[30vw] pt-16 "
+        style={{
+          backgroundImage: `url(${BlackSmokeDivider.src})`,
+          backgroundSize: "contain",
+          backgroundPosition: "center bottom",
+          backgroundRepeat: "no-repeat",
+        }}/>
       </section>
 
       {/* <FluorinatedMaterialsSection
@@ -245,7 +324,66 @@ export const Showcase4 = () => {
         />
         </section>
 
-      <section id="what-we-do" className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative">
+
+      {/* Health Section */}
+      <section id="health-section" className="relative w-full h-[70vw] max-h-[700px]">
+        <div className="absolute w-full h-full bottom-0 bg-black max-w-[1450px] left-1/2 -translate-x-1/2 "
+        style={{
+          backgroundImage: `url(${industrialPollutionImageV3.src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center bottom',
+          backgroundRepeat: 'no-repeat',
+
+        }}>
+
+        {/* Fade to black */}
+        <div className="absolute w-full h-[60%] top-0 left-0  bg-gradient-to-b from-black via-black to-transparent" />
+        <div className="absolute w-full h-[12%] bottom-0 left-0  bg-gradient-to-t from-black via-black to-transparent" />
+        <div className="absolute w-full h-full top-0 left-0  bg-gradient-to-l from-black via-black/30 to-transparent" />
+            {/* Center Content with Image */}
+            <motion.div
+                ref={ref4}
+                className="absolute w-[40%] aspect-square rounded-full right-0 top-0 overflow-hidden flex flex-col items-center justify-center"
+                style={{ willChange: "transform, opacity" }} // Optimize transformations and transparency
+              >
+                <div className="absolute w-[80%] h-[80%] top-[3%] "
+                  style={{
+                    backgroundImage: `url(${Pharma.src})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                  />
+
+                {/* Gradient Overlay */}
+                <div
+                  className="absolute w-full h-full inset-0 rounded-full overflow-hidden bg-gradient-to-t from-black via-black/50 to-transparent"
+                  style={{ willChange: "opacity" }} // Helps with smooth opacity transitions
+                />
+
+                {/* Animated Stats Box */}
+                <motion.div
+                  className="absolute top-[63%] -translate-y-[65%] w-full"
+                  ref={ref4}
+                  style={{ willChange: "transform, opacity" }} // Optimizing framer-motion animation
+                >
+                  <SimpleStatsBox
+                    classNamesContainer="w-fit mx-auto z-20 "
+                    classNamesTitle="text-center text-6xl lg:text-9xl font-black mb-4 bg-gradient-to-tl from-lightGrey/40 via-gray-200 to-lightGrey/80 bg-clip-text text-transparent"
+                    classNamesSubTitle="text-center text-lightGrey/80 text-lg lg:text-4xl font-bold capitalize -mt-8"
+                    stat={stats[3]}
+                    scrollYProgress={scrollYProgress}
+                    scrollEndThreshold={0.4}
+                    index={3}
+                    text=""
+                    ratchet={false}
+                  />
+                </motion.div>
+              </motion.div>
+        </div>
+
+      </section>
+
+      <section id="what-we-do" className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative overflow-hidden">
         {/* Section detection helper */}
         <div
           className="absolute top-0 h-24 w-full pointer-events-none"
@@ -271,6 +409,7 @@ export const Showcase4 = () => {
 
         <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
       </section>
+
 
       {/* Icon Carousel Section - No ID here since it's not in the navigation */}
       <section className="w-full">

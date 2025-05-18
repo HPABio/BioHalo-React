@@ -294,7 +294,7 @@ export function FluorinatedMaterialsSectionV2({
   const ref9 = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref9,
-    offset: ["center end", "center start"],
+    offset: ["start end", "end end"],
   });
 
   const shouldRasterize = false;
@@ -352,6 +352,18 @@ export function FluorinatedMaterialsSectionV2({
         <div className="relative w-screen pt-[100px] bg-gradient-to-br from-black via-black/0 to-transparent">
           {/* Flex Container */}
           <div className="w-full py-16 bg-blue-500/0 flex flex-col-2 items-center justify-center max-w-[1280px] mx-auto">
+            <motion.div
+              className="w-[300px] h-[300px] bg-blue-500/0 absolute top-0 left-[45%]"
+              style={{
+                willChange: "transform",
+                backgroundImage: `url(${BioFMonomer.src})`,
+                backgroundSize: "contain",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                rotate: useTransform(scrollYProgress, [0, 1], [-15, 0]),
+                y: useTransform(scrollYProgress, [0, 1], [80, 30]),
+              }}
+            ></motion.div>
             <div className="w-2/3  px-12">
               {/* TEXT COLUMN */}
               <div className="w-full">
@@ -398,10 +410,11 @@ export function FluorinatedMaterialsSectionV2({
             </div>
 
             {/* Empty Space / Right Column */}
-            <div className="w-1/3"></div>
+            <div className="w-1/3 h-full translate-x-[-100px]"></div>
           </div>
         </div>
       </div>
+      {/* Floating Info Circle  */}
       <div className="w-full h-full inset-0 absolute">
         <div className="w-full h-full inset-0 relative bg-yellow-500/0">
           {/* <div className="absolute w-[33%] max-w-[400px] aspect-square bg-red-500/10 rounded-full top-[40%] xl:top-[50%] left-[50%] translate-x-[10%] translate-y-[10%]"></div> */}
@@ -413,7 +426,14 @@ export function FluorinatedMaterialsSectionV2({
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              y: useTransform(scrollYProgress, [0, 1], [0, -250]),
+              y: useTransform(
+                useScroll({
+                  target: ref9,
+                  offset: ["center end", "center start"],
+                }).scrollYProgress,
+                [0, 1],
+                [0, -250]
+              ),
             }}
           >
             <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -425,7 +445,7 @@ export function FluorinatedMaterialsSectionV2({
                 classNamesSubTitle="w-[150px] lg:w-[200px] mx-auto text-center text-lightGrey/60 text-3xl font-bold mt-0 capitalize leading-3"
                 stat={stats[8]}
                 scrollYProgress={scrollYProgress}
-                scrollEndThreshold={0.5}
+                scrollEndThreshold={0.9}
                 index={4}
               />
 
@@ -437,12 +457,177 @@ export function FluorinatedMaterialsSectionV2({
                 classNamesSubTitle="w-[150px] lg:w-[200px] mx-auto text-center text-lightGrey/60 text-3xl font-bold mt-0 capitalize leading-3"
                 stat={stats[8]}
                 scrollYProgress={scrollYProgress}
-                scrollEndThreshold={0.5}
+                scrollEndThreshold={0.9}
                 index={4}
               />
             </div>
           </motion.div>
           {/* <div className="absolute w-[10%] max-w-[133px] aspect-square bg-yellow-500 rounded-full top-[50%] left-[50%] translate-x-[230%] translate-y-[10%]"></div> */}
+        </div>
+      </div>
+      {/* Fade to black */}
+      <div className="absolute w-full h-[100px] bottom-0 left-0  bg-gradient-to-t from-black via-black/30 to-transparent" />
+    </div>
+  );
+}
+
+export function FluorinatedMaterialsSectionV3({
+  stats,
+  className = "",
+}: FluorinatedMaterialsSectionProps) {
+  const ref9 = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref9,
+    offset: ["start end", "end end"],
+  });
+
+  const shouldRasterize = false;
+  const saveToAssets = false;
+
+  const backgroundImages = [MeshFabric, dropletsDark, waterRepellantFabric];
+
+  return (
+    <div className={`${className} relative overflow-hidden`}>
+      {/* Content Container */}
+      <div className="w-full h-auto bg-black mt-[-25px] relative pt-">
+        {/* Background Image Slider */}
+        <div className="w-screen h-full absolute top-0 left-0 flex bg-red-500/0 justify-center items-center z-0">
+          <motion.div className="absolute inset-0">
+            {backgroundImages.map((image, index) => (
+              <motion.div
+                ref={ref9}
+                key={index}
+                className="absolute inset-0"
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: [0, 1, 1, 0],
+                }}
+                transition={{
+                  duration: 12,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                  times: [0, 0.1, 0.9, 1],
+                  delay: index * 4,
+                }}
+              >
+                <Image
+                  src={image}
+                  alt="Background"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+          <div className="absolute w-full h-[100px] bottom-0 left-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+          <div className="absolute w-full h-[100px] top-0 left-0 bg-gradient-to-b from-black via-black/50 to-transparent" />
+          <div className="absolute w-full h-full bg-gradient-to-r from-black via-black/40 to-transparent" />
+          <div className="absolute w-[30%] 2xl:w-[40%] opacity-15 lg:opacity-75 xl:opacity-100 h-full top-0 right-0 bg-gradient-to-l from-black via-black/50 to-transparent" />
+          <div className="absolute w-full h-full bg-gradient-to-br from-black via-black/50 to-transparent opacity-70" />
+        </div>
+
+        {/* Content Container */}
+        <div className="relative w-screen pt-[100px] bg-gradient-to-br from-black via-black/0 to-transparent">
+          {/* New Flex Container */}
+          <div className="w-full py-16 bg-tealAccent/10 flex flex-row items-center justify-between max-w-[1280px] mx-auto px-24">
+            {/* Left Column - Empty for spacing */}
+            <div className="w-1/2"></div>
+
+            {/* Right Column - Text Content */}
+            <div className="w-1/2 text-right">
+              <h1 className="relative max-w-[500px] xl:max-w-[700px] font-black font-Arial text-4xl xl:text-6xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10 ml-auto">
+                <span className="text-9xl scale-[2] opacity-80 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                  PFAS{" "}
+                </span>
+                <br />
+                <span className="">also known as</span>
+                <br />
+                <span className="relative inline-block">
+                  <span>"df"</span>
+                  <span className="absolute top-0 left-0 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm opacity-50">
+                    Forever Chemicals
+                  </span>
+                  <span className="bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                    Forever Chemicals
+                  </span>
+                </span>
+                "
+                <span className="">
+                  {" "}
+                  are fluorinated materials that can be found everywhere
+                </span>
+              </h1>
+
+              <div className="space-y-4 ml-auto">
+                <p className="text-2xl md:text-3xl text-gray-300">
+                  From coatings and textiles to <br />
+                  food packaging and electronics
+                </p>
+                <p className="text-lg max-w-md pt-4 leading-relaxed text-gray-500 ml-auto">
+                  Due to their unique properties, like heat resistance and water
+                  repellency, they are used in a wide range of products.
+                  However, these special properties also make them nearly
+                  impossible to degrade and{" "}
+                  <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                    highly toxic
+                  </span>
+                  . PFAS accumulate in the environment and pose a threat to
+                  public health and the environment itself.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full h-full inset-0 absolute">
+        <div className="w-full h-full inset-0 relative bg-yellow-500/0">
+          <motion.div
+            className="absolute w-[33%] max-w-[400px] aspect-square bg-red-500/0 border-4 border-tealAccent/30 rounded-full top-[70%] xl:top-[70%] left-[50%] xl:left-[55%] translate-x-[10%] translate-y-[10%]"
+            style={{
+              willChange: "transform",
+              backgroundImage: `url(${ColorfulGradientRainbowTexture.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              y: useTransform(
+                useScroll({
+                  target: ref9,
+                  offset: ["center end", "center start"],
+                }).scrollYProgress,
+                [0, 1],
+                [0, -250]
+              ),
+            }}
+          >
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+              {/* Blurred Title */}
+              <SimpleStatsBox
+                classNamesContainer="w-fit h-fit mt-4"
+                classNamesTitle="w-[300px] blur-sm opacity-35 text-center text-8xl lg:text-9xl font-Arial
+                                    font-black mb-1 bg-gradient-to-tl from-lightGrey via-gray-400 to-lightGrey/70 bg-clip-text text-transparent"
+                classNamesSubTitle="w-[150px] lg:w-[200px] mx-auto text-center text-lightGrey/60 text-3xl font-bold mt-0 capitalize leading-3"
+                stat={stats[8]}
+                scrollYProgress={scrollYProgress}
+                scrollEndThreshold={0.9}
+                index={4}
+              />
+
+              {/* Primary Title */}
+              <SimpleStatsBox
+                classNamesContainer="absolute w-fit h-fit mt-4"
+                classNamesTitle="w-[300px] text-center text-8xl lg:text-9xl font-Arial
+                                  font-black mb-1 bg-gradient-to-tl from-lightGrey via-gray-400 to-lightGrey/70 bg-clip-text text-transparent"
+                classNamesSubTitle="w-[150px] lg:w-[200px] mx-auto text-center text-lightGrey/60 text-3xl font-bold mt-0 capitalize leading-3"
+                stat={stats[8]}
+                scrollYProgress={scrollYProgress}
+                scrollEndThreshold={0.9}
+                index={4}
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>

@@ -168,7 +168,7 @@ export const WhatWeDoSection = ({
         </div>
 
         {/* Circular Image Section */}
-        <div className="relative w-full md:w-[1200px] h-[600px] sm:h-[700px] md:h-[750px] lg:h-[800px] bg-red-500/0 mt-16 md:mt-16">
+        <div className="relative w-full md:w-[1200px] h-[600px] sm:h-[700px] md:h-[750px] lg:h-[800px] bg-red-500/0 mt-16 md:mt-16 lg:ml-[2vw]">
           {/* Top/Middle Circle */}
           <div className="absolute h-[400px] w-[400px] sm:h-[500px] sm:w-[500px] md:h-[600px] md:w-[600px] lg:h-[700px] lg:w-[700px] xl:h-[800px] xl:w-[800px] rounded-full left-[10%] sm:left-[15%] md:left-[10%] lg:left-[15%] xl:left-[25%] -top-[15%] sm:-top-[18%] md:-top-[20%] lg:-top-[17%] xl:-top-[15%] overflow-hidden drop-shadow-xl flex items-center justify-center">
             <Image
@@ -205,9 +205,9 @@ export const WhatWeDoSection = ({
             >
               <SimpleStatsBox
                 classNamesContainer="w-fit z-10 h-fit"
-                classNamesTitle="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl w-full sm:w-[400px] md:w-[500px] lg:w-[700px] xl:w-[800px] mt-5 sm:scale-[1.1] md:scale-[1.15] lg:scale-[1.2] text-center
+                classNamesTitle="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl w-full sm:w-[400px] md:w-[500px] lg:w-[700px] xl:w-[800px] mt-5 sm:scale-[1.1] md:scale-[1.15] lg:scale-[1.2] text-center
               font-bold mb-6 bg-gradient-to-tl from-tealAccent to-lightGrey bg-clip-text text-transparent [-webkit-text-stroke:1px_rgb(229,231,235,0.1)] sm:[-webkit-text-stroke:1.5px_rgb(229,231,235,0.1)] md:[-webkit-text-stroke:2px_rgb(229,231,235,0.1)] [text-stroke:1px_rgb(229,231,235,0.1)] sm:[text-stroke:1.5px_rgb(229,231,235,0.1)] md:[text-stroke:2px_rgb(229,231,235,0.1)]"
-                classNamesSubTitle="text-center text-lightGrey/60 text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-bold -mt-2 sm:-mt-3 md:-mt-4 lg:-mt-5 capitalize"
+                classNamesSubTitle="text-center text-lightGrey/60 text-xs sm:text-sm md:text-lg lg:text-2xl xl:text-3xl font-bold -mt-2 sm:-mt-3 md:-mt-4 lg:-mt-5 capitalize"
                 stat={stats[0]}
                 scrollYProgress={scrollYProgress}
                 scrollEndThreshold={0.6}
