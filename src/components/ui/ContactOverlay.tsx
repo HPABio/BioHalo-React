@@ -8,9 +8,11 @@ import AtomDiagram from "./AtomDiagram";
 interface ContactOverlayProps {
   isOpen: boolean;
   onClose: () => void;
+  className?: string;
 }
 
 export const ContactOverlay: React.FC<ContactOverlayProps> = ({
+  className,
   isOpen,
   onClose,
 }) => {
@@ -46,7 +48,7 @@ export const ContactOverlay: React.FC<ContactOverlayProps> = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md"
+          className={`fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md ${className}`}
         >
           {/* Background decoration */}
           <div className="absolute bottom-0 left-0 w-full h-[200px] bg-gradient-to-b from-black/0 via-black/50 to-black"></div>
@@ -70,7 +72,7 @@ export const ContactOverlay: React.FC<ContactOverlayProps> = ({
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-6 right-6 text-white hover:text-tealAccent transition-colors"
+            className="fixed top-6 right-6 text-white hover:text-tealAccent transition-colors z-50"
             aria-label="Close overlay"
           >
             <X size={32} />

@@ -245,7 +245,7 @@ export const ShowcaseNavbar = () => {
       </motion.header>
 
       {/* Contact Overlay */}
-      <ContactOverlay
+      <ContactOverlay className=""
         isOpen={isContactOverlayOpen}
         onClose={handleCloseContactOverlay}
       />
