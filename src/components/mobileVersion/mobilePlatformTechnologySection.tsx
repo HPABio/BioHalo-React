@@ -12,8 +12,19 @@ import BioReactorBP2 from "@/assets/images/BluePrintSVG/bio-reactor-product.svg"
 import DNALogo from "@/assets/images/BluePrintSVG/dna-logo.svg";
 import DNA_Logo_long from "@/components/ui/DNA-Logo-long";
 import BioHaloStep2 from "@/assets/images/BluePrintSVG/BioHalo-step2.svg";
+
+
+
+
+
+import BioReactorV1PNG from "@/assets/images/BluePrintPNGs/bio-reactorV1.png";
+import BioReactor2PNG from "@/assets/images/BluePrintPNGs/BioReactor2.png";
+import BioHaloStep2PNG from "@/assets/images/BluePrintPNGs/BioHalo-step2.png";
+import DNALogoPNG from "@/assets/images/BluePrintPNGs/dna-logo.png";
 import ScreenShot from "@/assets/images/ScreenShots/ScreenShot.png";
 import enzymeImage from "@/assets/images/BluePrint with Color/Enzyme.png";
+
+
 
 import {
   Beaker,
@@ -126,7 +137,7 @@ const technologyProcessSteps: TechnologyProcessStep[] = [
     title: "DNA Engineering",
     description:
       "Our genetic engineering platform enables precise control over microbial gene expression.",
-    image: DNALogo,
+    image: DNALogoPNG,
     alt: "DNA Structure",
   },
   {
@@ -142,7 +153,7 @@ const technologyProcessSteps: TechnologyProcessStep[] = [
     title: "Screening & Optimization",
     description:
       "In an iterative process, we screen and optimize the enzymes and strains for optimal performance.",
-    image: BioHaloStep2,
+    image: BioHaloStep2PNG,
     alt: "BioHalo Process",
   },
   {
@@ -150,7 +161,7 @@ const technologyProcessSteps: TechnologyProcessStep[] = [
     title: "Industrial Scaling",
     description:
       "Our fermentation process enables sustainable production compatible with industrial scale.",
-    image: BioReactorBP2,
+    image: BioReactor2PNG,
     alt: "Bioreactor Blueprint",
   },
 ];
@@ -352,7 +363,7 @@ export const MobilePlatformTechnologySection = ({
               imageHeight={400}
             />
           </div>
-          <div className="grid grid-cols-1 gap-6 -mt-14">
+          <div className="grid grid-cols-1 gap-4 -mt-14 px-2">
             {technologyFeatures.map((feature, index) => (
               <motion.div
                 key={feature.id}
@@ -360,19 +371,19 @@ export const MobilePlatformTechnologySection = ({
                 whileInView={{ opacity: 1}}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3}}
-                className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-tealAccent/10 rounded-xl hover:border-tealAccent/30 transition-all group"
+                className="p-4 bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-tealAccent/10 rounded-lg hover:border-tealAccent/30 transition-all group"
               >
-                <div className="flex items-start space-x-4">
+                <div className="flex flex-col items-center text-center space-y-3">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center 
                   group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)]">
                     {feature.icon}
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2 text-gray-300">
+                  <div className="w-full">
+                    <h3 className="text-lg font-semibold mb-2 text-gray-300">
                       {feature.title}
                     </h3>
-                    <div className="w-full h-px bg-gradient-to-r from-transparent via-tealAccent/20 to-transparent mb-3" />
-                    <p className="text-gray-400">{feature.description}</p>
+                    <div className="w-full h-px bg-gradient-to-r from-transparent via-tealAccent/20 to-transparent mb-2" />
+                    <p className="text-sm text-gray-400 leading-relaxed max-w-sm mx-auto">{feature.description}</p>
                   </div>
                 </div>
               </motion.div>

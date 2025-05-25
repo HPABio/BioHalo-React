@@ -180,22 +180,20 @@ export function MobileFluorinatedMaterialsSection({
     <section className={`${className} h-[1700px] w-full relative`}>
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
 
-      <div className="w-full min-h-screen h-[960px] relative bg-gradient-to-b bg-teal-950 from-black via-black to-teal-800/70">
+      <div className="w-full min-h-screen h-[1030px] relative bg-gradient-to-b bg-teal-950 from-black via-black to-slate-800/70">
         <div className="absolute w-full h-fit top-0 left-0 overflow-hidden xl:overflow-visible xl:bg-transparent bg-black/30">
-          <div className="w-full h-fit max-w-[1280px] mx-auto px-6 pt-[20px] pb-[40px]">
+          <div className="w-full h-fit max-w-[1280px] mx-auto px-6 pt-24 pb-[40px]">
             {/* TEXT COLUMN */}
             <div className="w-full flex flex-col items-center">
-              <h1 className="w-full text-center font-black font-Arial text-3xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
-                <span className="text-6xl scale-[1.5] opacity-80 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+              <h1 className="w-full text-center font-black font-poppins text-3xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
+                <span className="text-8xl scale-[1] bg-gradient-to-r from-slate-900 via-pinkAccent to-slate-900 bg-clip-text text-transparent">
                   PFAS{" "}
                 </span>
                 <br />
                 <span className="text-2xl">also known as</span>
                 <br />"
-                <span className="absolute bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm opacity-50">
-                  Forever Chemicals
-                </span>
-                <span className="bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+              
+                <span className="bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent">
                   Forever Chemicals
                 </span>"
                 <br />
@@ -211,11 +209,11 @@ export function MobileFluorinatedMaterialsSection({
               {/* Text content */}
               <div className="w-full px-4 h-fit">
                 <div className="space-y-4">
-                  <p className="text-xl text-gray-300">
+                  <p className="text-xl text-gray-300/90 font-poppins text-center">
                     From coatings and textiles to <br />
                     food packaging and electronics
                   </p>
-                  <p className="text-base pt-4 leading-relaxed text-gray-500">
+                  <p className="text-base pt-4 leading-relaxed text-gray-500 font-poppins">
                     Due to their unique properties, like heat resistance and
                     water repellency, they are used in a wide range of products.
                     However, these special properties also make them nearly
