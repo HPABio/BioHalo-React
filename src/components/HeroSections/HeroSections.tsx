@@ -657,13 +657,7 @@ export const HeroSection4 = ({
       <div className="absolute w-[80%] h-[80%] top-0 left-0 translate-x-[-50%] translate-y-[-50%] blur-[7px] opacity-60 brightness-[1.4]">
         <Image src={enzymeImage} alt="Enzyme" fill className="object-contain" />
       </div>
-      {/* Bottom image */}
-      <div
-        className="md:hidden block absolute w-full h-full bottom-0 right-[-90%] translate-x-[-50vw] translate-y-[55%] 
-      opacity-1 blur-[6px]"
-      >
-        <Image src={enzymeImage} alt="Enzyme" fill className="object-contain" />
-      </div>
+     
 
       {/* Center image */}
       <div className="absolute  w-[70%] h-[70%] md:w-[50%] md:h-[50%] min-h-[500px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-48%] md:translate-y-[-40%] overflow-visible bg-red-500/0">

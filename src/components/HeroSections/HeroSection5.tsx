@@ -14,6 +14,7 @@ import Image from "next/image";
 import FollowPath from "../ui/FollowPath";
 import logo from "@/assets/images/logo.png";
 import { MovingAtom } from "../ui/MovingAtom";
+import BlackSmokeDivider from "@/assets/images/VariousImages/BlackSmokeDivider.png";
 
 interface HeroSection5Props {
   className?: string;
@@ -165,6 +166,7 @@ export const HeroSection5 = ({
               </div>
               </div>
       </motion.div>
+
     </section>
   );
 };

@@ -180,8 +180,8 @@ export function MobileFluorinatedMaterialsSection({
     <section className={`${className} h-[1700px] w-full relative`}>
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
 
-      <div className="w-full min-h-screen h-[960px] relative bg-gradient-to-b bg-teal-950 from-black via-black/70 to-black">
-        <div className="absolute w-full h-fit top-0 left-0 overflow-hidden xl:overflow-visible xl:bg-transparent bg-black">
+      <div className="w-full min-h-screen h-[960px] relative bg-gradient-to-b bg-teal-950 from-black via-black to-teal-800/70">
+        <div className="absolute w-full h-fit top-0 left-0 overflow-hidden xl:overflow-visible xl:bg-transparent bg-black/30">
           <div className="w-full h-fit max-w-[1280px] mx-auto px-6 pt-[20px] pb-[40px]">
             {/* TEXT COLUMN */}
             <div className="w-full flex flex-col items-center">

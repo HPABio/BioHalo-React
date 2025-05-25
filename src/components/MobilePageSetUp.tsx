@@ -21,6 +21,10 @@ import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compres
 import { MobileFluorinatedMaterialsSection } from "./mobileVersion/mobileFluorinatedMaterialsSection";
 import { MobileWhatWeDoSection } from "@/components/mobileVersion/mobileWhatWeDoSection";
 import { MobilePlatformTechnologySection } from "@/components/mobileVersion/mobilePlatformTechnologySection";
+import BlackSmokeDivider from "@/assets/images/VariousImages/BlackSmokeDivider.png";
+import { useScroll } from "framer-motion";
+import { useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 // ✅ Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
@@ -144,22 +148,38 @@ export const MobilePageSetUp = () => {
 
 
       <section
-        className="pb-16 bg-black"
+        className="pb-16"
         id="transition-section-one"
       >
         <div className="relative w-full h-[100px] lg:h-[200px]">
 
         <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px]
         translate-x-[35%] translate-y-[-50%]">
-          <Image 
-            src={enzymeImage} 
-            alt="Enzyme" 
-            fill 
-            className="object-contain"
-          />
+          <motion.div
+              className="absolute w-full h-full"
+              style={{
+                y: useTransform(useScroll().scrollY, [0, 1000], [0, -200]),
+              }}
+            >
+              <Image
+                src={enzymeImage}
+                alt="Enzyme"
+                fill
+                className="object-contain"
+              />
+            </motion.div>
         </div>
 
-        <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0"/>
+        <div
+          className="relative w-full min-h-[200px] h-[30vw] xl:h-[30vw] pt-16 "
+          style={{
+            backgroundImage: `url(${BlackSmokeDivider.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center bottom",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+          <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/0 to-black/0"/>
 
         </div>
       </section>
