@@ -25,6 +25,7 @@ import BlackSmokeDivider from "@/assets/images/VariousImages/BlackSmokeDivider.p
 import { useScroll } from "framer-motion";
 import { useTransform } from "framer-motion";
 import { motion } from "framer-motion";
+import MobileIconCarousel from "./mobileVersion/mobileIconCarousel";
 
 // ✅ Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
@@ -148,7 +149,7 @@ export const MobilePageSetUp = () => {
 
 
       <section
-        className="pb-16"
+        className="pb-16 h-[300px] w-full relative"
         id="transition-section-one"
       >
         <div className="relative w-full h-[100px] lg:h-[200px]">
@@ -170,8 +171,10 @@ export const MobilePageSetUp = () => {
             </motion.div>
         </div>
 
+
+        </div>
         <div
-          className="relative w-full min-h-[200px] h-[30vw] xl:h-[30vw] pt-16 "
+          className="absolute w-full min-h-[150px] h-[30vw] bottom-0 "
           style={{
             backgroundImage: `url(${BlackSmokeDivider.src})`,
             backgroundSize: "contain",
@@ -179,9 +182,8 @@ export const MobilePageSetUp = () => {
             backgroundRepeat: "no-repeat",
           }}
         />
-          <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/0 to-black/0"/>
-
-        </div>
+          <div className="absolute bottom-0 w-full h-[50px] 
+          bg-gradient-to-t from-black via-black to-black/0 "/>
       </section>
 
 
@@ -190,7 +192,7 @@ export const MobilePageSetUp = () => {
 
 
       <MobileFluorinatedMaterialsSection
-        className="relative w-full h-full overflow-hidden z-10 pt-6"
+        className="relative w-full h-full overflow-hidden z-10 -mt-4"
         stats={stats}
       />
 
@@ -225,7 +227,7 @@ export const MobilePageSetUp = () => {
       <section className="w-full">
         <div className="bg-red-500/0 w-full">
           <div className="w-full h-[400px] pt-10 overflow-hidden flex items-center justify-center">
-            <IconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100" />
+            <MobileIconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100" />
           </div>
         </div>
       </section>

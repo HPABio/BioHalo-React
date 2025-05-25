@@ -231,7 +231,7 @@ export const MobileWhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(195,12,95,0.1)" //pink
-          className="absolute top-[80%] left-[90%] 
+          className="absolute top-[85%] left-[99%] 
           translate-x-[-50%] translate-y-[-150%] 
           lg:translate-x-[200%] lg:-translate-y-[50%] opacity-90 z-5"
         />
@@ -245,8 +245,8 @@ export const MobileWhatWeDoSection = ({
           shouldScale={false}
           scaleRange={[0.9, 1.8]}
           scaleDuration={24}
-          color="rgba(18,110,119,0.5)" //teal
-          className="absolute top-[50%] left-[-30%] translate-x-[50%] translate-y-[-80%] 
+          color="rgba(18,110,119,0.4)" //teal
+          className="absolute top-[55%] left-[-30%] translate-x-[50%] translate-y-[-80%] 
           lg:translate-x-[350%] lg:-translate-y-[500%] opacity-90 z-5"
         />
 
@@ -277,7 +277,7 @@ export const MobileWhatWeDoSection = ({
                 </span>
                   products
               </h1>
-              <p className="text-2xl">
+              <p className="text-2xl font-poppins text-center">
                 Our{" "}
                 <span className="font-bold ">
                   Bio-
@@ -293,7 +293,7 @@ export const MobileWhatWeDoSection = ({
               <p className="text-lg max-w-md pt-4 leading-relaxed">
                 BioHalos revolutionary enzyme-based biohalogenation platform
                 offers you near limitless possibilities for{" "}
-                <span className="bg-gradient-to-tr from-pinkAccent to-red-900/80 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-tr from-pinkAccent to-red-900/80 bg-clip-text text-transparent ">
                   fluorine
                 </span>
                 -enhanced compound development.
