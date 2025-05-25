@@ -308,15 +308,14 @@ export const Showcase4 = () => {
       {/* <HeroSection4 className=" block w-screen h-screen relative overflow-hidden" /> */}
       <HeroSection4 className=" md:hidden block w-screen h-screen relative overflow-hidden" />
       <HeroSection5 className=" hidden md:block w-screen h-screen relative overflow-hidden" />
-      <section
-        className="pb-16 bg-black"
-        id="transition-section-one"
-      >
-        <div className="relative w-full h-[100px] lg:h-[200px]">
-
-        <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px]
-        translate-x-[35%] translate-y-[-50%]">
-          <motion.div
+      <section className="" id="transition-section-one">
+        {/* Background image of enzyme */}
+        <div className="relative w-full h-full">
+          <div
+            className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px]
+        translate-x-[35%] translate-y-[-50%]"
+          >
+            <motion.div
               className="absolute w-full h-full"
               style={{
                 y: useTransform(useScroll().scrollY, [0, 1000], [0, -200]),
@@ -329,35 +328,99 @@ export const Showcase4 = () => {
                 className="object-contain"
               />
             </motion.div>
+          </div>
+
+          {/* <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0"/> */}
         </div>
-{/*         <div className="absolute w-[110vw] h-[400px] top-[50%] left-[50%] opacity-1 translate-x-[-50%] translate-y-[-64%]">
-          <Image 
-            src={abstractImage} 
-            alt="Abstract" 
-            fill 
-            className="object-fill "
-          />
-        </div>
-        <div className="absolute w-[300px] h-[100vw] top-[50%] left-[50%] opacity-1 translate-x-[-50%] translate-y-[-58%]">
-          <Image 
-            src={ribbonImage} 
-            alt="Ribbon" 
-            fill 
-            className="object-fill rotate-[-90deg] hidden"
-          />
+
+        {/* Title text made of letter images V2 */}
+  {/*       <div className="relative w-full h-screen pt-24">
+          <ImageTitleText letterImages={letterImages} />
         </div> */}
 
-        <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0"/>
+        <div
+          className="relative w-full min-h-[200px] h-[30vw] xl:h-[30vw] pt-16 "
+          style={{
+            backgroundImage: `url(${BlackSmokeDivider.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center bottom",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+      </section>
 
+      {/* <FluorinatedMaterialsSection
+        className="relative w-full h-full overflow-hidden z-10 pt-6"
+        stats={stats}
+      /> */}
+      <section className="w-full h-fit bg-red-500/0">
+        <FluorinatedMaterialsSectionV2
+          className="relative w-full h-fit overflow-hidden z-10 pt-6"
+          stats={stats}
+        />
+      </section>
+
+      {/* Health Section */}
+      <section
+        id="health-section"
+        className="relative w-full h-[70vw] max-h-[700px]"
+      >
+        <div
+          className="absolute w-full h-full bottom-0 bg-black max-w-[1450px] left-1/2 -translate-x-1/2 "
+          style={{
+            backgroundImage: `url(${industrialPollutionImageV3.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center bottom",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          {/* Fade to black */}
+          <div className="absolute w-full h-[60%] top-0 left-0  bg-gradient-to-b from-black via-black to-transparent" />
+          <div className="absolute w-full h-[12%] bottom-0 left-0  bg-gradient-to-t from-black via-black to-transparent" />
+          <div className="absolute w-full h-full top-0 left-0  bg-gradient-to-l from-black via-black/30 to-transparent" />
+          {/* Center Content with Image */}
+          <motion.div
+            ref={ref4}
+            className="absolute w-[40%] aspect-square rounded-full right-0 top-0 overflow-hidden flex flex-col items-center justify-center"
+            style={{ willChange: "transform, opacity" }} // Optimize transformations and transparency
+          >
+            <div
+              className="absolute w-[80%] h-[80%] top-[3%] "
+              style={{
+                backgroundImage: `url(${Pharma.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+
+            {/* Gradient Overlay */}
+            <div
+              className="absolute w-full h-full inset-0 rounded-full overflow-hidden bg-gradient-to-t from-black via-black/50 to-transparent"
+              style={{ willChange: "opacity" }} // Helps with smooth opacity transitions
+            />
+
+            {/* Animated Stats Box */}
+            <motion.div
+              className="absolute top-[63%] -translate-y-[65%] w-full"
+              ref={ref4}
+              style={{ willChange: "transform, opacity" }} // Optimizing framer-motion animation
+            >
+              <SimpleStatsBox
+                classNamesContainer="w-fit mx-auto z-20 "
+                classNamesTitle="text-center text-6xl lg:text-9xl font-black mb-4 bg-gradient-to-tl from-lightGrey/40 via-gray-200 to-lightGrey/80 bg-clip-text text-transparent"
+                classNamesSubTitle="text-center text-lightGrey/80 text-lg lg:text-4xl font-bold capitalize -mt-8"
+                stat={stats[3]}
+                scrollYProgress={scrollYProgress}
+                scrollEndThreshold={0.4}
+                index={3}
+                text=""
+                ratchet={false}
+              />
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
-      <FluorinatedMaterialsSection
-        className="relative w-full h-full overflow-hidden z-10 pt-6"
-        stats={stats}
-      />
-
-    
       <section
         id="what-we-do"
         className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative overflow-hidden"
