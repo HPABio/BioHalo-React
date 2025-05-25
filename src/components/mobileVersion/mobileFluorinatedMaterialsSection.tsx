@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useMemo } from "react";
-import { useScroll, motion } from "framer-motion";
+import { useScroll, motion, useTransform } from "framer-motion";
 import Image from "next/image";
 import {
   StatsBox,
@@ -22,6 +22,7 @@ import TexturedGlassSurface from "@/assets/images/BGImagesTest/Textured Glass Su
 import WaterRepellantFabric from "@/assets/images/water-repellant-fabric.png";
 import pollutionearth from "@/assets/images/BluePrintStyle/polutionEarth.svg";
 import IndustrialPollution from "@/assets/images/BGImages/IndustrialPollution_960678749.png";
+import IconToxicSkull from "@/assets/images/VariousImages/iconToxicSkull.png";
 
 interface FluorinatedMaterialsSectionProps {
   stats: any[];
@@ -32,26 +33,37 @@ interface FluorinatedMaterialsSectionProps {
 // Memoized Circle Components
 const Circle1 = React.memo(function Circle1() {
   console.log("Rendering Circle1 component");
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "center start"],
+  });
   return (
-    <div className="relative w-[350px] h-[350px] rounded-full overflow-hidden border-2 border-lightGrey/40 grid place-items-center">
+    <div className="relative w-[500px] h-[500px] rounded-full overflow-hidden border-2 border-lightGrey/40 grid place-items-center">
       <Image
-        src={TexturedGlassSurface}
+        src={ColorfulGradientRainbowTexture}
         alt="TexturedGlassSurface"
         sizes="(max-width: 768px) 100vw, 350px"
         className="w-full h-full object-cover"
       />
-      <div
+      <motion.div
+        ref={ref}
         className="absolute w-[110%] h-[110%] min-w-[110%] min-h-[110%] 
-        top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] "
+        top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
+        mix-blend-multiply"
+        style={{
+          opacity: useTransform(scrollYProgress, [0, 0.5], [0, 0.7])
+        }}
       >
-        <EcoliTripletsSVG
-          className="w-full h-full opacity-40 mix-blend-screen filter invert grayscale "
-          style={{
-            willChange: "opacity, transform",
-            transform: "translate3d(-3%, 2%, 0) scale(1.1) rotate(56deg)",
-          }}
+        <Image
+          src={IconToxicSkull}
+          alt="IconToxicSkull"
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, 500px"
+          className="w-full h-full object-cover invert grayscale -rotate-[25deg] translate-x-[-7%] translate-y-[-7%]"
         />
-      </div>
+      </motion.div>
     </div>
   );
 });
@@ -165,12 +177,12 @@ export function MobileFluorinatedMaterialsSection({
   if (debug) console.log("Rendering FluorinatedMaterialsSection");
 
   return (
-    <section className={`${className} relative`}>
+    <section className={`${className} h-[1700px] w-full relative`}>
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
 
-      <div className="w-full min-h-screen relative bg-gradient-to-b bg-teal-950 from-black via-black/70 to-black">
-        <div className="absolute w-full h-full top-0 left-0 overflow-hidden xl:overflow-visible xl:bg-transparent bg-black">
-          <div className="w-full h-full max-w-[1280px] mx-auto px-6 pt-[20px] pb-[40px]">
+      <div className="w-full min-h-screen h-[960px] relative bg-gradient-to-b bg-teal-950 from-black via-black/70 to-black">
+        <div className="absolute w-full h-fit top-0 left-0 overflow-hidden xl:overflow-visible xl:bg-transparent bg-black">
+          <div className="w-full h-fit max-w-[1280px] mx-auto px-6 pt-[20px] pb-[40px]">
             {/* TEXT COLUMN */}
             <div className="w-full flex flex-col items-center">
               <h1 className="w-full text-center font-black font-Arial text-3xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
@@ -195,9 +207,9 @@ export function MobileFluorinatedMaterialsSection({
             </div>
 
             {/* Content container */}
-            <div className="mt-8 flex flex-col gap-8 w-full">
+            <div className="mt-8 flex flex-col gap-8 w-full h-fit">
               {/* Text content */}
-              <div className="w-full px-4">
+              <div className="w-full px-4 h-fit">
                 <div className="space-y-4">
                   <p className="text-xl text-gray-300">
                     From coatings and textiles to <br />
@@ -217,50 +229,14 @@ export function MobileFluorinatedMaterialsSection({
                 </div>
               </div>
 
-              {/* Circles section */}
-              <div className="w-full relative mt-8">
-                {/* Circle 1 */}
-                <div className="w-[250px] h-[250px] mx-auto mb-8">
-                  <Circle1 />
-                </div>
+                      {/* Circles section */}
+                      <div className="w-full relative -mt-24 h-fit">
+                                {/* Circle 1 */}
+                                <div className="w-[250px] h-[250px] mx-auto mb-8 rotate-45">
+                                  <Circle1 />
+                                </div>
 
-                {/* Circle 2 */}
-                <div className="w-[350px] h-[350px] mx-auto mb-8">
-                  <Circle2 />
-                </div>
-
-                {/* Circle 3 */}
-                <div className="w-[300px] h-[300px] mx-auto mb-8">
-                  <motion.div className="relative w-full h-full" ref={ref2}>
-                    <Circle3Base />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center">
-                      {/* Blurred Title */}
-                      <SimpleStatsBox
-                        classNamesContainer="w-fit h-fit mt-14"
-                        classNamesTitle="w-[300px] scale-[1.5] blur-sm opacity-35 text-center text-4xl font-Arial
-                                    font-black -mb-8 bg-gradient-to-tl from-lightGrey via-gray-400 to-lightGrey/70 bg-clip-text text-transparent"
-                        classNamesSubTitle="text-center text-lightGrey/60 text-xl font-bold mt-20 capitalize"
-                        stat={stats[4]}
-                        scrollYProgress={scrollYProgress}
-                        scrollEndThreshold={0.4}
-                        index={4}
-                      />
-
-                      {/* Primary Title */}
-                      <SimpleStatsBox
-                        classNamesContainer="absolute w-fit h-fit mt-14"
-                        classNamesTitle="w-[300px] scale-[1.5] text-center text-4xl font-Arial
-                                font-black -mb-8 bg-gradient-to-tl from-lightGrey via-gray-400 to-lightGrey/70 bg-clip-text text-transparent"
-                        classNamesSubTitle="text-center text-lightGrey/60 text-xl font-bold mt-20 capitalize"
-                        stat={stats[4]}
-                        scrollYProgress={scrollYProgress}
-                        scrollEndThreshold={0.4}
-                        index={4}
-                      />
-                    </div>
-                  </motion.div>
-                </div>
-              </div>
+                      </div>
             </div>
           </div>
         </div>
