@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-800 text-white">
       <div className="relative bg-gradient-to-br from-slate-50 to-slate-800 w-full h-full">
-        <ScreenSizeDEVTOOL />
+
         {/* <HeroSection4 /> */}
         {/* <Showcase /> */}
         <section className="hidden md:block">

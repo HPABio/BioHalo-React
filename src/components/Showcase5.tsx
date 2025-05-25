@@ -1,11 +1,9 @@
 "use client";
 
+import WomanWhiteRainJacket from "@/assets/images/BGImagesTest/WomanWhiteRainJacket.jpeg";
 import Image from "next/image";
 import React, { Suspense, memo, useRef } from "react";
 import dynamic from "next/dynamic";
-import { motion, useScroll, useTransform } from "framer-motion";
-
-// Hero Sections
 import {
   HeroSection1,
   HeroSection2,
@@ -13,8 +11,6 @@ import {
   HeroSection4,
   HeroSection5,
 } from "@/components/HeroSections/HeroSections";
-
-// BioHalo Sections
 import {
   FluorinatedMaterialsSection,
   FluorinatedMaterialsSectionV2,
@@ -24,46 +20,29 @@ import {
   PollutionSection,
   PollutionSectionBACKUP,
 } from "@/components/sections2/BioHaloSections/PollutionSection";
+import { FollowingCircle } from "@/components/ui/FollowingCircle";
 import { TransitionSectionOne } from "@/components/sections2/BioHaloSections/TransitionSectionOne";
 import { TransitionSectionTwo } from "@/components/sections2/BioHaloSections/TransitionSectionTwo";
 import { TransitionSectionThree } from "@/components/sections2/BioHaloSections/TransitionSectionThree";
+
 import { WhatWeDoSection } from "@/components/sections2/BioHaloSections/WhatWeDoSection";
 import { FeatureOfPFAS } from "@/components/sections2/BioHaloSections/FeatureOfPFAS";
 import { PollutionSection2 } from "@/components/sections2/BioHaloSections/PollutionSection2";
 import { HealthSectionImgRight } from "@/components/sections2/BioHaloSections/HealthSection";
 import { PlatformFeaturesSection } from "@/components/sections2/BioHaloSections/PlatformFeaturesSection";
+import { BentoSection2 } from "@/components/sections2/BentoSection2";
+import { TransitionSectionFour } from "@/components/sections2/BioHaloSections/TransitionSectionFour";
+import IconCarousel from "@/components/ui/IconCarousel";
+import { BentosPFASSection } from "@/components/sections2/BentosPFASSection";
 import { TeamSection } from "@/components/sections2/BioHaloSections/TeamSection";
+
+// Import the new sections
 import { MeetUsAtSection } from "@/components/sections2/BioHaloSections/MeetUsAtSection";
 import { PlatformTechnologySection } from "@/components/sections2/BioHaloSections/PlatformTechnologySection";
 import { PartnersMarqueeSection } from "@/components/sections2/BioHaloSections/PartnersMarqueeSection";
 import { SuccessesSection } from "@/components/sections2/BioHaloSections/SuccessesSection";
 import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSection";
 
-// Other Sections
-import { BentoSection2 } from "@/components/sections2/BentoSection2";
-import { PeriodicTable } from "@/components/sections2/PeriodicTable";
-import { StatsSection } from "@/components/sections2/StatsSection";
-import { StatsSection2 } from "@/components/sections2/StatsSection2";
-import { StatsSection3 } from "@/components/sections2/StatsSection3";
-import { StatsSection4 } from "@/components/sections2/StatsSection4";
-import { StatsSection5 } from "@/components/sections2/StatsSection5";
-import { PFASSection } from "@/components/sections2/PFASSection";
-import { BentosPFASSection } from "@/components/sections2/BentosPFASSection";
-import { TransitionSectionFour } from "@/components/sections2/BioHaloSections/TransitionSectionFour";
-
-// UI Components
-import HaloComponent from "@/components/ui/HaloComponent";
-import IconCarousel from "@/components/ui/IconCarousel";
-import { FollowingCircle } from "@/components/ui/FollowingCircle";
-import EcoliTripletsSVG from "@/components/ui/EcoliTripletsSVG";
-import { SimpleStatsBox } from "@/components/ui/StatsBox";
-
-// Images
-import BioHaloBG from "@/assets/images/BioHalo-background-compressed.jpeg";
-import WomanWhiteRainJacket from "@/assets/images/BGImagesTest/WomanWhiteRainJacket.jpeg";
-import PfasBP from "@/assets/images/BluePrintStyle/pfasBP.svg";
-import BioReactor from "@/assets/images/BluePrint with Color/bio-reactor.png";
-import BioReactorBlueprint from "@/assets/images/BioReactorBlueprint.svg";
 import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
 import industrialPollutionImage from "@/assets/images/VariousImages/IndustrialPollution.png";
 import industrialPollutionImageV2 from "@/assets/images/VariousImages/IndutrialPollutionV2.png";
@@ -71,14 +50,15 @@ import industrialPollutionImageV3 from "@/assets/images/VariousImages/Industrial
 import industrialPollutionImageV3flipped from "@/assets/images/VariousImages/IndustrialPollutionV3flipped.png";
 import ribbonImage from "@/assets/images/BGImagesTest/Twisted Ribbon Structure transparent.png";
 import abstractImage from "@/assets/images/BGImagesTest/Abstract Black and White Design Transition.png";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { SimpleStatsBox } from "./ui/StatsBox";
 import WaterRepellantFabric from "@/assets/images/water-repellant-fabric.png";
 import Pharma from "@/assets/images/BluePrintSVG/Pharma.svg";
 import MeshFabric from "@/assets/images/Mesh-fabric.png";
 import Droplets1 from "@/assets/images/Droplets1.jpg";
+import EcoliTripletsSVG from "@/components/ui/EcoliTripletsSVG";
 import BGFabricTealPink from "@/assets/images/BGImagesTest/BGFabricTealPink.png";
 import BlackSmokeDivider from "@/assets/images/VariousImages/BlackSmokeDivider.png";
-
-// Letter Images - WornOurMetal
 import A from "@/assets/images/Lettering/WornOurMetal/A.png";
 import C from "@/assets/images/Lettering/WornOurMetal/C.png";
 import C2 from "@/assets/images/Lettering/WornOurMetal/C2.png";
@@ -95,7 +75,6 @@ import R from "@/assets/images/Lettering/WornOurMetal/R.png";
 import S from "@/assets/images/Lettering/WornOurMetal/S.png";
 import V from "@/assets/images/Lettering/WornOurMetal/V.png";
 
-// Letter Images - BlackLiquid
 import ABlackLiquid from "@/assets/images/Lettering/BlackLiquid/A.png";
 import CBlackLiquid from "@/assets/images/Lettering/BlackLiquid/C.png";
 import C2BlackLiquid from "@/assets/images/Lettering/BlackLiquid/C2.png";
@@ -114,9 +93,7 @@ import RBlackLiquid from "@/assets/images/Lettering/BlackLiquid/R.png";
 import SBlackLiquid from "@/assets/images/Lettering/BlackLiquid/S.png";
 import S2BlackLiquid from "@/assets/images/Lettering/BlackLiquid/S2.png";
 import VBlackLiquid from "@/assets/images/Lettering/BlackLiquid/V.png";
-import { BentoSectionGen3 } from "@/components/sections2/BentoSectionGen3";
-
-// Memoize static sections to prevent re-renders
+// ✅ Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
 
 // Array of letter images for the "FOREVER CHEMICALS" display
@@ -304,14 +281,16 @@ const stats = [
   },
 ];
 
-export default function Landing4() {
+import { ImageTitleText } from "@/components/ui/ImageTitleText";
+
+export const Showcase4 = () => {
+  console.log("Showcase4 component rendering");
+
   const ref4 = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref4,
     offset: ["start end", "end start"],
   });
-
-  const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
     <main
@@ -354,48 +333,10 @@ export default function Landing4() {
           {/* <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0"/> */}
         </div>
 
-        {/* Forever Chemicals Section */}
-        <section className="relative w-full min-h-screen max-w-[1450px] mx-auto px-4 md:px-24 pt-24 flex flex-col items-center justify-center">
-          {/* Main Title Container */}
-          <div className="w-fit max-w-4xl mx-auto">
-            <h1
-              className="relative text-[5vw] uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap text-center
-              "
-            >
-              <span
-                className="top-0 left-0 blur-[2px] opacity-40
-                bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent"
-              >
-                forever chemicals
-              </span>
-              <span className="absolute top-0 left-0 opacity-1
-              bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent">forever chemicals</span>
-            </h1>
-          </div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-500 text-center">
-              are fluorinated materials that can be found everywhere
-            </h2>
-          <BentoSectionGen3 className="w-full h-full bg-transparent" />
-
-          {/* Description Container */}
-          <div className="w-full max-w-3xl mx-auto mb-20 text-center">
-            <p className="text-gray-300 text-lg mb-4">
-              From coatings and textiles to <br />
-              food packaging and electronics
-            </p>
-            <p className="text-gray-500 text-base md:text-lg">
-              Due to their unique properties, like heat resistance and water
-              repellency, they are used in a wide range of products. However,
-              these special properties also make them nearly impossible to
-              degrade and{" "}
-              <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
-                highly toxic
-              </span>
-              . PFAS accumulate in the environment and pose a threat to public
-              health and the environment itself.
-            </p>
-          </div>
-        </section>
+        {/* Title text made of letter images V2 */}
+  {/*       <div className="relative w-full h-screen pt-24">
+          <ImageTitleText letterImages={letterImages} />
+        </div> */}
 
         <div
           className="relative w-full min-h-[200px] h-[30vw] xl:h-[30vw] pt-16 "
@@ -568,4 +509,4 @@ export default function Landing4() {
         */}
     </main>
   );
-}
+};

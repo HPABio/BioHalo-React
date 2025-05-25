@@ -2,10 +2,19 @@
 
 import WomanWhiteRainJacket from "@/assets/images/BGImagesTest/WomanWhiteRainJacket.jpeg";
 import Image from "next/image";
-import React, { Suspense, memo } from "react";
+import React, { Suspense, memo, useRef } from "react";
 import dynamic from "next/dynamic";
-import { HeroSection1, HeroSection2, HeroSection3, HeroSection4, HeroSection5 } from "@/components/HeroSections/HeroSections";
-import { FluorinatedMaterialsSection } from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection";
+import {
+  HeroSection1,
+  HeroSection2,
+  HeroSection3,
+  HeroSection4,
+  HeroSection5,
+} from "@/components/HeroSections/HeroSections";
+import {
+  FluorinatedMaterialsSection,
+  FluorinatedMaterialsSectionV2,
+} from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection";
 import { FluorinatedMaterialsSection2 } from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection2";
 import {
   PollutionSection,
@@ -34,14 +43,100 @@ import { PartnersMarqueeSection } from "@/components/sections2/BioHaloSections/P
 import { SuccessesSection } from "@/components/sections2/BioHaloSections/SuccessesSection";
 import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSection";
 
-
 import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import industrialPollutionImage from "@/assets/images/VariousImages/IndustrialPollution.png";
+import industrialPollutionImageV2 from "@/assets/images/VariousImages/IndutrialPollutionV2.png";
+import industrialPollutionImageV3 from "@/assets/images/VariousImages/IndustrialPollutionV3.png";
+import industrialPollutionImageV3flipped from "@/assets/images/VariousImages/IndustrialPollutionV3flipped.png";
 import ribbonImage from "@/assets/images/BGImagesTest/Twisted Ribbon Structure transparent.png";
 import abstractImage from "@/assets/images/BGImagesTest/Abstract Black and White Design Transition.png";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { SimpleStatsBox } from "./ui/StatsBox";
+import WaterRepellantFabric from "@/assets/images/water-repellant-fabric.png";
+import Pharma from "@/assets/images/BluePrintSVG/Pharma.svg";
+import MeshFabric from "@/assets/images/Mesh-fabric.png";
+import Droplets1 from "@/assets/images/Droplets1.jpg";
+import EcoliTripletsSVG from "@/components/ui/EcoliTripletsSVG";
+import BGFabricTealPink from "@/assets/images/BGImagesTest/BGFabricTealPink.png";
+import BlackSmokeDivider from "@/assets/images/VariousImages/BlackSmokeDivider.png";
+import A from "@/assets/images/Lettering/WornOurMetal/A.png";
+import C from "@/assets/images/Lettering/WornOurMetal/C.png";
+import C2 from "@/assets/images/Lettering/WornOurMetal/C2.png";
+import E from "@/assets/images/Lettering/WornOurMetal/E.png";
+import E2 from "@/assets/images/Lettering/WornOurMetal/E2.png";
+import F from "@/assets/images/Lettering/WornOurMetal/F.png";
+import H from "@/assets/images/Lettering/WornOurMetal/H.png";
+import I from "@/assets/images/Lettering/WornOurMetal/I.png";
+import I2 from "@/assets/images/Lettering/WornOurMetal/I2.png";
+import M from "@/assets/images/Lettering/WornOurMetal/M.png";
+import L from "@/assets/images/Lettering/WornOurMetal/L.png";
+import O from "@/assets/images/Lettering/WornOurMetal/O.png";
+import R from "@/assets/images/Lettering/WornOurMetal/R.png";
+import S from "@/assets/images/Lettering/WornOurMetal/S.png";
+import V from "@/assets/images/Lettering/WornOurMetal/V.png";
 
-
+import ABlackLiquid from "@/assets/images/Lettering/BlackLiquid/A.png";
+import CBlackLiquid from "@/assets/images/Lettering/BlackLiquid/C.png";
+import C2BlackLiquid from "@/assets/images/Lettering/BlackLiquid/C2.png";
+import EBlackLiquid from "@/assets/images/Lettering/BlackLiquid/E.png";
+import E2BlackLiquid from "@/assets/images/Lettering/BlackLiquid/E2.png";
+import FBlackLiquid from "@/assets/images/Lettering/BlackLiquid/F.png";
+import F2BlackLiquid from "@/assets/images/Lettering/BlackLiquid/F2.png";
+import HBlackLiquid from "@/assets/images/Lettering/BlackLiquid/H.png";
+import IBlackLiquid from "@/assets/images/Lettering/BlackLiquid/I.png";
+import LBlackLiquid from "@/assets/images/Lettering/BlackLiquid/L.png";
+import MBlackLiquid from "@/assets/images/Lettering/BlackLiquid/M.png";
+import OBlackLiquid from "@/assets/images/Lettering/BlackLiquid/O.png";
+import O2BlackLiquid from "@/assets/images/Lettering/BlackLiquid/O2.png";
+import PBlackLiquid from "@/assets/images/Lettering/BlackLiquid/P.png";
+import RBlackLiquid from "@/assets/images/Lettering/BlackLiquid/R.png";
+import SBlackLiquid from "@/assets/images/Lettering/BlackLiquid/S.png";
+import S2BlackLiquid from "@/assets/images/Lettering/BlackLiquid/S2.png";
+import VBlackLiquid from "@/assets/images/Lettering/BlackLiquid/V.png";
 // ✅ Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
+
+// Array of letter images for the "FOREVER CHEMICALS" display
+const letterImages = [
+  F, // F
+  O, // O
+  R, // R
+  E, // E
+  V, // V
+  E2, // E
+  R, // R
+
+  C, // C
+  C, // C
+  H, // H
+  E, // E
+  M, // M (Note: M is not in the imports, would need to be added)
+  I, // I
+  C2, // C
+  A, // A
+  L, // L
+  S, // S
+];
+const letterImagesBlackLiquid = [
+  FBlackLiquid, // F
+  O2BlackLiquid, // O
+  RBlackLiquid, // R
+  EBlackLiquid, // E
+  VBlackLiquid, // V
+  E2BlackLiquid, // E
+  RBlackLiquid, // R
+
+  CBlackLiquid, // C
+  CBlackLiquid, // C
+  HBlackLiquid, // H
+  EBlackLiquid, // E
+  MBlackLiquid, // M (Note: M is not in the imports, would need to be added)
+  IBlackLiquid, // I
+  C2BlackLiquid, // C
+  ABlackLiquid, // A
+  LBlackLiquid, // L
+  SBlackLiquid, // S
+];
 
 // Copy all the content from page.tsx here
 const stats = [
@@ -51,7 +146,13 @@ const stats = [
     suffix: "",
     label: (
       <>
-        <span className="text-lightGrey/80">fluorinated</span> compounds <br className="md:hidden block" /> are already known
+        <span
+          className="text-lg md:text-xl lg:text-2xl xl:text-4xl  uppercase font-bold text-center bg-gradient-to-bl 
+        from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent"
+        >
+          fluorinated compounds
+        </span>{" "}
+        <br /> are already known
       </>
     ),
   },
@@ -90,12 +191,16 @@ const stats = [
     ),
     label: (
       <>
-        <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-normal">tons of </span>
+        <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-normal">
+          tons of{" "}
+        </span>
         <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
           Fluoropolymers
         </span>
         <br />
-        <span className="font-normal text-lg md:text-2xl lg:text-3xl">Are Exported from the EU annually</span>
+        <span className="font-normal text-lg md:text-2xl lg:text-3xl">
+          Are Exported from the EU annually
+        </span>
       </>
     ),
     note: (
@@ -137,10 +242,55 @@ const stats = [
       </>
     ),
   },
+  {
+    number: "49",
+    prefix: "+",
+    suffix: (
+      <>
+        <span className="text-4xl md:text-7xl ">k</span>
+      </>
+    ),
+    label: (
+      <>
+        <span className="text-sm lg:text-2xl  uppercase font-normal  text-center">
+          tons of{" "}
+        </span>
+        <span
+          className="text-sm lg:text-2xl  uppercase font-bold text-center bg-gradient-to-bl 
+        from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent"
+        >
+          Fluoropolymers
+        </span>
+        <br />
+        <span className="font-normal text-base lg:text-lg">
+          Are Exported from the EU annually
+        </span>
+      </>
+    ),
+    note: (
+      <>
+        <span className="text-5xl font-normal">
+          Europe is a net exporter of fluoropolymers, with 49,000 tonnes
+          estimated to be produced annually in the EU28/EEA, 24,000 tonnes
+          exported outside of the EU28/EEA, and around 15,000 tonnes imported.
+        </span>
+      </>
+    ),
+    link_source:
+      "https://fluoropolymers.eu/wp-content/uploads/2023/12/Fluoropolymers_SEA_2022.pdf",
+  },
 ];
+
+import { ImageTitleText } from "@/components/ui/ImageTitleText";
 
 export const Showcase4 = () => {
   console.log("Showcase4 component rendering");
+
+  const ref4 = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref4,
+    offset: ["start end", "end start"],
+  });
 
   return (
     <main
@@ -165,13 +315,20 @@ export const Showcase4 = () => {
         <div className="relative w-full h-[100px] lg:h-[200px]">
 
         <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px]
-        translate-x-[35%] translate-y-[-50%]">
-          <Image 
-            src={enzymeImage} 
-            alt="Enzyme" 
-            fill 
-            className="object-contain"
-          />
+        translate-x-[35%] translate-y-[-50%] pointer-events-none">
+          <motion.div
+              className="absolute w-full h-full"
+              style={{
+                y: useTransform(useScroll().scrollY, [0, 1000], [0, -200]),
+              }}
+            >
+              <Image
+                src={enzymeImage}
+                alt="Enzyme"
+                fill
+                className="object-contain"
+              />
+            </motion.div>
         </div>
 {/*         <div className="absolute w-[110vw] h-[400px] top-[50%] left-[50%] opacity-1 translate-x-[-50%] translate-y-[-64%]">
           <Image 
@@ -200,7 +357,11 @@ export const Showcase4 = () => {
         stats={stats}
       />
 
-      <section id="what-we-do" className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative">
+    
+      <section
+        id="what-we-do"
+        className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative overflow-hidden"
+      >
         {/* Section detection helper */}
         <div
           className="absolute top-0 h-24 w-full pointer-events-none"
