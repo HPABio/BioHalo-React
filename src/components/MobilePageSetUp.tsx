@@ -149,7 +149,7 @@ export const MobilePageSetUp = () => {
 
 
       <section
-        className="pb-16 h-[300px] w-full relative"
+        className="pb-16 h-[300px] w-full relative pointer-events-none"
         id="transition-section-one"
       >
         <div className="relative w-full h-[100px] lg:h-[200px]">
@@ -211,7 +211,7 @@ export const MobilePageSetUp = () => {
 
       {/* Platform Technology Section */}
       <section
-        id="platform-technology"
+        id="platform-technology-mobile"
         className="w-full min-h-[80vh] relative"
       >
         {/* Section detection helper */}

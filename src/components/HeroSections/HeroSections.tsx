@@ -728,12 +728,12 @@ export const HeroSection4 = ({
                             text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 onClick={(e) => {
                   e.preventDefault();
-                  const targetElement = document.getElementById(
+                  const targetElement3 = document.getElementById(
                     "platform-technology"
                   );
-                  if (targetElement) {
+                  if (targetElement3) {
                     const yPosition =
-                      targetElement.getBoundingClientRect().top +
+                      targetElement3.getBoundingClientRect().top +
                       window.scrollY -
                       80;
                     window.scrollTo({
@@ -753,12 +753,12 @@ export const HeroSection4 = ({
                             rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 onClick={(e) => {
                   e.preventDefault();
-                  const targetElement = document.getElementById(
+                  const targetElement4 = document.getElementById(
                     "platform-features-content"
                   );
-                  if (targetElement) {
+                  if (targetElement4) {
                     const yPosition =
-                      targetElement.getBoundingClientRect().top +
+                      targetElement4.getBoundingClientRect().top +
                       window.scrollY -
                       80;
                     window.scrollTo({
@@ -880,7 +880,7 @@ export const HeroSection5 = ({
                     onClick={(e) => {
                       e.preventDefault();
                       const targetElement = document.getElementById(
-                        "platform-technology"
+                        "platform-technology-mobile"
                       );
                       if (targetElement) {
                         const yPosition =
@@ -905,7 +905,7 @@ export const HeroSection5 = ({
                     onClick={(e) => {
                       e.preventDefault();
                       const targetElement = document.getElementById(
-                        "platform-features-content"
+                        "platform-features-content-mobile"
                       );
                       if (targetElement) {
                         const yPosition =

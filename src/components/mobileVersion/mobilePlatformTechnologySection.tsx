@@ -321,7 +321,7 @@ export const MobilePlatformTechnologySection = ({
         {/* Features Section */}
         <div
           className="grid grid-cols-1 gap-12 mb-20 px-4 mt-16 relative"
-          id="platform-features-content"
+          id="platform-features-content-mobile"
         >
           {/* Section detection helper - invisible element to help with intersection detection */}
           <div
