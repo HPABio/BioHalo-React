@@ -12,6 +12,13 @@ import BioReactorBP2 from "@/assets/images/BluePrintSVG/bio-reactor-product.svg"
 import DNALogo from "@/assets/images/BluePrintSVG/dna-logo.svg";
 import DNA_Logo_long from "@/components/ui/DNA-Logo-long";
 import BioHaloStep2 from "@/assets/images/BluePrintSVG/BioHalo-step2.svg";
+
+
+
+import BioReactorV1PNG from "@/assets/images/BluePrintPNGs/bio-reactorV1.png";
+import BioReactor2PNG from "@/assets/images/BluePrintPNGs/BioReactor2.png";
+import BioHaloStep2PNG from "@/assets/images/BluePrintPNGs/BioHalo-step2.png";
+import DNALogoPNG from "@/assets/images/BluePrintPNGs/dna-logo.png";
 import ScreenShot from "@/assets/images/ScreenShots/ScreenShot.png";
 import enzymeImage from "@/assets/images/BluePrint with Color/Enzyme.png";
 

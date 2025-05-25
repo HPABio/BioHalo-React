@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/StatsBox";
 import { MovingAtom } from "@/components/ui/MovingAtom";
 import WaterColorReveal from "@/components/WaterColorReveal";
-import EnzymeImage2 from "@/assets/images/enzymeImage2.png";
+import EnzymeImage2 from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
 
 import BGFabricTealPink from "@/assets/images/BGImages/BGFabricTealPink_222564810.png";
 import MeshFabric from "@/assets/images/BGImages/Mesh-fabric_1020623350.png";
@@ -55,7 +55,7 @@ export const MobileWhatWeDoSection = ({
           />
         </div>
       </div>
-      <div className="max-w-[1280px] mx-auto px-14 ">
+      <div className="max-w-[1280px] mx-auto px-10 border-2 border-red-500/0 ">
         {/* Title */}
 
         <MovingAtom
@@ -94,52 +94,50 @@ export const MobileWhatWeDoSection = ({
 
         <div className="w-full sm:w-full bg-red-500/0 xl:mt-10 relative z-10">
           <h2
-            className="relative font-black font-Arial text-4xl sm:text-5xl bg-gradient-to-tl from-tealAccent to-tealAccent/60 bg-clip-text text-transparent 
+            className="relative text-center font-black font-poppins text-2xl bg-gradient-to-tl from-tealAccent to-tealAccent/60 bg-clip-text text-transparent 
           pb-6"
           >
             <span
-              className="font-poppins font-bold flex items-center -mb-8 sm:-mb-10
+              className="font-poppins font-bold flex items-center mb-2 
           text-black text-6xl w-full sm:w-[400px]"
             >
-              BioHalo
+              
               <Image
                 src={BioHaloLogoOnly}
                 alt="BioHalo Logo"
-                className="h-[1em] w-auto ml-2 sm:ml-3"
+                className="h-[1em] w-auto -ml-3"
               />
+              BioHalo
             </span>
             <br />
-            provides the world <br />
-            with sustainable <br />
-            <span className="relative group">
-              <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent cursor-help">
-                PFAS{" "}
-              </span>
-              <span className="invisible font-normal group-hover:visible absolute left-0 top-full mt-2 w-56 sm:w-60 p-3 bg-white/90 backdrop-blur-md rounded-lg shadow-lg text-xs sm:text-sm text-gray-800 z-50 transition-all duration-200 ease-in-out">
-                <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
-                  PFAS
-                </span>{" "}
-                are Per- and PolyfluoroAlkyl Substances also known as "
-                <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
-                  forever chemicals
-                </span>
-                "
-              </span>
+            offers a sustainable <br />
+            alternatives to <br/>
+            <span className="uppercase text-wrap box-decoration-clone text-3xl
+            bg-clip-text text-transparent bg-gradient-to-r from-slate-800/80 via-pinkAccent/70 to-slate-800/80 ">
+            forever chemicals
             </span>
-            alternatives
+            
           </h2>
         </div>
 
+           <div className="w-full h-auto overflow-hidden px-12 border-2 border-red-500/0 -mt-8 ">  
+                <Image
+                src={EnzymeImage2}
+                alt="EnzymeImage2"
+                className="w-full h-full object-cover scale-[1.1]"
+                />
+                </div>
+
         {/* Subtitle */}
-        <div className="w-full sm:w-full bg-red-500/0">
-          <h2 className="text-gray-800/60 text-4xl sm:text-5xl font-poppins">
+        <div className="w-full ">
+          <h2 className="text-gray-800/60 text-2xl  font-poppins text-center">
             through our microbial-based biohalogenation platform
           </h2>
         </div>
 
         {/* Text */}
         <div className="h-[200px] w-full bg-red-500/0 my-6">
-          <p className="text-gray-500/80 text-2xl font-poppins">
+          <p className="text-gray-500/80 text-1xl font-poppins text-center  ">
             we can selectively halogenate organic molecules, opening up new
             possibilities for{" "}
             <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent">
@@ -222,29 +220,68 @@ export const MobileWhatWeDoSection = ({
             </div>
           </div>
         </div>
+        <MovingAtom
+          width={580}
+          height={580}
+          hoverAmplitude={7}
+          hoverDuration={5}
+          shouldRotate={false}
+          rotationDuration={5}
+          shouldScale={false}
+          scaleRange={[0.9, 1.1]}
+          scaleDuration={4}
+          color="rgba(195,12,95,0.1)" //pink
+          className="absolute top-[80%] left-[90%] 
+          translate-x-[-50%] translate-y-[-150%] 
+          lg:translate-x-[200%] lg:-translate-y-[50%] opacity-90 z-5"
+        />
+        <MovingAtom
+          width={180}
+          height={180}
+          hoverAmplitude={7}
+          hoverDuration={6}
+          shouldRotate={false}
+          rotationDuration={20}
+          shouldScale={false}
+          scaleRange={[0.9, 1.8]}
+          scaleDuration={24}
+          color="rgba(18,110,119,0.5)" //teal
+          className="absolute top-[50%] left-[-30%] translate-x-[50%] translate-y-[-80%] 
+          lg:translate-x-[350%] lg:-translate-y-[500%] opacity-90 z-5"
+        />
+
 
         {/* Text Section */}
-        <div className="bg-black/0 text-gray-800/70 pt-0 mt-32 w-full relative">
+        <div className="bg-black/0 text-gray-800/70 pt-0 mt-32 w-full relative ">
           {/* Header Section */}
-          <div className="space-y-16 bg-red-500/0 relative">
+          <div className=" bg-red-500/0 relative">
             {/* Top Text Section */}
             <div className="space-y-4">
-              <h1 className="font-black font-Arial text-4xl bg-gradient-to-br from-teal-800/70 via-tealAccent/80 to-tealAccent/40 bg-clip-text text-transparent pb-10">
-                <span className="">We explore, design,</span>
+              <h1 className="text-3xl font-bold mb-2 capitalize opacity-1 text-center pb-10
+                bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent">
+                <span className="text-2xl">
+                  We explore, design,
+                </span>
                 <br />
-                <span className="">and produce, unmatched</span>
+                <span className="text-2xl">
+                  and produce, unmatched
+                </span>
                 <br />
-                <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
+                  uppercase drop-shadow-sm font-black font-Poppins">
                   new-to-market{" "}
-                </span>{" "}
+                </span>
                 <br className="hidden lg:block xl:hidden" />
-                products
+                <span className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
+                  uppercase drop-shadow-sm font-black font-Poppins">
+                </span>
+                  products
               </h1>
               <p className="text-2xl">
                 Our{" "}
                 <span className="font-bold ">
                   Bio-
-                  <span className="bg-gradient-to-tr from-pinkAccent to-red-900/80 bg-clip-text text-transparent text-4xl">
+                  <span className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent text-4xl">
                     F
                   </span>
                   -Polymers

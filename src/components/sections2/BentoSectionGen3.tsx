@@ -18,9 +18,9 @@
     return (
       <section className={`py-16 bg-gray-50 ${className || ""}`}>
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[minmax(180px,auto)]">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 auto-rows-[minmax(180px,auto)]">
             {/* Row 1 */}
-            <BentoInfo className="" /> {/* col-span-2 row-span-2 */}
+            <BentoInfo className="border-2 border-red-500" /> {/* col-span-2 row-span-2 */}
             <BentoStats className="" />
             <BentoVideo className="" />
             {/* Row 2 */}

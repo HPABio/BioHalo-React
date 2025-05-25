@@ -183,9 +183,10 @@ export const MobilePlatformTechnologySection = ({
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
           viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
           className="text-center mb-16 relative"
         >
           <h1
@@ -270,9 +271,9 @@ export const MobilePlatformTechnologySection = ({
           {technologyProcessSteps.map((step, index) => (
             <motion.div
               key={step.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0}}
+              whileInView={{ opacity: 1}}
+              transition={{ duration: 0.3}}
               viewport={{ once: true }}
               className="max-sm:text-center px-4 flex flex-col items-center gap-8"
             >
@@ -325,8 +326,9 @@ export const MobilePlatformTechnologySection = ({
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0}}
+            whileInView={{ opacity: 1}}
+            transition={{ duration: 0.3}}
             viewport={{ once: true }}
             className="text-center mb-12 relative"
           >
@@ -354,10 +356,10 @@ export const MobilePlatformTechnologySection = ({
             {technologyFeatures.map((feature, index) => (
               <motion.div
                 key={feature.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0}}
+                whileInView={{ opacity: 1}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: feature.id * 0.1 }}
+                transition={{ duration: 0.3}}
                 className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-tealAccent/10 rounded-xl hover:border-tealAccent/30 transition-all group"
               >
                 <div className="flex items-start space-x-4">
