@@ -6,7 +6,11 @@ export function ScreenSizeDEVTOOL() {
     return (
         <main>
             <div className="fixed top-[10%] right-5 w-[60px] h-[60px] bg-red-500/0 flex flex-row items-center justify-center gap-4 z-[100]">
-                    <div className="md:hidden flex w-[50px] h-[50px] rounded-full bg-red-500  items-center justify-center">
+                    <div className="flex sm:hidden w-[50px] h-[50px] rounded-full 
+                    bg-teal-500 items-center justify-center text-white text-xs font-bold">
+                    mobile
+                    </div>
+                    <div className="hidden sm:flex md:hidden  w-[50px] h-[50px] rounded-full bg-red-500  items-center justify-center">
                     SM
                     </div>
                     <div className="hidden md:flex lg:hidden w-[50px] h-[50px] rounded-full bg-yellow-500  items-center justify-center">

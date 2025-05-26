@@ -19,6 +19,7 @@ import EcoliTripletsSVG from "@/components/ui/EcoliTripletsSVG";
 import beaker2 from "@/assets/images/BluePrintSVG/beaker-product.svg";
 import BioHaloLogoOnly from "@/assets/BioHaloLogoOnly.svg";
 import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import BeakerHalfAndHalf from "@/assets/images/BluePrintPNGs/Beaker-half-and-half.png";
 
 interface MobileWhatWeDoSectionProps {
   stats: any[];
@@ -40,7 +41,7 @@ export const MobileWhatWeDoSection = ({
   });
 
   return (
-    <section className={`${className} overflow-visible`}>
+    <section className={`${className} overflow-visible z-20 `}>
       <div className="absolute top-[-10%] left-0 w-full">
         <div
           className="relative w-full h-full
@@ -224,7 +225,7 @@ export const MobileWhatWeDoSection = ({
           width={580}
           height={580}
           hoverAmplitude={7}
-          hoverDuration={5}
+          hoverDuration={7}
           shouldRotate={false}
           rotationDuration={5}
           shouldScale={false}
@@ -239,7 +240,7 @@ export const MobileWhatWeDoSection = ({
           width={180}
           height={180}
           hoverAmplitude={7}
-          hoverDuration={6}
+          hoverDuration={11}
           shouldRotate={false}
           rotationDuration={20}
           shouldScale={false}
@@ -281,7 +282,7 @@ export const MobileWhatWeDoSection = ({
                 Our{" "}
                 <span className="font-bold ">
                   Bio-
-                  <span className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent text-4xl">
+                  <span className="bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent text-4xl">
                     F
                   </span>
                   -Polymers
@@ -309,7 +310,7 @@ export const MobileWhatWeDoSection = ({
 
       <div className="relative bottom-0 left-0 w-full h-[100px]">
       </div>
-      <div className="relative bottom-0 left-0 w-full h-[200px] bg-red-600/0 hidden">
+      <div className="relative bottom-0 left-0 w-full h-[200px] bg-red-600/0 overflow-visible">
         <MovingAtom
           width={80}
           height={80}
@@ -336,7 +337,7 @@ export const MobileWhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(18,110,119,1)" //teal
-          className="absolute top-[50%] left-[50%] translate-x-[50%] translate-y-[-80%] 
+          className="absolute top-[10%] left-[50%] translate-x-[50%] translate-y-[-80%] 
           lg:translate-x-[350%] lg:-translate-y-[500%] opacity-90 z-5"
         />
         <MovingAtom
@@ -365,7 +366,7 @@ export const MobileWhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(195,12,95,1)" //pink
-          className="absolute top-[50%] left-[50%] translate-x-[100%] translate-y-[60%] 
+          className="absolute top-[20%] left-[50%] translate-x-[100%] translate-y-[60%] 
           lg:translate-x-[100%] lg:-translate-y-[690%] opacity-90 z-5"
         />
         <MovingAtom
@@ -394,16 +395,16 @@ export const MobileWhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(18,110,119,1)" //teal
-          className="absolute top-[50%] left-[50%] translate-x-[-100%] translate-y-[-40%] 
+          className="absolute top-[51%] left-[55%] translate-x-[-100%] translate-y-[-40%] 
           lg:translate-x-[300%] lg:-translate-y-[800%] opacity-90 z-5"
         />
         <div
           className="relative bottom-0 left-[50%] 
-          translate-x-[-50%] translate-y-[-50px] 
+          translate-x-[-50%] translate-y-[-57px] 
           lg:translate-x-[-30%] lg:translate-y-[-380px] 
           w-[300px] h-[300px] lg:w-[800px] lg:h-[800px]"
           style={{
-            backgroundImage: `url(${beaker2.src})`,
+            backgroundImage: `url(${BeakerHalfAndHalf.src})`,
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
