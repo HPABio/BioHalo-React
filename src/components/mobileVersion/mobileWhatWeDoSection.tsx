@@ -99,14 +99,14 @@ export const MobileWhatWeDoSection = ({
           pb-6"
           >
             <span
-              className="font-poppins font-bold flex items-center mb-2 
-          text-black text-6xl w-full sm:w-[400px]"
+              className="font-poppins font-bold flex items-center mb-2 sm:mt-12
+          text-black text-6xl w-full sm:w-[400px] mx-auto"
             >
               
               <Image
                 src={BioHaloLogoOnly}
                 alt="BioHalo Logo"
-                className="h-[1em] w-auto -ml-3"
+                className="h-[1em] w-auto -ml-3 sm:ml-8"
               />
               BioHalo
             </span>
@@ -148,79 +148,7 @@ export const MobileWhatWeDoSection = ({
           </p>
         </div>
 
-        {/* Circular Image Section */}
-        <div className="relative w-full bg-red-500/0 mt-16 hidden">
-          <div className="flex flex-col items-center gap-32 sm:gap-40">
-            {/* Top Circle */}
-            <div className="h-[400px] w-[400px] sm:h-[500px] sm:w-[500px] rounded-full overflow-hidden drop-shadow-xl flex items-center justify-center">
-              <Image
-                src={BGFabricTealPink}
-                alt="BGFabricTealPink"
-                className="w-full h-full object-cover blur-none"
-              />
-              <div className="opacity-1 absolute h-full w-full rounded-full left-0 top-0 overflow-visible flex items-center justify-center">
-                <EcoliTripletsSVG
-                  className="w-[100%] h-[100%] scale-[1.1] translate-x-[-3%] translate-y-[2%] opacity-1 invert mix-blend-overlay"
-                  style={{
-                    willChange: "opacity, transform",
-                  }}
-                />
-              </div>
-            </div>
 
-            {/* Middle Circle */}
-            <div
-              className="h-[300px] w-[300px] sm:h-[350px] sm:w-[350px] rounded-full 
-              bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-tealAccent via-transparent to-transparent
-              overflow-hidden relative"
-            >
-              <div className="opacity-1 absolute h-full w-full rounded-full left-0 top-0 overflow-hidden border-2 border-mintAccent flex items-center justify-center">
-                <Image
-                  src={MeshFabric}
-                  alt="MeshFabric"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <motion.div
-                ref={refWWD}
-                className="absolute h-full w-full rounded-full left-0 top-0 overflow-hidden flex items-center justify-center bg-gradient-to-tr from-black via-black/20 to-tealAccent/0"
-              >
-                <SimpleStatsBox
-                  classNamesContainer="w-fit z-10 h-fit"
-                  classNamesTitle="text-4xl sm:text-5xl w-full sm:w-[400px] mt-5 sm:scale-[1.1] text-center
-                  font-bold mb-6 bg-gradient-to-tl from-tealAccent to-lightGrey bg-clip-text text-transparent [-webkit-text-stroke:1px_rgb(229,231,235,0.1)] sm:[-webkit-text-stroke:1.5px_rgb(229,231,235,0.1)] [text-stroke:1px_rgb(229,231,235,0.1)] sm:[text-stroke:1.5px_rgb(229,231,235,0.1)]"
-                  classNamesSubTitle="text-center text-lightGrey/60 text-xs sm:text-sm font-bold -mt-2 sm:-mt-3 capitalize"
-                  stat={stats[0]}
-                  scrollYProgress={scrollYProgress}
-                  scrollEndThreshold={0.6}
-                  index={0}
-                  text=""
-                  ratchet={true}
-                />
-              </motion.div>
-            </div>
-
-            {/* Bottom Circle */}
-            <div className="h-[500px] w-[500px] rounded-full bg-mintAccent overflow-hidden drop-shadow-xl border-2 border-lightGrey relative">
-              <Image
-                src={enzymeImage}
-                alt="EnzymeImage"
-                className="w-full h-full object-cover bg-yellow-400/0"
-              />
-              <div
-                className="absolute inset-0 opacity-80 rounded-full
-                bg-gradient-to-tr from-black via-tealAccent to-tealAccent/90 mix-blend-multiply border-2 border-mintAccent/90"
-              ></div>
-              <div className="absolute inset-0 rounded-full bg-mintAccent/0 flex items-center justify-center">
-                <Image
-                  src={BioFMonomer}
-                  alt="BioFMonomer"
-                  className="w-[98%] -translate-y-[10%] bg-yellow-400/0 mix-blend-screen opacity-50 grayscale"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
         <MovingAtom
           width={580}
           height={580}
@@ -253,7 +181,7 @@ export const MobileWhatWeDoSection = ({
 
 
         {/* Text Section */}
-        <div className="bg-black/0 text-gray-800/70 pt-0 mt-32 w-full relative ">
+        <div className="bg-black/0 text-gray-800/70 pt-0 mt-32 sm:mt-0 w-full relative ">
           {/* Header Section */}
           <div className=" bg-red-500/0 relative">
             {/* Top Text Section */}
