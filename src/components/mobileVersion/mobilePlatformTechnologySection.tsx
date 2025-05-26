@@ -289,16 +289,17 @@ export const MobilePlatformTechnologySection = ({
               className="max-sm:text-center px-4 flex flex-col items-center gap-8"
             >
               {/* Image */}
-              <div className="flex-1 relative group">
+              <div className="flex-1 relative group p-4">
                 <div className="absolute inset-0 bg-tealAccent/20 rounded-2xl blur-3xl group-hover:blur-2xl opacity-70 transition-all duration-500 -z-10"></div>
-                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl border border-tealAccent/20 backdrop-blur-sm shadow-xl overflow-hidden h-[250px] flex items-center justify-center">
+                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl border border-tealAccent/20 backdrop-blur-sm shadow-xl 
+                overflow-hidden h-[250px] flex items-center justify-center sm:p-12">
                   <Image
                     src={step.image}
                     alt={step.alt}
                     width={450}
                     height={450}
                     style={{ objectFit: "contain" }}
-                    className="opacity-90 w-full h-auto max-h-[350px] transition-all duration-500 filter hover:grayscale-[30%] group-hover:scale-105"
+                    className="opacity-90 w-full h-auto max-h-[350px] sm:p-12 transition-all duration-500 filter hover:grayscale-[30%] group-hover:scale-105"
                   />
                 </div>
                 <div className="absolute -bottom-3 -right-3 bg-tealAccent/80 w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-xl">
@@ -321,7 +322,7 @@ export const MobilePlatformTechnologySection = ({
         {/* Features Section */}
         <div
           className="grid grid-cols-1 gap-12 mb-20 px-4 mt-16 relative"
-          id="platform-features-content"
+          id="platform-features-content-mobile"
         >
           {/* Section detection helper - invisible element to help with intersection detection */}
           <div

@@ -180,20 +180,20 @@ export function MobileFluorinatedMaterialsSection({
     <section className={`${className} h-[1700px] w-full relative`}>
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
 
-      <div className="w-full min-h-screen h-[1030px] relative bg-gradient-to-b bg-teal-950 from-black via-black to-slate-800/70">
-        <div className="absolute w-full h-fit top-0 left-0 overflow-hidden xl:overflow-visible xl:bg-transparent bg-black/30">
+      <div className="w-full min-h-screen h-[1030px] sm:h-[900px] relative bg-gradient-to-b bg-teal-950 from-black via-black to-slate-800/70">
+        <div className="absolute w-full h-fit top-0 left-0 overflow-hidden bg-gradient-to-b from-black via-black to-transparent ">
           <div className="w-full h-fit max-w-[1280px] mx-auto px-6 pt-24 pb-[40px]">
             {/* TEXT COLUMN */}
             <div className="w-full flex flex-col items-center">
               <h1 className="w-full text-center font-black font-poppins text-3xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
-                <span className="text-8xl scale-[1] bg-gradient-to-r from-slate-900 via-pinkAccent to-slate-900 bg-clip-text text-transparent">
+                <span className="text-8xl bg-gradient-to-r from-pink-950 via-pinkAccent to-pink-950 bg-clip-text text-transparent">
                   PFAS{" "}
                 </span>
                 <br />
                 <span className="text-2xl">also known as</span>
                 <br />"
               
-                <span className="bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-pink-950 via-pinkAccent to-pink-950 bg-clip-text text-transparent box-decoration-clone">
                   Forever Chemicals
                 </span>"
                 <br />
@@ -209,7 +209,7 @@ export function MobileFluorinatedMaterialsSection({
               {/* Text content */}
               <div className="w-full px-4 h-fit">
                 <div className="space-y-4">
-                  <p className="text-xl text-gray-300/90 font-poppins text-center">
+                  <p className="text-xl text-gray-300/90 font-poppins text-center uppercase">
                     From coatings and textiles to <br />
                     food packaging and electronics
                   </p>
@@ -227,19 +227,22 @@ export function MobileFluorinatedMaterialsSection({
                 </div>
               </div>
 
-                      {/* Circles section */}
-                      <div className="w-full relative -mt-24 h-fit">
-                                {/* Circle 1 */}
-                                <div className="w-[250px] h-[250px] mx-auto mb-8 rotate-45">
-                                  <Circle1 />
-                                </div>
-
-                      </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 right-0 w-full h-[100px] bg-gradient-to-t from-black via-black/90 to-transparent"></div>
+      <div className="absolute block bottom-0 right-0 w-full h-[300px] bg-gradient-to-t from-black via-black/90 to-transparent"/>
+                      {/* Circles section */}
+                      <div className="w-full absolute bottom-0 left-0 h-fit">
+
+                        <div className="w-full relative -mt-24 sm:translate-y-[300px] h-fit md:hidden">
+                                {/* Circle 1 */}
+                                <div className="w-[250px] h-[250px] sm:w-[550px] sm:h-[550px] mx-auto mb-8 rotate-45">
+                                  <Circle1 />
+                                </div>
+                        </div>
+                      </div>
+      <div className="absolute bottom-0 right-0 w-full h-[100px] bg-gradient-to-t from-black via-black/60 to-transparent"></div>
     </section>
   );
 }

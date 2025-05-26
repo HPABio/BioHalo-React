@@ -28,6 +28,7 @@ import BioHaloStep2 from "@/assets/images/BluePrintSVG/BioHalo-step2.svg";
 import BioReactorBP from "@/assets/images/BluePrintSVG/bio-reactor.svg";
 import NetworkDiagramWithNodes from "@/components/ui/NetworkDiagramWithNodes";
 import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import BeakerHalfAndHalf from "@/assets/images/BluePrintPNGs/Beaker-half-and-half.png";
 
 interface WhatWeDoSectionProps {
   stats: any[];
@@ -52,10 +53,8 @@ export const WhatWeDoSection = ({
     <section className={`${className} overflow-visible`}>
       <div className="absolute top-[-10%] left-0 w-full">
         <div
-          className="relative w-full h-full
-          [mask-image:linear-gradient(to_bottom_right,black,black,transparent)]
-        "
-        >
+          className="relative w-full h-full 
+          [mask-image:linear-gradient(to_bottom_right,black,black,transparent)]">
           <Image
             src={LightBGWithDroplets}
             alt="LightBGWithDroplets"
@@ -311,23 +310,34 @@ export const WhatWeDoSection = ({
           backgroundRepeat: "no-repeat",
           willChange: "opacity, transform",}}/> */}
       </div>
-      <div className="relative bottom-0 left-0 w-full h-[200px] bg-red-600/0 hidden">
-        <MovingAtom
-          width={80}
-          height={80}
-          hoverAmplitude={7}
-          hoverDuration={5}
-          shouldRotate={true}
-          rotationDuration={25}
-          shouldScale={false}
-          scaleRange={[0.9, 1.1]}
-          scaleDuration={4}
-          color="rgba(195,12,95,1)" //pink
-          className="absolute top-[50%] left-[50%] 
-          translate-x-[-50%] translate-y-[-150%] 
-          md:translate-x-[-50%] md:translate-y-[-250%] 
-          lg:translate-x-[200%] lg:-translate-y-[50%] opacity-90 z-5"
-        />
+      <div className="relative bottom-0 left-0 w-full h-[200px] bg-red-600/0 overflow-visible">
+          <MovingAtom
+            width={80}
+            height={80}
+            hoverAmplitude={7}
+            hoverDuration={5}
+            shouldRotate={true}
+            rotationDuration={25}
+            shouldScale={false}
+            scaleRange={[0.9, 1.1]}
+            scaleDuration={4}
+            color="rgba(195,12,95,1)" //pink
+            className="absolute top-[50%] left-[50%] 
+            translate-x-[-50%] translate-y-[-150%] 
+            md:translate-x-[-50%] md:translate-y-[-250%] 
+            2xl:translate-x-[200%] 2xl:-translate-y-[50%] opacity-90 z-5"
+          />
+        <div
+            className="absolute bottom-0 left-[50%]
+            translate-x-[-50%] md:translate-y-[72px] 2xl:translate-y-[86px]
+            w-[300px] h-[300px] md:w-[500px] md:h-[500px] 2xl:w-[600px] 2xl:h-[600px]"
+            style={{
+              backgroundImage: `url(${BeakerHalfAndHalf.src})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
         <MovingAtom
           width={80}
           height={80}
@@ -340,7 +350,7 @@ export const WhatWeDoSection = ({
           scaleDuration={4}
           color="rgba(18,110,119,1)" //teal
           className="absolute top-[50%] left-[50%] translate-x-[50%] translate-y-[-80%] 
-          lg:translate-x-[350%] lg:-translate-y-[500%] opacity-90 z-5"
+          2xl:translate-x-[350%] 2xl:-translate-y-[500%] opacity-90 z-5"
         />
         <MovingAtom
           width={50}
@@ -354,8 +364,8 @@ export const WhatWeDoSection = ({
           scaleDuration={4}
           color="rgba(195,12,95,1)" //pink
           className="hidden md:block
-          absolute top-[50%] left-[50%] translate-x-[350%] translate-y-[-260%] 
-          lg:translate-x-[950%] lg:-translate-y-[500%] opacity-90 z-5"
+          absolute top-[18%] left-[50%] translate-x-[350%] translate-y-[-260%] 
+          2xl:translate-x-[950%] 2xl:-translate-y-[500%] opacity-90 z-5"
         />
         <MovingAtom
           width={40}
@@ -368,8 +378,8 @@ export const WhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(195,12,95,1)" //pink
-          className="absolute top-[50%] left-[50%] translate-x-[100%] translate-y-[60%] 
-          lg:translate-x-[100%] lg:-translate-y-[690%] opacity-90 z-5"
+          className="absolute top-[2%] left-[50%] translate-x-[100%] translate-y-[20%] 
+          2xl:translate-x-[100%] 2xl:-translate-y-[690%] opacity-90 z-5"
         />
         <MovingAtom
           width={50}
@@ -383,8 +393,8 @@ export const WhatWeDoSection = ({
           scaleDuration={4}
           color="rgba(18,110,119,1)" //teal
           className="hidden md:block
-          absolute top-[50%] left-[50%] translate-x-[180%] translate-y-[-480%] 
-          lg:translate-x-[650%] lg:-translate-y-[350%] opacity-90 z-5"
+          absolute top-[20%] left-[47%] translate-x-[180%] translate-y-[-480%] 
+          2xl:translate-x-[650%] 2xl:-translate-y-[350%] opacity-90 z-5"
         />
         <MovingAtom
           width={50}
@@ -397,22 +407,10 @@ export const WhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(18,110,119,1)" //teal
-          className="absolute top-[50%] left-[50%] translate-x-[-100%] translate-y-[-40%] 
-          lg:translate-x-[300%] lg:-translate-y-[800%] opacity-90 z-5"
+          className="absolute top-[20%] left-[50%] translate-x-[-100%] translate-y-[-40%] 
+          2xl:translate-x-[300%] 2xl:-translate-y-[800%] opacity-90 z-5"
         />
-        <div
-          className="hidden relative bottom-0 left-[50%] 
-          translate-x-[-50%] translate-y-[-50px] 
-          md:translate-x-[-50%] md:translate-y-[-180px] 
-          lg:translate-x-[-30%] lg:translate-y-[-380px] 
-          w-[300px] h-[300px] md:w-[500px] md:h-[500px] lg:w-[800px] lg:h-[800px]"
-          style={{
-            backgroundImage: `url(${beaker2.src})`,
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
+        
       </div>
     </section>
   );

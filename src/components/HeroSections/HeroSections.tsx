@@ -491,7 +491,7 @@ export const HeroSection4 = ({
 }: HeroSectionsProps) => {
   if (debug) console.log("Rendering HeroSection5");
 
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRefMobile = useRef<HTMLElement>(null);
   const [activeSubtitle, setActiveSubtitle] = useState(4); // Default to version 4
 
   const subtitleVersions = [
@@ -648,7 +648,7 @@ export const HeroSection4 = ({
 
   return (
     <section
-      ref={sectionRef}
+      ref={sectionRefMobile}
       className={`relative w-[100vw] max-h-[1000px] md:max-h-[100vh] md:h-[100vh] min-h-[600px] 2xl:min-h-[900px]  ${className}`}
     >
       <div className="relative bottom-0 left-0 w-full h-full" />
@@ -725,11 +725,12 @@ export const HeroSection4 = ({
               <Button
                 className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
                             bg-tealAccent bg-gradient-to-r from-tealAccent via-mintAccent/50 to-mintAccent/80 hover:from-teal-600 hover:to-tealAccent 
-                            text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                            text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105
+                            pointer-events-auto"
                 onClick={(e) => {
                   e.preventDefault();
                   const targetElement = document.getElementById(
-                    "platform-technology"
+                    "platform-technology-mobile"
                   );
                   if (targetElement) {
                     const yPosition =
@@ -750,11 +751,12 @@ export const HeroSection4 = ({
               <Button
                 className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
                             bg-white/10 backdrop-blur-sm hover:bg-white/20 text-tealAccent/70 border border-white/20 
-                            rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                            rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105
+                            pointer-events-auto"
                 onClick={(e) => {
                   e.preventDefault();
                   const targetElement = document.getElementById(
-                    "platform-features-content"
+                    "platform-features-content-mobile"
                   );
                   if (targetElement) {
                     const yPosition =
@@ -876,7 +878,8 @@ export const HeroSection5 = ({
                   <Button
                     className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
                             bg-tealAccent bg-gradient-to-r from-tealAccent via-mintAccent/50 to-mintAccent/80 hover:from-teal-600 hover:to-tealAccent 
-                            text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                            text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105
+                            pointer-events-auto"
                     onClick={(e) => {
                       e.preventDefault();
                       const targetElement = document.getElementById(
@@ -901,10 +904,11 @@ export const HeroSection5 = ({
                   <Button
                     className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
                             bg-white/10 backdrop-blur-sm hover:bg-white/20 text-tealAccent/70 border border-white/20 
-                            rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                            rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105
+                            pointer-events-auto"
                     onClick={(e) => {
                       e.preventDefault();
-                      const targetElement = document.getElementById(
+                      const targetElement  = document.getElementById(
                         "platform-features-content"
                       );
                       if (targetElement) {

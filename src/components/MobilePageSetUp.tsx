@@ -149,7 +149,7 @@ export const MobilePageSetUp = () => {
 
 
       <section
-        className="pb-16 h-[300px] w-full relative"
+        className="pb-16 h-[300px] w-full relative pointer-events-none"
         id="transition-section-one"
       >
         <div className="relative w-full h-[100px] lg:h-[200px]">
@@ -192,11 +192,11 @@ export const MobilePageSetUp = () => {
 
 
       <MobileFluorinatedMaterialsSection
-        className="relative w-full h-full overflow-hidden z-10 -mt-4"
+        className="relative w-full h-full overflow-hidden z-20 -mt-4"
         stats={stats}
       />
 
-      <section id="what-we-do" className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative">
+      <section id="what-we-do" className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative z-10">
         {/* Section detection helper */}
         <div
           className="absolute top-0 h-24 w-full pointer-events-none"
@@ -211,7 +211,7 @@ export const MobilePageSetUp = () => {
 
       {/* Platform Technology Section */}
       <section
-        id="platform-technology"
+        id="platform-technology-mobile"
         className="w-full min-h-[80vh] relative"
       >
         {/* Section detection helper */}

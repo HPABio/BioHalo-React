@@ -330,22 +330,6 @@ export const Showcase4 = () => {
               />
             </motion.div>
         </div>
-{/*         <div className="absolute w-[110vw] h-[400px] top-[50%] left-[50%] opacity-1 translate-x-[-50%] translate-y-[-64%]">
-          <Image 
-            src={abstractImage} 
-            alt="Abstract" 
-            fill 
-            className="object-fill "
-          />
-        </div>
-        <div className="absolute w-[300px] h-[100vw] top-[50%] left-[50%] opacity-1 translate-x-[-50%] translate-y-[-58%]">
-          <Image 
-            src={ribbonImage} 
-            alt="Ribbon" 
-            fill 
-            className="object-fill rotate-[-90deg] hidden"
-          />
-        </div> */}
 
         <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0"/>
 
@@ -353,14 +337,14 @@ export const Showcase4 = () => {
       </section>
 
       <FluorinatedMaterialsSection
-        className="relative w-full h-full overflow-hidden z-10 pt-6"
+        className="relative w-full h-full overflow-hidden z-20 pt-6"
         stats={stats}
       />
 
     
       <section
         id="what-we-do"
-        className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative overflow-hidden"
+        className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative overflow-visible z-10"
       >
         {/* Section detection helper */}
         <div
