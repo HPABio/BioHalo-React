@@ -1,8 +1,8 @@
 import React from "react";
 
 interface AtomDiagramProps {
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
   className?: string;
 }
 
@@ -25,8 +25,8 @@ const AtomDiagram: React.FC<
     color?: string;
   }
 > = ({
-  width = 300,
-  height = 300,
+  width = "100%",
+  height = "100%",
   className = "",
   nucleusRadius = 15,
   nucleusFill,

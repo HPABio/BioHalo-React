@@ -5,8 +5,8 @@ import { ReactNode } from "react";
 
 interface MovingAtomProps {
   // Base props
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
   className?: string;
   color?: string;
 
@@ -31,8 +31,8 @@ interface MovingAtomProps {
 
 export function MovingAtom({
   // Default values for base props
-  width = 300,
-  height = 300,
+  width = "100%",
+  height = "auto",
   className = "",
   color = "tealAccent",
   // Default values for hover animation
@@ -54,7 +54,7 @@ export function MovingAtom({
   children,
 }: MovingAtomProps) {
   return (
-    <div className={`absolute  ${className}`}>
+    <div className={` ${className}`}>
       <HoverAtom
         width={width}
         height={height}

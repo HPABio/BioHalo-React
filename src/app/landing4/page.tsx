@@ -331,15 +331,56 @@ export default function Landing4() {
       <HeroSection5 className=" hidden md:block w-screen h-screen relative overflow-hidden" />
       <section className="" id="transition-section-one">
         {/* Background image of enzyme */}
-        <div className="relative w-full h-full">
+        <div className="relative w-screen h-[60vh] 2xl:h-[80vh] flex flex-col items-center justify-center">
+
+
+
+                <div className="relative aspect-square w-32 border-4 border-pinkAccent/10 rounded-lg flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm">
+                  <span className="text-[min(7vw,3rem)] font-bold">F</span>
+                  <span className="text-[min(3.5vw,0.875rem)] -mt-3">Fluorine</span>
+                  <span className="absolute top-1 left-1 text-[min(4vw,0.75rem)] font-bold">9</span>
+                  <span className="text-[min(2.5vw,0.75rem)] mt-1">18.99</span>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold  text-gray-500 text-center">
+                    our modern society is built on <br /> <span className="bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">fluorinated materials</span>
+                </h2>
+
+
+
+
+
           <div
             className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px]
-        translate-x-[35%] translate-y-[-50%]"
-          >
+            translate-x-[35%] translate-y-[-50%]"
+              >
             <motion.div
               className="absolute w-full h-full"
               style={{
+                scale: useTransform(useScroll().scrollY, [0, 1000], [1, 1.1]),
+                x: useTransform(useScroll().scrollY, [0, 1000], [0, 100]),
                 y: useTransform(useScroll().scrollY, [0, 1000], [0, -200]),
+                filter: useTransform(useScroll().scrollY, [0, 1000], ["blur(0px)", "blur(20px)"]),
+                opacity: useTransform(useScroll().scrollY, [0, 1000], [1, 0.8]),
+              }}
+            >
+              <Image
+                src={enzymeImage}
+                alt="Enzyme"
+                fill
+                className="object-contain"
+              />
+            </motion.div>
+          </div>
+              
+          <div
+            className="absolute w-[80vw] h-[80vw] max-w-[1450px] bottom-0 left-0 opacity-60 blur-[16px]
+            translate-x-[-50%] translate-y-[50%]"
+              >
+            <motion.div
+              className="absolute w-full h-full"
+              style={{
+                x: useTransform(useScroll().scrollY, [0, 1300], [0, -100]),
+                y: useTransform(useScroll().scrollY, [0, 1000], [0, -100]),
               }}
             >
               <Image
@@ -355,26 +396,31 @@ export default function Landing4() {
         </div>
 
         {/* Forever Chemicals Section */}
-        <section className="relative w-full min-h-screen max-w-[1450px] mx-auto px-4 md:px-24 pt-24 flex flex-col items-center justify-center">
+        <section className="relative w-full min-h-screen max-w-[1450px] mx-auto px-4 md:px-24 pt-44 flex flex-col items-center justify-center">
           {/* Main Title Container */}
-          <div className="w-fit max-w-4xl mx-auto">
+
+
+         
+          
+
+          <div className="w-fit mx-auto grayscale-[0.5] hidden">
             <h1
               className="relative text-[5vw] uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap text-center
               "
             >
               <span
                 className="top-0 left-0 blur-[2px] opacity-40
-                bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent"
+                bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent text-center"
               >
-                forever chemicals
+                fluorinated materials
               </span>
               <span className="absolute top-0 left-0 opacity-1
-              bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent">forever chemicals</span>
+              bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent">fluorinated materials</span>
+              <span className="absolute top-0 left-0 opacity-1
+              bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent">fluorinated materials</span>
             </h1>
           </div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-500 text-center">
-              are fluorinated materials that can be found everywhere
-            </h2>
+            
           <BentoSectionGen3 className="w-full h-full bg-transparent" />
 
           {/* Description Container */}

@@ -797,8 +797,8 @@ export const HeroSection5 = ({
       <div className="relative bottom-0 left-0 w-full h-full" />
 
       {/* Top left image */}
-      <div className="absolute w-[80%] h-[80%] top-0 left-0 translate-x-[-50%] translate-y-[-50%] blur-[7px] opacity-60 brightness-[1.4]">
-        <Image src={enzymeImage} alt="Enzyme" fill className="object-contain" />
+      <div className="absolute w-[80%] h-[80%] top-0 left-0 translate-x-[-50%] translate-y-[-50%] blur-[7px] opacity-60 brightness-[1.3]">
+        <Image src={enzymeImage} alt="Enzyme" fill className="object-contain -rotate-45" />
       </div>
       {/* Bottom image */}
       <motion.div

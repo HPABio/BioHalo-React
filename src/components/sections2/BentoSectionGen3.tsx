@@ -1,6 +1,6 @@
   "use client";
 
-  import { BentoInfo } from "../bentos/Gen_3_Bentos/BentoInfo";
+  import { BentoIntro } from "../bentos/Gen_3_Bentos/BentoIntro";
   import { BentoStats } from "../bentos/Gen_3_Bentos/BentoStats";
   import { BentoPeriodicTable } from "../bentos/Gen_3_Bentos/BentoPeriodicTable";
   import { BentoProcess } from "../bentos/Gen_3_Bentos/BentoProcess";
@@ -16,11 +16,11 @@
     if (DEBUG) console.log("Rendering BentoSection2");
 
     return (
-      <section className={`py-16 bg-gray-50 ${className || ""}`}>
+      <section className={`pt-4 pb-16 bg-gray-50 ${className || ""}`}>
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 auto-rows-[minmax(180px,auto)]">
+          <div className="grid grid-cols-1 xl:grid-cols-4 gap-4 auto-rows-[minmax(180px,auto)]">
             {/* Row 1 */}
-            <BentoInfo className="border-2 border-red-500" /> {/* col-span-2 row-span-2 */}
+            <BentoIntro className="border-2 border-lightGrey" /> {/* col-span-2 row-span-2 */}
             <BentoStats className="" />
             <BentoVideo className="" />
             {/* Row 2 */}
