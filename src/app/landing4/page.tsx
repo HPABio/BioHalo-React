@@ -315,7 +315,7 @@ export default function Landing4() {
 
   return (
     <main
-      className="min-h-screen w-full h-full bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70 overflow-hidden"
+      className="min-h-screen w-full h-full bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70 overflow-hidden font-poppins"
       id="top"
     >
       {/* Invisible element for top section detection */}
