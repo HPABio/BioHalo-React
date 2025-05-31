@@ -66,7 +66,7 @@ export function BentoLongLasting({ className }: { className?: string }) {
               }
             }}>
               <motion.p> <span className="text-xs">resistnat to</span> </motion.p>
-              <h2 className="relative">Corrosion
+              <h2 className="relative">CORONI
               <motion.span 
                 className="absolute top-0 left-0 bg-gradient-to-t from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent"
                 initial={{ opacity: 0 }}
@@ -75,7 +75,7 @@ export function BentoLongLasting({ className }: { className?: string }) {
                 }}
                 transition={{ duration: 0.2 }}
               >
-                Corrosion
+                CORONI
               </motion.span>
               </h2>
             </motion.div>
