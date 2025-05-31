@@ -5,8 +5,8 @@ import AtomDiagram from "./AtomDiagram";
 
 interface HoverAtomProps {
   // Base AtomDiagram props
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
   className?: string;
   color?: string;
   // Animation control props
@@ -30,8 +30,8 @@ interface HoverAtomProps {
 
 export function HoverAtom({
   // Default values for base props
-  width = 300,
-  height = 300,
+  width = "100%",
+  height = "100%",
   className = "",
   color = "tealAccent",
 
