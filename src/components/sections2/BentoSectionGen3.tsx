@@ -7,9 +7,10 @@
   import { BentoProcess } from "../bentos/Gen_3_Bentos/BentoProcess";
   import { BentoVideo } from "../bentos/Gen_3_Bentos/BentoVideo";
   import { BentoTeam } from "../bentos/Gen_3_Bentos/BentoTeam";
-  import { BentoSafety } from "../bentos/Gen_3_Bentos/BentoSafety";
+  import { BentoDurability } from "../bentos/Gen_3_Bentos/BentoDurability";
   import { BentoHeatResistant } from "../bentos/Gen_3_Bentos/BentoHeatResistant";
   import { BentoContact } from "../bentos/Gen_3_Bentos/BentoContact";
+  import { BentoLongLasting } from "../bentos/Gen_3_Bentos/BentoLongLasting";
 
   export const BentoSectionGen3 = ({ className }: { className?: string }) => {
     const DEBUG = false; // Toggle this to enable/disable logging
@@ -23,13 +24,14 @@
             {/* Row 1 */}
             <BentoIntro className="border-2 border-lightGrey" /> {/* col-span-2 row-span-2 */}
             <BentoStats className="" />
-            <BentoWaterRepellant className="" />
+            <BentoDurability className="border-2 border-white" />
             <BentoVideo className="hidden" />
             {/* Row 2 */}
-            <BentoTeam className="" />
-            <BentoSafety className="border-2 border-white" />
-            {/* Row 3 */}
             <BentoHeatResistant className="border-2 border-white" />
+            <BentoWaterRepellant className="border-2 border-white" />
+            <BentoTeam className="hidden" />
+            {/* Row 3 */}
+            <BentoLongLasting className="border-2 border-white" />
             <BentoContact className="" />
             <BentoPeriodicTable className="bg-gradient-to-br from-lightGrey to-tealAccent border-2 border-gray-200" />{" "}
             {/* col-span-2 row-span-2 */}

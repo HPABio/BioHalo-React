@@ -1,11 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Flame } from 'lucide-react'
+import { Flame, Clock, Hourglass } from 'lucide-react'
 import { url } from 'node:inspector'
 import IndustryHeat from '@/assets/images/VariousImages/IndustryHeat.png'
 
-export function BentoHeatResistant({ className }: { className?: string }) {
+export function BentoLongLasting({ className }: { className?: string }) {
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
@@ -18,7 +18,6 @@ export function BentoHeatResistant({ className }: { className?: string }) {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          border: "none",
         },
       }}
       className={`col-span-1 row-span-1 relative overflow-hidden rounded-3xl bg-gradient-to-br from-mintAccent/20 to-mintAccent/5 p-6 ${className}`}
@@ -33,7 +32,7 @@ export function BentoHeatResistant({ className }: { className?: string }) {
             color: "rgba(248,248,248,1)",
           }
         }}>
-          <h3 className="text-xl font-semibold">Heat Resistant</h3>
+          <h3 className="text-xl font-semibold">Long Lasting</h3>
           <motion.div className="w-12 h-12 rounded-full bg-mintAccent/30 border-2 border-tealAccent/70 flex items-center justify-center "
           initial={{
             color: "rgba(34,85,102,1)",
@@ -54,7 +53,7 @@ export function BentoHeatResistant({ className }: { className?: string }) {
           }}
           transition={{ duration: 0.2 }}
           >
-            <Flame className="w-6 h-6" />
+            <Hourglass className="w-6 h-6" />
           </motion.div>
         </motion.div>
             <motion.div className="text-6xl font-bold text-tealAccent relative"
@@ -66,8 +65,8 @@ export function BentoHeatResistant({ className }: { className?: string }) {
                 color: "rgba(234,179,8,1)",
               }
             }}>
-              <motion.p> <span className="text-xs">up to</span> </motion.p>
-              <h2 className="relative">327°C
+              <motion.p> <span className="text-xs">resistnat to</span> </motion.p>
+              <h2 className="relative">Corrosion
               <motion.span 
                 className="absolute top-0 left-0 bg-gradient-to-t from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent"
                 initial={{ opacity: 0 }}
@@ -76,7 +75,7 @@ export function BentoHeatResistant({ className }: { className?: string }) {
                 }}
                 transition={{ duration: 0.2 }}
               >
-                327°C
+                Corrosion
               </motion.span>
               </h2>
             </motion.div>

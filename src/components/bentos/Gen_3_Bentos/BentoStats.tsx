@@ -17,6 +17,17 @@ export function BentoStats({ className }: { className?: string }) {
       whileHover="hover"
       className={`col-span-1 row-span-1 relative overflow-hidden rounded-3xl bg-white shadow-lg ${className}`}
     >
+      <motion.h1
+          className="text-3xl leading-7 font-semibold text-transparent text-left w-full tracking-wider"
+          initial={{ display: "none" }}
+          variants={{
+            hover: {
+              display: "block",
+            },
+          }}
+        >
+          <span className="font-bold text-3xl">PFAS</span> <br/>can be found in countless materials and products throughout various industries
+        </motion.h1>
       {/* <Image src={EnzymeImage} alt="Enzyme Image" className="w-full h-full object-cover absolute top-0 left-0" /> */}
       <motion.div
         className="absolute top-0 left-0 w-full h-full "
@@ -52,8 +63,7 @@ export function BentoStats({ className }: { className?: string }) {
         }}
         transition={{ duration: 0.2 }}
       />
-      {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 via-transparent to-transparent "></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/60 via-transparent to-transparent "></div> */}
+
       <div className="p-4  absolute top-0 left-0 w-full h-full bg-mintAccent/10">
         <motion.h1 
           initial={{ opacity: 0, scale: 1.3 }}
@@ -66,7 +76,7 @@ export function BentoStats({ className }: { className?: string }) {
           viewport={{ once: true }}
           className="text-2xl leading-7 font-semibold bg-gradient-to-r bg-slate-600 from-tealAccent/30 to-tealAccent/20 text-transparent bg-clip-text text-left w-full tracking-wider"
         >
-          <span className="font-bold text-3xl">PFAS</span> <br/>can be found in countless materials and products
+          <span className="font-bold text-3xl">PFAS</span> <br/>can be found in countless materials and products throughout various industries
         </motion.h1>
       <motion.div className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
           initial={{

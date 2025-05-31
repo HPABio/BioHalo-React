@@ -4,91 +4,112 @@ import { motion } from "framer-motion";
 import { Droplet } from "lucide-react";
 import Image from "next/image";
 import WaterRepellantFabric from "@/assets/images/water-repellant-fabric.png";
+import IndustryHeat from '@/assets/images/VariousImages/IndustryHeat.png'
 
 export function BentoWaterRepellant({ className }: { className?: string }) {
   return (
-    <motion.div
+    <motion.div 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       whileHover="hover"
-      className={`col-span-1 row-span-1 relative overflow-hidden rounded-3xl bg-white shadow-lg ${className}`}
+      variants={{
+        hover: {
+          backgroundImage: `url(${WaterRepellantFabric.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          border: "none",
+        },
+      }}
+      className={`col-span-1 row-span-1 relative overflow-hidden rounded-3xl bg-gradient-to-br from-mintAccent/20 to-mintAccent/5 p-6 ${className}`}
     >
-      <motion.div
-        className="absolute top-0 left-0 w-full h-full"
-        variants={{
-          hover: { scale: 1.1 },
-        }}
-        transition={{ duration: 0.2 }}
-      >
-        <Image
-          src={WaterRepellantFabric}
-          alt="Water Repellant Fabric"
-          className="w-full h-full object-cover"
-        />
-      </motion.div>
-      <motion.div
-        className="absolute top-0 left-0 w-full h-full"
+      <div className="space-y-0 relative z-10">
+        <motion.div className="flex items-center justify-between gap-4"
         initial={{
-          backgroundImage:
-            "radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.2) 100%)",
+          color: "rgba(51,51,51,1)",
         }}
         variants={{
           hover: {
-            backgroundImage:
-              "radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 50%,rgba(0,0,0,0.6) 70%, rgba(0,0,0,0.8) 100%)",
-          },
-        }}
-        transition={{ duration: 0.2 }}
-      />
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/60 via-transparent to-transparent"></div>
-      <div className="p-6 absolute top-0 left-0 w-full h-full">
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl font-semibold text-lightGrey">
-              Water Repellency
-            </h3>
-            <motion.div
-              className="w-12 h-12 rounded-full bg-mintAccent/30 border-2 border-tealAccent/70 flex items-center justify-center"
-              initial={{
-                color: "rgba(34,85,102,1)",
-                scale: 1,
-                rotate: 0,
-                borderColor: "rgba(34,85,102,1)",
-              }}
-              variants={{
-                hover: {
-                  color: "rgba(56,189,248,1)",
-                  scale: 1.2,
-                  rotate: -20,
-                  borderColor: "rgba(56,189,248,0.6)",
-                  backgroundColor: "rgba(56,189,248,0.1)",
-                },
-              }}
-              transition={{ duration: 0.2 }}
-            >
-              <Droplet className="w-6 h-6" />
+            color: "rgba(248,248,248,1)",
+          }
+        }}>
+          <h3 className="text-xl font-semibold">Repellant</h3>
+          <motion.div className="w-12 h-12 rounded-full bg-mintAccent/30 border-2 border-tealAccent/70 flex items-center justify-center aspect-square"
+          initial={{
+            color: "rgba(34,85,102,1)",
+            scale: 1,
+            rotate: 0,
+            translateX: 0,
+            translateY: 0,
+            borderColor: "rgba(34,85,102,1)",
+            fill: "rgba(59,130,246,0)",
+
+          }}
+          variants={{
+            hover: {
+              color: "rgba(59,130,246,1)", // Blue color
+              scale: 1.2,
+              rotate: -20,
+              borderColor: "rgba(14,165,233,0.6)", // Light blue border
+              backgroundColor: "rgba(186,230,253,0.4)", // Very light blue background
+              fill: "rgba(59,130,246,0.6)",
+            },
+          }}
+          transition={{ duration: 0.2 }}
+          >
+            <Droplet className="w-6 h-6" fill='black/0' />
+          </motion.div>
+        </motion.div>
+            <motion.div className="text-6xl font-bold text-tealAccent relative"
+            initial={{
+              color: "rgba(34,85,102,1)",
+              opacity: 1,
+            }}
+            variants={{
+              hover: {
+                color: "rgb(118, 218, 243, 0.7)", // Light blue 
+                opacity: 0.8,
+              }
+            }}>
+              <motion.p> <span className="text-xs">for example to</span> </motion.p>
+              <h2 className="relative">Water
+              <motion.span 
+                className="absolute top-0 left-0 bg-gradient-to-t from-blue-600 via-sky-500 to-cyan-300 bg-clip-text text-transparent"
+                initial={{ opacity: 0 }}
+                variants={{
+                  hover: { opacity: 1 }
+                }}
+                transition={{ duration: 0.2 }}
+              >
+                Water
+              </motion.span>
+              </h2>
             </motion.div>
-          </div>
-          <div className="pt-7 grid grid-cols-2 gap-4">
-            <div>
-              <p className="text-sm text-gray-300">Water Contact Angle</p>
-              <div className="text-2xl font-bold text-mintAccent">150°</div>
-            </div>
-            <div>
-              <p className="text-sm text-gray-300">Durability</p>
-              <div className="text-2xl font-bold text-mintAccent">
-                50+ washes
-              </div>
-            </div>
-          </div>
-          <p className="text-[11px] text-gray-300 leading-tight">
-            Advanced fluoropolymer treatment creates a superhydrophobic surface
-            that repels water and stains
-          </p>
-        </div>
+        <motion.p 
+        initial={{
+          color: "rgba(102,102,102,1)",
+          display: "none",
+        }}
+        variants={{
+          hover: { color: "rgba(248,248,248,1)", display: "inline-block" }
+        }}
+        className="text-[11px] leading-tight">Impregrantion with a fluorinated polymer can make surfaces and textiles repell to water and other liquids</motion.p>
       </div>
+      
+      <motion.div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black via-black/50 to-black/0"
+      initial={{
+        opacity: 0,
+      }}
+      variants={{
+        hover: {
+          opacity: 1,
+        },
+      }}
+      >
+      </motion.div>
     </motion.div>
-  );
-}
+  )
+} 
+
+
