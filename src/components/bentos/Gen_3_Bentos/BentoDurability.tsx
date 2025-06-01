@@ -15,15 +15,29 @@ export function BentoDurability({ className }: { className?: string }) {
       className={`col-span-1 row-span-1 relative overflow-hidden rounded-3xl bg-mintAccent/10 p-6 ${className}`}
       variants={{ 
         hover: {
-          backgroundImage: `url(${DirtBikeAdventure.src})`,
-          backgroundSize: "fit",
-          backgroundPosition: "65% 75%",
-          backgroundRepeat: "no-repeat",
-          backgroundColor: "none",
           border: "none",
         }
       }}
     >
+      <motion.div className="absolute top-0 left-0 w-full h-full "
+      initial={{
+        opacity: 0,
+      }}
+      style={{
+        backgroundImage: `url(${DirtBikeAdventure.src})`,
+          backgroundSize: "fit",
+          backgroundPosition: "65% 75%",
+          backgroundRepeat: "no-repeat",
+          backgroundColor: "none",
+      }}
+      variants={{
+        hover: {
+          opacity: 1,
+          transition: { duration: 0.8 },
+        },
+      }}
+      >
+      </motion.div>
       <div className="space-y-0 relative z-10">
         <motion.div className="flex items-center justify-between"
         initial={{
@@ -46,11 +60,11 @@ export function BentoDurability({ className }: { className?: string }) {
           }}
           variants={{
             hover: {
-              color: "rgba(249,115,22,1)",
+              color: "rgb(159, 121, 37)",
               scale: 1.2,
               rotate: 20,
               borderColor: "rgba(149,15,22,0.6)",
-              backgroundColor: "rgba(249,115,22,0.1)",
+              backgroundColor: "rgba(228, 220, 214, 0.85)",
             },
           }}
           transition={{ duration: 0.2 }}
@@ -62,10 +76,10 @@ export function BentoDurability({ className }: { className?: string }) {
             initial={{ color: "rgba(34,85,102,1)" }}
             variants={{
               hover: {
-                color: "rgba(253,230,138,0.7)",
+                color: "rgba(253,230,138,0.9)",
               }
             }}>
-              <motion.p> <span className="text-xs">resistnat to</span> </motion.p>
+              <motion.p> <span className="text-xs opacity-50">resistnat to</span> </motion.p>
               <motion.h2 className="relative text-4xl"
               >
                 

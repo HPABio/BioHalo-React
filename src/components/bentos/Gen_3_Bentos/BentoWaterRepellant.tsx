@@ -13,17 +13,31 @@ export function BentoWaterRepellant({ className }: { className?: string }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       whileHover="hover"
-      variants={{
+      variants={{ 
         hover: {
-          backgroundImage: `url(${WaterRepellantFabric.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
           border: "none",
-        },
+        }
       }}
       className={`col-span-1 row-span-1 relative overflow-hidden rounded-3xl bg-gradient-to-br from-mintAccent/20 to-mintAccent/5 p-6 ${className}`}
     >
+      <motion.div className="absolute top-0 left-0 w-full h-full "
+      initial={{
+        opacity: 0,
+      }}
+      style={{
+        backgroundImage: `url(${WaterRepellantFabric.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      variants={{
+        hover: {
+          opacity: 1,
+          transition: { duration: 0.8 },
+        },
+      }}
+      >
+      </motion.div>
       <div className="space-y-0 relative z-10">
         <motion.div className="flex items-center justify-between gap-4"
         initial={{
@@ -68,11 +82,11 @@ export function BentoWaterRepellant({ className }: { className?: string }) {
             }}
             variants={{
               hover: {
-                color: "rgb(118, 218, 243, 0.7)", // Light blue 
+                color: "rgb(118, 218, 243, 1)", // Light blue 
                 opacity: 0.8,
               }
             }}>
-              <motion.p> <span className="text-xs">for example to</span> </motion.p>
+              <motion.p> <span className="text-xs opacity-50">for example to</span> </motion.p>
               <h2 className="relative">Water
               <motion.span 
                 className="absolute top-0 left-0 bg-gradient-to-t from-blue-600 via-sky-500 to-cyan-300 bg-clip-text text-transparent"

@@ -12,16 +12,31 @@ export function BentoLongLasting({ className }: { className?: string }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       whileHover="hover"
-      variants={{
+      variants={{ 
         hover: {
-          backgroundImage: `url(${IndustryHeat.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        },
+          border: "none",
+        }
       }}
       className={`col-span-1 row-span-1 relative overflow-hidden rounded-3xl bg-gradient-to-br from-mintAccent/20 to-mintAccent/5 p-6 ${className}`}
     >
+      <motion.div className="absolute top-0 left-0 w-full h-full "
+      initial={{
+        opacity: 0,
+      }}
+      style={{
+        backgroundImage: `url(${IndustryHeat.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      variants={{
+        hover: {
+          opacity: 1,
+          transition: { duration: 0.8 },
+        },
+      }}
+      >
+      </motion.div>
       <div className="space-y-0 relative z-10">
         <motion.div className="flex items-center justify-between"
         initial={{
@@ -65,7 +80,7 @@ export function BentoLongLasting({ className }: { className?: string }) {
                 color: "rgba(234,179,8,1)",
               }
             }}>
-              <motion.p> <span className="text-xs">resistnat to</span> </motion.p>
+              <motion.p> <span className="text-xs opacity-50">resistnat to</span> </motion.p>
               <h2 className="relative">CORONI
               <motion.span 
                 className="absolute top-0 left-0 bg-gradient-to-t from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent"
