@@ -33,7 +33,7 @@ export function BentoDurability({ className }: { className?: string }) {
       variants={{
         hover: {
           opacity: 1,
-          transition: { duration: 0.8 },
+          transition: { duration: 0.6 },
         },
       }}
       >
@@ -79,7 +79,7 @@ export function BentoDurability({ className }: { className?: string }) {
                 color: "rgba(253,230,138,0.9)",
               }
             }}>
-              <motion.p> <span className="text-xs opacity-50">resistnat to</span> </motion.p>
+              <motion.p> <span className="text-xs opacity-50 uppercase font-regular">resistnat to</span> </motion.p>
               <motion.h2 className="relative text-4xl"
               >
                 

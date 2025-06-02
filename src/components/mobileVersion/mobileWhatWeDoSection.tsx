@@ -112,7 +112,7 @@ export const MobileWhatWeDoSection = ({
             </span>
             <br />
             offers a sustainable <br />
-            alternatives to <br/>
+            alternative to <br/>
             <span className="uppercase text-wrap box-decoration-clone text-3xl
             bg-clip-text text-transparent bg-gradient-to-r from-slate-800/80 via-pinkAccent/70 to-slate-800/80 ">
             forever chemicals

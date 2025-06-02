@@ -15,6 +15,7 @@ export function BentoHeatResistant({ className }: { className?: string }) {
       variants={{ 
         hover: {
           border: "none",
+          backgroundImage:"none",
         }
       }}
       className={`col-span-1 row-span-1 relative overflow-hidden rounded-3xl p-6 bg-gradient-to-br from-mintAccent/20 to-mintAccent/5 ${className}`}
@@ -32,7 +33,7 @@ export function BentoHeatResistant({ className }: { className?: string }) {
       variants={{
         hover: {
           opacity: 1,
-          transition: { duration: 0.8 },
+          transition: { duration: 0.6 },
         },
       }}
       >
@@ -80,7 +81,7 @@ export function BentoHeatResistant({ className }: { className?: string }) {
                 color: "rgba(234,179,8,1)",
               }
             }}>
-              <motion.p> <span className="text-xs opacity-50">up to</span> </motion.p>
+              <motion.p> <span className="text-xs opacity-50 uppercase font-regular">up to</span> </motion.p>
               <h2 className="relative">327°C
               <motion.span 
                 className="absolute top-0 left-0 bg-gradient-to-t from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent"
