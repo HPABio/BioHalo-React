@@ -795,19 +795,19 @@ export const HeroSection5 = ({
   return (
     <section
       ref={sectionRef}
-      className={`relative w-[100vw] max-h-[1000px] md:max-h-[100vh] md:h-[100vh] min-h-[600px] lg:min-h-[700px] xl:min-h-[900px]  ${className}`}
+      className={`relative w-[100vw] max-h-[1000px] md:max-h-[100vh] md:h-[100vh] min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] bg-red-500/0 ${className}`}
     >
       <div className="relative bottom-0 left-0 w-full h-full" />
 
       {/* Top left image */}
       <div className="absolute w-[80%] h-[80%] top-0 left-0 translate-x-[-50%] translate-y-[-50%] blur-[7px] opacity-60 brightness-[1.3]">
-        <Image src={enzymeImage} alt="Enzyme" fill className="object-contain -rotate-45" />
+        <Image src={enzymeImage} alt="Enzyme"  className="object-contain -rotate-45" />
       </div>
       {/* Bottom image */}
       <motion.div
         className="md:hidden block absolute w-full h-full bottom-0 right-[-90%] translate-x-[-50vw] translate-y-[55%] 
       opacity-1 blur-[6px]">
-        <Image src={enzymeImage} alt="Enzyme" fill className="object-contain" />
+        <Image src={enzymeImage} alt="Enzyme"  className="object-contain" />
       </motion.div>
 
       {/* Center image */}
@@ -836,7 +836,7 @@ export const HeroSection5 = ({
       </div>
 
       {/* Logo and subtitle container */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-green-500/0 pt-[80px]">
+      <div className="absolute w-[100vw] h-[80vh] lg:min-h-[500px] top-0 left-0 flex flex-col items-center justify-center bg-green-500/0 pt-[80px]">
         <div
           className="relative w-[80%] xl:w-[70%] h-[40%] flex flex-col items-center justify-center 
         md:translate-y-[-30%] lg:translate-y-[-38%] xl:translate-y-[-45%] lg:px-12 bg-blue-500/0 max-w-[1400px]"
