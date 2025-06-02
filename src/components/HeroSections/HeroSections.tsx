@@ -489,7 +489,7 @@ export const HeroSection4 = ({
   className,
   debug = false,
 }: HeroSectionsProps) => {
-  if (debug) console.log("Rendering HeroSection5");
+  if (debug) console.log("Rendering HeroSection4");
 
   const sectionRefMobile = useRef<HTMLElement>(null);
   const [activeSubtitle, setActiveSubtitle] = useState(4); // Default to version 4
@@ -685,13 +685,13 @@ export const HeroSection4 = ({
         {/* Logo container, Subtitle, and Buttons */}
         <div className="relative w-[80%] h-[80%] flex flex-col items-center justify-center bg-blue-500/0">
           {/* Logo container */}
-          <div className="relative w-[80%] h-auto max-w-[1000px]">
+          <div className="relative w-[80%] h-auto max-w-[1000px] border border-red-500/0">
             <BioHaloLogo3 />
           </div>
           {/* Subtitle */}
-          <div className="w-full mt-32 md:mt-52 bg-transparent hidden md:block">
+          <div className="w-full mt-32 md:mt-52 bg-transparent hidden ">
             {/* subtitle */}
-            <div className="w-full bg-transparent hidden md:block border border-red-500/0">
+            <div className="w-full bg-transparent hidden border border-red-500/0">
               {/* Active subtitle */}
               <div className="w-full h-full relative bg-transparent">
                 {
@@ -730,7 +730,7 @@ export const HeroSection4 = ({
                 onClick={(e) => {
                   e.preventDefault();
                   const targetElement = document.getElementById(
-                    "platform-technology-mobile"
+                    "mobile-platform-technology"
                   );
                   if (targetElement) {
                     const yPosition =
@@ -754,19 +754,22 @@ export const HeroSection4 = ({
                             rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105
                             pointer-events-auto"
                 onClick={(e) => {
+                  console.log("Features button clicked");
                   e.preventDefault();
                   const targetElement = document.getElementById(
-                    "platform-features-content-mobile"
+                    "mobile-platform-features-content"
                   );
+                  console.log("targetElement:", targetElement);
                   if (targetElement) {
                     const yPosition =
-                      targetElement.getBoundingClientRect().top +
-                      window.scrollY -
-                      80;
+                    targetElement.getBoundingClientRect().top +
+                    window.scrollY -
+                    80;
                     window.scrollTo({
                       top: yPosition,
                       behavior: "smooth",
                     });
+                    console.log("yPosition:", yPosition);
                   }
                 }}
               >

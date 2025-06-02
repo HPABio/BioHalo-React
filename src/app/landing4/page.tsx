@@ -351,7 +351,7 @@ export default function Landing4() {
 
           <div
             className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px]
-            translate-x-[35%] translate-y-[-50%]"
+            translate-x-[35%] translate-y-[-50%] pointer-events-none"
               >
             <motion.div
               className="absolute w-full h-full"
