@@ -150,7 +150,7 @@ export const MobilePageSetUp = () => {
 
       <section
         className="pb-16 h-[300px] w-full relative pointer-events-none"
-        id="transition-section-one"
+        id="mobile-transition-section-one"
       >
         <div className="relative w-full h-[100px] lg:h-[200px]">
 
@@ -196,7 +196,7 @@ export const MobilePageSetUp = () => {
         stats={stats}
       />
 
-      <section id="what-we-do" className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative z-10">
+      <section id="mobile-what-we-do" className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative z-10">
         {/* Section detection helper */}
         <div
           className="absolute top-0 h-24 w-full pointer-events-none"
@@ -211,7 +211,7 @@ export const MobilePageSetUp = () => {
 
       {/* Platform Technology Section */}
       <section
-        id="platform-technology-mobile"
+        id="mobile-platform-technology"
         className="w-full min-h-[80vh] relative"
       >
         {/* Section detection helper */}
@@ -259,7 +259,7 @@ export const MobilePageSetUp = () => {
         */}
 
       {/* Team Section */}
-      <section id="team-section" className="min-h-[80vh] relative">
+      <section id="mobile-team-section" className="min-h-[80vh] relative">
         {/* Section detection helper */}
         <div
           className="absolute top-0 h-24 w-full pointer-events-none"
@@ -270,7 +270,7 @@ export const MobilePageSetUp = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact-section">
+      <section id="mobile-contact-section">
         <ContactSection className="w-full" />
       </section>
 

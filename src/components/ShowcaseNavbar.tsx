@@ -99,10 +99,10 @@ export const ShowcaseNavbar = () => {
 
     // Mobile-specific scroll destinations
     const mobileDestinations: { [key: string]: string } = {
-      "what-we-do": "what-we-do", // Keep About at its original position
-      "platform-technology": "platform-technology", // Keep Technology at its original position
-      "platform-features-content": "platform-features-content", // Keep Features at its original position
-      "team-section": "team-section", // Keep Team at its original position
+      "what-we-do": "mobile-what-we-do", // Keep About at its original position
+      "platform-technology": "mobile-platform-technology", // Keep Technology at its original position
+      "platform-features-content": "mobile-platform-features-content", // Keep Features at its original position
+      "team-section": "mobile-team-section", // Keep Team at its original position
     };
 
     // Get the mobile destination or use the original target
@@ -114,6 +114,8 @@ export const ShowcaseNavbar = () => {
       // The 80px offset accounts for the navbar height
       const yPosition =
         targetElement.getBoundingClientRect().top + window.scrollY - 80;
+      console.log("targetElement:", targetElement);
+      console.log("yPosition:", yPosition);
 
       // Scroll to the element
       window.scrollTo({

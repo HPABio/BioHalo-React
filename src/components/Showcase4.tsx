@@ -294,7 +294,7 @@ export const Showcase4 = () => {
 
   return (
     <main
-      className="min-h-screen w-full h-full bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70 overflow-hidden"
+      className="min-h-screen w-full h-full bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70 overflow-hidden font-poppins"
       id="top"
     >
       {/* Invisible element for top section detection */}
@@ -306,7 +306,7 @@ export const Showcase4 = () => {
       {/* <HeroSection1 className="w-screen h-screen relative" /> */}
       {/* <HeroSection2 className="w-screen h-screen relative overflow-hidden" /> */}
       {/* <HeroSection4 className=" block w-screen h-screen relative overflow-hidden" /> */}
-      <HeroSection4 className=" md:hidden block w-screen h-screen relative overflow-hidden" />
+      {/* <HeroSection4 className=" block md:hidden  w-screen h-screen relative overflow-hidden" /> */}
       <HeroSection5 className=" hidden md:block w-screen h-screen relative overflow-hidden" />
       <section
         className="pb-16 bg-black"
