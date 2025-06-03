@@ -390,8 +390,8 @@ export default function AlternativeLayout() {
 
       
       {/* Infos about PFAS / Bento Section */}
-      <section className="relative w-screen border-2 border-blue-300/0
-      p-24" id="alt-bento-section">
+      <section className="relative w-screen bg-gradient-to-t from-teal-50 via-transparent to-transparent border-2 border-blue-300/0 z-40
+      p-24 pb-36" id="alt-bento-section">
         {/* Content Container */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[minmax(180px,auto)]  bg-green-300/0 max-w-[80vw] lg:max-w-[80vw] 2xl:max-w-[1100px] mx-auto">
           <BentoContact className="w-full hidden" />
@@ -409,16 +409,16 @@ export default function AlternativeLayout() {
       </section>   
 
         <MobileFluorinatedMaterialsSection
-          className="relative w-full h-full overflow-hidden z-20 pt-20"
+          className="relative w-full h-full overflow-hidden z-20 pt-20 hidden"
           stats={stats}
         />
         <MobileFluorinatedMaterialsSectionV2
-          className="relative w-full h-full overflow-hidden z-20 pt-20"
+          className="relative w-full h-full overflow-hidden z-20 pt-20 hidden"
           stats={stats}
         />
 
         <MobileWhatWeDoSection
-          className="relative w-full h-full overflow-hidden z-20"
+          className="relative w-full h-full overflow-hidden z-20 pt-20"
           stats={stats}
         />
 

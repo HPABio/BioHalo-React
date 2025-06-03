@@ -180,9 +180,11 @@ export function MobileFluorinatedMaterialsSection({
             </div>
 
             {/* Vertical Bento Layout */}
-            <div className="w-full flex flex-col gap-8 py-8">
+            
+            <div className="w-full flex-col gap-8 py-8 hidden">
               {/* First Bento Box - CPU Section */}
-              <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
+
+              {/* <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
                 <motion.div
                   initial={{
                     filter: "blur(0px) brightness(1)",
@@ -243,10 +245,10 @@ export function MobileFluorinatedMaterialsSection({
                     </p>
                   </motion.div>
                 </motion.div>
-              </div>
+              </div> */}
 
               {/* Second Bento Box - Aerospace Section */}
-              <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
+              {/* <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
                 <motion.div
                   ref={refTurbine}
                   initial={{ filter: "brightness(1) saturate(0.7)" }}
@@ -317,10 +319,10 @@ export function MobileFluorinatedMaterialsSection({
                     </p>
                   </motion.div>
                 </motion.div>
-              </div>
+              </div> */}
 
               {/* Third Bento Box - Coating Section */}
-              <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
+              {/* <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
                 <motion.div
                   ref={refBottle}
                   className="w-full h-full relative"
@@ -394,7 +396,7 @@ export function MobileFluorinatedMaterialsSection({
                     </p>
                   </div>
                 </motion.div>
-              </div>
+              </div> */}
             </div>
 
             {/* Content container */}
