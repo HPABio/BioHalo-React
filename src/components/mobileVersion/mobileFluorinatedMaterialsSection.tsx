@@ -23,6 +23,25 @@ import WaterRepellantFabric from "@/assets/images/water-repellant-fabric.png";
 import pollutionearth from "@/assets/images/BluePrintStyle/polutionEarth.svg";
 import IndustrialPollution from "@/assets/images/BGImages/IndustrialPollution_960678749.png";
 import IconToxicSkull from "@/assets/images/VariousImages/iconToxicSkull.png";
+import MeshFabric from "@/assets/images/Mesh-fabric.png";
+
+//LummiAi
+
+import ElegantBottleDesignLummiAi from "@/assets/images/LummiAi/Elegant Bottle Design.jpeg";
+import FuturisticRocketEngineLummiAi from "@/assets/images/LummiAi/Futuristic Rocket Engine.jpeg";
+import IndustrialMachineCloseUpLummiAi from "@/assets/images/LummiAi/Industrial Machine Close-Up.jpeg";
+import JetEngineCloseUpLummiAi from "@/assets/images/LummiAi/Jet Engine Close-Up.jpeg";
+import JetEngineTurbineCloseUpLummiAi from "@/assets/images/LummiAi/Jet Engine Turbine Close-Up.jpeg";
+import LuxuriousSkincareDisplayLummiAi from "@/assets/images/LummiAi/Luxurious Skincare Display.jpeg";
+import LuxurySkincareDisplayLummiAi from "@/assets/images/LummiAi/Luxury Skincare Display.jpeg";
+import SolitudeInTheRainLummiAi from "@/assets/images/LummiAi/Solitude in the Rain.jpeg";
+
+
+import LummiCPU from "@/assets/images/VariousImages/LummiCPU.png";
+import LummiCPU2 from "@/assets/images/VariousImages/LummiCPU2.png";
+import UnsplashCPU from "@/assets/images/VariousImages/UnsplashCPU.png";
+import AdobeStockCPU from "@/assets/images/AdobeStock/AdobeStock_1514887767_Preview_CPU.jpeg";
+import { url } from "inspector";
 
 interface FluorinatedMaterialsSectionProps {
   stats: any[];
@@ -34,12 +53,25 @@ interface FluorinatedMaterialsSectionProps {
 const Circle1 = React.memo(function Circle1() {
   console.log("Rendering Circle1 component");
   const ref = useRef(null);
+  const ref2 = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "center start"],
   });
+  const { scrollYProgress: scrollYProgress2 } = useScroll({
+    target: ref2,
+    offset: ["start end", "center start"],
+  });
   return (
-    <div className="relative w-[500px] h-[500px] rounded-full overflow-hidden border-2 border-lightGrey/40 grid place-items-center">
+    <motion.div
+      ref={ref2}
+      initial={{ rotate: 0 }}
+      transition={{ duration: 1 }}
+      style={{
+        rotate: useTransform(scrollYProgress2, [0, 1], [0, -15]),
+      }}
+      className="relative w-[500px] h-[500px] rounded-full overflow-hidden border-2 border-lightGrey/40 grid place-items-center"
+    >
       <Image
         src={ColorfulGradientRainbowTexture}
         alt="TexturedGlassSurface"
@@ -52,7 +84,7 @@ const Circle1 = React.memo(function Circle1() {
         top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
         mix-blend-multiply"
         style={{
-          opacity: useTransform(scrollYProgress, [0, 0.5], [0, 0.7])
+          opacity: useTransform(scrollYProgress, [0, 0.6], [0, 1]),
         }}
       >
         <Image
@@ -64,100 +96,7 @@ const Circle1 = React.memo(function Circle1() {
           className="w-full h-full object-cover invert grayscale -rotate-[25deg] translate-x-[-7%] translate-y-[-7%]"
         />
       </motion.div>
-    </div>
-  );
-});
-
-const Circle2 = React.memo(function Circle2() {
-  console.log("Rendering Circle2 component");
-  return (
-    <div
-      className="relative w-[550px] h-[550px] grid place-items-center rounded-full overflow-hidden border-2 border-lightGrey/40
-    before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-tr before:from-tealAccent before:via-gray-800 before:to-gray-800 before:mix-blend-multiply before:opacity-0 before:"
-    >
-      <Image
-        src={ColorfulGradientRainbowTexture}
-        alt="ColorfulGradientRainbowTexture"
-        fill
-        priority
-        sizes="(max-width: 768px) 100vw, 550px"
-        style={{ objectFit: "cover" }}
-        className="rounded-full "
-      />
-      <div
-        className="w-[110%] h-[110%] min-w-[110%] min-h-[110%]
-        absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] "
-      >
-        <EcoliTripletsSVG
-          className="w-full h-full opacity-40 mix-blend-screen"
-          style={{
-            transform: "translate3d(-3%, 2%, 0) scale(1.1) rotate(32deg)",
-            willChange: "opacity, transform",
-          }}
-        />
-      </div>
-    </div>
-  );
-});
-
-const Circle3Base = React.memo(function Circle3Base() {
-  console.log("Rendering Circle3Base component");
-  return (
-    <div className="relative w-[400px] h-[400px] md:w-[650px] md:h-[650px] lg:w-[900px] lg:h-[900px] grid place-items-center rounded-full overflow-hidden">
-      <Image
-        src={IndustrialPollution}
-        alt="IndustrialPollution"
-        fill
-        priority
-        style={{ objectFit: "cover" }}
-        className="rounded-full"
-      />
-      <div className="w-full h-full border-2 border-lightGrey opacity-80 absolute inset-0 rounded-full"></div>
-      <div
-        className="w-[110%] h-[110%] min-w-[110%] min-h-[110%] 
-        absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rotate-180"
-      >
-        <EcoliTripletsSVG
-          className="w-full h-full opacity-70 invert grayscale mix-blend-overlay"
-          style={{
-            transform: "translate3d(-2%, 2%, 0)",
-            willChange: "opacity, transform",
-          }}
-        />
-      </div>
-      <div className="absolute w-full h-full bg-gradient-to-tr from-tealAccent via-tealAccent to-mintAccent mix-blend-overlay opacity-20"></div>
-      <div className="absolute w-full h-full bg-gradient-to-t from-black via-slate-900 to-teal-950/20 mix-blend-multiply opacity-60"></div>
-    </div>
-  );
-});
-
-const Circle4 = React.memo(function Circle4() {
-  console.log("Rendering Circle4 component");
-  return (
-    <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-lightGrey/40 grid place-items-center">
-      <Image
-        src={WaterRepellantFabric}
-        alt="WaterRepellantFabric"
-        fill
-        priority
-        sizes="(max-width: 768px) 100vw, 1200px"
-        style={{ objectFit: "cover" }}
-        className="rounded-full scale-x-[-1]"
-      />
-      <div className="w-full h-full bg-gradient-to-tr from-tealAccent via-tealAccent to-mintAccent mix-blend-multiply opacity-60"></div>
-      <div
-        className="w-[110%] h-[110%] min-w-[110%] min-h-[110%] 
-        absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
-      >
-        <EcoliTripletsSVG
-          className="w-full h-full opacity-70 invert mix-blend-color-burn"
-          style={{
-            transform: "translate3d(-3%, 2%, 0) scale(1.1)",
-            willChange: "opacity, transform",
-          }}
-        />
-      </div>
-    </div>
+    </motion.div>
   );
 });
 
@@ -177,12 +116,14 @@ export function MobileFluorinatedMaterialsSection({
   if (debug) console.log("Rendering FluorinatedMaterialsSection");
 
   return (
-    <section className={`${className} h-[1700px] w-full relative`}>
+    <section
+      className={`${className} w-full h-full relative bg-gradient-to-b from-black via-black to-slate-900`}
+    >
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
 
-      <div className="w-full min-h-screen h-[1030px] sm:h-[900px] relative bg-gradient-to-b bg-teal-950 from-black via-black to-slate-800/70">
-        <div className="absolute w-full h-fit top-0 left-0 overflow-hidden bg-gradient-to-b from-black via-black to-transparent ">
-          <div className="w-full h-fit max-w-[1280px] mx-auto px-6 pt-24 pb-[40px]">
+      <div className="w-full h-fit relative bg-gradient-to-b from-black via-black to-transparent">
+        <div className="w-full h-fit relative overflow-hidden bg-gradient-to-b from-black via-black to-transparent">
+          <div className="relative w-full h-full max-w-[1280px] flex flex-col mx-auto px-6">
             {/* TEXT COLUMN */}
             <div className="w-full flex flex-col items-center">
               <h1 className="w-full text-center font-black font-poppins text-3xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
@@ -190,28 +131,128 @@ export function MobileFluorinatedMaterialsSection({
                   PFAS{" "}
                 </span>
                 <br />
-                <span className="text-2xl">also known as</span>
-                <br />"
-              
+                <span className="text-2xl text-gray-500 font-bold">
+                  also known as
+                  <br />"
+                </span>
                 <span className="bg-gradient-to-r from-pink-950 via-pinkAccent to-pink-950 bg-clip-text text-transparent box-decoration-clone">
                   Forever Chemicals
-                </span>"
+                </span>
+                "
                 <br />
-                <span className="text-xl">
+                <span className="text-xl text-gray-500 font-bold">
                   {" "}
                   are fluorinated materials that can be found everywhere
                 </span>
               </h1>
             </div>
 
+
+
+            <div className="w-full h-fit min-h-[100px] flex flex-col items-center justify-center gap-4">
+            <div className="w-full relative">
+                <div 
+                  className="w-[86%] aspect-square rounded-full overflow-visible relative left-0 "
+                  style={{
+                    background: `url(${LuxuriousSkincareDisplayLummiAi.src})`,
+                    backgroundSize: "contain",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background: "radial-gradient(circle, transparent 0%, transparent 40%, black 65%, black 100%)",
+                    }}
+                  />
+                </div>
+                <div className="w-fit h-fit flex items-center justify-center absolute bottom-0 right-0">
+                  <p className="text-sm text-slate-300/50 font-black font-poppins" style={{ lineHeight: "1.3" }}>
+                    from <br />
+                    <span className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60" style={{ lineHeight: ".3" }}>
+                      Protective<br />
+                    </span>
+                    <span className="text-xl text-tealAccent uppercase font-semibold font-poppins" style={{ lineHeight: ".1" }}>
+                      Coatings
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              
+              <div className="w-full h-fit relative">
+                <div 
+                  className="w-[85%] aspect-square rounded-full overflow-visible relative left-0"
+                  style={{
+                    background: `url(${AdobeStockCPU.src})`,
+                    backgroundSize: "88%",
+                    backgroundPosition: "40% 50%",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background: "radial-gradient(circle, transparent 0%, transparent 40%, black 65%, black 100%)",
+                    }}
+                  />
+                </div>
+                <div className="w-fit h-fit flex items-center justify-center absolute bottom-0 right-0">
+                  <p className="text-sm text-slate-300/50 font-black font-poppins" style={{ lineHeight: "1.3" }}>
+                    from <br />
+                    <span className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60" style={{ lineHeight: ".3" }}>
+                      Protective<br />
+                    </span>
+                    <span className="text-xl text-tealAccent uppercase font-semibold font-poppins" style={{ lineHeight: ".1" }}>
+                      Coatings
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+             
+              <div className="w-full h-fit relative">
+                <div 
+                  className="w-full aspect-square rounded-full overflow-visible relative"
+                  style={{
+                    background: `url(https://plus.unsplash.com/premium_photo-1683120972279-87efe2ba252f?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background: "radial-gradient(circle, transparent 0%, transparent 40%, black 65%, black 100%)",
+                    }}
+                  />
+                </div>
+                <div className="w-fit h-fit flex items-center justify-center absolute bottom-0 right-0">
+                  <p className="text-sm text-slate-300/50 font-black font-poppins" style={{ lineHeight: "1.3" }}>
+                    from <br />
+                    <span className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60" style={{ lineHeight: ".3" }}>
+                      Protective<br />
+                    </span>
+                    <span className="text-xl text-tealAccent uppercase font-semibold font-poppins" style={{ lineHeight: ".1" }}>
+                      Coatings
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+
             {/* Content container */}
-            <div className="mt-8 flex flex-col gap-8 w-full h-fit">
+            <div className="mt-8 flex flex-col gap-8 w-full">
               {/* Text content */}
-              <div className="w-full px-4 h-fit">
+              <div className="w-full px-4">
                 <div className="space-y-4">
                   <p className="text-xl text-gray-300/90 font-poppins text-center uppercase">
-                    From coatings and textiles to <br />
-                    food packaging and electronics
+                    From coatings and textiles <br />
+                    to food packaging and electronics
                   </p>
                   <p className="text-base pt-4 leading-relaxed text-gray-500 font-poppins">
                     Due to their unique properties, like heat resistance and
@@ -226,22 +267,20 @@ export function MobileFluorinatedMaterialsSection({
                   </p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </div>
-      <div className="absolute block bottom-0 right-0 w-full h-[300px] bg-gradient-to-t from-black via-black/90 to-transparent"/>
-                      {/* Circles section */}
-                      <div className="w-full absolute bottom-0 left-0 h-fit">
 
-                        <div className="w-full relative -mt-24 sm:translate-y-[300px] h-fit md:hidden">
-                                {/* Circle 1 */}
-                                <div className="w-[250px] h-[250px] sm:w-[550px] sm:h-[550px] mx-auto mb-8 rotate-45">
-                                  <Circle1 />
-                                </div>
-                        </div>
-                      </div>
+      {/* Circles section */}
+      <div className="w-full h-fit relative">
+        <div className="w-full relative sm:translate-y-[300px] md:hidden">
+          {/* Circle 1 */}
+          <div className="w-[250px] h-[250px] sm:w-[550px] sm:h-[550px] mx-auto mb-8 rotate-45">
+            <Circle1 />
+          </div>
+        </div>
+      </div>
       <div className="absolute bottom-0 right-0 w-full h-[100px] bg-gradient-to-t from-black via-black/60 to-transparent"></div>
     </section>
   );

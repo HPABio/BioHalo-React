@@ -9,13 +9,13 @@ import {
 import { MovingAtom } from "@/components/ui/MovingAtom";
 import WaterColorReveal from "@/components/WaterColorReveal";
 import EnzymeImage2 from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import EcoliTripletsPNG from "@/assets/images/BluePrintPNGs/E.coli.png";
 
 import BGFabricTealPink from "@/assets/images/BGImages/BGFabricTealPink_222564810.png";
 import MeshFabric from "@/assets/images/BGImages/Mesh-fabric_1020623350.png";
 import LightBGWithDroplets from "@/assets/images/AdobeStock/AdobeStock_291137317.jpeg";
 
-import BioFMonomer from "@/assets/images/BluePrintSVG/BioF-Monomer.svg";
-import EcoliTripletsSVG from "@/components/ui/EcoliTripletsSVG";
+import BioFMonomer from "@/assets/images/BluePrintSVG/BioF-Monomer.svg";import EcoliTripletsSVG from "@/components/ui/EcoliTripletsSVG";
 import beaker2 from "@/assets/images/BluePrintSVG/beaker-product.svg";
 import BioHaloLogoOnly from "@/assets/BioHaloLogoOnly.svg";
 import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
@@ -41,12 +41,11 @@ export const MobileWhatWeDoSection = ({
   });
 
   return (
-    <section className={`${className} overflow-visible z-20 `}>
+    <section className={`${className} overflow-visible z-20 border-2 border-blue-300/0 mx-auto`}>
       <div className="absolute top-[-10%] left-0 w-full">
         <div
-          className="relative w-full h-full
-          [mask-image:linear-gradient(to_bottom_right,black,black,transparent)]
-        "
+          className="relative w-full h-full border-2 border-blue-300/0
+          [mask-image:linear-gradient(to_bottom_right,black,black,transparent)]"
         >
           <Image
             src={LightBGWithDroplets}
@@ -56,7 +55,7 @@ export const MobileWhatWeDoSection = ({
           />
         </div>
       </div>
-      <div className="max-w-[1280px] mx-auto px-10 border-2 border-red-500/0 ">
+      <div className="max-w-[800px] mx-auto px-10 border-2 border-red-500/0 ">
         {/* Title */}
 
         <MovingAtom
@@ -73,36 +72,15 @@ export const MobileWhatWeDoSection = ({
           className="absolute bg-red-500/0 top-[10%] left-[50%] translate-x-[-1220%] translate-y-[-10%] bg-pinkAccent"
         />
 
-        <div
-          className="absolute hidden lg:block
-        top-10 xl:top-0 left-[45%] w-[45%] xl:w-[55%]  max-w-[900px] translate-x-[12vw] xl:translate-x-[5vw]"
-        >
-          <Image
-            src={enzymeImage}
-            alt="EnzymeImage"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        {/*       <div className="hidden lg:block xl:hidden absolute w-[400px] h-[400px] top-0 right-[5%]  rounded-full 
-      border-2 border-lightGrey"
-      style={{
-        backgroundImage: `url(${DNALogo.src})`,
-        backgroundSize: "contain",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-      /> */}
 
-        <div className="w-full sm:w-full bg-red-500/0 xl:mt-10 relative z-10">
+        <div className="w-full sm:w-full bg-red-500/0  relative z-10">
           <h2
-            className="relative text-center font-black font-poppins text-2xl bg-gradient-to-tl from-tealAccent to-tealAccent/60 bg-clip-text text-transparent 
-          pb-6"
+            className="relative text-center font-black font-poppins text-2xl 
+            bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent 
+            pb-1 leading-tight"
           >
             <span
-              className="font-poppins font-bold flex items-center mb-2 sm:mt-12
-          text-black text-6xl w-full sm:w-[400px] mx-auto"
-            >
-              
+              className="font-poppins font-bold flex items-center mb-2 sm:mt-12 text-black text-6xl w-full sm:w-[400px] mx-auto">
               <Image
                 src={BioHaloLogoOnly}
                 alt="BioHalo Logo"
@@ -113,31 +91,34 @@ export const MobileWhatWeDoSection = ({
             <br />
             offers a sustainable <br />
             alternative to <br/>
-            <span className="uppercase text-wrap box-decoration-clone text-3xl
-            bg-clip-text text-transparent bg-gradient-to-r from-slate-800/80 via-pinkAccent/70 to-slate-800/80 ">
-            forever chemicals
-            </span>
-            
+          </h2>
+          <h2 className="relative text-center font-black font-poppins text-2xl 
+            bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent">
+              <span className="uppercase text-wrap box-decoration-clone text-3xl 
+              bg-clip-text text-transparent bg-gradient-to-r from-slate-800/80 via-pinkAccent/70 to-slate-800/80 ">
+              forever chemicals
+              </span>
           </h2>
         </div>
 
-           <div className="w-full h-auto overflow-hidden px-12 border-2 border-red-500/0 -mt-8 ">  
-                <Image
-                src={EnzymeImage2}
-                alt="EnzymeImage2"
-                className="w-full h-full object-cover scale-[1.1]"
-                />
+           <div className="w-full h-auto overflow-hidden px-12 border-2 border-red-500/0 -mt-12 pb-4">  
+           <Image
+              src={EcoliTripletsPNG}
+              alt="EcoliTripletsPNG"
+              className="w-full h-full object-contain grayscale opacity-20 -rotate-12 brightness-[0.1]"
+            />
                 </div>
 
         {/* Subtitle */}
         <div className="w-full ">
           <h2 className="text-gray-800/60 text-2xl  font-poppins text-center">
-            through our microbial-based biohalogenation platform
+            through our <br/>
+            microbial-based biohalogenation platform
           </h2>
         </div>
 
         {/* Text */}
-        <div className="h-[200px] w-full bg-red-500/0 my-6">
+        <div className="w-full h-full bg-red-500/0 my-6 relative">
           <p className="text-gray-500/80 text-1xl font-poppins text-center  ">
             we can selectively halogenate organic molecules, opening up new
             possibilities for{" "}
@@ -146,6 +127,15 @@ export const MobileWhatWeDoSection = ({
             </span>
             -based chemistry.
           </p>
+          <div className=" w-full h-full border-2 border-blue-300/0">
+            
+            <Image
+                src={EnzymeImage2}
+                alt="EnzymeImage2"
+                className="w-full h-full object-cover"
+                />
+          </div>
+          
         </div>
 
 
@@ -159,10 +149,9 @@ export const MobileWhatWeDoSection = ({
           shouldScale={false}
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
-          color="rgba(195,12,95,0.1)" //pink
-          className="absolute top-[85%] left-[99%] 
-          translate-x-[-50%] translate-y-[-150%] 
-          lg:translate-x-[200%] lg:-translate-y-[50%] opacity-90 z-5"
+          color="rgba(195,12,95,1)" //pink
+          className="absolute top-[105%] left-[99%] 
+          translate-x-[-50%] translate-y-[-150%] opacity-[0.07] z-5"
         />
         <MovingAtom
           width={180}
@@ -174,14 +163,13 @@ export const MobileWhatWeDoSection = ({
           shouldScale={false}
           scaleRange={[0.9, 1.8]}
           scaleDuration={24}
-          color="rgba(18,110,119,0.4)" //teal
-          className="absolute top-[55%] left-[-30%] translate-x-[50%] translate-y-[-80%] 
-          lg:translate-x-[350%] lg:-translate-y-[500%] opacity-90 z-5"
+          color="rgba(18,110,119,1)" //teal
+          className="absolute top-[50%] right-[50%] translate-x-[-20%] translate-y-[-60%] opacity-[0.3] z-5"
         />
 
 
         {/* Text Section */}
-        <div className="bg-black/0 text-gray-800/70 pt-0 mt-32 sm:mt-0 w-full relative ">
+        <div className="bg-black/0 text-gray-800/70 w-full relative border-2 border-blue-300/0">
           {/* Header Section */}
           <div className=" bg-red-500/0 relative">
             {/* Top Text Section */}
@@ -210,7 +198,8 @@ export const MobileWhatWeDoSection = ({
                 Our{" "}
                 <span className="font-bold ">
                   Bio-
-                  <span className="bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent text-4xl">
+                  <span className="bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent 
+                  text-4xl">
                     F
                   </span>
                   -Polymers
@@ -236,9 +225,9 @@ export const MobileWhatWeDoSection = ({
         ></div>
       </div>
 
-      <div className="relative bottom-0 left-0 w-full h-[100px]">
+      <div className="relative bottom-0 left-0 w-full h-[60px]">
       </div>
-      <div className="relative bottom-0 left-0 w-full h-[200px] bg-red-600/0 overflow-visible">
+      <div className="relative bottom-0 left-0 w-[80%] h-[200px] bg-red-600/0 overflow-visible mx-auto pl-12">
         <MovingAtom
           width={80}
           height={80}
@@ -251,7 +240,7 @@ export const MobileWhatWeDoSection = ({
           scaleDuration={4}
           color="rgba(195,12,95,1)" //pink
           className="absolute top-[50%] left-[50%] 
-          translate-x-[-50%] translate-y-[-150%] 
+          translate-x-[-40%] translate-y-[-150%] 
           lg:translate-x-[200%] lg:-translate-y-[50%] opacity-90 z-5"
         />
         <MovingAtom
@@ -268,24 +257,10 @@ export const MobileWhatWeDoSection = ({
           className="absolute top-[10%] left-[50%] translate-x-[50%] translate-y-[-80%] 
           lg:translate-x-[350%] lg:-translate-y-[500%] opacity-90 z-5"
         />
+
         <MovingAtom
           width={50}
           height={50}
-          hoverAmplitude={7}
-          hoverDuration={4}
-          shouldRotate={true}
-          rotationDuration={21}
-          shouldScale={false}
-          scaleRange={[0.9, 1.1]}
-          scaleDuration={4}
-          color="rgba(195,12,95,1)" //pink
-          className="hidden
-          absolute top-[50%] left-[50%] translate-x-[350%] translate-y-[-260%] 
-          lg:translate-x-[950%] lg:-translate-y-[500%] opacity-90 z-5"
-        />
-        <MovingAtom
-          width={40}
-          height={40}
           hoverAmplitude={7}
           hoverDuration={7}
           shouldRotate={true}
@@ -294,24 +269,10 @@ export const MobileWhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(195,12,95,1)" //pink
-          className="absolute top-[20%] left-[50%] translate-x-[100%] translate-y-[60%] 
+          className="absolute top-[20%] left-[50%] translate-x-[160%] translate-y-[20%] 
           lg:translate-x-[100%] lg:-translate-y-[690%] opacity-90 z-5"
         />
-        <MovingAtom
-          width={50}
-          height={50}
-          hoverAmplitude={7}
-          hoverDuration={4}
-          shouldRotate={true}
-          rotationDuration={25}
-          shouldScale={false}
-          scaleRange={[0.9, 1.1]}
-          scaleDuration={4}
-          color="rgba(18,110,119,1)" //teal
-          className="hidden
-          absolute top-[50%] left-[50%] translate-x-[180%] translate-y-[-480%] 
-          lg:translate-x-[650%] lg:-translate-y-[350%] opacity-90 z-5"
-        />
+
         <MovingAtom
           width={50}
           height={50}
@@ -323,7 +284,7 @@ export const MobileWhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(18,110,119,1)" //teal
-          className="absolute top-[51%] left-[55%] translate-x-[-100%] translate-y-[-40%] 
+          className="absolute top-[51%] left-[55%] translate-x-[-10%] translate-y-[-10%] 
           lg:translate-x-[300%] lg:-translate-y-[800%] opacity-90 z-5"
         />
         <div
