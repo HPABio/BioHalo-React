@@ -19,28 +19,10 @@ export function BentoIntro({ className }: { className?: string }) {
       className={`col-span-2 row-span-2 relative overflow-hidden rounded-3xl bg-gradient-to-br from-tealAccent to-mintAccent p-8 text-white ${className}`}
     >
       <div className="w-full h-full relative z-10 flex flex-col font-poppins">
-        <h2 className="text-4xl font-bold mb-4">Adding Fluorine Atoms...</h2>
+        <h2 className="text-4xl font-bold mb-4">Incorporating Fluorine Atoms...</h2>
         
         <motion.div 
           className="flex-1 relative"
-          /* style={{
-            backgroundImage: "none",
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat"
-          }}
-          variants={{
-            hover: {
-              scale: 1.2, 
-              y: -15,
-              rotate: 10,
-              backgroundImage: `url(${BioFMonomerAllPink.src})`,
-              transition: {
-                duration: 0.3,
-                ease: "easeInOut"
-              }
-            }
-          }} */
           transition={{ duration: 0.1 }}
           >
             <motion.div 
@@ -54,7 +36,7 @@ export function BentoIntro({ className }: { className?: string }) {
                       width: ["100%", "70%", "0%", "0%"],
                       scale: [1, 0.5],
                       x: [0, 100, 100],
-                      transition: { duration: 0.3, ease: "easeInOut" }
+                      transition: { duration: 0.2, ease: "easeInOut" }
                      }
                   }}
                 >
@@ -69,7 +51,7 @@ export function BentoIntro({ className }: { className?: string }) {
                               <span className="text-5xl font-bold">F</span>
                               <span className="text-sm mt-1 font-bold">Fluorine</span>
                               <span className="absolute top-1 left-1 text-xs font-bold">9</span>
-                              <span className="text-xs mt-1 font-regular">18.99</span>
+                              <span className="text-xs mt-1 font-medium">18.99</span>
                             </div>
                             <AtomDiagram
                               width={"60%"}
@@ -97,7 +79,7 @@ export function BentoIntro({ className }: { className?: string }) {
                 </motion.div>
 
                 <motion.div 
-                  className="flex w-full h-full bg-blue-400/0 relative items-center justify-center aspect-video xl:aspect-auto"
+                  className="flex w-full bg-blue-400/0 relative items-center justify-center aspect-video mx-auto"
                   variants={{
                     hover: { 
                       scale: 1.1,
@@ -151,10 +133,13 @@ export function BentoIntro({ className }: { className?: string }) {
 
 
         <p className="text-lg opacity-90 mt-4">
-          into the molecular structure of certain polymers transforms them into a class of 
-          <span className='font-bold'> high-performance materials </span>{" "}
-          with advanced properties known as <span className="font-bold">PFAS</span> (Per- and Polyfluoroalkyl Substances).
+          ...into the molecular structure of certain polymers, enhances their properties and transforms them into a class of 
+          <span className='font-bold'> high-performance materials with advanced properties. </span>{" "}
         </p>
+        <p className="text-3xl font-medium opacity-90 mt-4">
+          Including:
+        </p>
+          {/*  known. as <span className="font-bold">PFAS</span> (Per- and Polyfluoroalkyl Substances). */}
       </div>
 
       <motion.div 

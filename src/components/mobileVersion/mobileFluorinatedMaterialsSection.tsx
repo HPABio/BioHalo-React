@@ -26,22 +26,44 @@ import IconToxicSkull from "@/assets/images/VariousImages/iconToxicSkull.png";
 import MeshFabric from "@/assets/images/Mesh-fabric.png";
 
 //LummiAi
+import ElegantBottleDesignLummiAi from "@/assets/images/LummiAi/ElegantBottleDesign.jpeg";
+import FuturisticMetallicObjectLummiAi from "@/assets/images/LummiAi/FuturisticMetallicObject.jpeg";
+import FuturisticMetallicObject2LummiAi from "@/assets/images/LummiAi/FuturisticMetallicObject2.jpeg";
+import FuturisticRocketEngineLummiAi from "@/assets/images/LummiAi/FuturisticRocketEngine.jpeg";
+import IndustrialMachineCloseUpLummiAi from "@/assets/images/LummiAi/IndustrialMachineClose-Up.jpeg";
+import JetEngineCloseUpLummiAi from "@/assets/images/LummiAi/JetEngineClose-Up.jpeg";
+import JetEngineTurbineCloseUpLummiAi from "@/assets/images/LummiAi/JetEngineTurbineClose-Up.jpeg";
+import LuxuriousSkincareDisplayLummiAi from "@/assets/images/LummiAi/LuxuriousSkincareDisplay.jpeg";
+import LuxurySkincareDisplayLummiAi from "@/assets/images/LummiAi/LuxurySkincareDisplay.jpeg";
+import MatteBlackBottleLummiAi from "@/assets/images/LummiAi/MatteBlackBottle.jpeg";
+import ModernMetallicDesignLummiAi from "@/assets/images/LummiAi/ModernMetallicDesign.jpeg";
+import SleekMetallicObjectLummiAi from "@/assets/images/LummiAi/SleekMetallicObject.jpeg";
+import SolitudeInTheRainLummiAi from "@/assets/images/LummiAi/SolitudeInTheRain.jpeg";
 
-import ElegantBottleDesignLummiAi from "@/assets/images/LummiAi/Elegant Bottle Design.jpeg";
-import FuturisticRocketEngineLummiAi from "@/assets/images/LummiAi/Futuristic Rocket Engine.jpeg";
-import IndustrialMachineCloseUpLummiAi from "@/assets/images/LummiAi/Industrial Machine Close-Up.jpeg";
-import JetEngineCloseUpLummiAi from "@/assets/images/LummiAi/Jet Engine Close-Up.jpeg";
-import JetEngineTurbineCloseUpLummiAi from "@/assets/images/LummiAi/Jet Engine Turbine Close-Up.jpeg";
-import LuxuriousSkincareDisplayLummiAi from "@/assets/images/LummiAi/Luxurious Skincare Display.jpeg";
-import LuxurySkincareDisplayLummiAi from "@/assets/images/LummiAi/Luxury Skincare Display.jpeg";
-import SolitudeInTheRainLummiAi from "@/assets/images/LummiAi/Solitude in the Rain.jpeg";
-
+//Unsplash
+import TeflonMaterialUnsplash from "@/assets/images/VariousImages/TeflonMaterialUnsplash.jpg";
+import TeflonMaterialUnsplash2 from "@/assets/images/VariousImages/TeflonMaterialUnsplash2.jpg";
+import TeflonMaterialUnsplash3 from "@/assets/images/VariousImages/TeflonMaterialUnsplash3.jpg";
+import tightMeshThickFabric from "@/assets/images/VariousImages/tightMeshThickFabric.jpg";
 
 import LummiCPU from "@/assets/images/VariousImages/LummiCPU.png";
 import LummiCPU2 from "@/assets/images/VariousImages/LummiCPU2.png";
 import UnsplashCPU from "@/assets/images/VariousImages/UnsplashCPU.png";
 import AdobeStockCPU from "@/assets/images/AdobeStock/AdobeStock_1514887767_Preview_CPU.jpeg";
 import { url } from "inspector";
+import { Rocket } from "lucide-react";
+import { borderBottomLeftRadius } from "html2canvas/dist/types/css/property-descriptors/border-radius";
+
+// Function to generate random brightness values
+const generateBrightnessValues = (count: number, min: number, max: number) => {
+  min = min || 0.7;
+  max = max || 1.3;
+  count = count || 10;
+  return Array.from({ length: count }, () => {
+    const brightness = min + Math.random() * (max - min); // Random value between 0.9 and 1.3
+    return `blur(0px) brightness(${brightness.toFixed(2)})`;
+  });
+};
 
 interface FluorinatedMaterialsSectionProps {
   stats: any[];
@@ -106,117 +128,76 @@ export function MobileFluorinatedMaterialsSection({
   debug = false,
 }: FluorinatedMaterialsSectionProps) {
   const ref2 = useRef(null);
+  const refCPUText = useRef(null);
+  const refTurbine = useRef(null);
+  const refBottle = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref2,
     offset: ["center end", "center start"],
   });
-
+  const { scrollYProgress: scrollYProgressBottle } = useScroll({
+    target: refBottle,
+    offset: ["start end", "center start"],
+  });
   const shouldRasterize = false;
   const saveToAssets = false;
   if (debug) console.log("Rendering FluorinatedMaterialsSection");
 
   return (
     <section
-      className={`${className} w-full h-full relative bg-gradient-to-b from-black via-black to-slate-900`}
+      className={`${className} w-full h-full  relative bg-gradient-to-b from-black via-black to-slate-900`}
     >
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
 
-      <div className="w-full h-fit relative bg-gradient-to-b from-black via-black to-transparent">
-        <div className="w-full h-fit relative overflow-hidden bg-gradient-to-b from-black via-black to-transparent">
+      <div className="w-full max-w-[580px] mx-auto h-fit relative bg-gradient-to-b from-black via-black to-transparent border-2 border-purple-500/0">
+        <div
+          className="w-full h-fit relative overflow-hidden 
+        bg-gradient-to-b from-black via-black to-transparent"
+        >
           <div className="relative w-full h-full max-w-[1280px] flex flex-col mx-auto px-6">
             {/* TEXT COLUMN */}
             <div className="w-full flex flex-col items-center">
-              <h1 className="w-full text-center font-black font-poppins text-3xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
-                <span className="text-8xl bg-gradient-to-r from-pink-950 via-pinkAccent to-pink-950 bg-clip-text text-transparent">
+              <h1 className="w-full text-center font-black font-poppins bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10 groupleading-none">
+                <span className="text-2xl text-gray-500 font-medium capitalize leading-none">
+                  Perfluoroalkyl and <br className="block md:hidden" />{" "}
+                  polyfluoroalkyl substances
+                  <br />
+                </span>
+                <span className="text-xl text-gray-500 font-poppins font-light leading-snug">
+                  also known as
+                  <br />
+                </span>
+                <span className="text-8xl bg-gradient-to-r from-pink-950 via-pinkAccent to-pink-950 bg-clip-text text-transparent leading-tight">
                   PFAS{" "}
                 </span>
                 <br />
-                <span className="text-2xl text-gray-500 font-bold">
-                  also known as
-                  <br />"
-                </span>
-                <span className="bg-gradient-to-r from-pink-950 via-pinkAccent to-pink-950 bg-clip-text text-transparent box-decoration-clone">
-                  Forever Chemicals
-                </span>
-                "
-                <br />
-                <span className="text-xl text-gray-500 font-bold">
+                <span className="text-xl text-gray-500 font-poppins font-light leading-none">
                   {" "}
-                  are fluorinated materials that can be found everywhere
+                  play a crucial role in virtually every major sector of our
+                  modern economy. They are used in...
                 </span>
               </h1>
             </div>
 
-
-
-            <div className="w-full h-fit min-h-[100px] flex flex-col items-center justify-center gap-4">
-            <div className="w-full relative">
-                <div 
-                  className="w-[86%] aspect-square rounded-full overflow-visible relative left-0 "
-                  style={{
-                    background: `url(${LuxuriousSkincareDisplayLummiAi.src})`,
-                    backgroundSize: "contain",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
+            {/* Vertical Bento Layout */}
+            <div className="w-full flex flex-col gap-8 py-8">
+              {/* First Bento Box - CPU Section */}
+              <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
+                <motion.div
+                  initial={{
+                    filter: "blur(0px) brightness(1)",
                   }}
-                >
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background: "radial-gradient(circle, transparent 0%, transparent 40%, black 65%, black 100%)",
-                    }}
-                  />
-                </div>
-                <div className="w-fit h-fit flex items-center justify-center absolute bottom-0 right-0">
-                  <p className="text-sm text-slate-300/50 font-black font-poppins" style={{ lineHeight: "1.3" }}>
-                    from <br />
-                    <span className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60" style={{ lineHeight: ".3" }}>
-                      Protective<br />
-                    </span>
-                    <span className="text-xl text-tealAccent uppercase font-semibold font-poppins" style={{ lineHeight: ".1" }}>
-                      Coatings
-                    </span>
-                  </p>
-                </div>
-              </div>
-
-              
-              <div className="w-full h-fit relative">
-                <div 
-                  className="w-[85%] aspect-square rounded-full overflow-visible relative left-0"
+                  whileInView={{
+                    filter: generateBrightnessValues(10, 0.8, 1.3),
+                    transition: {
+                      duration: 4,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                    },
+                  }}
+                  className="w-full h-full relative"
                   style={{
                     background: `url(${AdobeStockCPU.src})`,
-                    backgroundSize: "88%",
-                    backgroundPosition: "40% 50%",
-                    backgroundRepeat: "no-repeat",
-                  }}
-                >
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background: "radial-gradient(circle, transparent 0%, transparent 40%, black 65%, black 100%)",
-                    }}
-                  />
-                </div>
-                <div className="w-fit h-fit flex items-center justify-center absolute bottom-0 right-0">
-                  <p className="text-sm text-slate-300/50 font-black font-poppins" style={{ lineHeight: "1.3" }}>
-                    from <br />
-                    <span className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60" style={{ lineHeight: ".3" }}>
-                      Protective<br />
-                    </span>
-                    <span className="text-xl text-tealAccent uppercase font-semibold font-poppins" style={{ lineHeight: ".1" }}>
-                      Coatings
-                    </span>
-                  </p>
-                </div>
-              </div>
-
-             
-              <div className="w-full h-fit relative">
-                <div 
-                  className="w-full aspect-square rounded-full overflow-visible relative"
-                  style={{
-                    background: `url(https://plus.unsplash.com/premium_photo-1683120972279-87efe2ba252f?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -225,25 +206,196 @@ export function MobileFluorinatedMaterialsSection({
                   <div
                     className="absolute inset-0"
                     style={{
-                      background: "radial-gradient(circle, transparent 0%, transparent 40%, black 65%, black 100%)",
+                      background:
+                        "radial-gradient(circle, transparent 0%, transparent 40%, black 65%, black 100%)",
                     }}
                   />
-                </div>
-                <div className="w-fit h-fit flex items-center justify-center absolute bottom-0 right-0">
-                  <p className="text-sm text-slate-300/50 font-black font-poppins" style={{ lineHeight: "1.3" }}>
-                    from <br />
-                    <span className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60" style={{ lineHeight: ".3" }}>
-                      Protective<br />
-                    </span>
-                    <span className="text-xl text-tealAccent uppercase font-semibold font-poppins" style={{ lineHeight: ".1" }}>
-                      Coatings
-                    </span>
-                  </p>
-                </div>
+                  <motion.div
+                    ref={refCPUText}
+                    initial={{ filter: "brightness(1)" }}
+                    style={{
+                      filter: useTransform(
+                        useScroll({
+                          target: refCPUText,
+                          offset: ["start end", "start start"],
+                        }).scrollYProgress,
+                        [0, 0.4, 0.5, 1],
+                        [
+                          "brightness(1)",
+                          "brightness(3)",
+                          "brightness(2)",
+                          "brightness(1)",
+                        ]
+                      ),
+                    }}
+                    className="absolute bottom-8 right-8"
+                  >
+                    <p className="text-sm text-slate-300/50 font-medium font-poppins leading-none">
+                      <span className="text-3xl text-tealAccent uppercase font-semibold font-poppins leading-none">
+                        electronics
+                        <br />
+                      </span>
+                      production of
+                      <br />
+                      <span className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60 leading-none">
+                        semiconductors &
+                      </span>
+                    </p>
+                  </motion.div>
+                </motion.div>
+              </div>
+
+              {/* Second Bento Box - Aerospace Section */}
+              <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
+                <motion.div
+                  ref={refTurbine}
+                  initial={{ filter: "brightness(1) saturate(0.7)" }}
+                  style={{
+                    background: `url(${JetEngineCloseUpLummiAi.src})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    filter: useTransform(
+                      useScroll({
+                        target: refTurbine,
+                        offset: ["start end", "center start"],
+                      }).scrollYProgress,
+                      [0, 0.3, 0.5, 1],
+                      [
+                        "brightness(1) saturate(0.7)",
+                        "brightness(2) saturate(1.2)",
+                        "brightness(3) saturate(1)",
+                        "brightness(0.8) saturate(0.7)",
+                      ]
+                    ),
+                  }}
+                  className="w-full h-full relative"
+                >
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background:
+                        "radial-gradient(circle, transparent 0%, transparent 40%, black 65%, black 100%)",
+                    }}
+                  />
+                  <motion.div
+                    ref={refTurbine}
+                    initial={{ filter: "brightness(1)" }}
+                    style={{
+                      filter: useTransform(
+                        useScroll({
+                          target: refTurbine,
+                          offset: ["start end", "start start"],
+                        }).scrollYProgress,
+                        [0, 0.2, 0.4, 1],
+                        [
+                          "brightness(1)",
+                          "brightness(1.5)",
+                          "brightness(2.5)",
+                          "brightness(1)",
+                        ]
+                      ),
+                    }}
+                    className="absolute bottom-8 left-8"
+                  >
+                    <p className="text-sm text-slate-300/50 font-black font-poppins text-right">
+                      <span
+                        className="text-xl text-tealAccent uppercase font-semibold font-poppins"
+                        style={{ lineHeight: ".1" }}
+                      >
+                        components
+                      </span>
+                      <br />
+                      improving
+                      <br />
+                      <span
+                        className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60"
+                        style={{ lineHeight: ".3" }}
+                      >
+                        aerospace
+                      </span>
+                    </p>
+                  </motion.div>
+                </motion.div>
+              </div>
+
+              {/* Third Bento Box - Coating Section */}
+              <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
+                <motion.div
+                  ref={refBottle}
+                  className="w-full h-full relative"
+                  initial={{
+                    rotate: -30,
+                    scale: 0.7,
+                    opacity: 0,
+                    backgroundSize: "70%",
+                    filter: "blur(0px) brightness(1)",
+                  }}
+                  style={{
+                    background: `url(${MatteBlackBottleLummiAi.src})`,
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    rotate: useTransform(
+                      scrollYProgressBottle,
+                      [0, 0.6],
+                      [-30, 0]
+                    ),
+                    scale: useTransform(
+                      scrollYProgressBottle,
+                      [0, 0.4, 0.9, 1],
+                      [0.7, 1.1, 1.1, 0.9]
+                    ),
+                    backgroundSize: useTransform(
+                      scrollYProgressBottle,
+                      [0, 0.5],
+                      ["80%", "100%"]
+                    ),
+                    opacity: useTransform(
+                      scrollYProgressBottle,
+                      [0, 0.5, 0.9, 1],
+                      [0, 1, 1, 0.1]
+                    ),
+                    filter: useTransform(
+                      scrollYProgressBottle,
+                      [0, 0.3, 0.9, 1],
+                      [
+                        "blur(2px) brightness(0.9)",
+                        "blur(0px) brightness(2)",
+                        "blur(0px) brightness(1.2)",
+                        "blur(2px) brightness(0.3)",
+                      ]
+                    ),
+                  }}
+                >
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background:
+                        "radial-gradient(circle, transparent 0%, transparent 40%, black 75%, black 100%)",
+                    }}
+                  />
+                  <div className="absolute bottom-8 left-8">
+                    <p className="text-sm text-slate-300/50 font-black font-poppins text-right">
+                      sealing and coating
+                      <br />
+                      <span
+                        className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60"
+                        style={{ lineHeight: ".3" }}
+                      >
+                        surfaces and materials
+                        <br />
+                      </span>
+                      <span
+                        className="text-xl text-tealAccent uppercase font-semibold font-poppins"
+                        style={{ lineHeight: ".1" }}
+                      >
+                        sealing and coating
+                      </span>
+                    </p>
+                  </div>
+                </motion.div>
               </div>
             </div>
-
-
 
             {/* Content container */}
             <div className="mt-8 flex flex-col gap-8 w-full">

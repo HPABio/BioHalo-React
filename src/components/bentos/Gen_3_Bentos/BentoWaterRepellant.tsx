@@ -16,6 +16,8 @@ export function BentoWaterRepellant({ className }: { className?: string }) {
       variants={{ 
         hover: {
           border: "none",
+          boxShadow: "2px 10px 15px 0px rgba(0, 0, 0, 0.2)",
+          transition: { duration: 0.2, ease: "easeInOut" },
         }
       }}
       className={`col-span-1 row-span-1 relative overflow-hidden rounded-3xl bg-gradient-to-br from-mintAccent/20 to-mintAccent/5 p-6 ${className}`}
@@ -86,7 +88,7 @@ export function BentoWaterRepellant({ className }: { className?: string }) {
                 opacity: 0.8,
               }
             }}>
-              <motion.p> <span className="text-xs opacity-50 uppercase font-regular">to for example</span> </motion.p>
+              <motion.p> <span className="text-xs opacity-50 uppercase font-medium">to for example</span> </motion.p>
               <h2 className="relative">Water
               <motion.span 
                 className="absolute top-0 left-0 bg-gradient-to-t from-blue-600 via-sky-500 to-cyan-300 bg-clip-text text-transparent"

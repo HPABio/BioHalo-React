@@ -23,6 +23,8 @@ export function BentoStats({ className }: { className?: string }) {
           variants={{
             hover: {
               display: "block",
+              boxShadow: "2px 10px 15px 0px rgba(0, 0, 0, 0.2)",
+              transition: { duration: 0.2, ease: "easeInOut" }, 
             },
           }}
         >

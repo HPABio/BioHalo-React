@@ -333,10 +333,10 @@ export default function Landing4() {
         {/* Background image of enzyme */}
         <div className="relative w-screen h-[60vh] 2xl:h-[80vh] flex flex-col items-center justify-center">
                 {/* Fluorine Element / Periodic Table */}
-                <div className="relative aspect-square w-32 border-4 border-pinkAccent/10 rounded-lg flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm">
+                <div className="relative aspect-square w-32 border-[6px] border-pinkAccent/15 rounded-lg flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm">
                   <span className="text-[min(7vw,3rem)] font-bold">F</span>
-                  <span className="text-[min(3.5vw,0.875rem)] -mt-3">Fluorine</span>
-                  <span className="absolute top-1 left-1 text-[min(4vw,0.75rem)] font-bold">9</span>
+                  <span className="text-[min(3.5vw,0.875rem)] font-semibold -mt-3">Fluorine</span>
+                  <span className="absolute top-1 left-2 text-[min(6vw,0.75rem)] font-bold">9</span>
                   <span className="text-[min(2.5vw,0.75rem)] mt-1">18.99</span>
                 </div>
                 {/* Subtitle */}

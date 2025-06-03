@@ -27,6 +27,7 @@ import  MobileIconCarousel  from "@/components/mobileVersion/mobileIconCarousel"
 import  MobileNetworkDiagram  from "@/components/mobileVersion/mobileNetworkDiagram";
 import  MobileNetworkDiagramWithNodes  from "@/components/mobileVersion/mobileNetworkDiagramWithNodes";
 import { MobileFluorinatedMaterialsSection } from "@/components/mobileVersion/mobileFluorinatedMaterialsSection";
+import { MobileFluorinatedMaterialsSectionV2 } from "@/components/mobileVersion/mobileFluorinatedMaterialsSectionV2";
 import { MobilePlatformTechnologySection } from "@/components/mobileVersion/mobilePlatformTechnologySection";
 import { MobileWhatWeDoSection } from "@/components/mobileVersion/mobileWhatWeDoSection";
 
@@ -38,6 +39,21 @@ import { TransitionSectionFour } from "@/components/sections2/BioHaloSections/Tr
 // UI Components
 import IconCarousel from "@/components/ui/IconCarousel";
 import { SimpleStatsBox } from "@/components/ui/StatsBox";
+
+// Bento Components
+import { BentoIntro } from "@/components/bentos/Gen_3_Bentos/BentoIntro";
+import { BentoContact } from "@/components/bentos/Gen_3_Bentos/BentoContact";
+import { BentoDurability } from "@/components/bentos/Gen_3_Bentos/BentoDurability";
+import { BentoHeatResistant } from "@/components/bentos/Gen_3_Bentos/BentoHeatResistant";
+import { BentoLongLasting } from "@/components/bentos/Gen_3_Bentos/BentoLongLasting";
+import { BentoPeriodicTable } from "@/components/bentos/Gen_3_Bentos/BentoPeriodicTable";
+import { BentoProcess } from "@/components/bentos/Gen_3_Bentos/BentoProcess";
+import { BentoStats } from "@/components/bentos/Gen_3_Bentos/BentoStats";
+import { BentoTeam } from "@/components/bentos/Gen_3_Bentos/BentoTeam";
+import { BentoVideo } from "@/components/bentos/Gen_3_Bentos/BentoVideo";
+import { BentoWaterRepellant } from "@/components/bentos/Gen_3_Bentos/BentoWaterRepellant";
+import { BentoSectionGen3 } from "@/components/sections2/BentoSectionGen3";
+import { BentoVerticalDouble } from "@/components/bentos/Gen_3_Bentos/BentoVerticalDouble ";
 
 // Images
 import BioHaloBG from "@/assets/images/BioHalo-background-compressed.jpeg";
@@ -95,8 +111,10 @@ import RBlackLiquid from "@/assets/images/Lettering/BlackLiquid/R.png";
 import SBlackLiquid from "@/assets/images/Lettering/BlackLiquid/S.png";
 import S2BlackLiquid from "@/assets/images/Lettering/BlackLiquid/S2.png";
 import VBlackLiquid from "@/assets/images/Lettering/BlackLiquid/V.png";
-import { BentoSectionGen3 } from "@/components/sections2/BentoSectionGen3";
+
 import ColorfulGradientRainbowTexture from "@/assets/images/BGImagesTest/ColorfulGradientRainbowTexture.jpeg";
+
+
 
 // Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
@@ -312,15 +330,15 @@ export default function AlternativeLayout() {
       <HeroSection4 className=" md:hidden block w-screen h-screen relative overflow-hidden" />
       <HeroSection5 className=" hidden md:block w-screen h-screen relative overflow-hidden" />
 
-      {/* Transition Section One */}
-      <section className="border-2 border-blue-300" id="transition-section-one">
+      {/* Transition Section One / Hook */}
+      <section className="relative w-screen h-[90vh] border-2 border-blue-300/0" id="transition-section-one">
         {/* Intro Fluorinated Materials */}
-        <div className="relative w-screen h-[60vh] 2xl:h-[80vh] flex flex-col items-center justify-center">
+        <div className=" w-full h-full flex flex-col items-center justify-center -mt-36">
                 {/* Fluorine Element / Periodic Table */}
-                <div className="relative aspect-square w-32 border-4 border-pinkAccent/10 rounded-lg flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm">
+                <div className="relative aspect-square w-32 border-[6px] border-pinkAccent/15 rounded-lg flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm">
                   <span className="text-[min(7vw,3rem)] font-bold">F</span>
-                  <span className="text-[min(3.5vw,0.875rem)] -mt-3">Fluorine</span>
-                  <span className="absolute top-1 left-1 text-[min(4vw,0.75rem)] font-bold">9</span>
+                  <span className="text-[min(3.5vw,0.875rem)] font-medium -mt-3">Fluorine</span>
+                  <span className="absolute top-2 left-2 text-[min(4vw,0.75rem)] font-bold">9</span>
                   <span className="text-[min(2.5vw,0.75rem)] mt-1">18.99</span>
                 </div>
                 {/* Subtitle */}
@@ -370,8 +388,32 @@ export default function AlternativeLayout() {
         </div>
         </section>   
 
+      
+      {/* Infos about PFAS / Bento Section */}
+      <section className="relative w-screen border-2 border-blue-300/0
+      p-24" id="alt-bento-section">
+        {/* Content Container */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[minmax(180px,auto)]  bg-green-300/0 max-w-[80vw] lg:max-w-[80vw] 2xl:max-w-[1100px] mx-auto">
+          <BentoContact className="w-full hidden" />
+          <BentoStats className="w-full " />
+          <BentoIntro className="w-full " />
+          <BentoHeatResistant className="w-full border-2 border-lightGrey" />
+
+          <BentoDurability className="w-full border-2 border-lightGrey" />
+          <BentoWaterRepellant className="w-full border-2 border-lightGrey" />
+          <BentoLongLasting className="w-full border-2 border-lightGrey" />
+          
+          <BentoPeriodicTable className="w-full hidden" />
+          <BentoVerticalDouble className="w-full hidden" />
+        </div>
+      </section>   
+
         <MobileFluorinatedMaterialsSection
-          className="relative w-full h-full overflow-hidden z-20 -mt-4"
+          className="relative w-full h-full overflow-hidden z-20 pt-20"
+          stats={stats}
+        />
+        <MobileFluorinatedMaterialsSectionV2
+          className="relative w-full h-full overflow-hidden z-20 pt-20"
           stats={stats}
         />
 
@@ -382,7 +424,7 @@ export default function AlternativeLayout() {
 
         {/* Forever Chemicals Section */}
         <section className="relative w-full min-h-screen max-w-[1450px] mx-auto 
-        px-4 md:px-24 pt-44 flex flex-col items-center justify-center border-2 border-red-300">
+        px-4 md:px-24 pt-44 flex flex-col items-center justify-center border-2 border-red-300/0">
           {/* Floating Info Circle  */}
       <div className="w-full h-full">
         <div className="w-full h-full inset-0 relative bg-yellow-500/0">

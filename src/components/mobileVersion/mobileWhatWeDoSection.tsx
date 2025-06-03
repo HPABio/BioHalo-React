@@ -34,9 +34,9 @@ export const MobileWhatWeDoSection = ({
 }: MobileWhatWeDoSectionProps) => {
   if (debug) console.log("Rendering MobileWhatWeDoSection");
 
-  const refWWD = useRef(null);
+  const refmWWD = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: refWWD,
+    target: refmWWD,
     offset: ["center end", "start start"],
   });
 

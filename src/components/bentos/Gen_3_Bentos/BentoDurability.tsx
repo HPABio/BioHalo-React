@@ -16,6 +16,8 @@ export function BentoDurability({ className }: { className?: string }) {
       variants={{ 
         hover: {
           border: "none",
+          boxShadow: "2px 10px 15px 0px rgba(0, 0, 0, 0.2)",
+          transition: { duration: 0.2, ease: "easeInOut" },
         }
       }}
     >
@@ -63,7 +65,7 @@ export function BentoDurability({ className }: { className?: string }) {
               color: "rgb(159, 121, 37)",
               scale: 1.2,
               rotate: 20,
-              borderColor: "rgba(149,15,22,0.6)",
+              borderColor: "rgba(153,130,38,0.9)",
               backgroundColor: "rgba(228, 220, 214, 0.85)",
             },
           }}
@@ -72,19 +74,17 @@ export function BentoDurability({ className }: { className?: string }) {
             <ShieldCheck className="w-6 h-6" />
           </motion.div>
         </motion.div>
-            <motion.div className="text-6xl font-bold text-tealAccent relative"
+            <motion.div className="text-6xl font-bold text-tealAccent relative leading-none"
             initial={{ color: "rgba(34,85,102,1)" }}
             variants={{
               hover: {
                 color: "rgba(253,230,138,0.9)",
               }
             }}>
-              <motion.p> <span className="text-xs opacity-50 uppercase font-regular">resistnat to</span> </motion.p>
-              <motion.h2 className="relative text-4xl"
-              >
-                
+              <motion.p> <span className="text-xs opacity-50 uppercase font-medium leading-none">resistnat to</span> </motion.p>
+              <motion.h2 className="relative text-6xl leading-none">
               <motion.span 
-                className="relative"
+                className="relative text-5xl leading-none"
                 initial={{ opacity: 1 }}
                 variants={{
                   hover: { opacity: 0 }
@@ -94,7 +94,7 @@ export function BentoDurability({ className }: { className?: string }) {
                 Wear&Tear
               </motion.span>
               <motion.span 
-                className="absolute top-0 left-0 bg-gradient-to-t from-stone-800 via-stone-600 to-amber-200 bg-clip-text text-transparent"
+                className="absolute text-5xl leading-none top-0 left-0 bg-gradient-to-t from-stone-800 via-stone-600 to-amber-200 bg-clip-text text-transparent"
                 initial={{ opacity: 0 }}
                 variants={{
                   hover: { opacity: 1 }
