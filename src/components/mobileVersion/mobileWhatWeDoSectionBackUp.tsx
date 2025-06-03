@@ -76,14 +76,11 @@ export const MobileWhatWeDoSection = ({
         <div className="w-full sm:w-full bg-red-500/0  relative z-10">
           <h2
             className="relative text-center font-black font-poppins text-2xl 
-            sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl
             bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent 
             pb-1 leading-tight"
           >
             <span
-              className="font-poppins font-bold flex items-center mb-2 
-              sm:mt-12 text-black text-6xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl w-full 
-              sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] 2xl:w-[1400px] mx-auto">
+              className="font-poppins font-bold flex items-center mb-2 sm:mt-12 text-black text-6xl w-full sm:w-[400px] mx-auto">
               <Image
                 src={BioHaloLogoOnly}
                 alt="BioHalo Logo"
@@ -104,27 +101,25 @@ export const MobileWhatWeDoSection = ({
           </h2>
         </div>
 
-           <div className="w-full h-auto overflow-hidden px-12 border-2 border-red-500/0 -mt-12 sm:-mt-28  pb-4">  
+           <div className="w-full h-auto overflow-hidden px-12 border-2 border-red-500/0 -mt-12 pb-4">  
            <Image
               src={EcoliTripletsPNG}
               alt="EcoliTripletsPNG"
-              className="w-full h-full object-contain grayscale opacity-40 sm:opacity-20 0 -rotate-12 brightness-[0.1]"
+              className="w-full h-full object-contain grayscale opacity-20 -rotate-12 brightness-[0.1]"
             />
                 </div>
 
         {/* Subtitle */}
         <div className="w-full ">
-          <h2 className="text-gray-800/60 text-2xl  font-poppins text-center sm:leading-tight ">
+          <h2 className="text-gray-800/60 text-2xl  font-poppins text-center">
             through our <br/>
-            microbial-based 
-            <br/>
-            biohalogenation platform
+            microbial-based biohalogenation platform
           </h2>
         </div>
 
         {/* Text */}
-        <div className="w-full h-full bg-red-500/0 mt-6 relative">
-          <p className="text-gray-500/80 text-1xl font-poppins text-center">
+        <div className="w-full h-full bg-red-500/0 my-6 relative">
+          <p className="text-gray-500/80 text-1xl font-poppins text-center  ">
             we can selectively halogenate organic molecules, opening up new
             possibilities for{" "}
             <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent">
@@ -132,34 +127,23 @@ export const MobileWhatWeDoSection = ({
             </span>
             -based chemistry.
           </p>
-          <div className="w-full h-full border-2 border-blue-300/0 relative mt-12">
-            <MovingAtom
-              width={80}
-              height={80}
-              hoverAmplitude={4}
-              hoverDuration={4}
-              shouldRotate={false}
-              rotationDuration={20}
-              shouldScale={false}
-              scaleRange={[0.9, 1.8]}
-              scaleDuration={24}
-              color="rgba(18,110,119,1)" //teal
-              className="absolute top-[-0%] left-[50%] translate-x-[-50%] translate-y-[0%] opacity-[0.3] rotate-[19deg]"
-            />
+          <div className=" w-full h-full border-2 border-blue-300/0">
+            
             <Image
-              src={EnzymeImage2}
-              alt="EnzymeImage2"
-              className="w-full h-full object-cover relative z-10"
-            />
+                src={EnzymeImage2}
+                alt="EnzymeImage2"
+                className="w-full h-full object-cover"
+                />
           </div>
+          
         </div>
 
 
         <MovingAtom
           width={580}
           height={580}
-          hoverAmplitude={4}
-          hoverDuration={4}
+          hoverAmplitude={7}
+          hoverDuration={7}
           shouldRotate={false}
           rotationDuration={5}
           shouldScale={false}
@@ -170,29 +154,27 @@ export const MobileWhatWeDoSection = ({
           translate-x-[-50%] translate-y-[-150%] opacity-[0.07] z-5"
         />
         <MovingAtom
-          width={100}
-          height={100}
+          width={180}
+          height={180}
           hoverAmplitude={7}
-          hoverDuration={16}
+          hoverDuration={11}
           shouldRotate={false}
           rotationDuration={20}
           shouldScale={false}
           scaleRange={[0.9, 1.8]}
           scaleDuration={24}
           color="rgba(18,110,119,1)" //teal
-          className="absolute top-[50%] right-[50%] 
-          translate-x-[-80%] translate-y-[280%] opacity-[0.3] z-5
-          sm:translate-x-[-165%] sm:translate-y-[250%]"
+          className="absolute top-[50%] right-[50%] translate-x-[-20%] translate-y-[-60%] opacity-[0.3] z-5"
         />
 
 
         {/* Text Section */}
-        <div className="bg-black/0 text-gray-800/70 w-full relative border-2 border-blue-300/0 -mt-6">
+        <div className="bg-black/0 text-gray-800/70 w-full relative border-2 border-blue-300/0">
           {/* Header Section */}
           <div className=" bg-red-500/0 relative">
             {/* Top Text Section */}
             <div className="space-y-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-2 capitalize opacity-1 text-center pb-10
+              <h1 className="text-3xl font-bold mb-2 capitalize opacity-1 text-center pb-10
                 bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent">
                 <span className="text-2xl">
                   We explore, design,
@@ -203,10 +185,10 @@ export const MobileWhatWeDoSection = ({
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
-                  uppercase drop-shadow-sm font-black font-Poppins sm:text-5xl">
+                  uppercase drop-shadow-sm font-black font-Poppins">
                   new-to-market{" "}
                 </span>
-                <br className="hidden sm:block xl:hidden" />
+                <br className="hidden lg:block xl:hidden" />
                 <span className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
                   uppercase drop-shadow-sm font-black font-Poppins">
                 </span>
@@ -222,11 +204,11 @@ export const MobileWhatWeDoSection = ({
                   </span>
                   -Polymers
                 </span>{" "}
-                do <br/>not compromise performance
+                do not compromise performance
                 <br />
                 while also being safe and sustainable
               </p>
-              <p className="text-lg max-w-md pt-8 leading-relaxed sm:mx-auto sm:text-center">
+              <p className="text-lg max-w-md pt-4 leading-relaxed">
                 BioHalos revolutionary enzyme-based biohalogenation platform
                 offers you near limitless possibilities for{" "}
                 <span className="bg-gradient-to-tr from-pinkAccent to-red-900/80 bg-clip-text text-transparent ">

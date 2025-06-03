@@ -20,7 +20,7 @@ export default function Home() {
         <section className="hidden md:block">
           <DesktopPage />
         </section>
-        <section className="md:hidden">
+        <section className="block md:hidden">
           <MobilePage />
         </section>
         {/* <StatsSection6 className="z-10  overflow-visible" />

@@ -113,6 +113,7 @@ import S2BlackLiquid from "@/assets/images/Lettering/BlackLiquid/S2.png";
 import VBlackLiquid from "@/assets/images/Lettering/BlackLiquid/V.png";
 
 import ColorfulGradientRainbowTexture from "@/assets/images/BGImagesTest/ColorfulGradientRainbowTexture.jpeg";
+import { AlternativeWhatWeDoSection } from "@/components/alternativeLayout/alternativeWhatWeDoSection";
 
 
 
@@ -393,7 +394,7 @@ export default function AlternativeLayout() {
       <section className="relative w-screen bg-gradient-to-t from-teal-50 via-transparent to-transparent border-2 border-blue-300/0 z-40
       p-24 pb-36" id="alt-bento-section">
         {/* Content Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[minmax(180px,auto)]  bg-green-300/0 max-w-[80vw] lg:max-w-[80vw] 2xl:max-w-[1100px] mx-auto">
+        <div className="hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[minmax(180px,auto)]  bg-green-300/0 max-w-[80vw] lg:max-w-[80vw] 2xl:max-w-[1100px] mx-auto">
           <BentoContact className="w-full hidden" />
           <BentoStats className="w-full " />
           <BentoIntro className="w-full " />
@@ -418,7 +419,13 @@ export default function AlternativeLayout() {
         />
 
         <MobileWhatWeDoSection
-          className="relative w-full h-full overflow-hidden z-20 pt-20"
+          className="relative w-full h-full overflow-hidden z-20 pt-20 block sm:hidden"
+          stats={stats}
+        />
+
+
+        <AlternativeWhatWeDoSection
+          className="relative w-full h-full overflow-hidden z-20 pt-20 hidden sm:block"
           stats={stats}
         />
 
@@ -579,21 +586,7 @@ export default function AlternativeLayout() {
         </div>
       </section>
 
-      <section
-        id="what-we-do"
-        className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative overflow-hidden"
-      >
-        {/* Section detection helper */}
-        <div
-          className="absolute top-0 h-24 w-full pointer-events-none"
-          aria-hidden="true"
-        ></div>
-
-        <WhatWeDoSection
-          className="min-h-[50vh] w-[100vw] text-white relative"
-          stats={stats}
-        />
-      </section>
+      
 
       {/* Platform Technology Section */}
       <section
