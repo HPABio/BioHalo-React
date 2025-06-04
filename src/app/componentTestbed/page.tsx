@@ -10,7 +10,7 @@ import { StatsBox, SimpleStatsBox } from "@/components/ui/StatsBox";
 import FauxBokehAnimation from "@/components/backgroundAnimations/FauxBokehAnimation";
 import AnimatedCPU from "@/components/ui/AnimatedCPU";
 import NetworkDiagramWithNodes from "@/components/ui/NetworkDiagramWithNodes";
-import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 import BioHaloLogoRingOnly from "@/components/ui/BioHaloLogoRingOnly";
 import BioHaloLogo3 from "@/components/ui/BioHaloLogo3";
 import BioReactorBP from "@/components/ui/BioReactorBP";
@@ -18,7 +18,7 @@ import BioReactorProductBP from "@/assets/images/BluePrintSVG/bio-reactor-produc
 import { ImageCarousel } from "@/components/ImageCarousel";
 
 import MeshFabric from "@/assets/images/BGImages/Mesh-fabric_1020623350.png";
-import {FluorinatedMaterialsSectionV3} from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection";
+import { FluorinatedMaterialsSectionV3 } from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection";
 import AdobeStock_222564810 from "@/assets/images/BGImagesTest/AdobeStock_222564810.jpeg";
 import AdobeStock_960678749 from "@/assets/images/BGImagesTest/AdobeStock_960678749.jpeg";
 import ColorfulGradientRainbowTexture from "@/assets/images/BGImagesTest/ColorfulGradientRainbowTexture.jpeg";
@@ -61,8 +61,13 @@ export default function Page() {
       suffix: "",
       label: (
         <>
-          <span className="text-lg md:text-xl lg:text-2xl xl:text-4xl  uppercase font-bold text-center bg-gradient-to-bl 
-          from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">fluorinated  compounds</span> <br/> are already known
+          <span
+            className="text-lg md:text-xl lg:text-2xl xl:text-4xl  uppercase font-bold text-center bg-gradient-to-bl 
+          from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent"
+          >
+            fluorinated compounds
+          </span>{" "}
+          <br /> are already known
         </>
       ),
     },
@@ -101,12 +106,16 @@ export default function Page() {
       ),
       label: (
         <>
-          <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-normal">tons of </span>
+          <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-normal">
+            tons of{" "}
+          </span>
           <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
             Fluoropolymers
           </span>
           <br />
-          <span className="font-normal text-lg md:text-2xl lg:text-3xl">Are Exported from the EU annually</span>
+          <span className="font-normal text-lg md:text-2xl lg:text-3xl">
+            Are Exported from the EU annually
+          </span>
         </>
       ),
       note: (
@@ -158,13 +167,19 @@ export default function Page() {
       ),
       label: (
         <>
-          <span className="text-sm lg:text-2xl  uppercase font-normal  text-center">tons of </span>
-          <span className="text-sm lg:text-2xl  uppercase font-bold text-center bg-gradient-to-bl 
-          from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+          <span className="text-sm lg:text-2xl  uppercase font-normal  text-center">
+            tons of{" "}
+          </span>
+          <span
+            className="text-sm lg:text-2xl  uppercase font-bold text-center bg-gradient-to-bl 
+          from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent"
+          >
             Fluoropolymers
           </span>
           <br />
-          <span className="font-normal text-base lg:text-lg">Are Exported from the EU annually</span>
+          <span className="font-normal text-base lg:text-lg">
+            Are Exported from the EU annually
+          </span>
         </>
       ),
       note: (

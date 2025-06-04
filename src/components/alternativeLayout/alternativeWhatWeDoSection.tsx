@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/StatsBox";
 import { MovingAtom } from "@/components/ui/MovingAtom";
 import WaterColorReveal from "@/components/WaterColorReveal";
-import EnzymeImage2 from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
 import EcoliTripletsPNG from "@/assets/images/BluePrintPNGs/E.coli.png";
 
 import BGFabricTealPink from "@/assets/images/BGImages/BGFabricTealPink_222564810.png";
@@ -19,9 +18,17 @@ import BioFMonomer from "@/assets/images/BluePrintSVG/BioF-Monomer.svg";
 import EcoliTripletsSVG from "@/components/ui/EcoliTripletsSVG";
 import beaker2 from "@/assets/images/BluePrintSVG/beaker-product.svg";
 import BioHaloLogoOnly from "@/assets/BioHaloLogoOnly.svg";
-import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 import BeakerHalfAndHalf from "@/assets/images/BluePrintPNGs/Beaker-half-and-half.png";
 import { ScreenSizeDEVTOOL } from "@/components/ui/ScreenSizeDEVTOOL";
+import PfasBP from "@/assets/images/BluePrintStyle/pfasBP.svg";
+import BioFMonomerAllPink from "@/assets/images/BluePrintSVG/BioF-Monomer-all-pink.svg";
+import BioReactor from "@/assets/images/BluePrint with Color/bio-reactor.png";
+import BioReactorBlueprint from "@/assets/images/BioReactorBlueprint.svg";
+import BioHaloStep1 from "@/assets/images/BluePrintSVG/BioHalo-step1.svg";
+import BioHaloStep2 from "@/assets/images/BluePrintSVG/BioHalo-step2.svg";
+import BioHaloStep3 from "@/assets/images/BluePrintSVG/BioHalo-step3.svg";
+import EnzymeImage2 from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 
 interface AlternativeWhatWeDoSectionProps {
   stats: any[];
@@ -43,7 +50,9 @@ export const AlternativeWhatWeDoSection = ({
   });
 
   return (
-    <section className={`${className} overflow-visible z-20 border-2 border-blue-300/0 mx-auto`}>
+    <section
+      className={`${className} overflow-visible z-20 border-2 border-blue-300/0 mx-auto`}
+    >
       <div className="absolute top-[-10%] left-0 w-full">
         <div
           className="relative w-full h-full border-2 border-blue-300/0
@@ -57,106 +66,92 @@ export const AlternativeWhatWeDoSection = ({
           />
         </div>
       </div>
-      <div className="max-w-[800px] mx-auto px-10 pt-12 border-2 border-red-500/0 2xl:max-w-[1000px]">
+      <div className="max-w-[800px] lg:max-w-[900px] xl:max-w-[1000px] mx-auto px-10 pt-12 border-2 border-red-500/0">
         {/* Title */}
 
-        <MovingAtom
-          width={60}
-          height={60}
-          hoverAmplitude={3}
-          hoverDuration={2}
-          shouldRotate={true}
-          rotationDuration={45}
-          shouldScale={true}
-          scaleRange={[0.9, 1.1]}
-          scaleDuration={4}
-          color="rgba(225,12,115,0.7)" //pink
-          className="absolute bg-red-500/0 top-[13%] left-[50%] translate-x-[-50%] translate-y-[70%] xl:top-[9%] xl:left-[50%] xl:translate-x-[-50%] xl:translate-y-[70%] bg-pinkAccent"
-        />
-
-
-        <div className="w-full sm:w-full bg-red-500/0  relative z-10">
-          <h2
-            className="relative text-center font-black font-poppins text-2xl 
-            sm:text-3xl md:text-4xl 2xl:text-5xl
-            bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent 
-            pb-1 leading-tight"
-          >
-            <span
-              className="font-poppins font-bold flex items-center mb-2 
-              sm:mt-12 text-black text-6xl sm:text-8xl md:text-8xl xl:text-9xl xl:scale-110 2xl:scale-125 w-full
-               mx-auto border-2 border-blue-300/0 xl:mb-12">
+        <div className="w-full relative z-10 mb-8">
+          <div className="w-full relative">
+            <h2
+              className="font-poppins font-bold flex items-center justify-center text-black 
+              text-[clamp(2.5rem,10vw,12rem)] w-full mx-auto tracking-tight"
+            >
               <Image
                 src={BioHaloLogoOnly}
                 alt="BioHalo Logo"
-                className="h-[1em] w-auto -ml-3 sm:ml-12 md:ml-24 xl:ml-4 "
+                className="h-[0.9em] w-auto mr-2"
               />
               BioHalo
-            </span>
-            <br />
-            offers a sustainable <br />
-            alternative to <br/>
-          </h2>
-          <h2 className="relative text-center font-black font-poppins text-2xl 
-            bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent">
-              <span className="uppercase text-wrap box-decoration-clone text-3xl 
-              bg-clip-text text-transparent bg-gradient-to-r from-slate-800/80 via-pinkAccent/70 to-slate-800/80 ">
-              forever chemicals
-              </span>
-          </h2>
-        </div>
+            </h2>
+          </div>
 
-           <div className="w-full h-auto sm:max-w-[600px] md:max-w-[500px] xl:max-w-[550px] mx-auto overflow-hidden px-12 border-2 border-red-500/0 -mt-12 sm:-mt-28  pb-4">  
-           <Image
-              src={EcoliTripletsPNG}
-              alt="EcoliTripletsPNG"
-              className="w-full h-full object-contain grayscale opacity-40 sm:opacity-20 0 -rotate-12 brightness-[0.1]"
-            />
-                </div>
+          <div className="w-full relative flex flex-col items-center justify-center space-y-6">
+            <div className="w-[70%] flex flex-col items-center justify-center">
+              {/* Subtitle */}
+              <h2
+                className="text-gray-800/60 w-[80vw] font-poppins leading-tight
+                          text-[clamp(1.1rem,4vw,4rem)] text-center text-nowrap"
+              >
+                offers a sustainable alternative to
+              </h2>
+              <h2
+                className="font-poppins leading-tight font-black font-poppin relative uppercase
+                   bg-clip-text text-transparent bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 
+                          text-[clamp(1.1rem,4vw,4rem)] text-center text-nowrap"
+              >
+                forever chemicals
+                <MovingAtom
+                  width={50}
+                  height={50}
+                  hoverAmplitude={4}
+                  hoverDuration={4}
+                  shouldRotate={false}
+                  rotationDuration={5}
+                  shouldScale={false}
+                  scaleRange={[0.9, 1.1]}
+                  scaleDuration={4}
+                  color="rgba(195,12,95,1)" //pink
+                  className="absolute top-[0%] left-[100%]
+                      translate-x-[-50%] translate-y-[-15%] z-0 "
+                />
+              </h2>
+            </div>
+            <div className="w-full flex flex-row items-center justify-center px-6 py-8 gap-8 max-w-4xl mx-auto">
+              <div className="w-full flex flex-col items-center justify-center pt-12">
+                <h2
+                  className="text-gray-800/60 w-full font-poppins leading-snug
+                      text-2xl lg:text-3xl
+                       xl:text-[clamp(1.1rem,2vw,2rem)] max-w-3xl mx-auto"
+                >
+                  through our microbial-based biohalogenation platform
+                </h2>
 
-        {/* Subtitle */}
-        <div className="w-full ">
-          <h2 className="text-gray-800/60 text-2xl  font-poppins text-center sm:leading-tight ">
-            through our <br/>
-            microbial-based 
-            <br/>
-            biohalogenation platform
-          </h2>
-        </div>
+                <div className="w-[20%] h-full border-[1px] border-gray-400/50 rounded-xl mr-auto mt-2 mb-8" />
 
-        {/* Text */}
-        <div className="w-full h-full bg-red-500/0 mt-6 relative">
-          <p className="text-gray-500/80 text-1xl font-poppins text-center">
-            we can selectively halogenate organic <br className="hidden sm:block"/> molecules, opening up new
-            possibilities for{" "}<br className="hidden sm:block"/> 
-            <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent">
-              fluorine
-            </span>
-            -based chemistry.
-          </p>
-          <div className="w-full h-full border-2 border-blue-300/0 relative mt-12">
-            <MovingAtom
-              width={80}
-              height={80}
-              hoverAmplitude={4}
-              hoverDuration={4}
-              shouldRotate={false}
-              rotationDuration={20}
-              shouldScale={false}
-              scaleRange={[0.9, 1.8]}
-              scaleDuration={24}
-              color="rgba(18,110,119,1)" //teal
-              className="absolute top-[-0%] left-[50%] translate-x-[-50%] translate-y-[0%] 
-              opacity-[0.3] rotate-[19deg] sm:scale-[1.8] sm:translate-y-[30%]"
-            />
-            <Image
-              src={EnzymeImage2}
-              alt="EnzymeImage2"
-              className="w-full h-full object-cover relative z-10"
-            />
+                <p
+                  className="text-gray-500/80 w-full font-poppins
+                      text-[clamp(0.9rem,2.5vw,1.5rem)] leading-relaxed"
+                >
+                  we selectively halogenate organic molecules, opening up new
+                  possibilities for{" "}
+                  <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent font-semibold">
+                    fluorine
+                  </span>
+                  -based chemistry.
+                </p>
+              </div>
+              <div className="w-full max-w-md flex flex-col items-center justify-center">
+                <Image
+                  src={EcoliTripletsPNG}
+                  alt="EcoliTripletsPNG"
+                  className="w-[50vw]  object-contain grayscale opacity-40 sm:opacity-20 -rotate-12 brightness-[0.1] scale-200 absolute"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
+        {/* devider */}
+        <div className="w-full h-[10vw] border-2 border-blue-300/0 relative mt-12 bg-red-500/0" />
 
         <MovingAtom
           width={580}
@@ -170,7 +165,7 @@ export const AlternativeWhatWeDoSection = ({
           scaleDuration={4}
           color="rgba(195,12,95,1)" //pink
           className="absolute top-[105%] left-[99%] 
-          translate-x-[-50%] translate-y-[-150%] opacity-[0.07] z-5"
+          translate-x-[-50%] translate-y-[-150%] opacity-[0.07] z-5 md:hidden"
         />
         <MovingAtom
           width={100}
@@ -188,79 +183,245 @@ export const AlternativeWhatWeDoSection = ({
           sm:translate-x-[-165%] sm:translate-y-[250%] hidden"
         />
 
-
         {/* Text Section */}
-        <div className="bg-black/0 text-gray-800/70 w-full relative border-2 border-blue-300/0 -mt-6">
+        <div className="bg-black/0 text-gray-800/70 w-full relative border-2 border-blue-300/0
+        md:max-w-[600px] lg:max-w-[900px] xl:max-w-[1000px] mx-auto">
           {/* Header Section */}
           <div className=" bg-red-500/0 relative">
             {/* Top Text Section */}
             <div className="space-y-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 capitalize opacity-1 text-center pb-10 leading-tight
-                  bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent md:leading-none">
-                <span className="text-2xl sm:text-3xl md:text-4xl md:leading-none xl:leading-none xl:text-5xl">
-                  We explore, design,
+              <h1
+                className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl 
+              font-bold mb-2 capitalize opacity-1 text-center leading-normal
+                  bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent"
+              >
+                We explore, design,
                 <br />
-                  and produce, unmatched
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
-                  uppercase drop-shadow-sm font-black font-Poppins sm:text-5xl xl:text-7xl xl:leading-tight relative ">
-                    <MovingAtom
-                      width={100}
-                      height={100}
-                      hoverAmplitude={4}
-                      hoverDuration={6}
-                      color="rgba(18,110,119,1)" //teal
-                      className="absolute bottom-[0%] left-[0%] opacity-[0.3] z-5
-                      translate-x-[-45%] translate-y-[25%]"
-                    />
-                    <MovingAtom
-                      width={50}
-                      height={50}
-                      hoverAmplitude={4}
-                      hoverDuration={6}
-                      color="rgba(18,110,119,1)" //teal
-                      className="absolute top-[0%] right-[0%] opacity-[0.3] z-5
+                and produce, unmatched
+              </h1>
+              <h1
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 capitalize opacity-1 text-center pb-10 leading-tight
+                  bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent md:leading-none"
+              >
+                <span
+                  className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
+                  uppercase drop-shadow-sm font-black font-Poppins sm:text-5xl md:text-6xl xl:text-7xl leading-tight relative "
+                >
+                  <MovingAtom
+                    width={100}
+                    height={100}
+                    hoverAmplitude={0}
+                    color="rgba(18,110,119,1)" //teal
+                    className="absolute bottom-[0%] left-[0%] opacity-[0.3] z-5
+                      translate-x-[-41%] translate-y-[27%]"
+                  />
+                  <MovingAtom
+                    width={50}
+                    height={50}
+                    hoverAmplitude={0}
+                    color="rgba(18,110,119,1)" //teal
+                    className="absolute top-[0%] right-[0%] opacity-[0.3] z-5
                       translate-x-[50%] translate-y-[-25%]"
-                    />
+                  />
                   new-to-market{" "}
                 </span>
-                <br className="hidden sm:block xl:hidden" />
-                <span className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
-                  uppercase drop-shadow-sm font-black font-Poppins">
-                </span>
-                  products
+                products
               </h1>
-              <div className="w-fit h-full border-2 border-blue-300/0 relative mx-auto "> 
-                    <p className="text-2xl sm:text-3xl sm:leading-tight font-poppins text-center sm:py-4">
-                      Our{" "}
-                      <span className="font-bold ">
-                        Bio-
-                        <span className="bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent 
-                        text-4xl">
-                          F
-                        </span>
-                        -Polymers
-                      </span>{" "}
-                      do <br/>not compromise <br/>
-                       performance
-                      <br />
-                      while also being safe <br/>and sustainable
+              <div className="w-1/3 h-full border-[1px] border-gray-400/50 rounded-xl mx-auto">
+                <MovingAtom
+                  width={80}
+                  height={80}
+                  hoverAmplitude={4}
+                  hoverDuration={4}
+                  shouldRotate={false}
+                  rotationDuration={20}
+                  shouldScale={false}
+                  scaleRange={[0.9, 1.8]}
+                  scaleDuration={24}
+                  color="rgba(18,110,119,1)" //teal
+                  className="absolute top-[-0%] left-[50%] translate-x-[-50%] translate-y-[0%] 
+                      opacity-[0.3] rotate-[19deg] sm:scale-[1.8] sm:translate-y-[30%] hidden"
+                />
+              </div>
+
+              {/* split design / Image on the right */}
+              <div
+                className="w-full flex flex-col items-center justify-center 
+              gap-8 p-4 border-2 border-blue-300/0 mt-12"
+              >
+                <h1 className="text-center text-4xl font-bold uppercase hidden">
+                  {" "}
+                  split design
+                </h1>
+                <div className="w-full flex flex-row items-start justify-start gap-8">
+                  <div className="flex-1 flex flex-col items-start">
+                    <p className="text-xl lg:text-2xl 2xl:text-3xl font-poppins font-medium opacity-30 leading-none">
+                      Our unique
                     </p>
-                    <p className="text-lg  max-w-md pt-8  sm:pt-12  sm:mx-auto sm:text-center sm:leading-snug 
-                    md:text-xl md:mb-12 leading-relaxed">
+
+                    <h1
+                      className="lowercase drop-shadow-sm font-semibold font-Poppins 
+                    sm:text-5xl md:text-4xl lg:text-5xl 2xl:text-6xl leading-none relative"
+                    >
+                      Bio
+                      <span className="text-4xl md:text-4xl lg:text-5xl 2xl:text-6xl uppercase font-black bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent">
+                        F
+                      </span>
+                      Polymers
+                    </h1>
+                    <p className="text-lg md:text-xl lg:text-xl 2xl:text-3xl font-poppins font-normal">
+                      are safe and sustainable without compromising performance
+                    </p>
+                    <p className="text-2xl sm:text-3xl sm:leading-tight font-poppins sm:py-4 hidden">
+                      don't compromise performance while also being safe and
+                      sustainable
+                    </p>
+                  </div>
+                  <div className="flex-1 relative border-2 border-blue-300/0">
+                    <Image
+                      src={BioFMonomer}
+                      alt="BioFMonomerAllPink"
+                      className="w-full object-cover grayscale opacity-20 invert rotate-[-20deg] scale-[1.2] xl:scale-[1.5]
+                      translate-x-[-30%] translate-y-[60%]
+                      lg:translate-x-[-30%] lg:translate-y-[40%]
+                      2xl:translate-x-[-30%] 2xl:translate-y-[55%]"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Divider */}
+              <div className="w-2/3 h-[10vw] max-h-[150px] border-b border-gray-400/80 relative bg-red-500/0 mx-auto" />
+
+              {/* split design / Image on the left */}
+              <div
+                className="w-full flex flex-col items-center justify-center 
+              gap-8 p-4 border-2 border-blue-300/0 mt-12"
+              >
+                <h1 className="text-center text-4xl font-bold uppercase hidden">
+                  {" "}
+                  split design
+                </h1>
+                <div className="w-full flex flex-row items-center justify-start gap-8 pl-4 p-0">
+                  <div className="flex-1 relative scale-150 lg:scale-125">
+                    <Image
+                      src={BioReactor}
+                      alt="BioReactorBlueprint"
+                      className="w-full object-cover grayscale opacity-40 invert scale-x-[-1]
+                      z-10 border-2 border-blue-300/0 translate-x-[-10%] translate-y-[0%]"
+                    />
+                  </div>
+                  <div className="flex-1 flex flex-col items-start border-2 border-blue-300/0 lg:-mr-6 lg:pl-6">
+                    <p className="text-xl lg:text-2xl  2xl:text-3xl font-poppins font-medium opacity-30 leading-none">
+                      Our expandable
+                    </p>
+
+                    <h1
+                      className="lowercase drop-shadow-sm font-semibold font-Poppins 
+                    sm:text-5xl md:text-4xl lg:text-5xl 2xl:text-6xl leading-none relative"
+                    >
+                      <span className="text-4xl md:text-4xl lg:text-5xl 2xl:text-6xl lowercase font-bold bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent">
+                        Bio
+                      </span>
+                      Halogenation platform
+                    </h1>
+                    <p className="text-lg md:text-xl lg:text-xl  2xl:text-3xl font-poppins font-normal">
+                      offers you near limitless possibilities for
+                      fluorine-enhanced compound development.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Divider */}
+              <div className="w-2/3 h-[50px] max-h-[250px] border-t border-gray-400/80 relative mt-12 bg-red-500/0 mx-auto mb-[2vw]" />
+
+              {/* centered design */}
+              <div
+                className="w-full flex flex-col items-center justify-center 
+              gap-8 p-4 border-2 border-blue-300/0 mt-12 "
+              >
+                <div className="w-full flex flex-row items-start justify-start gap-8">
+                  <div className="flex flex-col items-start w-2/3 border-2 border-blue-300/0">
+                  <p className="text-xl lg:text-2xl 2xl:text-3xl font-poppins font-medium opacity-30 leading-none">
+                      And our flexible
+                    </p>
+
+                    <h1
+                      className="lowercase drop-shadow-sm font-semibold font-Poppins 
+                    sm:text-5xl md:text-4xl lg:text-5xl 2xl:text-6xl leading-none relative"
+                    >
+                      <span className="text-4xl md:text-4xl lg:text-5xl 2xl:text-6xl lowercase font-bold bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent">
+                        enzyme
+                      </span>
+                      based <br/>technology
+                    </h1>
+                    <p className="text-lg md:text-xl lg:text-xl 2xl:text-3xl font-poppins font-normal max-w-md">
+                    lets us design custom processes tailored to your needs.
+                    </p>
+                  </div>
+                  <div className="flex-1 relative ">
+                  <Image
+                      src={EnzymeImage2}
+                      alt="EnzymeImage2"
+                      className="w-full object-cover grayscale opacity-80 lg:opacity-1 scale-[2.5] lg:scale-[2] 2xl:scale-[2.2]
+                      brightness-[1.2] contrast-[1.2] mix-blend-darken
+                      translate-x-[-40%] translate-y-[120%]
+                      lg:translate-x-[-20%] lg:translate-y-[70%] hidden"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* centered design */}
+              {/*  <div className="w-full flex flex-col items-center justify-center gap-8 py-12 border-2 border-blue-300/0">
+                <h1 className="text-center text-4xl font-bold uppercase"> centered design</h1> 
+                <div className="w-fit h-full border-2 border-blue-300/0 relative mx-auto "> 
+                    <p className="text-3xl font-poppins font-medium text-center opacity-30 leading-none">
+                      Our unique
+                    </p>
+                    <h1 className="text-center lowercase drop-shadow-sm font-semibold font-Poppins 
+                    sm:text-5xl md:text-6xl xl:text-6xl leading-none relative">
+                          Bio
+                          <span className="text-7xl uppercase font-black bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent">
+                            F
+                          </span>
+                          Polymers
+                    </h1>
+                    <p className="text-3xl font-poppins text-center">
+                    are safe and sustainable <br/>
+                    without compromising performance
+                      </p>
+                    <p className="text-2xl sm:text-3xl sm:leading-tight font-poppins text-center sm:py-4 hidden">
+                    don't compromise performance <br/>
+                    while also being safe and sustainable
+                      </p>
+                </div>
+                <div className="w-full flex flex-row items-center justify-center px-12 py-8 gap-8 max-w-4xl mx-auto">
+                      <div className="w-full flex flex-col items-center justify-center gap-8">
+                      <p className="text-lg hidden">
                       BioHalos revolutionary enzyme-based biohalogenation platform
                       offers you near limitless possibilities for{" "}
                       <span className="bg-gradient-to-tr from-pinkAccent to-red-900/80 bg-clip-text text-transparent ">
                         fluorine
                       </span>
                       -enhanced compound development.
-                    </p>
-              </div>
+                </p>
 
+                      </div>
+                      <div className="w-full max-w-md flex flex-col items-center justify-center">
+                          <Image
+                            src={BioFMonomer}
+                            alt="BioFMonomerAllPink"
+                            className="w-[50vw]  object-contain grayscale opacity-40 sm:opacity-20 -rotate-12 brightness-[0.1] scale-200 absolute"
+                          />
+                      </div>
+                </div>
+              </div> */}
             </div>
           </div>
-        </div>  
+        </div>
+
         <div
           className="absolute w-[800px] h-[400px] 
           bottom-[-11%] left-[30%]"
@@ -268,9 +429,9 @@ export const AlternativeWhatWeDoSection = ({
       </div>
 
       <div
-          className="absolute w-[800px] h-[400px] 
+        className="absolute w-[800px] h-[400px] 
           bottom-[-11%] left-[30%]"
-        ></div>
+      ></div>
 
       <div className="relative bottom-0 left-0 w-full h-[100px] md:h-[200px]">
         {/*   <div className="w-full h-full opacity-1"
@@ -281,34 +442,34 @@ export const AlternativeWhatWeDoSection = ({
           backgroundRepeat: "no-repeat",
           willChange: "opacity, transform",}}/> */}
       </div>
-      <div className="relative bottom-0 left-0 w-full h-[200px] bg-red-600/0 overflow-visible">
-          <MovingAtom
-            width={80}
-            height={80}
-            hoverAmplitude={7}
-            hoverDuration={5}
-            shouldRotate={true}
-            rotationDuration={25}
-            shouldScale={false}
-            scaleRange={[0.9, 1.1]}
-            scaleDuration={4}
-            color="rgba(195,12,95,1)" //pink
-            className="absolute top-[50%] left-[50%] 
+      <div className="relative bottom-0 left-[5%] w-full h-[200px] bg-red-600/0 overflow-visible">
+        <MovingAtom
+          width={80}
+          height={80}
+          hoverAmplitude={7}
+          hoverDuration={5}
+          shouldRotate={true}
+          rotationDuration={25}
+          shouldScale={false}
+          scaleRange={[0.9, 1.1]}
+          scaleDuration={4}
+          color="rgba(195,12,95,1)" //pink
+          className="absolute top-[50%] left-[50%] 
             translate-x-[-50%] translate-y-[-150%] 
             md:translate-x-[-50%] md:translate-y-[-250%] 
-            2xl:translate-x-[200%] 2xl:-translate-y-[50%] opacity-90 z-5"
-          />
+            2xl:translate-x-[200%] 2xl:-translate-y-[50%] opacity-90 z-5 "
+        />
         <div
-            className="absolute bottom-0 left-[50%]
+          className="absolute bottom-0 left-[50%]
             translate-x-[-50%] md:translate-y-[72px] 2xl:translate-y-[86px]
             w-[300px] h-[300px] md:w-[500px] md:h-[500px] 2xl:w-[600px] 2xl:h-[600px]"
-            style={{
-              backgroundImage: `url(${BeakerHalfAndHalf.src})`,
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          />
+          style={{
+            backgroundImage: `url(${BeakerHalfAndHalf.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
         <MovingAtom
           width={80}
           height={80}
@@ -381,9 +542,7 @@ export const AlternativeWhatWeDoSection = ({
           className="absolute top-[20%] left-[50%] translate-x-[-100%] translate-y-[-40%] 
           2xl:translate-x-[300%] 2xl:-translate-y-[800%] opacity-90 z-5"
         />
-        
       </div>
-
     </section>
   );
 };

@@ -44,7 +44,7 @@ import { SuccessesSection } from "@/components/sections2/BioHaloSections/Success
 import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSection";
 import { AlternativeWhatWeDoSection } from "@/components/alternativeLayout/alternativeWhatWeDoSection";
 
-import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 import industrialPollutionImage from "@/assets/images/VariousImages/IndustrialPollution.png";
 import industrialPollutionImageV2 from "@/assets/images/VariousImages/IndutrialPollutionV2.png";
 import industrialPollutionImageV3 from "@/assets/images/VariousImages/IndustrialPollutionV3.png";
@@ -309,15 +309,101 @@ export const Showcase4 = () => {
       {/* <HeroSection4 className=" block w-screen h-screen relative overflow-hidden" /> */}
       {/* <HeroSection4 className=" block md:hidden  w-screen h-screen relative overflow-hidden" /> */}
       <HeroSection5 className=" hidden md:block w-screen h-screen relative overflow-hidden" />
+      {/* Transition Section One / Hook */}
       <section
-        className="pb-16 bg-black"
+        className="relative w-screen "
         id="transition-section-one"
       >
-        <div className="relative w-full h-[100px] lg:h-[200px]">
-
-        <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px]
-        translate-x-[35%] translate-y-[-50%] pointer-events-none">
+        
+        
+        {/* Background image of enzyme */}
+      <div className="relative w-screen h-screen flex flex-col items-center justify-center min-h-[900px]">
+        {/* Fluorine Element / Periodic Table */}
+        {/* Enzyme Image left */}
+        <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] bottom-0 left-0 opacity-60 blur-[16px] translate-x-[-50%] translate-y-[50%]">
           <motion.div
+            className="absolute w-full h-full"
+            style={{
+              x: useTransform(useScroll().scrollY, [0, 1300], [0, -100]),
+              y: useTransform(useScroll().scrollY, [0, 1000], [0, -100]),
+            }}
+          >
+            <Image
+              src={enzymeImage}
+              alt="Enzyme"
+              fill
+              className="object-contain"
+            />
+          </motion.div>
+        </div>
+        <div className="relative aspect-square w-32 border-[6px] border-gradient-to-br from-pink-500 via-purple-500 to-red-700 rounded-lg 
+        flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm text-gray-600">
+          <span className="text-[min(7vw,3rem)] font-bold">
+            F</span>
+          <span className="text-[min(3.5vw,0.875rem)] font-semibold -mt-3">
+            Fluorine
+          </span>
+          <span className="absolute top-1 left-2 text-[min(6vw,0.75rem)] font-bold">
+            9
+          </span>
+          <span className="text-[min(2.5vw,0.75rem)] mt-1">18.99</span>
+        </div>
+        {/* Subtitle */}
+        <h2 className="text-2xl md:text-3xl font-bold  text-gray-500 text-center">
+          our modern society is built on <br />{" "}
+          <span className="bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+            fluorinated materials
+          </span>
+        </h2>
+
+        {/* Enzyme Image right */}
+        <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px] translate-x-[35%] translate-y-[-50%] pointer-events-none">
+          <motion.div
+            className="absolute w-full h-full"
+            style={{
+              scale: useTransform(useScroll().scrollY, [0, 1000], [1, 1.1]),
+              x: useTransform(useScroll().scrollY, [0, 1000], [0, 100]),
+              y: useTransform(useScroll().scrollY, [0, 1000], [0, -200]),
+              filter: useTransform(
+                useScroll().scrollY,
+                [0, 1000],
+                ["blur(0px)", "blur(20px)"]
+              ),
+              opacity: useTransform(useScroll().scrollY, [0, 1000], [1, 0.8]),
+            }}
+          >
+            <Image
+              src={enzymeImage}
+              alt="Enzyme"
+              fill
+              className="object-contain"
+            />
+          </motion.div>
+        </div>
+
+       
+        
+
+        
+        
+      </div>
+      <div
+          className="relative bottom-0 left-0 w-full min-h-[200px] h-[30vw] xl:h-[30vw]"
+          style={{
+            backgroundImage: `url(${BlackSmokeDivider.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center bottom",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+      </section>
+      {/* <section className="pb-16 bg-black" id="transition-section-one">
+        <div className="relative w-full h-[100px] lg:h-[200px]">
+          <div
+            className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px]
+        translate-x-[35%] translate-y-[-50%] pointer-events-none"
+          >
+            <motion.div
               className="absolute w-full h-full"
               style={{
                 y: useTransform(useScroll().scrollY, [0, 1000], [0, -200]),
@@ -330,19 +416,17 @@ export const Showcase4 = () => {
                 className="object-contain"
               />
             </motion.div>
-        </div>
+          </div>
 
-        <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0"/>
-
+          <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0" />
         </div>
-      </section>
+      </section> */}
 
       <FluorinatedMaterialsSection
         className="relative w-full h-full overflow-hidden z-20 pt-6"
         stats={stats}
       />
 
-    
       <section
         id="what-we-do"
         className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative overflow-visible z-10"

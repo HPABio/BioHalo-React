@@ -8,17 +8,18 @@ import {
 } from "@/components/ui/StatsBox";
 import { MovingAtom } from "@/components/ui/MovingAtom";
 import WaterColorReveal from "@/components/WaterColorReveal";
-import EnzymeImage2 from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import EnzymeImage2 from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 import EcoliTripletsPNG from "@/assets/images/BluePrintPNGs/E.coli.png";
 
 import BGFabricTealPink from "@/assets/images/BGImages/BGFabricTealPink_222564810.png";
 import MeshFabric from "@/assets/images/BGImages/Mesh-fabric_1020623350.png";
 import LightBGWithDroplets from "@/assets/images/AdobeStock/AdobeStock_291137317.jpeg";
 
-import BioFMonomer from "@/assets/images/BluePrintSVG/BioF-Monomer.svg";import EcoliTripletsSVG from "@/components/ui/EcoliTripletsSVG";
+import BioFMonomer from "@/assets/images/BluePrintSVG/BioF-Monomer.svg";
+import EcoliTripletsSVG from "@/components/ui/EcoliTripletsSVG";
 import beaker2 from "@/assets/images/BluePrintSVG/beaker-product.svg";
 import BioHaloLogoOnly from "@/assets/BioHaloLogoOnly.svg";
-import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 import BeakerHalfAndHalf from "@/assets/images/BluePrintPNGs/Beaker-half-and-half.png";
 
 interface MobileWhatWeDoSectionProps {
@@ -41,7 +42,9 @@ export const MobileWhatWeDoSection = ({
   });
 
   return (
-    <section className={`${className} overflow-visible z-20 border-2 border-blue-300/0 mx-auto`}>
+    <section
+      className={`${className} overflow-visible z-20 border-2 border-blue-300/0 mx-auto`}
+    >
       <div className="absolute top-[-10%] left-0 w-full">
         <div
           className="relative w-full h-full border-2 border-blue-300/0
@@ -72,15 +75,13 @@ export const MobileWhatWeDoSection = ({
           className="absolute bg-red-500/0 top-[10%] left-[50%] translate-x-[-1220%] translate-y-[-10%] bg-pinkAccent"
         />
 
-
         <div className="w-full sm:w-full bg-red-500/0  relative z-10">
           <h2
             className="relative text-center font-black font-poppins text-2xl 
             bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent 
             pb-1 leading-tight"
           >
-            <span
-              className="font-poppins font-bold flex items-center mb-2 sm:mt-12 text-black text-6xl w-full sm:w-[400px] mx-auto">
+            <span className="font-poppins font-bold flex items-center mb-2 sm:mt-12 text-black text-6xl w-full sm:w-[400px] mx-auto">
               <Image
                 src={BioHaloLogoOnly}
                 alt="BioHalo Logo"
@@ -90,29 +91,33 @@ export const MobileWhatWeDoSection = ({
             </span>
             <br />
             offers a sustainable <br />
-            alternative to <br/>
+            alternative to <br />
           </h2>
-          <h2 className="relative text-center font-black font-poppins text-2xl 
-            bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent">
-              <span className="uppercase text-wrap box-decoration-clone text-3xl 
-              bg-clip-text text-transparent bg-gradient-to-r from-slate-800/80 via-pinkAccent/70 to-slate-800/80 ">
+          <h2
+            className="relative text-center font-black font-poppins text-2xl 
+            bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent"
+          >
+            <span
+              className="uppercase text-wrap box-decoration-clone text-3xl 
+              bg-clip-text text-transparent bg-gradient-to-r from-slate-800/80 via-pinkAccent/70 to-slate-800/80 "
+            >
               forever chemicals
-              </span>
+            </span>
           </h2>
         </div>
 
-           <div className="w-full h-auto overflow-hidden px-12 border-2 border-red-500/0 -mt-12 pb-4">  
-           <Image
-              src={EcoliTripletsPNG}
-              alt="EcoliTripletsPNG"
-              className="w-full h-full object-contain grayscale opacity-20 -rotate-12 brightness-[0.1]"
-            />
-                </div>
+        <div className="w-full h-auto overflow-hidden px-12 border-2 border-red-500/0 -mt-12 pb-4">
+          <Image
+            src={EcoliTripletsPNG}
+            alt="EcoliTripletsPNG"
+            className="w-full h-full object-contain grayscale opacity-20 -rotate-12 brightness-[0.1]"
+          />
+        </div>
 
         {/* Subtitle */}
         <div className="w-full ">
           <h2 className="text-gray-800/60 text-2xl  font-poppins text-center">
-            through our <br/>
+            through our <br />
             microbial-based biohalogenation platform
           </h2>
         </div>
@@ -128,16 +133,13 @@ export const MobileWhatWeDoSection = ({
             -based chemistry.
           </p>
           <div className=" w-full h-full border-2 border-blue-300/0">
-            
             <Image
-                src={EnzymeImage2}
-                alt="EnzymeImage2"
-                className="w-full h-full object-cover"
-                />
+              src={EnzymeImage2}
+              alt="EnzymeImage2"
+              className="w-full h-full object-cover"
+            />
           </div>
-          
         </div>
-
 
         <MovingAtom
           width={580}
@@ -167,39 +169,41 @@ export const MobileWhatWeDoSection = ({
           className="absolute top-[50%] right-[50%] translate-x-[-20%] translate-y-[-60%] opacity-[0.3] z-5"
         />
 
-
         {/* Text Section */}
         <div className="bg-black/0 text-gray-800/70 w-full relative border-2 border-blue-300/0">
           {/* Header Section */}
           <div className=" bg-red-500/0 relative">
             {/* Top Text Section */}
             <div className="space-y-4">
-              <h1 className="text-3xl font-bold mb-2 capitalize opacity-1 text-center pb-10
-                bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent">
-                <span className="text-2xl">
-                  We explore, design,
-                </span>
+              <h1
+                className="text-3xl font-bold mb-2 capitalize opacity-1 text-center pb-10
+                bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent"
+              >
+                <span className="text-2xl">We explore, design,</span>
                 <br />
-                <span className="text-2xl">
-                  and produce, unmatched
-                </span>
+                <span className="text-2xl">and produce, unmatched</span>
                 <br />
-                <span className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
-                  uppercase drop-shadow-sm font-black font-Poppins">
+                <span
+                  className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
+                  uppercase drop-shadow-sm font-black font-Poppins"
+                >
                   new-to-market{" "}
                 </span>
                 <br className="hidden lg:block xl:hidden" />
-                <span className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
-                  uppercase drop-shadow-sm font-black font-Poppins">
-                </span>
-                  products
+                <span
+                  className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
+                  uppercase drop-shadow-sm font-black font-Poppins"
+                ></span>
+                products
               </h1>
               <p className="text-2xl font-poppins text-center">
                 Our{" "}
                 <span className="font-bold ">
                   Bio-
-                  <span className="bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent 
-                  text-4xl">
+                  <span
+                    className="bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent 
+                  text-4xl"
+                  >
                     F
                   </span>
                   -Polymers
@@ -218,15 +222,14 @@ export const MobileWhatWeDoSection = ({
               </p>
             </div>
           </div>
-        </div>  
+        </div>
         <div
           className="absolute w-[800px] h-[400px] 
           bottom-[-11%] left-[30%]"
         ></div>
       </div>
 
-      <div className="relative bottom-0 left-0 w-full h-[60px]">
-      </div>
+      <div className="relative bottom-0 left-0 w-full h-[60px]"></div>
       <div className="relative bottom-0 left-0 w-[80%] h-[200px] bg-red-600/0 overflow-visible mx-auto pl-12">
         <MovingAtom
           width={80}

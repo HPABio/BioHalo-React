@@ -10,7 +10,7 @@ import { HeroLayout } from "../pageLayouts/HeroLayout";
 import SerenityShader from "../backgroundAnimations/SerenityShader";
 import EcoliTripletsSVG from "@/components/ui/EcoliTripletsSVG";
 import BioHaloBackground from "@/assets/images/BioHalo-background-compressed.jpeg";
-import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 
 import Image from "next/image";
 import FollowPath from "../ui/FollowPath";
@@ -657,7 +657,6 @@ export const HeroSection4 = ({
       <div className="absolute w-[80%] h-[80%] top-0 left-0 translate-x-[-50%] translate-y-[-50%] blur-[7px] opacity-60 brightness-[1.4]">
         <Image src={enzymeImage} alt="Enzyme" fill className="object-contain" />
       </div>
-     
 
       {/* Center image */}
       <div className="absolute  w-[70%] h-[70%] md:w-[50%] md:h-[50%] min-h-[500px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-48%] md:translate-y-[-40%] overflow-visible bg-red-500/0">
@@ -762,9 +761,9 @@ export const HeroSection4 = ({
                   console.log("targetElement:", targetElement);
                   if (targetElement) {
                     const yPosition =
-                    targetElement.getBoundingClientRect().top +
-                    window.scrollY -
-                    80;
+                      targetElement.getBoundingClientRect().top +
+                      window.scrollY -
+                      80;
                     window.scrollTo({
                       top: yPosition,
                       behavior: "smooth",
@@ -791,7 +790,6 @@ export const HeroSection5 = ({
 
   const sectionRef = useRef<HTMLElement>(null);
 
-
   return (
     <section
       ref={sectionRef}
@@ -801,13 +799,18 @@ export const HeroSection5 = ({
 
       {/* Top left image */}
       <div className="absolute w-[80%] h-[80%] top-0 left-0 translate-x-[-50%] translate-y-[-50%] blur-[7px] opacity-60 brightness-[1.3]">
-        <Image src={enzymeImage} alt="Enzyme"  className="object-contain -rotate-45" />
+        <Image
+          src={enzymeImage}
+          alt="Enzyme"
+          className="object-contain -rotate-45"
+        />
       </div>
       {/* Bottom image */}
       <motion.div
         className="md:hidden block absolute w-full h-full bottom-0 right-[-90%] translate-x-[-50vw] translate-y-[55%] 
-      opacity-1 blur-[6px]">
-        <Image src={enzymeImage} alt="Enzyme"  className="object-contain" />
+      opacity-1 blur-[6px]"
+      >
+        <Image src={enzymeImage} alt="Enzyme" className="object-contain" />
       </motion.div>
 
       {/* Center image */}
@@ -911,7 +914,7 @@ export const HeroSection5 = ({
                             pointer-events-auto"
                     onClick={(e) => {
                       e.preventDefault();
-                      const targetElement  = document.getElementById(
+                      const targetElement = document.getElementById(
                         "platform-features-content"
                       );
                       if (targetElement) {

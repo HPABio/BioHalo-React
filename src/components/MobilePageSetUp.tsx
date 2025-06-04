@@ -1,6 +1,5 @@
 "use client";
 
-
 import Image from "next/image";
 import React, { Suspense, memo } from "react";
 
@@ -13,11 +12,9 @@ import { TeamSection } from "@/components/sections2/BioHaloSections/TeamSection"
 
 // Import the new sections
 
-
 import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSection";
 
-
-import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 import { MobileFluorinatedMaterialsSection } from "./mobileVersion/mobileFluorinatedMaterialsSection";
 import { MobileWhatWeDoSection } from "@/components/mobileVersion/mobileWhatWeDoSection";
 import { MobilePlatformTechnologySection } from "@/components/mobileVersion/mobilePlatformTechnologySection";
@@ -38,7 +35,8 @@ const stats = [
     suffix: "",
     label: (
       <>
-        <span className="text-lightGrey/80">fluorinated</span> compounds <br className="md:hidden block" /> are already known
+        <span className="text-lightGrey/80">fluorinated</span> compounds{" "}
+        <br className="md:hidden block" /> are already known
       </>
     ),
   },
@@ -77,12 +75,16 @@ const stats = [
     ),
     label: (
       <>
-        <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-normal">tons of </span>
+        <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-normal">
+          tons of{" "}
+        </span>
         <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
           Fluoropolymers
         </span>
         <br />
-        <span className="font-normal text-lg md:text-2xl lg:text-3xl">Are Exported from the EU annually</span>
+        <span className="font-normal text-lg md:text-2xl lg:text-3xl">
+          Are Exported from the EU annually
+        </span>
       </>
     ),
     note: (
@@ -145,18 +147,16 @@ export const MobilePageSetUp = () => {
       {/* <HeroSection4 className=" block w-screen h-screen relative overflow-hidden" /> */}
       <HeroSection4 className="block w-screen h-screen relative overflow-hidden" />
 
-
-
-
       <section
         className="pb-16 h-[300px] w-full relative"
         id="mobile-transition-section-one"
       >
         <div className="relative w-full h-[100px] lg:h-[200px]">
-
-        <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px]
-        translate-x-[35%] translate-y-[-50%] pointer-events-none">
-          <motion.div
+          <div
+            className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px]
+        translate-x-[35%] translate-y-[-50%] pointer-events-none"
+          >
+            <motion.div
               className="absolute w-full h-full"
               style={{
                 y: useTransform(useScroll().scrollY, [0, 1000], [0, -200]),
@@ -169,9 +169,7 @@ export const MobilePageSetUp = () => {
                 className="object-contain"
               />
             </motion.div>
-        </div>
-
-
+          </div>
         </div>
         <div
           className="absolute w-full min-h-[150px] h-[30vw] bottom-0 "
@@ -182,21 +180,21 @@ export const MobilePageSetUp = () => {
             backgroundRepeat: "no-repeat",
           }}
         />
-          <div className="absolute bottom-0 w-full h-[50px] 
-          bg-gradient-to-t from-black via-black to-black/0 "/>
+        <div
+          className="absolute bottom-0 w-full h-[50px] 
+          bg-gradient-to-t from-black via-black to-black/0 "
+        />
       </section>
-
-
-
-
-
 
       <MobileFluorinatedMaterialsSection
         className="relative w-full h-full overflow-hidden z-20 -mt-4"
         stats={stats}
       />
 
-      <section id="mobile-what-we-do" className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative z-10">
+      <section
+        id="mobile-what-we-do"
+        className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative z-10"
+      >
         {/* Section detection helper */}
         <div
           className="absolute top-0 h-24 w-full pointer-events-none"

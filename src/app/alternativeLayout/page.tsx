@@ -15,23 +15,19 @@ import {
 } from "@/components/HeroSections/HeroSections";
 
 // BioHalo Sections
-import {
-  FluorinatedMaterialsSectionV2,
-} from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection";
+import { FluorinatedMaterialsSectionV2 } from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection";
 import { WhatWeDoSection } from "@/components/sections2/BioHaloSections/WhatWeDoSection";
 import { TeamSection } from "@/components/sections2/BioHaloSections/TeamSection";
 import { PlatformTechnologySection } from "@/components/sections2/BioHaloSections/PlatformTechnologySection";
 
 // Mobile Version
-import  MobileIconCarousel  from "@/components/mobileVersion/mobileIconCarousel";
-import  MobileNetworkDiagram  from "@/components/mobileVersion/mobileNetworkDiagram";
-import  MobileNetworkDiagramWithNodes  from "@/components/mobileVersion/mobileNetworkDiagramWithNodes";
+import MobileIconCarousel from "@/components/mobileVersion/mobileIconCarousel";
+import MobileNetworkDiagram from "@/components/mobileVersion/mobileNetworkDiagram";
+import MobileNetworkDiagramWithNodes from "@/components/mobileVersion/mobileNetworkDiagramWithNodes";
 import { MobileFluorinatedMaterialsSection } from "@/components/mobileVersion/mobileFluorinatedMaterialsSection";
 import { MobileFluorinatedMaterialsSectionV2 } from "@/components/mobileVersion/mobileFluorinatedMaterialsSectionV2";
 import { MobilePlatformTechnologySection } from "@/components/mobileVersion/mobilePlatformTechnologySection";
 import { MobileWhatWeDoSection } from "@/components/mobileVersion/mobileWhatWeDoSection";
-
-
 
 import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSection";
 import { TransitionSectionFour } from "@/components/sections2/BioHaloSections/TransitionSectionFour";
@@ -61,7 +57,7 @@ import WomanWhiteRainJacket from "@/assets/images/BGImagesTest/WomanWhiteRainJac
 import PfasBP from "@/assets/images/BluePrintStyle/pfasBP.svg";
 import BioReactor from "@/assets/images/BluePrint with Color/bio-reactor.png";
 import BioReactorBlueprint from "@/assets/images/BioReactorBlueprint.svg";
-import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 import industrialPollutionImage from "@/assets/images/VariousImages/IndustrialPollution.png";
 import industrialPollutionImageV2 from "@/assets/images/VariousImages/IndutrialPollutionV2.png";
 import industrialPollutionImageV3 from "@/assets/images/VariousImages/IndustrialPollutionV3.png";
@@ -114,8 +110,7 @@ import VBlackLiquid from "@/assets/images/Lettering/BlackLiquid/V.png";
 
 import ColorfulGradientRainbowTexture from "@/assets/images/BGImagesTest/ColorfulGradientRainbowTexture.jpeg";
 import { AlternativeWhatWeDoSection } from "@/components/alternativeLayout/alternativeWhatWeDoSection";
-
-
+import { AlternativeFluorinatedMaterialsSection } from "@/components/alternativeLayout/alternativeFluorinatedMaterialsSection";
 
 // Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
@@ -333,69 +328,98 @@ export default function AlternativeLayout() {
       <HeroSection5 className=" hidden md:block w-screen h-screen relative overflow-hidden" />
 
       {/* Transition Section One / Hook */}
-      <section className="relative w-screen h-[90vh] border-2 border-blue-300/0" id="transition-section-one">
-        {/* Intro Fluorinated Materials */}
-        <div className=" w-full h-full flex flex-col items-center justify-center -mt-36">
-                {/* Fluorine Element / Periodic Table */}
-                <div className="relative aspect-square w-32 border-[6px] border-pinkAccent/15 rounded-lg flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm">
-                  <span className="text-[min(7vw,3rem)] font-bold">F</span>
-                  <span className="text-[min(3.5vw,0.875rem)] font-medium -mt-3">Fluorine</span>
-                  <span className="absolute top-2 left-2 text-[min(4vw,0.75rem)] font-bold">9</span>
-                  <span className="text-[min(2.5vw,0.75rem)] mt-1">18.99</span>
-                </div>
-                {/* Subtitle */}
-                <h2 className="text-2xl md:text-3xl font-bold  text-gray-500 text-center">
-                    our modern society is built on <br /> <span className="bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">fluorinated materials</span>
-                </h2>
-                
-                {/* Enzyme Image right */}
-                <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px] translate-x-[35%] translate-y-[-50%] pointer-events-none">
-                  <motion.div
-                    className="absolute w-full h-full"
-                    style={{
-                      scale: useTransform(useScroll().scrollY, [0, 1000], [1, 1.1]),
-                      x: useTransform(useScroll().scrollY, [0, 1000], [0, 100]),
-                      y: useTransform(useScroll().scrollY, [0, 1000], [0, -200]),
-                      filter: useTransform(useScroll().scrollY, [0, 1000], ["blur(0px)", "blur(20px)"]),
-                      opacity: useTransform(useScroll().scrollY, [0, 1000], [1, 0.8]),
-                    }}
-                  >
-                    <Image
-                      src={enzymeImage}
-                      alt="Enzyme"
-                      fill
-                      className="object-contain"
-                    />
-                  </motion.div>
-                </div>
-              
-                {/* Enzyme Image left */}
-                <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] bottom-0 left-0 opacity-60 blur-[16px] translate-x-[-50%] translate-y-[50%]">
-                  <motion.div
-                    className="absolute w-full h-full"
-                    style={{
-                      x: useTransform(useScroll().scrollY, [0, 1300], [0, -100]),
-                      y: useTransform(useScroll().scrollY, [0, 1000], [0, -100]),
-                    }}
-                  >
-                    <Image
-                      src={enzymeImage}
-                      alt="Enzyme"
-                      fill
-                      className="object-contain"
-                    />
-                  </motion.div>
-                </div>
-
+      <section
+        className="relative w-screen z-0 "
+        id="transition-section-one">
+        {/* Background image of enzyme */}
+      <div className="relative w-screen h-screen flex flex-col items-center justify-center min-h-[900px]">
+        {/* Fluorine Element / Periodic Table */}
+        {/* Enzyme Image left */}
+        <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] bottom-0 left-0 opacity-60 blur-[16px] translate-x-[-50%] translate-y-[50%]">
+          <motion.div
+            className="absolute w-full h-full"
+            style={{
+              x: useTransform(useScroll().scrollY, [0, 1300], [0, -100]),
+              y: useTransform(useScroll().scrollY, [0, 1000], [0, -100]),
+            }}
+          >
+            <Image
+              src={enzymeImage}
+              alt="Enzyme"
+              fill
+              className="object-contain"
+            />
+          </motion.div>
         </div>
-        </section>   
+        <div className="relative aspect-square w-32 border-[6px] border-pinkAccent/15 rounded-lg 
+        flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm ">
+          <span className="text-[min(7vw,3rem)] font-bold">
+            F</span>
+          <span className="text-[min(3.5vw,0.875rem)] font-semibold -mt-3">
+            Fluorine
+          </span>
+          <span className="absolute top-1 left-2 text-[min(6vw,0.75rem)] font-bold">
+            9
+          </span>
+          <span className="text-[min(2.5vw,0.75rem)] mt-1">18.99</span>
+        </div>
+        {/* Subtitle */}
+        <h2 className="text-2xl md:text-3xl font-bold  text-gray-500 text-center">
+          our modern society is built on <br />{" "}
+          <span className="bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+            fluorinated materials
+          </span>
+        </h2>
 
-      
+        {/* Enzyme Image right */}
+        <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px] translate-x-[35%] translate-y-[-50%] pointer-events-none">
+          <motion.div
+            className="absolute w-full h-full"
+            style={{
+              scale: useTransform(useScroll().scrollY, [0, 1000], [1, 1.1]),
+              x: useTransform(useScroll().scrollY, [0, 1000], [0, 100]),
+              y: useTransform(useScroll().scrollY, [0, 1000], [0, -200]),
+              filter: useTransform(
+                useScroll().scrollY,
+                [0, 1000],
+                ["blur(0px)", "blur(20px)"]
+              ),
+              opacity: useTransform(useScroll().scrollY, [0, 1000], [1, 0.8]),
+            }}
+          >
+            <Image
+              src={enzymeImage}
+              alt="Enzyme"
+              fill
+              className="object-contain"
+            />
+          </motion.div>
+        </div>  
+      </div>
+
+      <div
+          className="relative bottom-0 left-0 w-full min-h-[200px] h-[30vw] xl:h-[30vw] 
+          translate-y-[5vw] bg-gradient-to-t from-red-500 via-black to-transparent"
+          style={{
+            backgroundImage: `url(${BlackSmokeDivider.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center bottom",
+            backgroundRepeat: "no-repeat",
+          }}>
+          </div>
+      <div
+          className="absolute bottom-0 left-0 w-full h-[10vw] bg-gradient-to-t from-black via-black/30 to-transparent"
+          />
+      </section>
+
       {/* Infos about PFAS / Bento Section */}
-      <section className="relative w-screen bg-gradient-to-t from-teal-50 via-transparent to-transparent border-2 border-blue-300/0 z-40
-      p-24 pb-36" id="alt-bento-section">
+      <section
+        className="hidden relative w-screen bg-gradient-to-t from-teal-50 via-transparent to-transparent border-2 border-blue-300/0 z-40
+      p-24 pb-36"
+        id="alt-bento-section"
+      >
         {/* Content Container */}
-        <div className="hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[minmax(180px,auto)]  bg-green-300/0 max-w-[80vw] lg:max-w-[80vw] 2xl:max-w-[1100px] mx-auto">
+        <div className=" grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[minmax(180px,auto)]  bg-green-300/0 max-w-[80vw] lg:max-w-[80vw] 2xl:max-w-[1100px] mx-auto">
           <BentoContact className="w-full hidden" />
           <BentoStats className="w-full " />
           <BentoIntro className="w-full " />
@@ -404,124 +428,142 @@ export default function AlternativeLayout() {
           <BentoDurability className="w-full border-2 border-lightGrey" />
           <BentoWaterRepellant className="w-full border-2 border-lightGrey" />
           <BentoLongLasting className="w-full border-2 border-lightGrey" />
-          
+
           <BentoPeriodicTable className="w-full hidden" />
           <BentoVerticalDouble className="w-full hidden" />
         </div>
-      </section>   
+      </section>
 
-        <MobileFluorinatedMaterialsSection
-          className="relative w-full h-full overflow-hidden z-20 pt-20 hidden"
-          stats={stats}
-        />
-        <MobileFluorinatedMaterialsSectionV2
-          className="relative w-full h-full overflow-hidden z-20 pt-20 hidden"
-          stats={stats}
-        />
+      <AlternativeFluorinatedMaterialsSection
+        className="relative w-full h-full overflow-hidden z-20 pt-20 "
+        stats={stats}
+      />
+      <MobileFluorinatedMaterialsSection
+        className="relative w-full h-full overflow-hidden z-20 pt-20 hidden"
+        stats={stats}
+      />
+      <MobileFluorinatedMaterialsSectionV2
+        className="relative w-full h-full overflow-hidden z-20 pt-20 hidden "
+        stats={stats}
+      />
 
-        <MobileWhatWeDoSection
-          className="relative w-full h-full overflow-hidden z-20 pt-20 block md:hidden"
-          stats={stats}
-        />
+      <MobileWhatWeDoSection
+        className="relative w-full h-full overflow-hidden z-20 pt-20 block md:hidden"
+        stats={stats}
+      />
 
+      <AlternativeWhatWeDoSection
+        className="relative w-full h-full overflow-hidden z-20 pt-20 hidden md:block"
+        stats={stats}
+      />
 
-        <AlternativeWhatWeDoSection
-          className="relative w-full h-full overflow-hidden z-20 pt-20 hidden md:block"
-          stats={stats}
-        />
+      {/* Platform Technology Section */}
+      <section
+        id="platform-technology"
+        className="w-full min-h-[80vh] relative"
+      >
+        {/* Section detection helper */}
+        <div
+          className="absolute top-0 h-24 w-full pointer-events-none"
+          aria-hidden="true"
+        ></div>
 
-        {/* HIDDEN!  Forever Chemicals Section */}
-        <section className="relative w-full min-h-screen max-w-[1450px] mx-auto hidden
-        px-4 md:px-24 pt-44 flex-col items-center justify-center border-2 border-red-300/0">
-          {/* Floating Info Circle  */}
-      <div className="w-full h-full">
-        <div className="w-full h-full inset-0 relative bg-yellow-500/0">
-          {/* <div className="absolute w-[33%] max-w-[400px] aspect-square bg-red-500/10 rounded-full top-[40%] xl:top-[50%] left-[50%] translate-x-[10%] translate-y-[10%]"></div> */}
-          <motion.div
-            className="absolute w-[33%] max-w-[400px] aspect-square bg-red-500/0 border-4 border-tealAccent/30 rounded-full top-[70%] xl:top-[70%] left-[50%] xl:left-[55%] translate-x-[10%] translate-y-[10%]"
-            style={{
-              willChange: "transform",
-              backgroundImage: `url(${ColorfulGradientRainbowTexture.src})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              y: useTransform(
-                useScroll({
-                  target: ref4,
-                  offset: ["center end", "center start"],
-                }).scrollYProgress,
-                [0, 1],
-                [0, -250]
-              ),
-            }}
-          >
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              {/* Blurred Title */}
-              <SimpleStatsBox
-                classNamesContainer="w-fit h-fit mt-4"
-                classNamesTitle="w-[300px] blur-sm opacity-35 text-center text-8xl lg:text-9xl font-Arial
+        <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
+      </section>
+
+      {/* HIDDEN!  Forever Chemicals Section */}
+      <section
+        className="relative w-full min-h-screen max-w-[1450px] mx-auto hidden
+        px-4 md:px-24 pt-44 flex-col items-center justify-center border-2 border-red-300/0"
+      >
+        {/* Floating Info Circle  */}
+        <div className="w-full h-full">
+          <div className="w-full h-full inset-0 relative bg-yellow-500/0">
+            {/* <div className="absolute w-[33%] max-w-[400px] aspect-square bg-red-500/10 rounded-full top-[40%] xl:top-[50%] left-[50%] translate-x-[10%] translate-y-[10%]"></div> */}
+            <motion.div
+              className="absolute w-[33%] max-w-[400px] aspect-square bg-red-500/0 border-4 border-tealAccent/30 rounded-full top-[70%] xl:top-[70%] left-[50%] xl:left-[55%] translate-x-[10%] translate-y-[10%]"
+              style={{
+                willChange: "transform",
+                backgroundImage: `url(${ColorfulGradientRainbowTexture.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                y: useTransform(
+                  useScroll({
+                    target: ref4,
+                    offset: ["center end", "center start"],
+                  }).scrollYProgress,
+                  [0, 1],
+                  [0, -250]
+                ),
+              }}
+            >
+              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                {/* Blurred Title */}
+                <SimpleStatsBox
+                  classNamesContainer="w-fit h-fit mt-4"
+                  classNamesTitle="w-[300px] blur-sm opacity-35 text-center text-8xl lg:text-9xl font-Arial
                                     font-black mb-1 bg-gradient-to-tl from-lightGrey via-gray-400 to-lightGrey/70 bg-clip-text text-transparent"
-                classNamesSubTitle="w-[150px] lg:w-[200px] mx-auto text-center text-lightGrey/60 text-3xl font-bold mt-0 capitalize leading-3"
-                stat={stats[8]}
-                scrollYProgress={scrollYProgress}
-                scrollEndThreshold={0.9}
-                index={4}
-              />
+                  classNamesSubTitle="w-[150px] lg:w-[200px] mx-auto text-center text-lightGrey/60 text-3xl font-bold mt-0 capitalize leading-3"
+                  stat={stats[8]}
+                  scrollYProgress={scrollYProgress}
+                  scrollEndThreshold={0.9}
+                  index={4}
+                />
 
-              {/* Primary Title */}
-              <SimpleStatsBox
-                classNamesContainer="absolute w-fit h-fit mt-4"
-                classNamesTitle="w-[300px] text-center text-8xl lg:text-9xl font-Arial
+                {/* Primary Title */}
+                <SimpleStatsBox
+                  classNamesContainer="absolute w-fit h-fit mt-4"
+                  classNamesTitle="w-[300px] text-center text-8xl lg:text-9xl font-Arial
                                   font-black mb-1 bg-gradient-to-tl from-lightGrey via-gray-400 to-lightGrey/70 bg-clip-text text-transparent"
-                classNamesSubTitle="w-[150px] lg:w-[200px] mx-auto text-center text-lightGrey/60 text-3xl font-bold mt-0 capitalize leading-3"
-                stat={stats[8]}
-                scrollYProgress={scrollYProgress}
-                scrollEndThreshold={0.9}
-                index={4}
-              />
-            </div>
-          </motion.div>
-          {/* <div className="absolute w-[10%] max-w-[133px] aspect-square bg-yellow-500 rounded-full top-[50%] left-[50%] translate-x-[230%] translate-y-[10%]"></div> */}
-        </div>
-      </div>
-        </section>
-            
-        <section className="px-16">
-            <BentoSectionGen3 className="w-full h-full bg-transparent pt-[340px]" />
-
-              {/* Description Container */}
-              <div className="w-full max-w-3xl mx-auto mb-20 text-center">
-                <p className="text-gray-300 text-lg mb-4">
-                  From coatings and textiles to <br />
-                  food packaging and electronics
-                </p>
-                <p className="text-gray-500 text-base md:text-lg">
-                  Due to their unique properties, like heat resistance and water
-                  repellency, they are used in a wide range of products. However,
-                  these special properties also make them nearly impossible to
-                  degrade and{" "}
-                  <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
-                    highly toxic
-                  </span>
-                  . PFAS accumulate in the environment and pose a threat to public
-                  health and the environment itself.
-                </p>
+                  classNamesSubTitle="w-[150px] lg:w-[200px] mx-auto text-center text-lightGrey/60 text-3xl font-bold mt-0 capitalize leading-3"
+                  stat={stats[8]}
+                  scrollYProgress={scrollYProgress}
+                  scrollEndThreshold={0.9}
+                  index={4}
+                />
               </div>
+            </motion.div>
+            {/* <div className="absolute w-[10%] max-w-[133px] aspect-square bg-yellow-500 rounded-full top-[50%] left-[50%] translate-x-[230%] translate-y-[10%]"></div> */}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-16">
+        <BentoSectionGen3 className="w-full h-full bg-transparent pt-[340px]" />
+
+        {/* Description Container */}
+        <div className="w-full max-w-3xl mx-auto mb-20 text-center">
+          <p className="text-gray-300 text-lg mb-4">
+            From coatings and textiles to <br />
+            food packaging and electronics
+          </p>
+          <p className="text-gray-500 text-base md:text-lg">
+            Due to their unique properties, like heat resistance and water
+            repellency, they are used in a wide range of products. However,
+            these special properties also make them nearly impossible to degrade
+            and{" "}
+            <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+              highly toxic
+            </span>
+            . PFAS accumulate in the environment and pose a threat to public
+            health and the environment itself.
+          </p>
+        </div>
       </section>
 
       <section className="w-full h-fit bg-red-500/0 border-2 border-blue-300 relative">
-          <div
-              className="relative w-full min-h-[200px] h-[30vw] xl:h-[30vw] pt-16 "
-              style={{
-                backgroundImage: `url(${BlackSmokeDivider.src})`,
-                backgroundSize: "contain",
-                backgroundPosition: "center bottom",
-                backgroundRepeat: "no-repeat",
-              }}
-            />
-          <div className="w-full h-[10vw] absolute bottom-0 left-0 bg-gradient-to-t from-black via-black/50 to-black/0 "/>
+        <div
+          className="relative w-full min-h-[200px] h-[30vw] xl:h-[30vw] pt-16 "
+          style={{
+            backgroundImage: `url(${BlackSmokeDivider.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center bottom",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        <div className="w-full h-[10vw] absolute bottom-0 left-0 bg-gradient-to-t from-black via-black/50 to-black/0 " />
       </section>
-
 
       <section className="w-full h-fit bg-red-500/0">
         <FluorinatedMaterialsSectionV2
@@ -531,8 +573,12 @@ export default function AlternativeLayout() {
       </section>
 
       {/* Health Section */}
-      <section id="health-section" className="relative w-full h-[70vw] max-h-[700px]">
-        <div className="absolute w-full h-full bottom-0 bg-black max-w-[1450px] left-1/2 -translate-x-1/2 "
+      <section
+        id="health-section"
+        className="relative w-full h-[70vw] max-h-[700px]"
+      >
+        <div
+          className="absolute w-full h-full bottom-0 bg-black max-w-[1450px] left-1/2 -translate-x-1/2 "
           style={{
             backgroundImage: `url(${industrialPollutionImageV3.src})`,
             backgroundSize: "cover",
@@ -587,22 +633,6 @@ export default function AlternativeLayout() {
         </div>
       </section>
 
-      
-
-      {/* Platform Technology Section */}
-      <section
-        id="platform-technology"
-        className="w-full min-h-[80vh] relative"
-      >
-        {/* Section detection helper */}
-        <div
-          className="absolute top-0 h-24 w-full pointer-events-none"
-          aria-hidden="true"
-        ></div>
-
-        <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
-      </section>
-
       {/* Icon Carousel Section - No ID here since it's not in the navigation */}
       <section className="w-full">
         <div className="bg-red-500/0 w-full">
@@ -611,7 +641,6 @@ export default function AlternativeLayout() {
           </div>
         </div>
       </section>
-
 
       {/* Team Section */}
       <section id="team-section" className="min-h-[80vh] relative">

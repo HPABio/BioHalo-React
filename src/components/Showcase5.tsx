@@ -43,7 +43,7 @@ import { PartnersMarqueeSection } from "@/components/sections2/BioHaloSections/P
 import { SuccessesSection } from "@/components/sections2/BioHaloSections/SuccessesSection";
 import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSection";
 
-import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 import industrialPollutionImage from "@/assets/images/VariousImages/IndustrialPollution.png";
 import industrialPollutionImageV2 from "@/assets/images/VariousImages/IndutrialPollutionV2.png";
 import industrialPollutionImageV3 from "@/assets/images/VariousImages/IndustrialPollutionV3.png";
@@ -334,7 +334,7 @@ export const Showcase4 = () => {
         </div>
 
         {/* Title text made of letter images V2 */}
-  {/*       <div className="relative w-full h-screen pt-24">
+        {/*       <div className="relative w-full h-screen pt-24">
           <ImageTitleText letterImages={letterImages} />
         </div> */}
 

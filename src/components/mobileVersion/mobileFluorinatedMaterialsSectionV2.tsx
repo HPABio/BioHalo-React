@@ -145,11 +145,11 @@ export function MobileFluorinatedMaterialsSectionV2({
 
   return (
     <section
-      className={`${className} w-full h-full  relative bg-gradient-to-b from-black via-black to-slate-900`}
+      className={`${className} w-full h-full  relative bg-gradient-to-b from-black via-black to-slate-900 -mt-4 pt-32`}
     >
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
 
-      <div className="w-full max-w-[580px] mx-auto h-fit relative bg-gradient-to-b from-black via-black to-transparent border-2 border-purple-500/0">
+      <div className="w-full max-w-[580px] mx-auto h-fit relative bg-gradient-to-b from-black via-black to-transparent">
         <div className="w-full h-fit relative overflow-hidden 
         bg-gradient-to-b from-black via-black to-transparent">
           <div className="relative w-full h-full max-w-[1280px] flex flex-col mx-auto px-6">
@@ -184,7 +184,7 @@ export function MobileFluorinatedMaterialsSectionV2({
 
             <div className="w-full h-[60px] relative my-4"/>
 
-<div className="w-full relative pt-32 mb-32 border-2 border-red-500">
+<div className="w-full relative pt-32 mb-32 border-2 border-red-500/0">
   <motion.div
   ref={refTurbine}
   initial={{

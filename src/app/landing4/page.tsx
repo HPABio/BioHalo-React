@@ -64,7 +64,7 @@ import WomanWhiteRainJacket from "@/assets/images/BGImagesTest/WomanWhiteRainJac
 import PfasBP from "@/assets/images/BluePrintStyle/pfasBP.svg";
 import BioReactor from "@/assets/images/BluePrint with Color/bio-reactor.png";
 import BioReactorBlueprint from "@/assets/images/BioReactorBlueprint.svg";
-import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 import industrialPollutionImage from "@/assets/images/VariousImages/IndustrialPollution.png";
 import industrialPollutionImageV2 from "@/assets/images/VariousImages/IndutrialPollutionV2.png";
 import industrialPollutionImageV3 from "@/assets/images/VariousImages/IndustrialPollutionV3.png";
@@ -332,98 +332,118 @@ export default function Landing4() {
       <section className="" id="transition-section-one">
         {/* Background image of enzyme */}
         <div className="relative w-screen h-[60vh] 2xl:h-[80vh] flex flex-col items-center justify-center">
-                {/* Fluorine Element / Periodic Table */}
-                <div className="relative aspect-square w-32 border-[6px] border-pinkAccent/15 rounded-lg flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm">
-                  <span className="text-[min(7vw,3rem)] font-bold">F</span>
-                  <span className="text-[min(3.5vw,0.875rem)] font-semibold -mt-3">Fluorine</span>
-                  <span className="absolute top-1 left-2 text-[min(6vw,0.75rem)] font-bold">9</span>
-                  <span className="text-[min(2.5vw,0.75rem)] mt-1">18.99</span>
-                </div>
-                {/* Subtitle */}
-                <h2 className="text-2xl md:text-3xl font-bold  text-gray-500 text-center">
-                    our modern society is built on <br /> <span className="bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">fluorinated materials</span>
-                </h2>
-                
-                {/* Enzyme Image right */}
-                <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px] translate-x-[35%] translate-y-[-50%] pointer-events-none">
-                  <motion.div
-                    className="absolute w-full h-full"
-                    style={{
-                      scale: useTransform(useScroll().scrollY, [0, 1000], [1, 1.1]),
-                      x: useTransform(useScroll().scrollY, [0, 1000], [0, 100]),
-                      y: useTransform(useScroll().scrollY, [0, 1000], [0, -200]),
-                      filter: useTransform(useScroll().scrollY, [0, 1000], ["blur(0px)", "blur(20px)"]),
-                      opacity: useTransform(useScroll().scrollY, [0, 1000], [1, 0.8]),
-                    }}
-                  >
-                    <Image
-                      src={enzymeImage}
-                      alt="Enzyme"
-                      fill
-                      className="object-contain"
-                    />
-                  </motion.div>
-                </div>
-              
-                {/* Enzyme Image left */}
-                <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] bottom-0 left-0 opacity-60 blur-[16px] translate-x-[-50%] translate-y-[50%]">
-                  <motion.div
-                    className="absolute w-full h-full"
-                    style={{
-                      x: useTransform(useScroll().scrollY, [0, 1300], [0, -100]),
-                      y: useTransform(useScroll().scrollY, [0, 1000], [0, -100]),
-                    }}
-                  >
-                    <Image
-                      src={enzymeImage}
-                      alt="Enzyme"
-                      fill
-                      className="object-contain"
-                    />
-                  </motion.div>
-                </div>
+          {/* Fluorine Element / Periodic Table */}
+          <div className="relative aspect-square w-32 border-[6px] border-pinkAccent/15 rounded-lg flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm">
+            <span className="text-[min(7vw,3rem)] font-bold">F</span>
+            <span className="text-[min(3.5vw,0.875rem)] font-semibold -mt-3">
+              Fluorine
+            </span>
+            <span className="absolute top-1 left-2 text-[min(6vw,0.75rem)] font-bold">
+              9
+            </span>
+            <span className="text-[min(2.5vw,0.75rem)] mt-1">18.99</span>
+          </div>
+          {/* Subtitle */}
+          <h2 className="text-2xl md:text-3xl font-bold  text-gray-500 text-center">
+            our modern society is built on <br />{" "}
+            <span className="bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+              fluorinated materials
+            </span>
+          </h2>
 
+          {/* Enzyme Image right */}
+          <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px] translate-x-[35%] translate-y-[-50%] pointer-events-none">
+            <motion.div
+              className="absolute w-full h-full"
+              style={{
+                scale: useTransform(useScroll().scrollY, [0, 1000], [1, 1.1]),
+                x: useTransform(useScroll().scrollY, [0, 1000], [0, 100]),
+                y: useTransform(useScroll().scrollY, [0, 1000], [0, -200]),
+                filter: useTransform(
+                  useScroll().scrollY,
+                  [0, 1000],
+                  ["blur(0px)", "blur(20px)"]
+                ),
+                opacity: useTransform(useScroll().scrollY, [0, 1000], [1, 0.8]),
+              }}
+            >
+              <Image
+                src={enzymeImage}
+                alt="Enzyme"
+                fill
+                className="object-contain"
+              />
+            </motion.div>
+          </div>
+
+          {/* Enzyme Image left */}
+          <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] bottom-0 left-0 opacity-60 blur-[16px] translate-x-[-50%] translate-y-[50%]">
+            <motion.div
+              className="absolute w-full h-full"
+              style={{
+                x: useTransform(useScroll().scrollY, [0, 1300], [0, -100]),
+                y: useTransform(useScroll().scrollY, [0, 1000], [0, -100]),
+              }}
+            >
+              <Image
+                src={enzymeImage}
+                alt="Enzyme"
+                fill
+                className="object-contain"
+              />
+            </motion.div>
+          </div>
         </div>
 
         {/* Forever Chemicals Section */}
-        <section className="relative w-full min-h-screen max-w-[1450px] mx-auto px-4 md:px-24 pt-44 flex flex-col items-center justify-center">
+        <section className="relative w-full min-h-screen max-w-[1450px] mx-auto px-4 md:px-24 pt-44 flex flex-col items-center justify-center
+        border-2 border-blue-300">
           {/* Main Title Container */}
-          <div className="w-fit mx-auto grayscale-[0.5] hidden">
-            <h1
-              className="relative text-[5vw] uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap text-center">
+          <div className="w-fit mx-auto grayscale-[0.5] ">
+            <h1 className="relative text-[5vw] uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap text-center">
               <span className="top-0 left-0 blur-[2px] opacity-40 bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent text-center">
                 fluorinated materials
               </span>
-              <span className="absolute top-0 left-0 opacity-1
-              bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent">fluorinated materials</span>
-              <span className="absolute top-0 left-0 opacity-1
-              bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent">fluorinated materials</span>
+              <span
+                className="absolute top-0 left-0 opacity-1
+              bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent"
+              >
+                fluorinated materials
+              </span>
+              <span
+                className="absolute top-0 left-0 opacity-1
+              bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent"
+              >
+                fluorinated materials
+              </span>
             </h1>
           </div>
-            
         </section>
         <section className="px-16">
-            <BentoSectionGen3 className="w-full h-full bg-transparent" />
 
-              {/* Description Container */}
-              <div className="w-full max-w-3xl mx-auto mb-20 text-center">
-                <p className="text-gray-300 text-lg mb-4">
-                  From coatings and textiles to <br />
-                  food packaging and electronics
-                </p>
-                <p className="text-gray-500 text-base md:text-lg">
-                  Due to their unique properties, like heat resistance and water
-                  repellency, they are used in a wide range of products. However,
-                  these special properties also make them nearly impossible to
-                  degrade and{" "}
-                  <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
-                    highly toxic
-                  </span>
-                  . PFAS accumulate in the environment and pose a threat to public
-                  health and the environment itself.
-                </p>
-              </div>
-        </section>        
+
+          
+          <BentoSectionGen3 className="w-full h-full bg-transparent" />
+
+          {/* Description Container */}
+          <div className="w-full max-w-3xl mx-auto mb-20 text-center">
+            <p className="text-gray-300 text-lg mb-4">
+              From coatings and textiles to <br />
+              food packaging and electronics
+            </p>
+            <p className="text-gray-500 text-base md:text-lg">
+              Due to their unique properties, like heat resistance and water
+              repellency, they are used in a wide range of products. However,
+              these special properties also make them nearly impossible to
+              degrade and{" "}
+              <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                highly toxic
+              </span>
+              . PFAS accumulate in the environment and pose a threat to public
+              health and the environment itself.
+            </p>
+          </div>
+        </section>
 
         <div
           className="relative w-full min-h-[200px] h-[30vw] xl:h-[30vw] pt-16 "

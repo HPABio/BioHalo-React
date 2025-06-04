@@ -10,7 +10,6 @@ import { MovingAtom } from "../../ui/MovingAtom";
 import WaterColorReveal from "@/components/WaterColorReveal";
 import EnzymeImage2 from "@/assets/images/enzymeImage2.png";
 
-
 import BGFabricTealPink from "@/assets/images/BGImages/BGFabricTealPink_222564810.png";
 import MeshFabric from "@/assets/images/BGImages/Mesh-fabric_1020623350.png";
 import LightBGWithDroplets from "@/assets/images/AdobeStock/AdobeStock_291137317.jpeg";
@@ -27,7 +26,7 @@ import DNALogo from "@/assets/images/BluePrintSVG/dna-logo.svg";
 import BioHaloStep2 from "@/assets/images/BluePrintSVG/BioHalo-step2.svg";
 import BioReactorBP from "@/assets/images/BluePrintSVG/bio-reactor.svg";
 import NetworkDiagramWithNodes from "@/components/ui/NetworkDiagramWithNodes";
-import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 import BeakerHalfAndHalf from "@/assets/images/BluePrintPNGs/Beaker-half-and-half.png";
 
 interface WhatWeDoSectionProps {
@@ -54,7 +53,8 @@ export const WhatWeDoSection = ({
       <div className="absolute top-[-10%] left-0 w-full">
         <div
           className="relative w-full h-full 
-          [mask-image:linear-gradient(to_bottom_right,black,black,transparent)]">
+          [mask-image:linear-gradient(to_bottom_right,black,black,transparent)]"
+        >
           <Image
             src={LightBGWithDroplets}
             alt="LightBGWithDroplets"
@@ -80,8 +80,10 @@ export const WhatWeDoSection = ({
           className="absolute bg-red-500/0 top-[10%] left-[50%] translate-x-[-1220%] translate-y-[-10%] bg-pinkAccent"
         />
 
-        <div className="absolute hidden lg:block
-        top-10 xl:top-0 left-[45%] w-[45%] xl:w-[55%]  max-w-[900px] translate-x-[12vw] xl:translate-x-[5vw]">
+        <div
+          className="absolute hidden lg:block
+        top-10 xl:top-0 left-[45%] w-[45%] xl:w-[55%]  max-w-[900px] translate-x-[12vw] xl:translate-x-[5vw]"
+        >
           <motion.div
             animate={{
               y: [0, -30, 0],
@@ -311,33 +313,33 @@ export const WhatWeDoSection = ({
           willChange: "opacity, transform",}}/> */}
       </div>
       <div className="relative bottom-0 left-0 w-full h-[200px] bg-red-600/0 overflow-visible">
-          <MovingAtom
-            width={80}
-            height={80}
-            hoverAmplitude={7}
-            hoverDuration={5}
-            shouldRotate={true}
-            rotationDuration={25}
-            shouldScale={false}
-            scaleRange={[0.9, 1.1]}
-            scaleDuration={4}
-            color="rgba(195,12,95,1)" //pink
-            className="absolute top-[50%] left-[50%] 
+        <MovingAtom
+          width={80}
+          height={80}
+          hoverAmplitude={7}
+          hoverDuration={5}
+          shouldRotate={true}
+          rotationDuration={25}
+          shouldScale={false}
+          scaleRange={[0.9, 1.1]}
+          scaleDuration={4}
+          color="rgba(195,12,95,1)" //pink
+          className="absolute top-[50%] left-[50%] 
             translate-x-[-50%] translate-y-[-150%] 
             md:translate-x-[-50%] md:translate-y-[-250%] 
             2xl:translate-x-[200%] 2xl:-translate-y-[50%] opacity-90 z-5"
-          />
+        />
         <div
-            className="absolute bottom-0 left-[50%]
+          className="absolute bottom-0 left-[50%]
             translate-x-[-50%] md:translate-y-[72px] 2xl:translate-y-[86px]
             w-[300px] h-[300px] md:w-[500px] md:h-[500px] 2xl:w-[600px] 2xl:h-[600px]"
-            style={{
-              backgroundImage: `url(${BeakerHalfAndHalf.src})`,
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          />
+          style={{
+            backgroundImage: `url(${BeakerHalfAndHalf.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
         <MovingAtom
           width={80}
           height={80}
@@ -410,7 +412,6 @@ export const WhatWeDoSection = ({
           className="absolute top-[20%] left-[50%] translate-x-[-100%] translate-y-[-40%] 
           2xl:translate-x-[300%] 2xl:-translate-y-[800%] opacity-90 z-5"
         />
-        
       </div>
     </section>
   );

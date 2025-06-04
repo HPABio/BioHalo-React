@@ -5,7 +5,10 @@ import Image from "next/image";
 import React, { Suspense, memo } from "react";
 import dynamic from "next/dynamic";
 import { HeroSection5 } from "@/components/HeroSections/HeroSection5";
-import { HeroSection1, HeroSection2 } from "@/components/HeroSections/HeroSections";
+import {
+  HeroSection1,
+  HeroSection2,
+} from "@/components/HeroSections/HeroSections";
 import { FluorinatedMaterialsSection } from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection";
 import {
   PollutionSection,
@@ -34,11 +37,9 @@ import { PartnersMarqueeSection } from "@/components/sections2/BioHaloSections/P
 import { SuccessesSection } from "@/components/sections2/BioHaloSections/SuccessesSection";
 import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSection";
 
-
-import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 import ribbonImage from "@/assets/images/BGImagesTest/Twisted Ribbon Structure transparent.png";
 import abstractImage from "@/assets/images/BGImagesTest/Abstract Black and White Design Transition.png";
-
 
 // ✅ Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
@@ -51,7 +52,8 @@ const stats = [
     suffix: "",
     label: (
       <>
-        <span className="text-lightGrey/80">fluorinated</span> compounds <br className="md:hidden block" /> are already known
+        <span className="text-lightGrey/80">fluorinated</span> compounds{" "}
+        <br className="md:hidden block" /> are already known
       </>
     ),
   },
@@ -90,12 +92,16 @@ const stats = [
     ),
     label: (
       <>
-        <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-normal">tons of </span>
+        <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-normal">
+          tons of{" "}
+        </span>
         <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
           Fluoropolymers
         </span>
         <br />
-        <span className="font-normal text-lg md:text-2xl lg:text-3xl">Are Exported from the EU annually</span>
+        <span className="font-normal text-lg md:text-2xl lg:text-3xl">
+          Are Exported from the EU annually
+        </span>
       </>
     ),
     note: (
@@ -155,22 +161,20 @@ export default function Landing6() {
 
       {/* <HeroSection1 className="w-screen h-screen relative" /> */}
       <HeroSection2 className="w-screen h-screen relative overflow-hidden" />
-      <section
-        className="pb-16 bg-black"
-        id="transition-section-one"
-      >
+      <section className="pb-16 bg-black" id="transition-section-one">
         <div className="relative w-full h-[100px] lg:h-[200px]">
-
-        <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px]
-        translate-x-[35%] translate-y-[-50%]">
-          <Image 
-            src={enzymeImage} 
-            alt="Enzyme" 
-            fill 
-            className="object-contain"
-          />
-        </div>
-{/*         <div className="absolute w-[110vw] h-[400px] top-[50%] left-[50%] opacity-1 translate-x-[-50%] translate-y-[-64%]">
+          <div
+            className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px]
+        translate-x-[35%] translate-y-[-50%]"
+          >
+            <Image
+              src={enzymeImage}
+              alt="Enzyme"
+              fill
+              className="object-contain"
+            />
+          </div>
+          {/*         <div className="absolute w-[110vw] h-[400px] top-[50%] left-[50%] opacity-1 translate-x-[-50%] translate-y-[-64%]">
           <Image 
             src={abstractImage} 
             alt="Abstract" 
@@ -187,8 +191,7 @@ export default function Landing6() {
           />
         </div> */}
 
-        <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0"/>
-
+          <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0" />
         </div>
       </section>
 
@@ -197,7 +200,10 @@ export default function Landing6() {
         stats={stats}
       />
 
-      <section id="what-we-do" className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative">
+      <section
+        id="what-we-do"
+        className="pt-12 md:pt-20 xl:pt-48 min-h-[80vh] relative"
+      >
         {/* Section detection helper */}
         <div
           className="absolute top-0 h-24 w-full pointer-events-none"
@@ -282,4 +288,4 @@ export default function Landing6() {
         */}
     </main>
   );
-};
+}
