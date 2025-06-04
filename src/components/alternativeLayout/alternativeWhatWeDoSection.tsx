@@ -21,6 +21,7 @@ import beaker2 from "@/assets/images/BluePrintSVG/beaker-product.svg";
 import BioHaloLogoOnly from "@/assets/BioHaloLogoOnly.svg";
 import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
 import BeakerHalfAndHalf from "@/assets/images/BluePrintPNGs/Beaker-half-and-half.png";
+import { ScreenSizeDEVTOOL } from "@/components/ui/ScreenSizeDEVTOOL";
 
 interface AlternativeWhatWeDoSectionProps {
   stats: any[];
@@ -184,7 +185,7 @@ export const AlternativeWhatWeDoSection = ({
           color="rgba(18,110,119,1)" //teal
           className="absolute top-[50%] right-[50%] 
           translate-x-[-80%] translate-y-[280%] opacity-[0.3] z-5
-          sm:translate-x-[-165%] sm:translate-y-[250%]"
+          sm:translate-x-[-165%] sm:translate-y-[250%] hidden"
         />
 
 
@@ -203,7 +204,25 @@ export const AlternativeWhatWeDoSection = ({
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
-                  uppercase drop-shadow-sm font-black font-Poppins sm:text-5xl xl:text-7xl xl:leading-tight">
+                  uppercase drop-shadow-sm font-black font-Poppins sm:text-5xl xl:text-7xl xl:leading-tight relative ">
+                    <MovingAtom
+                      width={100}
+                      height={100}
+                      hoverAmplitude={4}
+                      hoverDuration={6}
+                      color="rgba(18,110,119,1)" //teal
+                      className="absolute bottom-[0%] left-[0%] opacity-[0.3] z-5
+                      translate-x-[-45%] translate-y-[25%]"
+                    />
+                    <MovingAtom
+                      width={50}
+                      height={50}
+                      hoverAmplitude={4}
+                      hoverDuration={6}
+                      color="rgba(18,110,119,1)" //teal
+                      className="absolute top-[0%] right-[0%] opacity-[0.3] z-5
+                      translate-x-[50%] translate-y-[-25%]"
+                    />
                   new-to-market{" "}
                 </span>
                 <br className="hidden sm:block xl:hidden" />

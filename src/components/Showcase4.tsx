@@ -354,11 +354,11 @@ export const Showcase4 = () => {
         ></div>
 
         <WhatWeDoSection
-          className="min-h-[50vh] w-[100vw] text-white relative hidden"
+          className="min-h-[50vh] w-[100vw] text-white relative hidden md:block"
           stats={stats}
         />
         <AlternativeWhatWeDoSection
-          className="min-h-[50vh] w-[100vw] text-white relative hidden md:block"
+          className="min-h-[50vh] w-[100vw] text-white relative hidden"
           stats={stats}
         />
       </section>

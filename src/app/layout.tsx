@@ -36,7 +36,7 @@ export default function RootLayout({
           {/* <Header /> */}
           <ShowcaseNavbar />
         </div>
-        <main className="pt-0">{children} </main>
+        <main className="pt-0">{children } </main>
         <Footer />
       </body>
     </html>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { Suspense, memo, useRef } from "react";
 import dynamic from "next/dynamic";
 import { motion, useScroll, useTransform } from "framer-motion";
-
+import { ScreenSizeDEVTOOL } from "@/components/ui/ScreenSizeDEVTOOL";
 // Hero Sections
 import {
   HeroSection1,
@@ -319,6 +319,7 @@ export default function AlternativeLayout() {
       className="min-h-screen w-full h-full bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70 overflow-hidden font-poppins"
       id="top"
     >
+      <ScreenSizeDEVTOOL />
       {/* Invisible element for top section detection */}
       <div
         className="absolute top-0 h-32 w-full pointer-events-none"
