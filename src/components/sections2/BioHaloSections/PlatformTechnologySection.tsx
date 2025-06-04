@@ -285,7 +285,9 @@ export const PlatformTechnologySection = ({
               key={step.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.4, 
+                // delay: index * 0.1
+               }}
               viewport={{ once: true }}
               className={`max-sm:text-center px-4 md:px-12 lg:px-24 flex flex-col ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
@@ -379,7 +381,9 @@ export const PlatformTechnologySection = ({
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: feature.id * 0.1 }}
+                transition={{ duration: 0.4, 
+                  // delay: feature.id * 0.1 
+                }}
                 className={`p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-tealAccent/10 rounded-xl hover:border-tealAccent/30 transition-all group ${
                   index === technologyFeatures.length - 1
                     ? "md:col-span-2 md:max-w-[calc(50%-12px)] md:mx-auto"

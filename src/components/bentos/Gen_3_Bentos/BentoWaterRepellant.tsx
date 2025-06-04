@@ -50,7 +50,7 @@ export function BentoWaterRepellant({ className }: { className?: string }) {
             color: "rgba(248,248,248,1)",
           }
         }}>
-          <h3 className="text-xl font-semibold">Repellant</h3>
+          <h3 className="text-xl font-semibold hidden">Repellant</h3>
           <motion.div className="w-12 h-12 rounded-full bg-mintAccent/30 border-2 border-tealAccent/70 flex items-center justify-center aspect-square"
           initial={{
             color: "rgba(34,85,102,1)",

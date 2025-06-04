@@ -858,7 +858,7 @@ export const HeroSection5 = ({
           bg-yellow-500/0  border border-yellow-500/0"
             >
               {/* Subtitle */}
-              <div className="w-full h-fit bg-red-500/0 lg:mt-[5vh]">
+              <div className="w-full h-fit bg-red-500/0 md:mt-[10vh] lg:mt-[10vh] xl:mt-[10vh]">
                 <p className="w-full relative tracking-widest text-[clamp(1.2rem,2vw,2.4rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
                   <span
                     className="text-[clamp(1.4rem,2.5vw,3rem)] bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent 

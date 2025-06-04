@@ -50,7 +50,7 @@ export function BentoHeatResistant({ className }: { className?: string }) {
             color: "rgba(248,248,248,1)",
           }
         }}>
-          <h3 className="text-xl font-semibold">Heat Resistant</h3>
+          <h3 className="text-xl font-semibold hidden ">Heat Resistant</h3>
           <motion.div className="w-12 h-12 rounded-full bg-mintAccent/30 border-2 border-tealAccent/70 flex items-center justify-center "
           initial={{
             color: "rgba(34,85,102,1)",
@@ -84,7 +84,8 @@ export function BentoHeatResistant({ className }: { className?: string }) {
               }
             }}>
               <motion.p> <span className="text-xs opacity-50 uppercase font-medium">up to</span> </motion.p>
-              <h2 className="relative">327°C
+              <h2 className="relative">Heat
+              {/* <h2 className="relative">327°C */}
               <motion.span 
                 className="absolute top-0 left-0 bg-gradient-to-t from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent"
                 initial={{ opacity: 0 }}
@@ -93,7 +94,8 @@ export function BentoHeatResistant({ className }: { className?: string }) {
                 }}
                 transition={{ duration: 0.2 }}
               >
-                327°C
+                {/* 327°C */}
+                Heat
               </motion.span>
               </h2>
             </motion.div>

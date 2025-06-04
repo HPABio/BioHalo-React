@@ -51,7 +51,7 @@ export function BentoLongLasting({ className }: { className?: string }) {
             color: "rgba(248,248,248,1)",
           }
         }}>
-          <h3 className="text-xl font-semibold">Persistent</h3>
+          <h3 className="text-xl font-semibold hidden">Persistent</h3>
           <motion.div className="w-12 h-12 rounded-full bg-mintAccent/30 border-2 border-tealAccent/70 flex items-center justify-center "
           initial={{
             color: "rgba(34,85,102,1)",

@@ -51,11 +51,11 @@ export const AlternativeWhatWeDoSection = ({
 
   return (
     <section
-      className={`${className} overflow-visible z-20 border-2 border-blue-300/0 mx-auto`}
+      className={`${className} overflow-visible z-20  mx-auto`}
     >
-      <div className="absolute top-[-10%] left-0 w-full">
+      <div className="absolute top-[0%] left-0 w-full overflow-hidden">
         <div
-          className="relative w-full h-full border-2 border-blue-300/0
+          className="relative w-full h-full  translate-y-[-10%]
           [mask-image:linear-gradient(to_bottom_right,black,black,transparent)]"
         >
           <Image
@@ -64,6 +64,12 @@ export const AlternativeWhatWeDoSection = ({
             className="w-full h-full object-contain -scale-x-100 mix-blend-overlay opacity-20
             [mask-image:linear-gradient(to_bottom,black,black,transparent)]"
           />
+          {/* <Image
+            src={EnzymeImage2}
+            alt="EnzymeImage2"
+            className="w-full h-full object-contain -scale-x-100 mix-blend-overlay opacity-20
+            [mask-image:linear-gradient(to_bottom,black,black,transparent)]"
+          /> */}
         </div>
       </div>
       <div className="max-w-[800px] lg:max-w-[900px] xl:max-w-[1000px] mx-auto px-10 pt-12 border-2 border-red-500/0">

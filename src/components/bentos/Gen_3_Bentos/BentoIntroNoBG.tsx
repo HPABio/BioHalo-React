@@ -9,7 +9,7 @@ import { MovingAtom } from "@/components/ui/MovingAtom";
 import { backgroundImage } from "html2canvas/dist/types/css/property-descriptors/background-image";
 import AtomDiagram from "@/components/ui/AtomDiagram";
 
-export function BentoIntro({ className }: { className?: string }) {
+export function BentoIntroNoBG({ className }: { className?: string }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -17,17 +17,27 @@ export function BentoIntro({ className }: { className?: string }) {
       viewport={{ once: true }}
       whileHover="hover"
       className={`col-span-2 row-span-2 relative overflow-hidden rounded-3xl
-         bg-gradient-to-br from-tealAccent to-mintAccent p-8 text-white ${className}`}
+         p-8 text-white ${className}`}
     >
       <div className="w-full h-full relative z-10 flex flex-col font-poppins lg:pt-14">
         <h2 className="text-4xl font-bold mb-4">
-          Incorporating Fluorine Atoms...
+          Incorporating <motion.span className="font-bold"
+          initial={{ color: "#ffffff", textShadow: "none" }}
+          variants={{
+            hover: {
+              color: ["#ff69b4", "rgba(225, 12, 115, 1)"],
+              textShadow: "0 0 10px rgba(255, 105, 180, 0.5)",
+              transition: { duration: 0.2, ease: "easeInOut" },
+            },
+          }}>Fluorine</motion.span> Atoms...
         </h2>
 
         <motion.div className="flex-1 relative" transition={{ duration: 0.1 }}>
-          <motion.div className="flex w-full h-full bg-red-400/0 gap-4  max-w-[700px] mx-auto">
+          <motion.div className="flex w-full h-full gap-4  max-w-[700px] mx-auto
+          border-2 border-blue-500/0">
             <motion.div
-              className="flex w-fit max-w-[180px] h-full bg-green-400/0 justify-center relative"
+              className="flex w-fit h-full max-w-[180px] justify-center items-center relative
+               border-2 border-red-500/0 my-auto"
               variants={{
                 hover: {
                   opacity: [1, 0, 0],
@@ -38,8 +48,9 @@ export function BentoIntro({ className }: { className?: string }) {
                 },
               }}
             >
-              <div className="relative aspect-square w-32 h-32  bg-white/10 my-auto overflow-visible ">
-                <div className="absolute inset-0 flex flex-col items-center justify-center border-2 border-white/80 rounded-lg overflow-hidden">
+              <div className="relative aspect-square w-32 h-32  bg-white/10 overflow-visible ">
+                <div className="absolute inset-0 flex flex-col items-center justify-center
+                 border-2 border-white/80 rounded-lg overflow-hidden">
                   <AtomDiagram
                     width={"250%"}
                     height={"250%"}
@@ -62,7 +73,7 @@ export function BentoIntro({ className }: { className?: string }) {
               </div>
             </motion.div>
             <motion.div
-              className="flex-grow flex max-w-[200px] bg-white/0 justify-center items-center"
+              className="flex-grow flex max-w-[200px] justify-center items-center"
               variants={{
                 hover: {
                   opacity: 0,
@@ -77,7 +88,7 @@ export function BentoIntro({ className }: { className?: string }) {
             </motion.div>
 
             <motion.div
-              className="flex w-full bg-blue-400/0 relative items-center justify-center aspect-video mx-auto"
+              className="flex w-full relative items-center justify-center aspect-video mx-auto"
               variants={{
                 hover: {
                   scale: 1.1,
@@ -134,20 +145,16 @@ export function BentoIntro({ className }: { className?: string }) {
             high-performance materials with advanced properties.{" "}
           </span>{" "}
         </p>
-        <p className="text-3xl font-medium opacity-90 mt-4">Including:</p>
-        {/*  known. as <span className="font-bold">PFAS</span> (Per- and Polyfluoroalkyl Substances). */}
       </div>
 
       <motion.div
         className="absolute inset-0"
         initial={{
           backgroundImage: "none",
-          backgroundColor: "rgba(0,0,0,0.2)",
         }}
         variants={{
           hover: {
-            backgroundImage:
-              "linear-gradient(to bottom right, rgba(0, 50, 80, 0.6), rgba(0, 80, 100, 0.2))",
+            backgroundImage: "none",
           },
         }}
         transition={{ duration: 0.2 }}

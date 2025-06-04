@@ -75,24 +75,20 @@ interface AlternativeFluorinatedMaterialsSectionProps {
 const Circle1 = React.memo(function Circle1() {
   console.log("Rendering Circle1 component");
   const ref = useRef(null);
-  const ref2 = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "center start"],
   });
-  const { scrollYProgress: scrollYProgress2 } = useScroll({
-    target: ref2,
-    offset: ["start end", "center start"],
-  });
   return (
     <motion.div
-      ref={ref2}
+      ref={ref}
       initial={{ rotate: 0 }}
       transition={{ duration: 1 }}
       style={{
-        rotate: useTransform(scrollYProgress2, [0, 1], [0, -15]),
+        rotate: useTransform(scrollYProgress, [0, 1], [0, -15]),
+        y: useTransform(scrollYProgress, [0, 0.6], [0, -100]),
       }}
-      className="relative w-[500px] h-[500px] rounded-full overflow-hidden border-2 border-lightGrey/40 grid place-items-center"
+      className="relative w-full h-full rounded-full overflow-hidden border-2 border-lightGrey/40 grid place-items-center"
     >
       <Image
         src={ColorfulGradientRainbowTexture}
@@ -106,7 +102,7 @@ const Circle1 = React.memo(function Circle1() {
         top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
         mix-blend-multiply"
         style={{
-          opacity: useTransform(scrollYProgress, [0, 0.6], [0, 1]),
+          opacity: useTransform(scrollYProgress, [0, 0.6], [0, 0.75]),
         }}
       >
         <Image
@@ -115,7 +111,7 @@ const Circle1 = React.memo(function Circle1() {
           fill
           priority
           sizes="(max-width: 768px) 100vw, 500px"
-          className="w-full h-full object-cover invert grayscale -rotate-[25deg] translate-x-[-7%] translate-y-[-7%]"
+          className="w-full h-full object-cover invert grayscale"
         />
       </motion.div>
     </motion.div>
@@ -157,246 +153,29 @@ export function AlternativeFluorinatedMaterialsSection({
           <div className="relative w-full h-full max-w-[1280px] flex flex-col mx-auto px-6 pt-24">
             {/* TEXT COLUMN */}
             <div className="w-full flex flex-col items-center">
+              <p>Forever Chemicals are also known as</p>
               <h1 className="w-full text-center font-black font-poppins bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10 groupleading-none">
                 <span className="text-2xl text-gray-500 font-medium capitalize leading-none">
-                  Perfluoroalkyl and <br className="block md:hidden" />{" "}
-                  polyfluoroalkyl substances
+                  Perfluoroalkyl and <br /> polyfluoroalkyl substances
                   <br />
                 </span>
                 <span className="text-xl text-gray-500 font-poppins font-light leading-snug">
-                  also known as
+                  or for short
                   <br />
                 </span>
                 <span className="text-8xl bg-gradient-to-r from-pink-950 via-pinkAccent to-pink-950 bg-clip-text text-transparent leading-tight">
                   PFAS{" "}
                 </span>
                 <br />
-                <span className="text-xl text-gray-500 font-poppins font-light leading-none">
-                  {" "}
-                  play a crucial role in virtually every major sector of our
-                  modern economy. 
-                  {/* They are used in... */}
-                </span>
+
               </h1>
             </div>
 
             {/* Vertical Bento Layout */}
-            
-            <div className="w-full flex-col gap-8 py-8 hidden">
+            <div className="w-full flex-col gap-8 py-8">
               {/* First Bento Box - CPU Section */}
-
               {/* <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
-                <motion.div
-                  initial={{
-                    filter: "blur(0px) brightness(1)",
-                  }}
-                  whileInView={{
-                    filter: generateBrightnessValues(10, 0.8, 1.3),
-                    transition: {
-                      duration: 4,
-                      ease: "easeInOut",
-                      repeat: Infinity,
-                    },
-                  }}
-                  className="w-full h-full relative"
-                  style={{
-                    background: `url(${AdobeStockCPU.src})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                  }}
-                >
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background:
-                        "radial-gradient(circle, transparent 0%, transparent 40%, black 65%, black 100%)",
-                    }}
-                  />
-                  <motion.div
-                    ref={refCPUText}
-                    initial={{ filter: "brightness(1)" }}
-                    style={{
-                      filter: useTransform(
-                        useScroll({
-                          target: refCPUText,
-                          offset: ["start end", "start start"],
-                        }).scrollYProgress,
-                        [0, 0.4, 0.5, 1],
-                        [
-                          "brightness(1)",
-                          "brightness(3)",
-                          "brightness(2)",
-                          "brightness(1)",
-                        ]
-                      ),
-                    }}
-                    className="absolute bottom-8 right-8"
-                  >
-                    <p className="text-sm text-slate-300/50 font-medium font-poppins leading-none">
-                      <span className="text-3xl text-tealAccent uppercase font-semibold font-poppins leading-none">
-                        electronics
-                        <br />
-                      </span>
-                      production of
-                      <br />
-                      <span className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60 leading-none">
-                        semiconductors &
-                      </span>
-                    </p>
-                  </motion.div>
-                </motion.div>
-              </div> */}
-
-              {/* Second Bento Box - Aerospace Section */}
-              {/* <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
-                <motion.div
-                  ref={refTurbine}
-                  initial={{ filter: "brightness(1) saturate(0.7)" }}
-                  style={{
-                    background: `url(${JetEngineCloseUpLummiAi.src})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    filter: useTransform(
-                      useScroll({
-                        target: refTurbine,
-                        offset: ["start end", "center start"],
-                      }).scrollYProgress,
-                      [0, 0.3, 0.5, 1],
-                      [
-                        "brightness(1) saturate(0.7)",
-                        "brightness(2) saturate(1.2)",
-                        "brightness(3) saturate(1)",
-                        "brightness(0.8) saturate(0.7)",
-                      ]
-                    ),
-                  }}
-                  className="w-full h-full relative"
-                >
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background:
-                        "radial-gradient(circle, transparent 0%, transparent 40%, black 65%, black 100%)",
-                    }}
-                  />
-                  <motion.div
-                    ref={refTurbine}
-                    initial={{ filter: "brightness(1)" }}
-                    style={{
-                      filter: useTransform(
-                        useScroll({
-                          target: refTurbine,
-                          offset: ["start end", "start start"],
-                        }).scrollYProgress,
-                        [0, 0.2, 0.4, 1],
-                        [
-                          "brightness(1)",
-                          "brightness(1.5)",
-                          "brightness(2.5)",
-                          "brightness(1)",
-                        ]
-                      ),
-                    }}
-                    className="absolute bottom-8 left-8"
-                  >
-                    <p className="text-sm text-slate-300/50 font-black font-poppins text-right">
-                      <span
-                        className="text-xl text-tealAccent uppercase font-semibold font-poppins"
-                        style={{ lineHeight: ".1" }}
-                      >
-                        components
-                      </span>
-                      <br />
-                      improving
-                      <br />
-                      <span
-                        className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60"
-                        style={{ lineHeight: ".3" }}
-                      >
-                        aerospace
-                      </span>
-                    </p>
-                  </motion.div>
-                </motion.div>
-              </div> */}
-
-              {/* Third Bento Box - Coating Section */}
-              {/* <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
-                <motion.div
-                  ref={refBottle}
-                  className="w-full h-full relative"
-                  initial={{
-                    rotate: -30,
-                    scale: 0.7,
-                    opacity: 0,
-                    backgroundSize: "70%",
-                    filter: "blur(0px) brightness(1)",
-                  }}
-                  style={{
-                    background: `url(${MatteBlackBottleLummiAi.src})`,
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    rotate: useTransform(
-                      scrollYProgressBottle,
-                      [0, 0.6],
-                      [-30, 0]
-                    ),
-                    scale: useTransform(
-                      scrollYProgressBottle,
-                      [0, 0.4, 0.9, 1],
-                      [0.7, 1.1, 1.1, 0.9]
-                    ),
-                    backgroundSize: useTransform(
-                      scrollYProgressBottle,
-                      [0, 0.5],
-                      ["80%", "100%"]
-                    ),
-                    opacity: useTransform(
-                      scrollYProgressBottle,
-                      [0, 0.5, 0.9, 1],
-                      [0, 1, 1, 0.1]
-                    ),
-                    filter: useTransform(
-                      scrollYProgressBottle,
-                      [0, 0.3, 0.9, 1],
-                      [
-                        "blur(2px) brightness(0.9)",
-                        "blur(0px) brightness(2)",
-                        "blur(0px) brightness(1.2)",
-                        "blur(2px) brightness(0.3)",
-                      ]
-                    ),
-                  }}
-                >
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background:
-                        "radial-gradient(circle, transparent 0%, transparent 40%, black 75%, black 100%)",
-                    }}
-                  />
-                  <div className="absolute bottom-8 left-8">
-                    <p className="text-sm text-slate-300/50 font-black font-poppins text-right">
-                      sealing and coating
-                      <br />
-                      <span
-                        className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60"
-                        style={{ lineHeight: ".3" }}
-                      >
-                        surfaces and materials
-                        <br />
-                      </span>
-                      <span
-                        className="text-xl text-tealAccent uppercase font-semibold font-poppins"
-                        style={{ lineHeight: ".1" }}
-                      >
-                        sealing and coating
-                      </span>
-                    </p>
-                  </div>
-                </motion.div>
+                // ... existing code ...
               </div> */}
             </div>
 
@@ -405,6 +184,14 @@ export function AlternativeFluorinatedMaterialsSection({
               {/* Text content */}
               <div className="w-full px-4">
                 <div className="space-y-4">
+                  <p>
+                  <span className="text-xl text-gray-500 font-poppins font-light leading-none">
+                  {" "}
+                  These chemicals play a crucial role in virtually every major sector of our
+                  modern economy.
+                  {/* They are used in... */}
+                </span>
+                  </p>
                   <p className="text-xl text-gray-300/90 font-poppins text-center uppercase">
                     From coatings and textiles <br />
                     to food packaging and electronics
@@ -428,12 +215,12 @@ export function AlternativeFluorinatedMaterialsSection({
       </div>
 
       {/* Circles section */}
-      <div className="w-full h-fit relative">
-        <div className="w-full relative sm:translate-y-[300px] md:hidden">
+      <div className="w-full h-[47vw] relative border-2 border-red-500/0 mt-24">
           {/* Circle 1 */}
-          <div className="w-[250px] h-[250px] sm:w-[550px] sm:h-[550px] mx-auto mb-8 rotate-45">
+          <div className="w-[70vw] h-[70vw] mx-auto border-2 border-blue-500/0 relative flex items-center justify-center">
             <Circle1 />
           </div>
+        <div className="w-full relative">
         </div>
       </div>
       <div className="absolute bottom-0 right-0 w-full h-[100px] bg-gradient-to-t from-black via-black/60 to-transparent"></div>

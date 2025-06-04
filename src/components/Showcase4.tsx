@@ -283,11 +283,18 @@ const stats = [
 ];
 
 import { ImageTitleText } from "@/components/ui/ImageTitleText";
+import AtomDiagram from "./ui/AtomDiagram";
 
 export const Showcase4 = () => {
   console.log("Showcase4 component rendering");
+  const refFluorinatedMaterialsSection = useRef(null);
 
   const ref4 = useRef(null);
+  const { scrollYProgress: scrollYProgressFluorinatedMaterialsSection } =
+    useScroll({
+      target: refFluorinatedMaterialsSection,
+      offset: ["start end", "center end"],
+    });
   const { scrollYProgress } = useScroll({
     target: ref4,
     offset: ["start end", "end start"],
@@ -309,58 +316,60 @@ export const Showcase4 = () => {
       {/* <HeroSection4 className=" block w-screen h-screen relative overflow-hidden" /> */}
       {/* <HeroSection4 className=" block md:hidden  w-screen h-screen relative overflow-hidden" /> */}
       <HeroSection5 className=" hidden md:block w-screen h-screen relative overflow-hidden" />
-      {/* Transition Section One / Hook */}
-      <section
-        className="relative w-screen "
-        id="transition-section-one"
-      >
-        
-        
+      <section className="relative w-screen z-10  " id="transition-section-one">
         {/* Background image of enzyme */}
-      <div className="relative w-screen h-screen flex flex-col items-center justify-center min-h-[900px]">
-        {/* Fluorine Element / Periodic Table */}
-        {/* Enzyme Image left */}
-        <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] bottom-0 left-0 opacity-60 blur-[16px] translate-x-[-50%] translate-y-[50%]">
-          <motion.div
-            className="absolute w-full h-full"
-            style={{
-              x: useTransform(useScroll().scrollY, [0, 1300], [0, -100]),
-              y: useTransform(useScroll().scrollY, [0, 1000], [0, -100]),
-            }}
-          >
-            <Image
-              src={enzymeImage}
-              alt="Enzyme"
-              fill
-              className="object-contain"
-            />
-          </motion.div>
+        <div className="relative w-screen h-screen max-h-[800px] flex flex-col items-center justify-center min-h-[900px]">
+          {/* Fluorine Element / Periodic Table */}
+          <div className="relative flex flex-col items-center justify-center translate-y-[-20vh] bg-blue-500/0">
+        <AtomDiagram className="absolute h-full w-full top-[-50%] left-[50%] translate-x-[-50%] translate-y-[50%]
+        scale-[3] opacity-10" />
+            <div
+              className="relative aspect-square w-40 border-[8px] border-lightGrey/80 drop-shadow-2xl
+              rounded-xl flex flex-col items-center justify-center bg-gradient-to-br from-pink-800/10 to-purple-900/10 backdrop-blur-md text-lightGrey
+              hover:scale-105 transition-transform duration-300"
+            >
+              <span className="text-[min(8vw,4rem)] font-bold tracking-wider">
+                F
+              </span>
+              <span className="text-[min(4vw,1rem)] font-semibold tracking-wide mt-1">
+                Fluorine
+              </span>
+              <span className="absolute top-2 left-3 text-[min(6vw,0.875rem)] font-bold">
+                9
+              </span>
+              <span className="text-[min(3vw,0.875rem)] mt-2 font-medium">
+                18.99
+              </span>
+            </div>
+            {/* Subtitle */}
+            <h2
+              className="text-3xl md:text-4xl font-bold text-gray-600 text-center mt-8 max-w-2xl leading-relaxed"
+            >
+              our modern society is built on{" "}
+              <span className="bg-gradient-to-bl from-red-800/90 via-pinkAccent to-purple-900/80 bg-clip-text text-transparent font-extrabold">
+                fluorinated materials
+              </span>
+            </h2>
+          </div>
         </div>
-        <div className="relative aspect-square w-32 border-[6px] border-gradient-to-br from-pink-500 via-purple-500 to-red-700 rounded-lg 
-        flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm text-gray-600">
-          <span className="text-[min(7vw,3rem)] font-bold">
-            F</span>
-          <span className="text-[min(3.5vw,0.875rem)] font-semibold -mt-3">
-            Fluorine
-          </span>
-          <span className="absolute top-1 left-2 text-[min(6vw,0.75rem)] font-bold">
-            9
-          </span>
-          <span className="text-[min(2.5vw,0.75rem)] mt-1">18.99</span>
-        </div>
-        {/* Subtitle */}
-        <h2 className="text-2xl md:text-3xl font-bold  text-gray-500 text-center">
-          our modern society is built on <br />{" "}
-          <span className="bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
-            fluorinated materials
-          </span>
-        </h2>
-
+        {/* <div
+          className="relative bottom-0 left-0 w-full min-h-[200px] h-[30vw] xl:h-[30vw]"
+          style={{
+            backgroundImage: `url(${BlackSmokeDivider.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center bottom",
+            backgroundRepeat: "no-repeat",
+          }}
+        /> */}
         {/* Enzyme Image right */}
-        <div className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 right-0 opacity-1 blur-[6px] translate-x-[35%] translate-y-[-50%] pointer-events-none">
+        <div
+          className="absolute w-[80vw] h-[80vw] max-w-[1450px] 
+            top-0 right-0 opacity-1 blur-[6px] translate-x-[35%] translate-y-[-50%] pointer-events-none"
+        >
           <motion.div
             className="absolute w-full h-full"
             style={{
+              opacity: useTransform(useScroll().scrollY, [0, 600], [1, 0.1]),    
               scale: useTransform(useScroll().scrollY, [0, 1000], [1, 1.1]),
               x: useTransform(useScroll().scrollY, [0, 1000], [0, 100]),
               y: useTransform(useScroll().scrollY, [0, 1000], [0, -200]),
@@ -369,7 +378,6 @@ export const Showcase4 = () => {
                 [0, 1000],
                 ["blur(0px)", "blur(20px)"]
               ),
-              opacity: useTransform(useScroll().scrollY, [0, 1000], [1, 0.8]),
             }}
           >
             <Image
@@ -380,23 +388,8 @@ export const Showcase4 = () => {
             />
           </motion.div>
         </div>
-
-       
-        
-
-        
-        
-      </div>
-      <div
-          className="relative bottom-0 left-0 w-full min-h-[200px] h-[30vw] xl:h-[30vw]"
-          style={{
-            backgroundImage: `url(${BlackSmokeDivider.src})`,
-            backgroundSize: "contain",
-            backgroundPosition: "center bottom",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
       </section>
+      {/* Transition Section One / Hook */}
       {/* <section className="pb-16 bg-black" id="transition-section-one">
         <div className="relative w-full h-[100px] lg:h-[200px]">
           <div
@@ -421,11 +414,45 @@ export const Showcase4 = () => {
           <div className="relative w-full h-[300px] bg-gradient-to-t from-black/90 via-black/90 to-black/0" />
         </div>
       </section> */}
+      {/* Fluorinated Materials Section */}
 
-      <FluorinatedMaterialsSection
-        className="relative w-full h-full overflow-hidden z-20 pt-6"
-        stats={stats}
-      />
+      <section className="relative overflow-visible bg-gradient-to-b from-black via-black to-black/0 pt-20 lg:pt-40 xl:pt-60">
+        <motion.div ref={refFluorinatedMaterialsSection}>
+          <FluorinatedMaterialsSection
+            className="relative w-full h-full overflow-hidden z-20"
+            stats={stats}
+          />
+          {/* Enzyme Image left */}
+          {/* Enzyme Image left */}
+          <div
+            className="absolute w-[80vw] h-[80vw] max-w-[1450px] top-0 left-0 blur-[16px] 
+        translate-x-[-35%] translate-y-[-37%] z-20"
+          >
+            <motion.div
+              className="w-full h-full"
+              style={{
+                scale: useTransform(
+                  scrollYProgressFluorinatedMaterialsSection,
+                  [0, 1],
+                  [1.2, 0.8]
+                ),
+                x: useTransform(
+                  scrollYProgressFluorinatedMaterialsSection,
+                  [0, 1],
+                  [0, -300]
+                ),
+                y: useTransform(
+                  scrollYProgressFluorinatedMaterialsSection,
+                  [0, 1],
+                  [0, -50]
+                ),
+              }}
+            >
+              <Image src={enzymeImage} alt="Enzyme" className="object-cover" />
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
 
       <section
         id="what-we-do"
