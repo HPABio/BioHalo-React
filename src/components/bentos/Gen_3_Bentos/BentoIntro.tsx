@@ -18,7 +18,7 @@ export function BentoIntro({ className }: { className?: string }) {
       whileHover="hover"
       className={`col-span-2 row-span-2 relative overflow-hidden rounded-3xl bg-gradient-to-br from-tealAccent to-mintAccent p-8 text-white ${className}`}
     >
-      <div className="w-full h-full relative z-10 flex flex-col font-poppins">
+      <div className="w-full h-full relative z-10 flex flex-col font-poppins lg:pt-14">
         <h2 className="text-4xl font-bold mb-4">Incorporating Fluorine Atoms...</h2>
         
         <motion.div 

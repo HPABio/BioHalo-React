@@ -419,19 +419,19 @@ export default function AlternativeLayout() {
         />
 
         <MobileWhatWeDoSection
-          className="relative w-full h-full overflow-hidden z-20 pt-20 block sm:hidden"
+          className="relative w-full h-full overflow-hidden z-20 pt-20 block md:hidden"
           stats={stats}
         />
 
 
         <AlternativeWhatWeDoSection
-          className="relative w-full h-full overflow-hidden z-20 pt-20 hidden sm:block"
+          className="relative w-full h-full overflow-hidden z-20 pt-20 hidden md:block"
           stats={stats}
         />
 
-        {/* Forever Chemicals Section */}
-        <section className="relative w-full min-h-screen max-w-[1450px] mx-auto 
-        px-4 md:px-24 pt-44 flex flex-col items-center justify-center border-2 border-red-300/0">
+        {/* HIDDEN!  Forever Chemicals Section */}
+        <section className="relative w-full min-h-screen max-w-[1450px] mx-auto hidden
+        px-4 md:px-24 pt-44 flex-col items-center justify-center border-2 border-red-300/0">
           {/* Floating Info Circle  */}
       <div className="w-full h-full">
         <div className="w-full h-full inset-0 relative bg-yellow-500/0">
@@ -486,7 +486,7 @@ export default function AlternativeLayout() {
         </section>
             
         <section className="px-16">
-            <BentoSectionGen3 className="w-full h-full bg-transparent" />
+            <BentoSectionGen3 className="w-full h-full bg-transparent pt-[340px]" />
 
               {/* Description Container */}
               <div className="w-full max-w-3xl mx-auto mb-20 text-center">

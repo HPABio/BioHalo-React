@@ -149,12 +149,12 @@ export function MobileFluorinatedMaterialsSection({
     >
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
 
-      <div className="w-full max-w-[580px] mx-auto h-fit relative bg-gradient-to-b from-black via-black to-transparent border-2 border-purple-500/0">
+      <div className="w-full max-w-[580px] mx-auto h-fit relative bg-gradient-to-b from-black via-black to-transparent ">
         <div
           className="w-full h-fit relative overflow-hidden 
-        bg-gradient-to-b from-black via-black to-transparent"
+        bg-gradient-to-b from-black via-black to-transparent "
         >
-          <div className="relative w-full h-full max-w-[1280px] flex flex-col mx-auto px-6">
+          <div className="relative w-full h-full max-w-[1280px] flex flex-col mx-auto px-6 pt-24">
             {/* TEXT COLUMN */}
             <div className="w-full flex flex-col items-center">
               <h1 className="w-full text-center font-black font-poppins bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10 groupleading-none">
@@ -174,7 +174,8 @@ export function MobileFluorinatedMaterialsSection({
                 <span className="text-xl text-gray-500 font-poppins font-light leading-none">
                   {" "}
                   play a crucial role in virtually every major sector of our
-                  modern economy. They are used in...
+                  modern economy. 
+                  {/* They are used in... */}
                 </span>
               </h1>
             </div>
@@ -400,7 +401,7 @@ export function MobileFluorinatedMaterialsSection({
             </div>
 
             {/* Content container */}
-            <div className="mt-8 flex flex-col gap-8 w-full">
+            <div className="mt-6 flex flex-col gap-8 w-full">
               {/* Text content */}
               <div className="w-full px-4">
                 <div className="space-y-4">

@@ -42,6 +42,7 @@ import { PlatformTechnologySection } from "@/components/sections2/BioHaloSection
 import { PartnersMarqueeSection } from "@/components/sections2/BioHaloSections/PartnersMarqueeSection";
 import { SuccessesSection } from "@/components/sections2/BioHaloSections/SuccessesSection";
 import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSection";
+import { AlternativeWhatWeDoSection } from "@/components/alternativeLayout/alternativeWhatWeDoSection";
 
 import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517 Compressed.png";
 import industrialPollutionImage from "@/assets/images/VariousImages/IndustrialPollution.png";
@@ -353,7 +354,11 @@ export const Showcase4 = () => {
         ></div>
 
         <WhatWeDoSection
-          className="min-h-[50vh] w-[100vw] text-white relative"
+          className="min-h-[50vh] w-[100vw] text-white relative hidden"
+          stats={stats}
+        />
+        <AlternativeWhatWeDoSection
+          className="min-h-[50vh] w-[100vw] text-white relative hidden md:block"
           stats={stats}
         />
       </section>

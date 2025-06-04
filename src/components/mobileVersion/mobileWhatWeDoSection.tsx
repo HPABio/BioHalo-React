@@ -55,7 +55,7 @@ export const MobileWhatWeDoSection = ({
           />
         </div>
       </div>
-      <div className="max-w-[800px] mx-auto px-10 border-2 border-red-500/0 ">
+      <div className="max-w-[800px]  mx-auto px-10 pt-12 border-2 border-red-500/0 ">
         {/* Title */}
 
         <MovingAtom
@@ -125,8 +125,8 @@ export const MobileWhatWeDoSection = ({
         {/* Text */}
         <div className="w-full h-full bg-red-500/0 mt-6 relative">
           <p className="text-gray-500/80 text-1xl font-poppins text-center">
-            we can selectively halogenate organic molecules, opening up new
-            possibilities for{" "}
+            we can selectively halogenate organic <br className="hidden sm:block"/> molecules, opening up new
+            possibilities for{" "}<br className="hidden sm:block"/> 
             <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent">
               fluorine
             </span>
@@ -144,7 +144,8 @@ export const MobileWhatWeDoSection = ({
               scaleRange={[0.9, 1.8]}
               scaleDuration={24}
               color="rgba(18,110,119,1)" //teal
-              className="absolute top-[-0%] left-[50%] translate-x-[-50%] translate-y-[0%] opacity-[0.3] rotate-[19deg]"
+              className="absolute top-[-0%] left-[50%] translate-x-[-50%] translate-y-[0%] 
+              opacity-[0.3] rotate-[19deg] sm:scale-[1.8] sm:translate-y-[30%]"
             />
             <Image
               src={EnzymeImage2}
@@ -194,11 +195,9 @@ export const MobileWhatWeDoSection = ({
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-2 capitalize opacity-1 text-center pb-10
                 bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent">
-                <span className="text-2xl">
+                <span className="text-2xl sm:text-3xl ">
                   We explore, design,
-                </span>
                 <br />
-                <span className="text-2xl">
                   and produce, unmatched
                 </span>
                 <br />
@@ -212,28 +211,32 @@ export const MobileWhatWeDoSection = ({
                 </span>
                   products
               </h1>
-              <p className="text-2xl font-poppins text-center">
-                Our{" "}
-                <span className="font-bold ">
-                  Bio-
-                  <span className="bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent 
-                  text-4xl">
-                    F
-                  </span>
-                  -Polymers
-                </span>{" "}
-                do <br/>not compromise performance
-                <br />
-                while also being safe and sustainable
-              </p>
-              <p className="text-lg max-w-md pt-8 leading-relaxed sm:mx-auto sm:text-center">
-                BioHalos revolutionary enzyme-based biohalogenation platform
-                offers you near limitless possibilities for{" "}
-                <span className="bg-gradient-to-tr from-pinkAccent to-red-900/80 bg-clip-text text-transparent ">
-                  fluorine
-                </span>
-                -enhanced compound development.
-              </p>
+              <div className="w-fit h-full border-2 border-blue-300/0 relative mx-auto "> 
+                    <p className="text-2xl sm:text-3xl sm:leading-tight font-poppins text-center sm:py-4">
+                      Our{" "}
+                      <span className="font-bold ">
+                        Bio-
+                        <span className="bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent 
+                        text-4xl">
+                          F
+                        </span>
+                        -Polymers
+                      </span>{" "}
+                      do <br/>not compromise <br/>
+                       performance
+                      <br />
+                      while also being safe <br/>and sustainable
+                    </p>
+                    <p className="text-lg max-w-md pt-8 sm:pt-12 leading-relaxed sm:mx-auto sm:text-center sm:leading-snug">
+                      BioHalos revolutionary enzyme-based biohalogenation platform
+                      offers you near limitless possibilities for{" "}
+                      <span className="bg-gradient-to-tr from-pinkAccent to-red-900/80 bg-clip-text text-transparent ">
+                        fluorine
+                      </span>
+                      -enhanced compound development.
+                    </p>
+              </div>
+
             </div>
           </div>
         </div>  
