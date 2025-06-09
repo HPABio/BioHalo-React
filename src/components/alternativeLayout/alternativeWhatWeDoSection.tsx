@@ -128,7 +128,7 @@ export const AlternativeWhatWeDoSection = ({
                       text-2xl lg:text-3xl
                        xl:text-[clamp(1.1rem,2vw,2rem)] max-w-3xl mx-auto"
                 >
-                  through our microbial-based biohalogenation platform
+                  through our <br/> microbial-based <span className="font-bold text-gray-600">biohalogenation platform</span>
                 </h2>
 
                 <div className="w-[20%] h-full border-[1px] border-gray-400/50 rounded-xl mr-auto mt-2 mb-8" />
@@ -138,7 +138,7 @@ export const AlternativeWhatWeDoSection = ({
                       text-[clamp(0.9rem,2.5vw,1.5rem)] leading-relaxed"
                 >
                   we selectively halogenate organic molecules, opening up new
-                  possibilities for{" "}
+                  possibilities for{" "}<br/>
                   <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent font-semibold">
                     fluorine
                   </span>
@@ -229,7 +229,7 @@ export const AlternativeWhatWeDoSection = ({
                     className="absolute top-[0%] right-[0%] opacity-[0.3] z-5
                       translate-x-[50%] translate-y-[-25%]"
                   />
-                  new-to-market{" "}
+                  new-to-market{" "}<br className="block md:hidden"/>
                 </span>
                 products
               </h1>
@@ -253,7 +253,7 @@ export const AlternativeWhatWeDoSection = ({
               {/* split design / Image on the right */}
               <div
                 className="w-full flex flex-col items-center justify-center 
-              gap-8 p-4 border-2 border-blue-300/0 mt-12"
+              gap-8 p-4 border-2 border-blue-300/0 mt-12 px-12 md:px-0"
               >
                 <h1 className="text-center text-4xl font-bold uppercase hidden">
                   {" "}
@@ -261,21 +261,21 @@ export const AlternativeWhatWeDoSection = ({
                 </h1>
                 <div className="w-full flex flex-row items-start justify-start gap-8">
                   <div className="flex-1 flex flex-col items-start">
-                    <p className="text-xl lg:text-2xl 2xl:text-3xl font-poppins font-medium opacity-30 leading-none">
+                    <p className="text-sm md:text-xl lg:text-2xl 2xl:text-3xl font-poppins font-medium opacity-30 leading-none">
                       Our unique
                     </p>
 
                     <h1
                       className="lowercase drop-shadow-sm font-semibold font-Poppins 
-                    sm:text-5xl md:text-4xl lg:text-5xl 2xl:text-6xl leading-none relative"
+                    sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl leading-none relative"
                     >
                       Bio
-                      <span className="text-4xl md:text-4xl lg:text-5xl 2xl:text-6xl uppercase font-black bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent">
+                      <span className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl uppercase font-black bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent">
                         F
                       </span>
                       Polymers
                     </h1>
-                    <p className="text-lg md:text-xl lg:text-xl 2xl:text-3xl font-poppins font-normal">
+                    <p className="text-sm md:text-xl lg:text-xl 2xl:text-3xl font-poppins font-normal">
                       are safe and sustainable without compromising performance
                     </p>
                     <p className="text-2xl sm:text-3xl sm:leading-tight font-poppins sm:py-4 hidden">
@@ -309,7 +309,7 @@ export const AlternativeWhatWeDoSection = ({
                   split design
                 </h1>
                 <div className="w-full flex flex-row items-center justify-start gap-8 pl-4 p-0">
-                  <div className="flex-1 relative scale-150 lg:scale-125">
+                  <div className="flex-1 relative md:scale-150 lg:scale-125">
                     <Image
                       src={BioReactor}
                       alt="BioReactorBlueprint"
@@ -318,20 +318,20 @@ export const AlternativeWhatWeDoSection = ({
                     />
                   </div>
                   <div className="flex-1 flex flex-col items-start border-2 border-blue-300/0 lg:-mr-6 lg:pl-6">
-                    <p className="text-xl lg:text-2xl  2xl:text-3xl font-poppins font-medium opacity-30 leading-none">
+                    <p className="text-sm md:text-xl lg:text-2xl 2xl:text-3xl font-poppins font-medium opacity-30 leading-none">
                       Our expandable
                     </p>
 
                     <h1
                       className="lowercase drop-shadow-sm font-semibold font-Poppins 
-                    sm:text-5xl md:text-4xl lg:text-5xl 2xl:text-6xl leading-none relative"
+                    sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl leading-none relative"
                     >
-                      <span className="text-4xl md:text-4xl lg:text-5xl 2xl:text-6xl lowercase font-bold bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent">
+                      <span className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl lowercase font-bold bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent">
                         Bio
                       </span>
                       Halogenation platform
                     </h1>
-                    <p className="text-lg md:text-xl lg:text-xl  2xl:text-3xl font-poppins font-normal">
+                    <p className="text-sm md:text-xl lg:text-xl 2xl:text-3xl font-poppins font-normal">
                       offers you near limitless possibilities for
                       fluorine-enhanced compound development.
                     </p>
@@ -340,7 +340,7 @@ export const AlternativeWhatWeDoSection = ({
               </div>
 
               {/* Divider */}
-              <div className="w-2/3 h-[50px] max-h-[250px] border-t border-gray-400/80 relative mt-12 bg-red-500/0 mx-auto mb-[2vw]" />
+              <div className="w-2/3 md:h-[50px] max-h-[250px] border-t border-gray-400/80 relative mt-12 bg-red-500/0 mx-auto mb-[2vw]" />
 
               {/* centered design */}
               <div
@@ -349,20 +349,20 @@ export const AlternativeWhatWeDoSection = ({
               >
                 <div className="w-full flex flex-row items-start justify-start gap-8">
                   <div className="flex flex-col items-start w-2/3 border-2 border-blue-300/0">
-                  <p className="text-xl lg:text-2xl 2xl:text-3xl font-poppins font-medium opacity-30 leading-none">
+                  <p className="text-sm md:text-xl lg:text-2xl 2xl:text-3xl font-poppins font-medium opacity-30 leading-none">
                       And our flexible
                     </p>
 
                     <h1
                       className="lowercase drop-shadow-sm font-semibold font-Poppins 
-                    sm:text-5xl md:text-4xl lg:text-5xl 2xl:text-6xl leading-none relative"
+                    sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl leading-none relative"
                     >
-                      <span className="text-4xl md:text-4xl lg:text-5xl 2xl:text-6xl lowercase font-bold bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent">
+                      <span className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl lowercase font-bold bg-gradient-to-tr from-teal-700 via-teal-500 to-teal-600 bg-clip-text text-transparent">
                         enzyme
                       </span>
                       based <br/>technology
                     </h1>
-                    <p className="text-lg md:text-xl lg:text-xl 2xl:text-3xl font-poppins font-normal max-w-md">
+                    <p className="text-sm md:text-xl lg:text-xl 2xl:text-3xl font-poppins font-normal max-w-md">
                     lets us design custom processes tailored to your needs.
                     </p>
                   </div>
@@ -448,7 +448,8 @@ export const AlternativeWhatWeDoSection = ({
           backgroundRepeat: "no-repeat",
           willChange: "opacity, transform",}}/> */}
       </div>
-      <div className="relative bottom-0 left-[5%] w-full h-[200px] bg-red-600/0 overflow-visible">
+      <div className="relative bottom-0 left-[5%] w-full h-[200px] bg-red-600/0 overflow-visible
+      translate-x-[0] translate-y-[43px] md:translate-y-[0]">
         <MovingAtom
           width={80}
           height={80}

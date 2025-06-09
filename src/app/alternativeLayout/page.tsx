@@ -414,10 +414,10 @@ export default function AlternativeLayout() {
 
 
         <div className="w-screen mx-auto flex flex-col items-end justify-center
-        bg-gradient-to-t from-tealAccent/10 via-tealAccent/50 to-transparent pt-32">
+        bg-gradient-to-t from-tealAccent/40 via-tealAccent/50 to-transparent pt-32">
             <BentoIntroNoBG className="w-full max-w-[650px] mx-auto bg-mint-60" />
             <div
-          className="w-full min-h-[150px] h-[30vw] bottom-0 "
+          className="w-full min-h-[150px] h-[30vw] bottom-0  2xl:mt-[-6vw]"
           style={{
             backgroundImage: `url(${BlackSmokeDivider.src})`,
             backgroundSize: "contain",
@@ -425,55 +425,18 @@ export default function AlternativeLayout() {
             backgroundRepeat: "no-repeat",
           }}
         />
+        <div className="w-full h-[10vw] absolute bottom-0 left-0 
+        bg-gradient-to-t from-black via-black/50 to-transparent"
+        ></div>
         </div> 
 
-  
-        <div className="hidden w-screen mx-auto flex-col items-center pt-24 px-40 lg:px-24
-        bg-gradient-to-b bg-teal-950 from-tealAccent via-black to-black">
-          <h1 className="w-full text-wrap text-center text-4xl text-lightGrey py-6"> Some examples
-            include <br /> materials becoming especially:
-            </h1>
-            <div className="max-w-[750px] mx-auto flex flex-col gap-8 px-[16%] md:px-0">
-              <div className="flex flex-col md:flex-row gap-4 items-center">
-                <BentoHeatResistant className="flex-grow w-full md:w-3/5 border-2 border-lightGrey/40" />
-                <div className="flex-shrink w-full md:w-2/5 text-lightGrey/70 text-lg">
-                  <h3 className="text-2xl font-bold mb-2">Heat Resistant</h3>
-                  <p>These materials can withstand extreme temperatures while maintaining their structural integrity and performance.</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col md:flex-row-reverse gap-4 items-center">
-                <BentoDurability className="w-full md:w-3/5 border-2 border-lightGrey/40" />
-                <div className="w-full md:w-2/5 text-lightGrey/70 text-lg">
-                  <h3 className="text-2xl font-bold mb-2">Highly Durable</h3>
-                  <p>Exceptional resistance to wear and tear, making them ideal for long-lasting applications.</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col md:flex-row gap-4 items-center">
-                <BentoWaterRepellant className="w-full md:w-3/5 border-2 border-lightGrey/40" />
-                <div className="w-full md:w-2/5 text-lightGrey/70 text-lg">
-                  <h3 className="text-2xl font-bold mb-2">Repellant to Liquids</h3>
-                  <p>Superior water resistance properties that prevent moisture absorption and degradation.</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col md:flex-row-reverse gap-4 items-center">
-                <BentoLongLasting className="w-full md:w-3/5 border-2 border-lightGrey/40" />
-                <div className="w-full md:w-2/5 text-lightGrey/70 text-lg">
-                  <h3 className="text-2xl font-bold mb-2">Long Lasting</h3>
-                  <p>Extended lifespan and performance retention even under challenging conditions.</p>
-                </div>
-              </div>
-            </div>
-          </div>
       </section>
 
 
       {/* Fluorinated Materials Section */}
       <section className="relative w-full h-full overflow-hidden z-20">
       <AlternativeFluorinatedMaterialsSection
-        className="relative w-full h-full overflow-hidden z-20 pt-20 "
+        className="relative w-full h-full overflow-hidden z-20 pt-12"
         stats={stats}
       />
       </section>
@@ -488,14 +451,14 @@ export default function AlternativeLayout() {
       />
 
       <MobileWhatWeDoSection
-        className="relative w-full h-full overflow-hidden z-20 pt-20 block md:hidden"
+        className="relative w-full h-full overflow-hidden z-20 pt-20 block sm:hidden"
         stats={stats}
       />
 
       {/* What We Do Section */}
       <section className="relative w-full h-full z-20 ´">
       <AlternativeWhatWeDoSection
-        className="relative w-full h-full overflow-hidden z-20 pt-20 hidden md:block"
+        className="relative w-full h-full overflow-hidden z-20 pt-20 hidden sm:block"
         stats={stats}
       />
       </section>

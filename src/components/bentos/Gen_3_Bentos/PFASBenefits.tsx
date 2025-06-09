@@ -1,0 +1,57 @@
+import { motion } from "framer-motion";
+import { Droplet, Flame, Shield, Clock, Zap, Layers } from "lucide-react";
+
+const benefits = [
+  {
+    icon: <Flame className="w-6 h-6" />,
+    title: "Heat Resistant",
+    description: "Withstands extreme temperatures",
+  },
+  {
+    icon: <Droplet className="w-6 h-6" />,
+    title: "Water Repellent",
+    description: "Excellent hydrophobic properties",
+  },
+  {
+    icon: <Shield className="w-6 h-6" />,
+    title: "Chemical Resistant",
+    description: "Resists harsh chemicals and solvents",
+  },
+  {
+    icon: <Layers className="w-6 h-6" />,
+    title: "Durable",
+    description: "Long-lasting material properties",
+  },
+  {
+    icon: <Clock className="w-6 h-6" />,
+    title: "Long-lived",
+    description: "Exceptional stability over time",
+  },
+  {
+    icon: <Zap className="w-6 h-6" />,
+    title: "Low Friction",
+    description: "Superior non-stick properties",
+  },
+];
+
+export function PFASBenefits({ className }: { className?: string }) {
+  return (
+    <div className={`grid grid-cols-2 md:grid-cols-3 gap-4 ${className}`}>
+      {benefits.map((benefit, index) => (
+        <motion.div
+          key={benefit.title}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors
+          border-2 border-lightGrey/20"
+        >
+          <div className="text-tealAccent mt-1">{benefit.icon}</div>
+          <div>
+            <h3 className="font-semibold text-sm text-lightGrey">{benefit.title}</h3>
+            <p className="text-xs text-tealAccent/60">{benefit.description}</p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  );
+}

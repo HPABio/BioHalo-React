@@ -187,16 +187,15 @@ export function AlternativeFluorinatedMaterialsSection({
                     From coatings and textiles <br />
                     to food packaging and electronics
                   </p> */}
-                  <h2 className="text-4xl xl:text-5xl text-gray-400 font-poppins font-bold">
+                  <h2 className="text-4xl xl:text-5xl xl:pb-4 text-gray-400 font-poppins font-bold">
                     However...
                   </h2>
-                  <p className="text-base leading-relaxed text-gray-500 font-poppins">
+                  <p className="text-base leading-relaxed text-gray-500 font-poppins xl:text-lg">
                   these special properties also make them nearly
                     impossible to degrade and {" "}
                     <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
                       highly toxic
-                    </span>
-                    . PFAS accumulate in the environment and pose a threat to
+                    </span>. Over time, PFAS accumulate in the environment and pose a threat to
                     public health and the environment itself.
                   </p>
                 </div>
@@ -215,7 +214,7 @@ export function AlternativeFluorinatedMaterialsSection({
         <div className="w-full relative">
         </div>
       </div>
-      <div className="absolute bottom-0 right-0 w-full h-[100px] bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+      <div className="absolute bottom-0 right-0 w-full h-[100px] lg:h-[200px] 2xl:h-[300px] bg-gradient-to-t from-black via-black/60 to-transparent"></div>
     </section>
   );
 }

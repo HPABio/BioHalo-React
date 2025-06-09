@@ -9,6 +9,7 @@ import { MovingAtom } from "@/components/ui/MovingAtom";
 import { backgroundImage } from "html2canvas/dist/types/css/property-descriptors/background-image";
 import AtomDiagram from "@/components/ui/AtomDiagram";
 import { BentoStats } from "../Gen_3_Bentos/BentoStats";
+import { PFASBenefits } from "./PFASBenefits";
 
 export function BentoIntroNoBG({ className }: { className?: string }) {
   return (
@@ -21,22 +22,29 @@ export function BentoIntroNoBG({ className }: { className?: string }) {
     >
       <div className="w-full h-full relative z-10 flex flex-col font-poppins lg:pt-14 px-12 lg:px-0">
         <h2 className="text-4xl font-bold mb-4">
-          Incorporating <motion.span className="font-bold"
-          initial={{ color: "#ffffff", textShadow: "none" }}
-          variants={{
-            hover: {
-              color: ["#ff69b4", "rgba(225, 12, 115, 1)"],
-              textShadow: "0 0 10px rgba(255, 105, 180, 0.5)",
-              transition: { duration: 0.2, ease: "easeInOut" },
-            },
-          }}>Fluorine</motion.span> Atoms...
+          Incorporating{" "}
+          <motion.span
+            className="font-bold"
+            initial={{ color: "#ffffff", textShadow: "none" }}
+            variants={{
+              hover: {
+                color: ["#ff69b4", "rgba(225, 12, 115, 1)"],
+                textShadow: "0 0 10px rgba(255, 105, 180, 0.5)",
+                transition: { duration: 0.2, ease: "easeInOut" },
+              },
+            }}
+          >
+            Fluorine
+          </motion.span>{" "}
+          Atoms...
         </h2>
 
         <motion.div className="flex-1 relative" transition={{ duration: 0.1 }}>
-          <motion.div 
-          whileHover="hover"
-          className="flex w-full h-full gap-4  max-w-[700px] mx-auto
-          border-2 border-blue-500/0">
+          <motion.div
+            whileHover="hover"
+            className="flex w-full h-full gap-4  max-w-[700px] mx-auto
+          border-2 border-blue-500/0"
+          >
             <motion.div
               className="flex w-fit h-full max-w-[180px] justify-center items-center relative
                border-2 border-red-500/0 my-auto"
@@ -51,8 +59,10 @@ export function BentoIntroNoBG({ className }: { className?: string }) {
               }}
             >
               <div className="relative aspect-square w-32 h-32  bg-white/10 overflow-visible ">
-                <div className="absolute inset-0 flex flex-col items-center justify-center
-                 border-2 border-white/80 rounded-lg overflow-hidden">
+                <div
+                  className="absolute inset-0 flex flex-col items-center justify-center
+                 border-2 border-white/80 rounded-lg overflow-hidden"
+                >
                   <AtomDiagram
                     width={"250%"}
                     height={"250%"}
@@ -144,10 +154,23 @@ export function BentoIntroNoBG({ className }: { className?: string }) {
           properties and transforms them into a class of
           <span className="font-bold">
             {" "}
-            high-performance materials with advanced properties.{" "}
-          </span>{" "} Known as Perfluoroalkyl and Polyfluoroalkyl Substances or for short:
+            high-performance materials with advanced properties{" "}
+          </span>{" "}
+          known as "Perfluoroalkyl and Polyfluoroalkyl Substances" or for short <b>PFAS</b>.
         </p>
-        <BentoStats className="w-full  aspect-[16/4] mt-12 border-2 border-lightGrey/20" />
+
+        <div className="mt-32 lg:mt-44">
+        <BentoStats className="w-full  aspect-[16/4] border-2 border-lightGrey/20" />
+          <h3 className="text-lg font-medium text-lightGrey/60 pt-2 mb-4 lg:mb-8">
+            are known for their exceptional properties...
+          </h3>
+          <PFASBenefits />
+          <p className="text-sm text-lightGrey/60 mt-4 text-right italic">
+            ...and many more unique characteristics that make them valuable in
+            various applications
+          </p>
+        </div>
+
       </div>
 
       <motion.div
