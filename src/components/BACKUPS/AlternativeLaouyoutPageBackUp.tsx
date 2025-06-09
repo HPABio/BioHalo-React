@@ -711,3 +711,431 @@ export default function AlternativeLayout() {
 }
 
 
+
+
+
+
+export function AlternativeLayoutBackUp() {
+  const ref4 = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref4,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
+
+  return (
+    <main
+      className="min-h-screen w-full h-full bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70 overflow-hidden font-poppins"
+      id="top"
+    >
+      <ScreenSizeDEVTOOL />
+      {/* Invisible element for top section detection */}
+      <div
+        className="absolute top-0 h-32 w-full pointer-events-none"
+        aria-hidden="true"
+      ></div>
+
+      {/* <HeroSection1 className="w-screen h-screen relative" /> */}
+      {/* <HeroSection2 className="w-screen h-screen relative overflow-hidden" /> */}
+      {/* <HeroSection4 className=" block w-screen h-screen relative overflow-hidden" /> */}
+      <HeroSection4 className=" md:hidden block w-screen h-screen relative overflow-hidden" />
+      <HeroSection5 className=" hidden md:block w-screen h-screen relative overflow-hidden" />
+
+      {/* Transition Section */}
+      <section className="relative w-screen max-h-[120vh] z-10 " id="transition-section-one">
+        <div className="flex flex-col item justify-center">
+                <div className="w-full h-[10vh] border-2 border-red-500/0"></div>
+                <div className="w-full h-[400px] border-2 border-green-500/0
+                flex flex-col items-center justify-center">
+                  {/* Fluorine Element / Periodic Table */}
+                      <div className="relative flex flex-col items-center justify-center">
+                            <AtomDiagram className="absolute h-full w-full top-[-50%] left-[50%] translate-x-[-50%] translate-y-[50%]
+                            scale-[3] opacity-20" />
+                                <div
+                                  className="relative aspect-square w-40 border-[8px] border-gray-600 drop-shadow-2xl
+                                  rounded-xl flex flex-col items-center justify-center bg-gradient-to-br from-pink-800/10 to-purple-900/10 backdrop-blur-md text-gray-600
+                                  hover:scale-105 transition-transform duration-300"
+                                >
+                                  <span className="text-[min(8vw,4rem)] font-bold tracking-wider">
+                                    F
+                                  </span>
+                                  <span className="text-[min(4vw,1rem)] font-semibold tracking-wide mt-1">
+                                    Fluorine
+                                  </span>
+                                  <span className="absolute top-2 left-3 text-[min(6vw,0.875rem)] font-bold">
+                                    9
+                                  </span>
+                                  <span className="text-[min(3vw,0.875rem)] mt-2 font-medium">
+                                    18.99
+                                  </span>
+                                </div>
+                                {/* Subtitle */}
+                                <h2
+                                  className="text-3xl md:text-4xl font-bold text-gray-600 text-center mt-8 max-w-2xl leading-relaxed"
+                                >
+                                  our modern society is built on{" "}<br />
+                                  <span className="bg-gradient-to-bl from-red-800/90 via-pinkAccent to-purple-900/80 bg-clip-text text-transparent font-extrabold">
+                                    fluorinated materials
+                                  </span>
+                                </h2>
+                      </div>
+                </div>
+                <div className="w-full h-[10vh] border-2 border-yellow-500/0 hidden"></div>
+        </div>
+
+       
+        {/* <div
+          className="relative bottom-0 left-0 w-full min-h-[200px] h-[30vw] xl:h-[30vw]"
+          style={{
+            backgroundImage: `url(${BlackSmokeDivider.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center bottom",
+            backgroundRepeat: "no-repeat",
+          }}
+        /> */}
+        {/* Enzyme Image right */}
+        <div
+          className="absolute w-[80vw] h-[80vw] max-w-[1450px] 
+            top-0 right-0 opacity-1 blur-[6px] translate-x-[35%] translate-y-[-50%] pointer-events-none"
+        >
+          <motion.div
+            className="absolute w-full h-full hidden sm:block"
+            style={{
+              opacity: useTransform(useScroll().scrollY, [0, 600], [1, 0.1]),    
+              scale: useTransform(useScroll().scrollY, [0, 1000], [1, 1.1]),
+              x: useTransform(useScroll().scrollY, [0, 1000], [0, 500]),
+              y: useTransform(useScroll().scrollY, [0, 1000], [0, -100]),
+              filter: useTransform(
+                useScroll().scrollY,
+                [0, 1000],
+                ["blur(0px)", "blur(20px)"]
+              ),
+            }}
+          >
+            <Image
+              src={enzymeImage}
+              alt="Enzyme"
+              fill
+              className="object-contain"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="relative w-full  overflow-hidden z-20 font-poppins">
+
+
+        <div className="w-screen mx-auto
+        bg-gradient-to-t from-tealAccent via-tealAccent/50 to-transparent">
+            <BentoIntroNoBG className="w-full max-w-[650px] mx-auto bg-mint-60 mt-12" />
+        </div> 
+
+        <div className="w-full h-[30%] 
+        bg-gradient-to-t from-tealAccent via-tealAccent/50 to-transparent"></div>
+        {/* <BentoIntro className="w-full max-w-[650px] mx-auto" /> */}
+  
+        <div className="w-screen mx-auto flex flex-col items-center pt-12
+        bg-gradient-to-b bg-teal-950 from-tealAccent via-black to-black">
+          <h1 className="w-2/3 text-wrap text-center text-4xl font-normal text-white py-6"> Some examples
+            include <br /> materials becoming especially:
+            </h1>
+            <div className="max-w-[750px] mx-auto flex flex-col gap-8 px-[16%] md:px-0">
+              <div className="flex flex-col md:flex-row gap-4 items-center">
+                <BentoHeatResistant className="w-full md:w-1/2 border-2 border-lightGrey" />
+                <div className="w-full md:w-1/2 text-white text-lg">
+                  <h3 className="text-2xl font-bold mb-2">Heat Resistant</h3>
+                  <p>These materials can withstand extreme temperatures while maintaining their structural integrity and performance.</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row-reverse gap-4 items-center">
+                <BentoDurability className="w-full md:w-1/2 border-2 border-lightGrey" />
+                <div className="w-full md:w-1/2 text-white text-lg">
+                  <h3 className="text-2xl font-bold mb-2">Highly Durable</h3>
+                  <p>Exceptional resistance to wear and tear, making them ideal for long-lasting applications.</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-4 items-center">
+                <BentoWaterRepellant className="w-full md:w-1/2 border-2 border-lightGrey" />
+                <div className="w-full md:w-1/2 text-white text-lg">
+                  <h3 className="text-2xl font-bold mb-2">Repellant to Liquids</h3>
+                  <p>Superior water resistance properties that prevent moisture absorption and degradation.</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row-reverse gap-4 items-center">
+                <BentoLongLasting className="w-full md:w-1/2 border-2 border-lightGrey" />
+                <div className="w-full md:w-1/2 text-white text-lg">
+                  <h3 className="text-2xl font-bold mb-2">Long Lasting</h3>
+                  <p>Extended lifespan and performance retention even under challenging conditions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <BentoStats className="w-full" />
+      </section>
+      <BentoStats className="w-full h-full " />
+      {/* Infos about PFAS / Bento Section */}
+      <section
+        className="hidden relative w-screen bg-gradient-to-t from-teal-50 via-transparent to-transparent border-2 border-blue-300/0 z-40
+      p-24 pb-36"
+        id="alt-bento-section"
+      >
+        {/* Content Container */}
+        <div className=" grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[minmax(180px,auto)]  bg-green-300/0 max-w-[80vw] lg:max-w-[80vw] 2xl:max-w-[1100px] mx-auto">
+          <BentoContact className="w-full hidden" />
+          <BentoStats className="w-full " />
+          <BentoIntro className="w-full " />
+          <BentoHeatResistant className="w-full border-2 border-lightGrey" />
+
+          <BentoDurability className="w-full border-2 border-lightGrey" />
+          <BentoWaterRepellant className="w-full border-2 border-lightGrey" />
+          <BentoLongLasting className="w-full border-2 border-lightGrey" />
+
+          <BentoPeriodicTable className="w-full hidden" />
+          <BentoVerticalDouble className="w-full hidden" />
+        </div>
+      </section>
+
+
+      {/* Fluorinated Materials Section */}
+      <section className="relative w-full h-full overflow-hidden z-20">
+      <AlternativeFluorinatedMaterialsSection
+        className="relative w-full h-full overflow-hidden z-20 pt-20 "
+        stats={stats}
+      />
+      </section>
+
+      <MobileFluorinatedMaterialsSection
+        className="relative w-full h-full overflow-hidden z-20 pt-20 hidden"
+        stats={stats}
+      />
+      <MobileFluorinatedMaterialsSectionV2
+        className="relative w-full h-full overflow-hidden z-20 pt-20 hidden "
+        stats={stats}
+      />
+
+      <MobileWhatWeDoSection
+        className="relative w-full h-full overflow-hidden z-20 pt-20 block md:hidden"
+        stats={stats}
+      />
+
+      {/* What We Do Section */}
+      <section className="relative w-full h-full z-20 ´">
+      <AlternativeWhatWeDoSection
+        className="relative w-full h-full overflow-hidden z-20 pt-20 hidden md:block"
+        stats={stats}
+      />
+      </section>
+
+      {/* Platform Technology Section */}
+      <section
+        id="platform-technology"
+        className="w-full min-h-[80vh] relative z-10"
+      >
+        {/* Section detection helper */}
+        <div
+          className="absolute top-0 h-24 w-full pointer-events-none"
+          aria-hidden="true"
+        ></div>
+
+        <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
+      </section>
+
+      {/* HIDDEN!  Forever Chemicals Section */}
+      <section
+        className="relative w-full min-h-screen max-w-[1450px] mx-auto hidden
+        px-4 md:px-24 pt-44 flex-col items-center justify-center border-2 border-red-300/0"
+      >
+        {/* Floating Info Circle  */}
+        <div className="w-full h-full">
+          <div className="w-full h-full inset-0 relative bg-yellow-500/0">
+            {/* <div className="absolute w-[33%] max-w-[400px] aspect-square bg-red-500/10 rounded-full top-[40%] xl:top-[50%] left-[50%] translate-x-[10%] translate-y-[10%]"></div> */}
+            <motion.div
+              className="absolute w-[33%] max-w-[400px] aspect-square bg-red-500/0 border-4 border-tealAccent/30 rounded-full top-[70%] xl:top-[70%] left-[50%] xl:left-[55%] translate-x-[10%] translate-y-[10%]"
+              style={{
+                willChange: "transform",
+                backgroundImage: `url(${ColorfulGradientRainbowTexture.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                y: useTransform(
+                  useScroll({
+                    target: ref4,
+                    offset: ["center end", "center start"],
+                  }).scrollYProgress,
+                  [0, 1],
+                  [0, -250]
+                ),
+              }}
+            >
+              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                {/* Blurred Title */}
+                <SimpleStatsBox
+                  classNamesContainer="w-fit h-fit mt-4"
+                  classNamesTitle="w-[300px] blur-sm opacity-35 text-center text-8xl lg:text-9xl font-Arial
+                                    font-black mb-1 bg-gradient-to-tl from-lightGrey via-gray-400 to-lightGrey/70 bg-clip-text text-transparent"
+                  classNamesSubTitle="w-[150px] lg:w-[200px] mx-auto text-center text-lightGrey/60 text-3xl font-bold mt-0 capitalize leading-3"
+                  stat={stats[8]}
+                  scrollYProgress={scrollYProgress}
+                  scrollEndThreshold={0.9}
+                  index={4}
+                />
+
+                {/* Primary Title */}
+                <SimpleStatsBox
+                  classNamesContainer="absolute w-fit h-fit mt-4"
+                  classNamesTitle="w-[300px] text-center text-8xl lg:text-9xl font-Arial
+                                  font-black mb-1 bg-gradient-to-tl from-lightGrey via-gray-400 to-lightGrey/70 bg-clip-text text-transparent"
+                  classNamesSubTitle="w-[150px] lg:w-[200px] mx-auto text-center text-lightGrey/60 text-3xl font-bold mt-0 capitalize leading-3"
+                  stat={stats[8]}
+                  scrollYProgress={scrollYProgress}
+                  scrollEndThreshold={0.9}
+                  index={4}
+                />
+              </div>
+            </motion.div>
+            {/* <div className="absolute w-[10%] max-w-[133px] aspect-square bg-yellow-500 rounded-full top-[50%] left-[50%] translate-x-[230%] translate-y-[10%]"></div> */}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-16 hidden">
+        <BentoSectionGen3 className="w-full h-full bg-transparent pt-[340px]" />
+
+        {/* Description Container */}
+        <div className="w-full max-w-3xl mx-auto mb-20 text-center">
+          <p className="text-gray-300 text-lg mb-4">
+            From coatings and textiles to <br />
+            food packaging and electronics
+          </p>
+          <p className="text-gray-500 text-base md:text-lg">
+            Due to their unique properties, like heat resistance and water
+            repellency, they are used in a wide range of products. However,
+            these special properties also make them nearly impossible to degrade
+            and{" "}
+            <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+              highly toxic
+            </span>
+            . PFAS accumulate in the environment and pose a threat to public
+            health and the environment itself.
+          </p>
+        </div>
+      </section>
+
+      <section className="w-full h-fit bg-red-500/0 border-2 border-blue-300 relative hidden">
+        <div
+          className="relative w-full min-h-[200px] h-[30vw] xl:h-[30vw] pt-16 "
+          style={{
+            backgroundImage: `url(${BlackSmokeDivider.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center bottom",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        <div className="w-full h-[10vw] absolute bottom-0 left-0 bg-gradient-to-t from-black via-black/50 to-black/0 " />
+      </section>
+
+      <section className="w-full h-fit bg-red-500/0 hidden">
+        <FluorinatedMaterialsSectionV2
+          className="relative w-full h-fit overflow-hidden z-10 pt-6"
+          stats={stats}
+        />
+      </section>
+
+      {/* Health Section */}
+      <section
+        id="health-section"
+        className="relative w-full h-[70vw] max-h-[700px] hidden"
+      >
+        <div
+          className="absolute w-full h-full bottom-0 bg-black max-w-[1450px] left-1/2 -translate-x-1/2 "
+          style={{
+            backgroundImage: `url(${industrialPollutionImageV3.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center bottom",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          {/* Fade to black */}
+          <div className="absolute w-full h-[60%] top-0 left-0  bg-gradient-to-b from-black via-black to-transparent" />
+          <div className="absolute w-full h-[12%] bottom-0 left-0  bg-gradient-to-t from-black via-black to-transparent" />
+          <div className="absolute w-full h-full top-0 left-0  bg-gradient-to-l from-black via-black/30 to-transparent" />
+          {/* Center Content with Image */}
+          <motion.div
+            ref={ref4}
+            className="absolute w-[40%] aspect-square rounded-full right-0 top-0 overflow-hidden flex flex-col items-center justify-center"
+            style={{ willChange: "transform, opacity" }} // Optimize transformations and transparency
+          >
+            <div
+              className="absolute w-[80%] h-[80%] top-[3%] "
+              style={{
+                backgroundImage: `url(${Pharma.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+
+            {/* Gradient Overlay */}
+            <div
+              className="absolute w-full h-full inset-0 rounded-full overflow-hidden bg-gradient-to-t from-black via-black/50 to-transparent"
+              style={{ willChange: "opacity" }} // Helps with smooth opacity transitions
+            />
+
+            {/* Animated Stats Box */}
+            <motion.div
+              className="absolute top-[63%] -translate-y-[65%] w-full"
+              ref={ref4}
+              style={{ willChange: "transform, opacity" }} // Optimizing framer-motion animation
+            >
+              <SimpleStatsBox
+                classNamesContainer="w-fit mx-auto z-20 "
+                classNamesTitle="text-center text-6xl lg:text-9xl font-black mb-4 bg-gradient-to-tl from-lightGrey/40 via-gray-200 to-lightGrey/80 bg-clip-text text-transparent"
+                classNamesSubTitle="text-center text-lightGrey/80 text-lg lg:text-4xl font-bold capitalize -mt-8"
+                stat={stats[3]}
+                scrollYProgress={scrollYProgress}
+                scrollEndThreshold={0.4}
+                index={3}
+                text=""
+                ratchet={false}
+              />
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Icon Carousel Section - No ID here since it's not in the navigation */}
+      <section className="w-full">
+        <div className="bg-red-500/0 w-full">
+          <div className="w-full h-[400px] pt-10 overflow-hidden flex items-center justify-center">
+            <IconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100" />
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section id="team-section" className="min-h-[80vh] relative">
+        {/* Section detection helper */}
+        <div
+          className="absolute top-0 h-24 w-full pointer-events-none"
+          aria-hidden="true"
+        ></div>
+
+        <TeamSection className="w-full" />
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact-section">
+        <ContactSection className="w-full" />
+      </section>
+
+      {/* Bento Section 
+      <section className="py-16 bg-lightGrey text-center px-4">
+        <BentoSection2 className="bg-lightGrey relative" />
+      </section>
+        */}
+    </main>
+  );
+}
