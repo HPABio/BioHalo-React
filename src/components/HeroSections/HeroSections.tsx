@@ -659,7 +659,7 @@ export const HeroSection4 = ({
       </div>
 
       {/* Center image */}
-      <div className="absolute  w-[70%] h-[70%] md:w-[50%] md:h-[50%] min-h-[500px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-48%] md:translate-y-[-40%] overflow-visible bg-red-500/0">
+      <div className="absolute  w-[70%] h-[70%] md:w-[50%] md:h-[50%] min-h-[500px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-58%] md:translate-y-[-40%] overflow-visible bg-red-500/0">
         <motion.div
           className="relative w-full h-full overflow-visible bg-blue-500/0"
           animate={{
@@ -688,38 +688,36 @@ export const HeroSection4 = ({
             <BioHaloLogo3 />
           </div>
           {/* Subtitle */}
-          <div className="w-full mt-32 md:mt-52 bg-transparent hidden ">
+          <div className="w-full mt-52 md:mt-52 bg-transparent">
             {/* subtitle */}
-            <div className="w-full bg-transparent hidden border border-red-500/0">
-              {/* Active subtitle */}
-              <div className="w-full h-full relative bg-transparent">
-                {
-                  subtitleVersions.find(
-                    (version) => version.id === activeSubtitle
-                  )?.content
-                }
-              </div>
-
-              {/* Navigation dots */}
-              <div className="flex justify-center gap-2 mt-4">
-                {subtitleVersions.map((version) => (
-                  <button
-                    key={version.id}
-                    onClick={() => setActiveSubtitle(version.id)}
-                    className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                      activeSubtitle === version.id
-                        ? "bg-pinkAccent"
-                        : "bg-gray-400"
-                    }`}
-                    aria-label={`Switch to subtitle version ${version.id}`}
-                  />
-                ))}
+            <div className="w-full bg-transparent">
+              {/* Subtitle */}
+              <div className="w-full h-fit bg-red-500/0 mt-8 md:mt-[10vh]">
+                <p className="w-full relative tracking-widest text-[clamp(0.9rem,4vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-pre-wrap bg-transparent">
+                  <span
+                    className="text-[clamp(1.1rem,5vw,2.2rem)] bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent 
+                                                      uppercase drop-shadow-sm font-black font-Poppins"
+                  >
+                    forever chemicals
+                  </span>
+                  <br />
+                  <span className="text-[clamp(0.8rem,3.5vw,1.6rem)]">
+                    disrupted by
+                  </span>
+                  <br />
+                  <span
+                    className="text-[clamp(1.1rem,5vw,2.2rem)] bg-gradient-to-r from-tealAccent to-teal-600  bg-clip-text text-transparent 
+                                                      uppercase drop-shadow-sm font-black font-Poppins"
+                  >
+                    biology
+                  </span>
+                </p>
               </div>
             </div>
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col md:flex-row gap-4 md:gap-2 xl:gap-4 mt-60 md:mt-2 items-center justify-center">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-2 xl:gap-4 mt-12 md:mt-2 items-center justify-center">
             <div>
               <Button
                 className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
