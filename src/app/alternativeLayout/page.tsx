@@ -340,7 +340,7 @@ export default function AlternativeLayout() {
                             <AtomDiagram className="absolute h-full w-full top-[-50%] left-[50%] translate-x-[-50%] translate-y-[50%]
                             scale-[3] opacity-20" />
                                 <div
-                                  className="relative aspect-square w-40 border-[8px] border-lightGrey/80 drop-shadow-2xl
+                                  className="relative aspect-square w-40 border-[8px] border-gray-600 drop-shadow-2xl
                                   rounded-xl flex flex-col items-center justify-center bg-gradient-to-br from-pink-800/10 to-purple-900/10 backdrop-blur-md text-gray-600
                                   hover:scale-105 transition-transform duration-300"
                                 >
@@ -589,7 +589,7 @@ export default function AlternativeLayout() {
         </div>
       </section>
 
-      <section className="px-16">
+      <section className="px-16 hidden">
         <BentoSectionGen3 className="w-full h-full bg-transparent pt-[340px]" />
 
         {/* Description Container */}
@@ -612,7 +612,7 @@ export default function AlternativeLayout() {
         </div>
       </section>
 
-      <section className="w-full h-fit bg-red-500/0 border-2 border-blue-300 relative">
+      <section className="w-full h-fit bg-red-500/0 border-2 border-blue-300 relative hidden">
         <div
           className="relative w-full min-h-[200px] h-[30vw] xl:h-[30vw] pt-16 "
           style={{
@@ -625,7 +625,7 @@ export default function AlternativeLayout() {
         <div className="w-full h-[10vw] absolute bottom-0 left-0 bg-gradient-to-t from-black via-black/50 to-black/0 " />
       </section>
 
-      <section className="w-full h-fit bg-red-500/0">
+      <section className="w-full h-fit bg-red-500/0 hidden">
         <FluorinatedMaterialsSectionV2
           className="relative w-full h-fit overflow-hidden z-10 pt-6"
           stats={stats}
@@ -635,7 +635,7 @@ export default function AlternativeLayout() {
       {/* Health Section */}
       <section
         id="health-section"
-        className="relative w-full h-[70vw] max-h-[700px]"
+        className="relative w-full h-[70vw] max-h-[700px] hidden"
       >
         <div
           className="absolute w-full h-full bottom-0 bg-black max-w-[1450px] left-1/2 -translate-x-1/2 "

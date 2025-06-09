@@ -45,9 +45,9 @@ export const MobileWhatWeDoSection = ({
     <section
       className={`${className} overflow-visible z-20 border-2 border-blue-300/0 mx-auto`}
     >
-      <div className="absolute top-[-10%] left-0 w-full">
+      <div className="absolute top-0 left-0 w-full overflow-hidden">
         <div
-          className="relative w-full h-full border-2 border-blue-300/0
+          className="relative w-full h-full border-2 border-blue-300/0 translate-y-[-30%]
           [mask-image:linear-gradient(to_bottom_right,black,black,transparent)]"
         >
           <Image
@@ -78,12 +78,13 @@ export const MobileWhatWeDoSection = ({
         <div className="w-full sm:w-full bg-red-500/0  relative z-10">
           <h2
             className="relative text-center font-black font-poppins text-2xl 
+            border-2 border-blue-300/0
             sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl
             bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent 
             pb-1 leading-tight"
           >
             <span
-              className="font-poppins font-bold flex items-center mb-2 
+              className="font-poppins font-bold flex items-center justify-center mb-2 
               sm:mt-12 text-black text-6xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl w-full 
               sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] 2xl:w-[1400px] mx-auto"
             >
@@ -94,7 +95,15 @@ export const MobileWhatWeDoSection = ({
               />
               BioHalo
             </span>
-            <br />
+          </h2>
+    
+          <h2
+            className="relative text-center font-black font-poppins text-2xl 
+            border-2 border-blue-300/0
+            sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl
+            bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent 
+            pb-1 leading-tight"
+          >
             offers a sustainable <br />
             alternative to <br />
           </h2>
