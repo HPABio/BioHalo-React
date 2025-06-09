@@ -53,6 +53,7 @@ import AdobeStockCPU from "@/assets/images/AdobeStock/AdobeStock_1514887767_Prev
 import { url } from "inspector";
 import { Rocket } from "lucide-react";
 import { borderBottomLeftRadius } from "html2canvas/dist/types/css/property-descriptors/border-radius";
+import { BentoStats } from "@/components/bentos/Gen_3_Bentos/BentoStats";
 
 // Function to generate random brightness values
 const generateBrightnessValues = (count: number, min: number, max: number) => {
@@ -150,57 +151,48 @@ export function AlternativeFluorinatedMaterialsSection({
           className="w-full h-fit relative overflow-hidden 
         bg-gradient-to-b from-black via-black to-transparent "
         >
-          <div className="relative w-full h-full max-w-[1280px] flex flex-col mx-auto px-6 pt-24">
+          <div className="relative w-full h-full max-w-[1280px] flex flex-col mx-auto px-6">
             {/* TEXT COLUMN */}
-            <div className="w-full flex flex-col items-center">
-              <p>Forever Chemicals are also known as</p>
-              <h1 className="w-full text-center font-black font-poppins bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10 groupleading-none">
-                <span className="text-2xl text-gray-500 font-medium capitalize leading-none">
-                  Perfluoroalkyl and <br /> polyfluoroalkyl substances
-                  <br />
-                </span>
-                <span className="text-xl text-gray-500 font-poppins font-light leading-snug">
-                  or for short
-                  <br />
-                </span>
-                <span className="text-8xl bg-gradient-to-r from-pink-950 via-pinkAccent to-pink-950 bg-clip-text text-transparent leading-tight">
-                  PFAS{" "}
-                </span>
-                <br />
+           {/*  <div className="w-full flex flex-col items-center">
+              <p className="text-lightGrey/30 text-lg font-poppins font-light">Forever Chemicals are also known as:</p>
 
+              <h1 className="w-full text-center font-black font-poppins 
+              bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-4 groupleading-none">
+                <span className="text-4xl text-gray-500 font-medium leading-none">
+                  <span className="font-bold text-transparent">P</span>er<span className="font-bold text-transparent">F</span>luoro
+                  <span className="font-bold text-transparent">A</span>lkyl <span className="font-bold text-transparent">S</span>ubstances <span className="text-gray-500 font-light">&</span> <br />
+                  <span className="font-bold text-transparent">P</span>oly<span className="font-bold text-transparent">F</span>luoro
+                  <span className="font-bold text-transparent">A</span>lkyl <span className="font-bold text-transparent">S</span>ubstances
+                </span>
+                      <p className="text-md lg:text-xl text-gray-500 font-poppins font-light leading-snug">
+                        or for short
+                      </p>
               </h1>
-            </div>
+                  <div className="w-full h-full flex flex-col items-center justify-center">
+                      <div className="w-full h-full flex flex-col items-center justify-center 
+                    border-2 border-red-500/0">
+                      <BentoStats className="w-full  aspect-[16/4] border-2 border-red-500/0" />
+                </div>
+              </div>
+            </div> */}
 
-            {/* Vertical Bento Layout */}
-            <div className="w-full flex-col gap-8 py-8">
-              {/* First Bento Box - CPU Section */}
-              {/* <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
-                // ... existing code ...
-              </div> */}
-            </div>
+
 
             {/* Content container */}
-            <div className="mt-6 flex flex-col gap-8 w-full">
+            <div className="flex flex-col gap-8 w-full">
               {/* Text content */}
               <div className="w-full px-4">
-                <div className="space-y-4">
-                  <p>
-                  <span className="text-xl text-gray-500 font-poppins font-light leading-none">
-                  {" "}
-                  These chemicals play a crucial role in virtually every major sector of our
-                  modern economy.
-                  {/* They are used in... */}
-                </span>
-                  </p>
-                  <p className="text-xl text-gray-300/90 font-poppins text-center uppercase">
+                <div className="">
+                  {/* <p className="text-xl text-gray-300/90 font-poppins text-center uppercase">
                     From coatings and textiles <br />
                     to food packaging and electronics
-                  </p>
-                  <p className="text-base pt-4 leading-relaxed text-gray-500 font-poppins">
-                    Due to their unique properties, like heat resistance and
-                    water repellency, they are used in a wide range of products.
-                    However, these special properties also make them nearly
-                    impossible to degrade and <br />{" "}
+                  </p> */}
+                  <h2 className="text-4xl xl:text-5xl text-gray-400 font-poppins font-bold">
+                    However...
+                  </h2>
+                  <p className="text-base leading-relaxed text-gray-500 font-poppins">
+                  these special properties also make them nearly
+                    impossible to degrade and {" "}
                     <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
                       highly toxic
                     </span>
@@ -215,9 +207,9 @@ export function AlternativeFluorinatedMaterialsSection({
       </div>
 
       {/* Circles section */}
-      <div className="w-full h-[47vw] relative border-2 border-red-500/0 mt-24">
+      <div className="w-full h-[47vw] max-h-[500px] relative mt-24">
           {/* Circle 1 */}
-          <div className="w-[50vw] h-[70vw] max-w-[500px] mx-auto border-2 border-blue-500/0 relative flex items-center justify-center">
+          <div className="w-[50vw] aspect-[6/9] max-w-[500px] mx-auto relative flex items-center justify-center">
             <Circle1 />
           </div>
         <div className="w-full relative">

@@ -53,7 +53,7 @@ export function BentoHeatResistant({ className }: { className?: string }) {
           <h3 className="text-xl font-semibold hidden ">Heat Resistant</h3>
           <motion.div className="w-12 h-12 rounded-full bg-mintAccent/30 border-2 border-tealAccent/70 flex items-center justify-center "
           initial={{
-            color: "rgba(134,185,202,1)",
+            color: "rgba(34,85,102,1)",
             scale: 1,
             rotate: 0,
             translateX: 0,
@@ -76,7 +76,7 @@ export function BentoHeatResistant({ className }: { className?: string }) {
         </motion.div>
             <motion.div className="text-6xl font-bold text-tealAccent relative"
             initial={{
-              color: "rgba(134,185,202,1)",
+              color: "rgba(34,85,102,1)",
             }}
             variants={{
               hover: {

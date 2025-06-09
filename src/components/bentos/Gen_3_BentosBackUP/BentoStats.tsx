@@ -15,7 +15,7 @@ export function BentoStats({ className }: { className?: string }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       whileHover="hover"
-      className={`py-20 col-span-1 row-span-1 relative overflow-hidden rounded-3xl bg-white shadow-lg ${className}`}
+      className={`col-span-1 row-span-1 relative overflow-hidden rounded-3xl bg-white shadow-lg ${className}`}
     >
       <motion.h1
           className="text-3xl leading-7 font-semibold text-transparent text-left w-full tracking-wider"
@@ -52,7 +52,7 @@ export function BentoStats({ className }: { className?: string }) {
         />
       </motion.div>
       <motion.div
-        className="absolute top-0 left-0 w-full h-full rounded-3xl "
+        className="absolute top-0 left-0 w-full h-full "
         initial={{ 
           maskImage: "linear-gradient(to right, black 0%, black 30%, transparent 100%)",
           backdropFilter: "blur(4px)",

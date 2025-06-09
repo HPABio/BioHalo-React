@@ -8,7 +8,6 @@ import BioFMonomerAllPink from "@/assets/images/BluePrintSVG/BioF-Monomer-all-pi
 import { MovingAtom } from "@/components/ui/MovingAtom";
 import { backgroundImage } from "html2canvas/dist/types/css/property-descriptors/background-image";
 import AtomDiagram from "@/components/ui/AtomDiagram";
-import { BentoStats } from "../Gen_3_Bentos/BentoStats";
 
 export function BentoIntroNoBG({ className }: { className?: string }) {
   return (
@@ -16,6 +15,7 @@ export function BentoIntroNoBG({ className }: { className?: string }) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
+      whileHover="hover"
       className={`col-span-2 row-span-2 relative overflow-hidden rounded-3xl
          p-8 text-white ${className}`}
     >
@@ -33,9 +33,7 @@ export function BentoIntroNoBG({ className }: { className?: string }) {
         </h2>
 
         <motion.div className="flex-1 relative" transition={{ duration: 0.1 }}>
-          <motion.div 
-          whileHover="hover"
-          className="flex w-full h-full gap-4  max-w-[700px] mx-auto
+          <motion.div className="flex w-full h-full gap-4  max-w-[700px] mx-auto
           border-2 border-blue-500/0">
             <motion.div
               className="flex w-fit h-full max-w-[180px] justify-center items-center relative
@@ -145,9 +143,8 @@ export function BentoIntroNoBG({ className }: { className?: string }) {
           <span className="font-bold">
             {" "}
             high-performance materials with advanced properties.{" "}
-          </span>{" "} Known as Perfluoroalkyl and Polyfluoroalkyl Substances or for short:
+          </span>{" "}
         </p>
-        <BentoStats className="w-full  aspect-[16/4] mt-12 border-2 border-lightGrey/20" />
       </div>
 
       <motion.div

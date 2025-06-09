@@ -53,7 +53,7 @@ export function BentoDurability({ className }: { className?: string }) {
           <h3 className="text-xl font-semibold hidden">Durable</h3>
           <motion.div className="w-12 h-12 rounded-full bg-mintAccent/30 border-2 border-tealAccent/70 flex items-center justify-center "
           initial={{
-            color: "rgba(34,85,102,1)",
+            color: "rgba(134,185,202,1)",
             scale: 1,
             rotate: 0,
             translateX: 0,
@@ -75,7 +75,7 @@ export function BentoDurability({ className }: { className?: string }) {
           </motion.div>
         </motion.div>
             <motion.div className="text-6xl font-bold text-tealAccent relative leading-none"
-            initial={{ color: "rgba(34,85,102,1)" }}
+            initial={{ color: "rgba(134,185,202,1)" }}
             variants={{
               hover: {
                 color: "rgba(253,230,138,0.9)",
