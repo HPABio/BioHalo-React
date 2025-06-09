@@ -115,6 +115,7 @@ import AtomDiagram from "@/components/ui/AtomDiagram";
 import { BentoIntroNoBG } from "@/components/bentos/Gen_3_Bentos/BentoIntroNoBG";
 import { MobileBentoIntroNoBG } from "@/components/mobileVersion/mobileBentoIntroNoBG";
 
+
 // Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
 
@@ -477,7 +478,9 @@ export default function AlternativeLayout() {
           aria-hidden="true"
         ></div>
 
-        <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
+        <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black hidden sm:block" />
+        <MobilePlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black block sm:hidden" />
+
       </section>
 
       {/* HIDDEN!  Forever Chemicals Section */}
@@ -646,7 +649,8 @@ export default function AlternativeLayout() {
       <section className="w-full">
         <div className="bg-red-500/0 w-full">
           <div className="w-full h-[400px] pt-10 overflow-hidden flex items-center justify-center">
-            <IconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100" />
+            <IconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100 hidden sm:block" />
+            <MobileIconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100 block sm:hidden" />
           </div>
         </div>
       </section>

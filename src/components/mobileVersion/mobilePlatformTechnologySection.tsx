@@ -13,18 +13,12 @@ import DNALogo from "@/assets/images/BluePrintSVG/dna-logo.svg";
 import DNA_Logo_long from "@/components/ui/DNA-Logo-long";
 import BioHaloStep2 from "@/assets/images/BluePrintSVG/BioHalo-step2.svg";
 
-
-
-
-
 import BioReactorV1PNG from "@/assets/images/BluePrintPNGs/bio-reactorV1.png";
 import BioReactor2PNG from "@/assets/images/BluePrintPNGs/BioReactor2.png";
 import BioHaloStep2PNG from "@/assets/images/BluePrintPNGs/BioHalo-step2.png";
 import DNALogoPNG from "@/assets/images/BluePrintPNGs/dna-logo.png";
 import ScreenShot from "@/assets/images/ScreenShots/ScreenShot.png";
 import enzymeImage from "@/assets/images/BluePrint with Color/Enzyme.png";
-
-
 
 import {
   Beaker,
@@ -56,25 +50,22 @@ const technologyFeatures: TechnologyFeature[] = [
   {
     id: 9,
     title: "Reduced Fluorine Usage",
-    description:
-      "Our technology requires significantly less fluorine while maintaining or enhancing material performance.",
+    description: "Minimal fluorine required while maintaining performance.",
     icon: (
-      <TrendingDown className="w-8 h-8  text-teal-700 hover:text-teal-500" />
+      <TrendingDown className="w-6 h-6 text-teal-700 hover:text-teal-500" />
     ),
   },
   {
     id: 8,
     title: "Bio-Based Materials",
-    description:
-      "We utilize biological systems and renewable resources to create sustainable and safe fluorinated polymers.",
-    icon: <Sprout className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+    description: "Sustainable fluorinated polymers from renewable resources.",
+    icon: <Sprout className="w-6 h-6 text-teal-700 hover:text-teal-500" />,
   },
   {
     id: 7,
     title: "Minimal By-Products",
-    description:
-      "Our precision technology produces fewer unwanted by-products, increasing efficiency and reducing waste.",
-    icon: <Zap className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+    description: "Precision technology with reduced waste output.",
+    icon: <Zap className="w-6 h-6 text-teal-700 hover:text-teal-500" />,
   },
   /* {
     id: 1,
@@ -93,16 +84,14 @@ const technologyFeatures: TechnologyFeature[] = [
   {
     id: 6,
     title: "Circular Economy",
-    description:
-      "Our platform is designed with end-of-life considerations, enabling recyclability and biodegradability.",
-    icon: <Recycle className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+    description: "Designed for recyclability and biodegradability.",
+    icon: <Recycle className="w-6 h-6 text-teal-700 hover:text-teal-500" />,
   },
   {
     id: 4,
     title: "Green Chemistry",
-    description:
-      "Our processes operate under mild conditions, using renewable resources and generating minimal waste.",
-    icon: <Leaf className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+    description: "Mild conditions with minimal waste generation.",
+    icon: <Leaf className="w-6 h-6 text-teal-700 hover:text-teal-500" />,
   },
   /* {
     id: 5,
@@ -194,8 +183,8 @@ export const MobilePlatformTechnologySection = ({
         </div>
 
         <motion.div
-          initial={{ opacity: 0}}
-          whileInView={{ opacity: 1}}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}
           className="text-center mb-16 relative"
@@ -282,17 +271,19 @@ export const MobilePlatformTechnologySection = ({
           {technologyProcessSteps.map((step, index) => (
             <motion.div
               key={step.id}
-              initial={{ opacity: 0}}
-              whileInView={{ opacity: 1}}
-              transition={{ duration: 0.3}}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
               viewport={{ once: true }}
               className="max-sm:text-center px-4 flex flex-col items-center gap-8"
             >
               {/* Image */}
               <div className="flex-1 relative group p-4">
                 <div className="absolute inset-0 bg-tealAccent/20 rounded-2xl blur-3xl group-hover:blur-2xl opacity-70 transition-all duration-500 -z-10"></div>
-                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl border border-tealAccent/20 backdrop-blur-sm shadow-xl 
-                overflow-hidden h-[250px] flex items-center justify-center sm:p-12">
+                <div
+                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl border border-tealAccent/20 backdrop-blur-sm shadow-xl 
+                overflow-hidden h-[250px] flex items-center justify-center sm:p-12"
+                >
                   <Image
                     src={step.image}
                     alt={step.alt}
@@ -338,9 +329,9 @@ export const MobilePlatformTechnologySection = ({
           </div>
 
           <motion.div
-            initial={{ opacity: 0}}
-            whileInView={{ opacity: 1}}
-            transition={{ duration: 0.3}}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
             viewport={{ once: true }}
             className="text-center mb-12 relative"
           >
@@ -364,33 +355,35 @@ export const MobilePlatformTechnologySection = ({
               imageHeight={400}
             />
           </div>
-          <div className="grid grid-cols-1 gap-4 -mt-14 px-2">
+          <div className="grid grid-cols-1 gap-3 -mt-14 px-2">
             {technologyFeatures.map((feature, index) => (
               <motion.div
                 key={feature.id}
-                initial={{ opacity: 0}}
-                whileInView={{ opacity: 1}}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3}}
-                className="p-4 bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-tealAccent/10 rounded-lg hover:border-tealAccent/30 transition-all group"
+                transition={{ duration: 0.3 }}
+                className="p-3 bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-tealAccent/10 rounded-lg hover:border-tealAccent/30 transition-all group"
               >
-                <div className="flex flex-col items-center text-center space-y-3">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center 
-                  group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)]">
+                <div className="flex items-center space-x-3">
+                  <div
+                    className="flex-shrink-0 w-10 h-10 rounded-full bg-tealAccent/10 flex items-center justify-center 
+                  group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)]"
+                  >
                     {feature.icon}
                   </div>
-                  <div className="w-full">
-                    <h3 className="text-lg font-semibold mb-2 text-gray-300">
+                  <div className="flex-1">
+                    <h3 className="text-base font-semibold text-gray-300">
                       {feature.title}
                     </h3>
-                    <div className="w-full h-px bg-gradient-to-r from-transparent via-tealAccent/20 to-transparent mb-2" />
-                    <p className="text-sm text-gray-400 leading-relaxed max-w-sm mx-auto">{feature.description}</p>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                      {feature.description}
+                    </p>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
-          
         </div>
       </div>
     </section>
