@@ -684,7 +684,7 @@ export const HeroSection4 = ({
         {/* Logo container, Subtitle, and Buttons */}
         <div className="relative w-[80%] h-[80%] flex flex-col items-center justify-center bg-blue-500/0">
           {/* Logo container */}
-          <div className="relative w-[80%] h-auto max-w-[1000px] border border-red-500/0">
+          <div className="relative w-[80%] h-auto max-w-[1000px] border border-red-500/0 mt-[-8vh]">
             <BioHaloLogo3 />
           </div>
           {/* Subtitle */}
