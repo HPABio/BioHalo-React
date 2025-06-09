@@ -113,6 +113,7 @@ import { AlternativeWhatWeDoSection } from "@/components/alternativeLayout/alter
 import { AlternativeFluorinatedMaterialsSection } from "@/components/alternativeLayout/alternativeFluorinatedMaterialsSection";
 import AtomDiagram from "@/components/ui/AtomDiagram";
 import { BentoIntroNoBG } from "@/components/bentos/Gen_3_Bentos/BentoIntroNoBG";
+import { MobileBentoIntroNoBG } from "@/components/mobileVersion/mobileBentoIntroNoBG";
 
 // Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
@@ -410,12 +411,14 @@ export default function AlternativeLayout() {
         </div>
       </section>
 
-      <section className="relative w-full  overflow-hidden z-20 font-poppins md:mt-24 lg:mt-12">
+      <section className="relative w-full  overflow-hidden z-20 font-poppins md:mt-24 lg:mt-12
+      bg-gradient-to-b from-transparent via-gray-900/30 to-transparent">
 
 
         <div className="w-screen mx-auto flex flex-col items-end justify-center
         bg-gradient-to-t from-tealAccent/40 via-tealAccent/50 to-transparent pt-32">
-            <BentoIntroNoBG className="w-full max-w-[650px] mx-auto bg-mint-60" />
+            {/* <BentoIntroNoBG className="w-full max-w-[650px] mx-auto bg-mint-60" /> */}
+            <MobileBentoIntroNoBG className="w-full max-w-[650px] mx-auto bg-mint-60" />
             <div
           className="w-full min-h-[150px] h-[30vw] bottom-0  2xl:mt-[-6vw]"
           style={{

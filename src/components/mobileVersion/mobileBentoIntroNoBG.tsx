@@ -8,10 +8,10 @@ import BioFMonomerAllPink from "@/assets/images/BluePrintSVG/BioF-Monomer-all-pi
 import { MovingAtom } from "@/components/ui/MovingAtom";
 import { backgroundImage } from "html2canvas/dist/types/css/property-descriptors/background-image";
 import AtomDiagram from "@/components/ui/AtomDiagram";
-import { BentoStats } from "../Gen_3_Bentos/BentoStats";
-import { PFASBenefits } from "./PFASBenefits";
+import { BentoStats } from "../bentos/Gen_3_Bentos/BentoStats";
+import { PFASBenefits } from "../bentos/Gen_3_Bentos/PFASBenefits";
 
-export function BentoIntroNoBG({ className }: { className?: string }) {
+export function MobileBentoIntroNoBG({ className }: { className?: string }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -19,10 +19,10 @@ export function BentoIntroNoBG({ className }: { className?: string }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       className={`col-span-2 row-span-2 relative overflow-hidden rounded-3xl
-         p-8 text-white ${className}`}
+         p-4 sm:p-6 md:p-8 text-white ${className}`}
     >
-      <div className="w-full h-full relative z-10 flex flex-col font-poppins lg:pt-14 px-12 lg:px-0">
-        <h2 className="text-4xl font-bold mb-4">
+      <div className="w-full h-full relative z-10 flex flex-col font-poppins pt-8 sm:pt-10 lg:pt-14 px-4 sm:px-8 lg:px-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
           Incorporating{" "}
           <motion.span
             className="font-bold"
@@ -43,11 +43,11 @@ export function BentoIntroNoBG({ className }: { className?: string }) {
         <motion.div className="flex-1 relative" transition={{ duration: 0.1 }}>
           <motion.div
             whileHover="hover"
-            className="flex w-full h-full gap-4  max-w-[700px] mx-auto
+            className="flex w-full h-full gap-2 sm:gap-4 max-w-[700px] mx-auto
           border-2 border-blue-500/0"
           >
             <motion.div
-              className="flex w-fit h-full max-w-[180px] justify-center items-center relative
+              className="flex w-fit h-full max-w-[120px] sm:max-w-[180px] justify-center items-center relative
                border-2 border-red-500/0 my-auto"
               variants={{
                 hover: {
@@ -59,7 +59,7 @@ export function BentoIntroNoBG({ className }: { className?: string }) {
                 },
               }}
             >
-              <div className="relative aspect-square w-32 h-32  bg-white/10 overflow-visible ">
+              <div className="relative aspect-square w-24 h-24 sm:w-32 sm:h-32 bg-white/10 overflow-visible">
                 <div
                   className="absolute inset-0 flex flex-col items-center justify-center
                  border-2 border-white/80 rounded-lg overflow-hidden"
@@ -70,12 +70,16 @@ export function BentoIntroNoBG({ className }: { className?: string }) {
                     color="rgb(225,212,215,1)"
                     className="absolute bottom-0 right-0 translate-x-[50%] translate-y-[50%] opacity-10 blur-[1px]"
                   />
-                  <span className="text-5xl font-bold">F</span>
-                  <span className="text-sm mt-1 font-bold">Fluorine</span>
-                  <span className="absolute top-1 left-1 text-xs font-bold">
+                  <span className="text-4xl sm:text-5xl font-bold">F</span>
+                  <span className="text-xs sm:text-sm mt-1 font-bold">
+                    Fluorine
+                  </span>
+                  <span className="absolute top-1 left-1 text-[10px] sm:text-xs font-bold">
                     9
                   </span>
-                  <span className="text-xs mt-1 font-medium">18.99</span>
+                  <span className="text-[10px] sm:text-xs mt-1 font-medium">
+                    18.99
+                  </span>
                 </div>
                 <AtomDiagram
                   width={"60%"}
@@ -150,28 +154,28 @@ export function BentoIntroNoBG({ className }: { className?: string }) {
           </motion.div>
         </motion.div>
 
-        <p className="text-lg opacity-90 mt-4">
+        <p className="text-base sm:text-lg opacity-90 mt-3 sm:mt-4">
           ...into the molecular structure of certain polymers, enhances their
           properties and transforms them into a class of
           <span className="font-bold">
             {" "}
             high-performance materials with advanced properties{" "}
           </span>{" "}
-          known as "Perfluoroalkyl and Polyfluoroalkyl Substances" or for short <b>PFAS</b>.
+          known as "Perfluoroalkyl and Polyfluoroalkyl Substances" or for short{" "}
+          <b>PFAS</b>.
         </p>
 
-        <div className="mt-32 lg:mt-44">
-        <BentoStats className="w-full  aspect-[16/4] border-2 border-lightGrey/20" />
-          <h3 className="text-lg font-medium text-lightGrey/60 pt-2 mb-4 lg:mb-8">
+        <div className="mt-16 sm:mt-24 lg:mt-32">
+          <BentoStats className="w-full aspect-[16/4] border-2 border-lightGrey/20" />
+          <h3 className="text-base sm:text-lg font-medium text-lightGrey/60 pt-2 mb-3 sm:mb-4 lg:mb-8">
             are known for their exceptional properties...
           </h3>
           <PFASBenefits />
-          <p className="text-sm text-lightGrey/60 mt-4 text-right italic">
+          <p className="text-xs sm:text-sm text-lightGrey/60 mt-3 sm:mt-4 text-right italic">
             ...and many more unique characteristics that make them valuable in
             various applications
           </p>
         </div>
-
       </div>
 
       <motion.div
