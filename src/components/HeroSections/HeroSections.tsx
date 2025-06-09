@@ -718,10 +718,10 @@ export const HeroSection4 = ({
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col md:flex-row gap-4 md:gap-2 xl:gap-4 mt-12 md:mt-2 items-center justify-center">
+          <div className="flex flex-row gap-2 xl:gap-4 mt-12 md:mt-2 items-center justify-center">
             <div>
               <Button
-                className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
+                className="px-4 py-2 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
                             bg-tealAccent bg-gradient-to-r from-tealAccent via-mintAccent/50 to-mintAccent/80 hover:from-teal-600 hover:to-tealAccent 
                             text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105
                             pointer-events-auto"
@@ -747,7 +747,7 @@ export const HeroSection4 = ({
             </div>
             <div>
               <Button
-                className="px-8 py-6 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
+                className="px-4 py-2 md:px-8 md:py-4 xl:px-8 xl:py-6 font-poppins text-lg md:text-base xl:text-lg font-medium 
                             bg-white/10 backdrop-blur-sm hover:bg-white/20 text-tealAccent/70 border border-white/20 
                             rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105
                             pointer-events-auto"
