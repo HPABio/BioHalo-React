@@ -331,7 +331,7 @@ export const PlatformTechnologySection = ({
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center relative pt-12 lg:pt-24
+          className="text-center relative pt-4 lg:pt-12
           flex flex-col items-center justify-center pb-12 lg:pb-20 2xl:pb-24"
         >
           <h1 className="text-center bg-gradient-to-br from-mintAccent/30 via-gray-500/40 to-lightGrey/30 bg-clip-text text-transparent
