@@ -29,11 +29,11 @@ const NetworkDiagramWithNodes: React.FC<NetworkDiagramWithNodesProps> = ({
   imageHeight = 500,
 }) => {
   const icons = [
-    <Sprout key="sprout" className="w-8 h-8 text-teal-700" />,
-    <Zap key="zap" className="w-8 h-8 text-teal-700" />,
-    <TrendingDown key="trending" className="w-8 h-8 text-teal-700" />,
-    <Recycle key="recycle" className="w-8 h-8 text-teal-700" />,
-    <Leaf key="leaf" className="w-8 h-8 text-teal-700" />,
+    <Sprout key="sprout" className="" />,
+    <Zap key="zap" className="w-8 h-8" />,
+    <TrendingDown key="trending" className="w-8 h-8" />,
+    <Recycle key="recycle" className="w-8 h-8" />,
+    <Leaf key="leaf" className="w-8 h-8" />,
   ];
 
   return (
@@ -46,9 +46,13 @@ const NetworkDiagramWithNodes: React.FC<NetworkDiagramWithNodesProps> = ({
           {nodeLabels.map((label, index) => (
             <div
               key={index}
-              className="w-[100px] h-[100px] bg-slate-900 rounded-lg flex items-center justify-center border border-[#4B5563]"
+              className="w-[100px] h-[100px] rounded-lg flex items-center justify-center p-4
+              bg-gradient-to-br from-gray-900/50 to-gray-800/60 backdrop-blur-xl 
+              border-[1px] lg:border-[1.2px] border-mintAccent/5 lg:border-tealAccent/15 hover:border-mintAccent/10 group"
             >
-              <div className="w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)]">
+              <div className="w-full h-full rounded-full flex items-center justify-center text-tealAccent
+              bg-gradient-to-tl from-gray-900/50 to-gray-800/60 backdrop-blur-xl 
+              border-[1px] border-mintAccent/10 group-hover:border-mintAccent/30">
                 {icons[index]}
               </div>
             </div>

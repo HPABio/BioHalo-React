@@ -55,7 +55,7 @@ const technologyFeatures: TechnologyFeature[] = [
     description:
       "Our technology requires significantly less fluorine while maintaining or enhancing material performance.",
     icon: (
-      <TrendingDown className="w-8 h-8  text-teal-700 hover:text-teal-500" />
+      <TrendingDown className="" />
     ),
   },
   {
@@ -63,42 +63,42 @@ const technologyFeatures: TechnologyFeature[] = [
     title: "Bio-Based Materials",
     description:
       "We utilize biological systems and renewable resources to create sustainable and safe fluorinated polymers.",
-    icon: <Sprout className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+    icon: <Sprout className="" />,
   },
   {
     id: 7,
     title: "Minimal By-Products",
     description:
       "Our precision technology produces fewer unwanted by-products, increasing efficiency and reducing waste.",
-    icon: <Zap className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+    icon: <Zap className="" />,
   },
   /* {
     id: 1,
     title: "Bio-Based Enzyme Platform",
     description:
       "Our computational platform predicts and optimizes enzyme performance for specific substrates and reaction conditions.",
-    icon: <Dna className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+    icon: <Dna className="" />,
   }, */
   /* {
     id: 2,
     title: "Biocatalysis",
     description:
       "We harness the power of biocatalysts to perform chemical transformations with unprecedented selectivity and efficiency.",
-    icon: <Microscope className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+    icon: <Microscope className="" />,
   }, */
   {
     id: 6,
     title: "Circular Economy",
     description:
       "Our platform is designed with end-of-life considerations, enabling recyclability and biodegradability.",
-    icon: <Recycle className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+    icon: <Recycle className="" />,
   },
   {
     id: 4,
     title: "Green Chemistry",
     description:
       "Our processes operate under mild conditions, using renewable resources and generating minimal waste.",
-    icon: <Leaf className="w-8 h-8 text-teal-700 hover:text-teal-500" />,
+    icon: <Leaf className="" />,
   },
   /* {
     id: 5,
@@ -215,7 +215,7 @@ export const PlatformTechnologySection = ({
           />
             </h1>
           <h1
-            className="text-center bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent">
+            className="relative text-center bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent">
             <span
               className="text-5xl md:text-6xl lg:text-7xl  
               bg-gradient-to-tr from-teal-900 via-teal-500 to-teal-800 bg-clip-text text-transparent
@@ -238,7 +238,14 @@ export const PlatformTechnologySection = ({
               </span>{" "}
               Offers
             </span> */}
+            <div className="relative w-[50%] mx-auto h-0.5 bg-gradient-to-r from-transparent via-tealAccent to-transparent mt-6 opacity-60">
+          </div>
+              <div className="w-[25%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mt-6 opacity-20
+                absolute bottom-0 left-[50%] translate-x-[-50%] "/>
+              <div className="w-[15%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mt-6 opacity-20
+                absolute bottom-0 left-[50%] translate-x-[-50%] "/>
           </h1>
+          
           <p className="text-gray-500 md:w-[70%] min-w-[600px] lg:w-1/2 mx-auto mt-24 font-light text-lg leading-snug 
           xl:text-xl xl:leading-tight xl:min-w-[650px]">
             {/* Harnessing the potential of biology for controlled{" "} */}
@@ -321,23 +328,60 @@ export const PlatformTechnologySection = ({
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 relative"
-          >
-            <h2 className="text-3xl md:text-5xl font-bold capitalize bg-gradient-to-br from-mintAccent/60 to-mintAccent/80 bg-clip-text text-transparent py-6">
-              Key Technology Features
-            </h2>
-            <p className="text-gray-400 max-w-3xl mx-auto">
-              Our revolutionary biohalogenation platform offers unique
-              advantages over traditional fluorination methods
-            </p>
-            <div className="absolute w-full h-0.5 bg-gradient-to-r from-transparent via-tealAccent to-transparent mt-6 opacity-30"></div>
-          </motion.div>
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center relative pt-12 sm:pt-24
+          flex flex-col items-center justify-center pb-24"
+        >
+          <h1 className="text-center bg-gradient-to-br from-mintAccent/30 via-gray-500/40 to-lightGrey/30 bg-clip-text text-transparent
+          text-3xl lg:text-4xl 2xl:text-5xl font-Poppins font-light relative">
+              explore our <br />
+              <MovingAtom
+            width={50}
+            height={50}
+            hoverAmplitude={5}
+            hoverDuration={4}
+            color="rgba(18,110,119,1)"
+            className="absolute opacity-50
+            top-[0%] right-[50%]
+            translate-x-[450%] translate-y-[-50%]"
+          />
+            </h1>
+          <h1
+            className="text-center bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent
+            relative">
+            <span
+              className="text-5xl md:text-6xl 2xl:text-7xl  
+              bg-gradient-to-tr from-teal-900 via-teal-500 to-teal-800 bg-clip-text text-transparent
+              uppercase drop-shadow-sm font-black font-Poppins "
+            >
+              biohalogenation <br />
+            </span>
+            <span
+              className="text-5xl md:text-6xl 2xl:text-7xl uppercase drop-shadow-sm font-normal font-Poppins
+              bg-gradient-to-br from-mintAccent/60 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparentt"
+            >
+              key features
+              <br />
+            </span>
+          <div className="relative w-full h-0.5 bg-gradient-to-r from-transparent via-tealAccent to-transparent mt-6 opacity-60">
+          </div>
+              <div className="w-[30%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mt-6 opacity-20
+                absolute bottom-0 left-[50%] translate-x-[-50%] "/>
+              <div className="w-[10%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mt-6 opacity-20
+                absolute bottom-0 left-[50%] translate-x-[-50%] "/>
+          </h1>
+        </motion.div>
 
           {/* Right side: Features list */}
-          <div className="flex justify-center items-center w-full">
+          <div className="flex flex-col justify-center items-center w-full">
+          <p className="text-gray-500 sm:w-[80%] md:w-[50%] lg:w-[55%] xl:max-w-[550px] mx-auto font-light text-sm lg:text-base 2xl:text-lg  
+          leading-tight 2xl:leading-snug text-center pb-2
+          ">
+            Our revolutionary biohalogenation platform offers unique
+            advantages over traditional fluorination methods
+          </p>
             <NetworkDiagramWithNodes
               enzymeImage={enzymeImage.src}
               enzymeImageAlt="Enzyme"
@@ -349,33 +393,32 @@ export const PlatformTechnologySection = ({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 -mt-14">
             {technologyFeatures.map((feature, index) => (
               <motion.div
-                key={feature.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, 
-                  // delay: feature.id * 0.1 
-                }}
-                className={`p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-tealAccent/10 rounded-xl hover:border-tealAccent/30 transition-all group ${
-                  index === technologyFeatures.length - 1
-                    ? "md:col-span-2 md:max-w-[calc(50%-12px)] md:mx-auto"
-                    : ""
-                }`}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center 
-                  group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)]">
-                    {feature.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2 text-gray-300">
-                      {feature.title}
-                    </h3>
-                    <div className="w-full h-px bg-gradient-to-r from-transparent via-tealAccent/20 to-transparent mb-3" />
-                    <p className="text-gray-400">{feature.description}</p>
-                  </div>
+              key={feature.id}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3 }}
+              className="p-3 
+              bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm 
+              border border-tealAccent/10 rounded-lg hover:border-tealAccent/30 transition-all group"
+            >
+              <div className="flex items-center space-x-3 ">
+                <div
+                  className="flex-shrink-0 w-10 h-10 rounded-full bg-tealAccent/10 flex items-center justify-center 
+                group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)] text-tealAccent"
+                >
+                  {feature.icon}
                 </div>
-              </motion.div>
+                <div className="flex-1">
+                      <h3 className="text-base font-semibold leading-tight sm:text-xl sm:leading-snug sm:mb-1
+                      bg-lightGrey bg-gradient-to-br from-lightGrey via-gray-900/60 to-gray-300 bg-clip-text text-transparent">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-500 text-xs sm:text-sm pb-2 pt-1 leading-tight
+                      sm:font-normal sm:leading-tight">{feature.description}</p>
+                </div>
+              </div>
+            </motion.div>
             ))}
           </div>
           
