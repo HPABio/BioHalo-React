@@ -55,22 +55,7 @@ import { Rocket } from "lucide-react";
 import { borderBottomLeftRadius } from "html2canvas/dist/types/css/property-descriptors/border-radius";
 import { BentoStats } from "@/components/bentos/Gen_3_Bentos/BentoStats";
 
-// Function to generate random brightness values
-const generateBrightnessValues = (count: number, min: number, max: number) => {
-  min = min || 0.7;
-  max = max || 1.3;
-  count = count || 10;
-  return Array.from({ length: count }, () => {
-    const brightness = min + Math.random() * (max - min); // Random value between 0.9 and 1.3
-    return `blur(0px) brightness(${brightness.toFixed(2)})`;
-  });
-};
 
-interface AlternativeFluorinatedMaterialsSectionProps {
-  stats: any[];
-  className?: string;
-  debug?: boolean;
-}
 
 // Memoized Circle Components
 const Circle1 = React.memo(function Circle1() {
@@ -119,20 +104,13 @@ const Circle1 = React.memo(function Circle1() {
   );
 });
 
-export function AlternativeFluorinatedMaterialsSection({
-  stats,
-  className = "",
-  debug = false,
-}: AlternativeFluorinatedMaterialsSectionProps) {
-  const ref2 = useRef(null);
-  const refSkull1 = useRef(null);
-  const refSkull2 = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref2,
-    offset: ["center end", "center start"],
-  });
-  if (debug) console.log("Rendering FluorinatedMaterialsSection");
 
+  export function AlternativeFluorinatedMaterialsSection({ className }: { className?: string }) {
+    const refSkull1 = useRef(null);
+  const { scrollYProgress: scrollYProgressSkull1 } = useScroll({
+    target: refSkull1,
+    offset: ["center end", "center start"],
+  })
   return (
     <section
       className={`${className} w-full h-full  relative bg-gradient-to-b from-black via-black to-slate-900`}>
@@ -178,7 +156,7 @@ export function AlternativeFluorinatedMaterialsSection({
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundBlendMode: "multiply",
-          opacity: 0.3,
+          opacity: 0.4,
         }}>
           <div className="w-full h-full bg-gradient-to-b from-black via-black/50 to-transparent"></div>
         </div>
@@ -191,14 +169,8 @@ export function AlternativeFluorinatedMaterialsSection({
                 initial={{ rotate: 0 }}
                 transition={{ duration: 1 }}
                 style={{
-                  rotate: useTransform(useScroll({
-                    target: refSkull1,
-                    offset: ["start end", "center start"],
-                  }).scrollYProgress, [0, 1], [0, -15]),
-                  y: useTransform(useScroll({
-                    target: refSkull1,
-                    offset: ["start end", "center start"],
-                  }).scrollYProgress, [0, 0.6], [0, -100]),
+                  rotate: useTransform(scrollYProgressSkull1, [0, 1], [0, -15]),
+                  y: useTransform(scrollYProgressSkull1, [0, 0.6], [0, -100]),
                 }}
                 className="relative w-full h-full rounded-full overflow-hidden border-2 border-lightGrey/40 grid place-items-center"
               >
@@ -209,15 +181,11 @@ export function AlternativeFluorinatedMaterialsSection({
                   className="w-full h-full object-cover"
                 />
                 <motion.div
-                  ref={refSkull2}
                   className="absolute w-[110%] h-[110%] min-w-[110%] min-h-[110%] 
                   top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
                   mix-blend-multiply"
                   style={{
-                    opacity: useTransform(useScroll({
-                      target: refSkull2,
-                      offset: ["start end", "center start"],
-                    }).scrollYProgress, [0, 0.6], [0, 1]),
+                    opacity: useTransform(scrollYProgressSkull1, [0, 0.6], [0, 1]),
                   }}
                 >
                   <Image

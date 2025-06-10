@@ -334,12 +334,14 @@ export default function AlternativeLayout() {
       {/* Transition Section */}
       <section
         className="relative w-screen max-h-[120vh] z-10 "
-        id="transition-section-one">
+        id="transition-section-one"
+      >
         <FluorineElement />
         {/* Enzyme Image right */}
         <div
           className="absolute w-[80vw] h-[80vw] max-w-[1450px] 
-            top-0 right-0 opacity-1 blur-[6px] translate-x-[35%] translate-y-[-50%] pointer-events-none">
+            top-0 right-0 opacity-1 blur-[6px] translate-x-[35%] translate-y-[-50%] pointer-events-none"
+        >
           <motion.div
             className="absolute w-full h-full hidden sm:block"
             style={{
@@ -350,7 +352,10 @@ export default function AlternativeLayout() {
               filter: useTransform(
                 useScroll().scrollY,
                 [0, 1000],
-                ["blur(0px)", "blur(20px)"]),}}>
+                ["blur(0px)", "blur(20px)"]
+              ),
+            }}
+          >
             <Image
               src={enzymeImage}
               alt="Enzyme"
@@ -361,18 +366,61 @@ export default function AlternativeLayout() {
         </div>
       </section>
 
+      <section className="w-full h-[400px] top-0 left-0 z-10 mt-2 relative overflow-hidden
+">
+                  <div className="w-[2400px] aspect-square xl:scale-x-[1.2] 2xl:scale-x-[2] bottom-0 left-[50%] translate-x-[-50%] absolute " 
+                  style={{
+                    maskImage: "radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 65%, rgba(0,0,0,1) 70%)",
+                    backgroundSize: "contain",
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                }}>
+
+                  <div className="w-full h-[800px] translate-y-[400px]
+                  absolute bottom-0 left-0 flex items-center justify-center
+                  bg-gray-300 bg-gradient-to-br from-mintAccent via-mintAccent/60 to-tealAccent
+                  border-2 border-green-500" />
+                </div>
+      </section>
+
+      {/* Blueprint Section */}
       <section
-        className="relative w-full  overflow-hidden z-20 font-poppins md:mt-24 lg:mt-12
-      bg-gradient-to-b from-transparent via-gray-900/30 to-transparent"
-      >
-        <div
-          className="w-screen mx-auto flex flex-col items-end justify-center
-        bg-gradient-to-t from-tealAccent/40 via-tealAccent/50 to-transparent pt-32"
-        >
+        className="relative w-full  overflow-hidden z-0 font-poppins
+        bg-gradient-to-tl from-slate-800 via-tealAccent/60 to-slate-300/40
+        ">
+          <div className="w-full h-[400px] top-0 left-0 relative overflow-hidden">
+                  <div className="w-[2400px] aspect-square xl:scale-x-[1.2] 2xl:scale-x-[2]  -top-0 left-[50%] translate-x-[-50%] absolute " 
+                  style={{
+                    maskImage: "radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 65%, rgba(0,0,0,1) 70%)",
+                    backgroundSize: "contain",
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",}}>
+
+                  <div className="w-full h-[800px] translate-y-[-400px]
+                  absolute top-0 left-0 flex items-center justify-center
+                  bg-gray-300 bg-gradient-to-br from-mintAccent via-mintAccent/60 to-tealAccent" />
+                </div>
+      </div>
+          
+        <div className="absolute inset-0 flex items-center justify-center">
+          {/* <div className="w-full h-[10%] absolute top-0 left-0 bg-gradient-to-b from-white to-transparent" /> */}
+          <div
+            className="w-[80vw] aspect-video absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[20%] lg:translate-y-[-10%] scale-x-[-1] 
+            max-w-[1000px] xl:max-w-[1300px] opacity-[0.08] xl:opacity-[0.05]"
+            style={{
+              backgroundImage: `url(${PfasBP.src})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center center",
+              backgroundRepeat: "no-repeat",
+
+            }}
+          ></div>
+        </div>
+        <div className="w-screen mx-auto flex flex-col items-end justify-center -mt-44">
           {/* <BentoIntroNoBG className="w-full max-w-[650px] mx-auto bg-mint-60" /> */}
           <MobileBentoIntroNoBG className="w-full max-w-[650px] mx-auto bg-mint-60" />
           <div
-            className="w-full min-h-[150px] h-[30vw] bottom-0  2xl:mt-[-6vw]"
+            className="w-full min-h-[150px] h-[30vw] bottom-0  2xl:mt-[-6vw] mix-blend-multiply"
             style={{
               backgroundImage: `url(${BlackSmokeDivider.src})`,
               backgroundSize: "contain",
@@ -390,34 +438,37 @@ export default function AlternativeLayout() {
       {/* Fluorinated Materials Section */}
       <section
         className="relative w-full h-full overflow-hidden z-20"
-        id="fluorinated-materials-section">
+        id="fluorinated-materials-section"
+      >
         <AlternativeFluorinatedMaterialsSection
           className="relative w-full h-full overflow-hidden z-20 pt-12"
-          stats={stats}
         />
       </section>
 
       {/* Mobile What We Do Section */}
-      <section className="relative w-full h-full block sm:hidden"
-      id="mobile-what-we-do">
+      <section
+        className="relative w-full h-full block sm:hidden"
+        id="mobile-what-we-do"
+      >
         <MobileWhatWeDoSection
           className="relative w-full h-full overflow-hidden pt-20"
           stats={stats}
-          />
-        </section>
+        />
+      </section>
 
       {/* Desktop What We Do Section */}
-      <section className="relative w-full h-full hidden sm:block"
-      id="what-we-do">
-        <AlternativeWhatWeDoSection
-          className="relative w-full h-full overflow-hidden pt-20 hidden sm:block"
-        />
+      <section
+        className="relative w-full h-full hidden sm:block"
+        id="what-we-do"
+      >
+        <AlternativeWhatWeDoSection className="relative w-full h-full overflow-hidden pt-20 hidden sm:block" />
       </section>
 
       {/* Platform Technology Section */}
       <section
         id="platform-technology"
-        className="w-full min-h-[80vh] relative z-10 hidden sm:block">
+        className="w-full min-h-[80vh] relative z-10 hidden md:block"
+      >
         {/* Section detection helper */}
         <div
           className="absolute top-0 h-24 w-full pointer-events-none"
@@ -429,15 +480,15 @@ export default function AlternativeLayout() {
       {/* Mobile Platform Technology Section */}
       <section
         id="mobile-platform-technology"
-        className="w-full min-h-[80vh] relative z-10 block sm:hidden">
+        className="w-full min-h-[80vh] relative z-10 block md:hidden"
+      >
         {/* Section detection helper */}
         <div
           className="absolute top-0 h-24 w-full pointer-events-none"
           aria-hidden="true"
         ></div>
-        <MobilePlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black block sm:hidden" />
+        <MobilePlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
       </section>
-
 
       <section className="w-full h-fit bg-red-500/0 border-2 border-blue-300 relative hidden">
         <div
@@ -451,7 +502,6 @@ export default function AlternativeLayout() {
         />
         <div className="w-full h-[10vw] absolute bottom-0 left-0 bg-gradient-to-t from-black via-black/50 to-black/0 " />
       </section>
-
 
       {/* Icon Carousel Section - No ID here since it's not in the navigation */}
       <section className="w-full">

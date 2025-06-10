@@ -138,7 +138,7 @@ const technologyProcessSteps: TechnologyProcessStep[] = [
   },
   {
     id: 2,
-    title: "Metabolic Engineering Technology for controlled fluorination",
+    title: "Metabolic Engineering",
     description:
       "We rewire the metabolism of microorganisms tailored for the production of fluorinated monomers and polymers containing fluorine atoms at specific molecular positions.",
     image: enzymeImage,
@@ -184,61 +184,48 @@ export const PlatformTechnologySection = ({
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-8 -mt-32 md:mt-0">
-        <div className="absolute bottom-[100%] left-[100%] translate-x-[-50%] translate-y-[50%] opacity-[4%] mix-blend-screen">
-          <AtomDiagram width={5300} height={5300} color="rgba(18,110,119,1)" />
+        <div className="absolute bottom-[100%] left-[100%] translate-x-[-50%] translate-y-[50%] opacity-[6%] mix-blend-screen blur-lg">
+          <AtomDiagram width={5300} height={5300} color="rgba(108,200,209,1)" />
         </div>
-        <div className="absolute top-[100%] right-[100%] translate-x-[50%] -translate-y-[50%] opacity-[50%]">
-          <AtomDiagram width={2300} height={2300} color="rgba(20,40,50,1)" />
+        <div className="absolute top-[100%] right-[100%] translate-x-[50%] -translate-y-[50%] opacity-[35%] blur-xl">
+          <AtomDiagram width={2300} height={2300} color="rgba(70,90,100,1)" />
+        </div>
+        <div className="absolute top-[100%] left-[100%] translate-x-[-50%] -translate-y-[50%] opacity-[15%]">
+          <AtomDiagram width={600} height={600} color="rgba(70,90,100,1)" />
         </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16 relative"
+          className="text-center relative"
         >
+          <h1 className="text-center bg-gradient-to-br from-mintAccent/30 via-gray-500/40 to-lightGrey/30 bg-clip-text text-transparent
+          text-3xl md:text-3xl font-Poppins font-light relative">
+              discover our revolutionary <br />
+              <MovingAtom
+            width={50}
+            height={50}
+            hoverAmplitude={5}
+            hoverDuration={4}
+            color="rgba(18,110,119,1)"
+            className="absolute opacity-50
+            top-[0%] right-[50%]
+            translate-x-[450%] translate-y-[-50%]"
+          />
+            </h1>
           <h1
-            className="text-3xl sm:text-5xl md:text-7xl font-bold mb-2 capitalize opacity-1 text-center xl:mt-[3vw]
-                bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent py-6 sm:py-10"
-          >
-            <span className="text-2xl sm:text-4xl md:text-6xl">
-              Discover our revolutionary <br />
-            </span>
-
+            className="text-center bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent">
             <span
-              className="absolute opacity-0 lg:opacity-50 uppercase blur-[2px] font-black font-Poppins  
-              bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent "
+              className="text-5xl md:text-6xl lg:text-7xl  
+              bg-gradient-to-tr from-teal-900 via-teal-500 to-teal-800 bg-clip-text text-transparent
+              uppercase drop-shadow-sm font-black font-Poppins "
             >
               biohalogenation <br />
             </span>
             <span
-              className="absolute opacity-0 lg:opacity-30 uppercase blur-[4px] font-black font-Poppins
-              bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent "
-            >
-              biohalogenation <br />
-            </span>
-            <span
-              className=" bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
-              uppercase drop-shadow-sm font-black font-Poppins"
-            >
-              biohalogenation <br />
-            </span>
-
-            <span
-              className="absolute opacity-0 lg:opacity-50 uppercase blur-[2px] font-black font-Poppins  
-                bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent "
-            >
-              Technology
-            </span>
-            <span
-              className="absolute opacity-0 lg:opacity-30 uppercase blur-[4px] font-black font-Poppins
-              bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent"
-            >
-              Technology
-            </span>
-            <span
-              className=" bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
-              uppercase drop-shadow-sm font-black font-Poppins"
+              className="text-5xl md:text-6xl lg:text-7xl uppercase drop-shadow-sm font-normal font-Poppins
+              bg-gradient-to-br from-mintAccent/60 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparentt"
             >
               Technology
               <br />
@@ -252,34 +239,18 @@ export const PlatformTechnologySection = ({
               Offers
             </span> */}
           </h1>
-          <p className="text-gray-400 max-w-3xl mx-auto text-sm sm:text-base md:text-lg">
-            Harnessing the potential of biology for controlled{" "}
-            <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
-              fluorination
-            </span>{" "}
-            which is deemed impossible by chemical approaches
+          <p className="text-gray-500 md:w-[70%] min-w-[600px] lg:w-1/2 mx-auto mt-24 font-light text-lg leading-snug 
+          xl:text-xl xl:leading-tight xl:min-w-[650px]">
+            {/* Harnessing the potential of biology for controlled{" "} */}
+            By harnessing the potential of biology <br /> we can achieve  <span className="font-bold bg-tealAccent bg-gradient-to-r from-mintAccent/10 via-mintAccent/60 to-mintAccent/10 bg-clip-text text-transparent">
+            controlled fluorination
+            </span>{" "}on a level of precision  which is deemed impossible by standard chemical approaches.
           </p>
-          <MovingAtom
-            width={60}
-            height={60}
-            hoverAmplitude={10}
-            hoverDuration={4}
-            shouldRotate={false}
-            rotationDuration={30}
-            shouldScale={true}
-            scaleRange={[0.9, 1.1]}
-            scaleDuration={4}
-            color="rgba(18,110,119,1)"
-            className="absolute top-[12%] right-[14%]
-            lg:top-[12%] lg:left-[50%]
-            md:translate-x-[220%] md:translate-y-[170%]
-            lg:translate-x-[100%] lg:translate-y-[90%]
-            xl:translate-x-[80%] xl:translate-y-[90%]"
-          />
+          
         </motion.div>
 
         {/* Process Steps Section */}
-        <div className="space-y-14 xl:space-y-24 mb-24 md:pt-16">
+        <div className="space-y-14 xl:space-y-12 mb-24 mt-12">
           {technologyProcessSteps.map((step, index) => (
             <motion.div
               key={step.id}
@@ -289,14 +260,15 @@ export const PlatformTechnologySection = ({
                 // delay: index * 0.1
                }}
               viewport={{ once: true }}
-              className={`max-sm:text-center px-4 md:px-12 lg:px-24 flex flex-col ${
+              className={`max-sm:text-center px-4 md:px-12 lg:px-24 xl:px-32 2xl:px-24 flex flex-col ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } items-center gap-8 md:gap-16`}
+              } items-center gap-8 md:gap-8 lg:gap-10 xl:gap-12`}
             >
               {/* Image */}
               <div className="flex-1 relative group">
                 <div className="absolute inset-0 bg-tealAccent/20 rounded-2xl blur-3xl group-hover:blur-2xl opacity-70 transition-all duration-500 -z-10"></div>
-                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl border border-tealAccent/20 backdrop-blur-sm shadow-xl overflow-hidden h-[250px] lg:h-[350px] flex items-center justify-center">
+                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl border border-tealAccent/20 backdrop-blur-sm shadow-xl overflow-hidden 
+                h-[250px] xl:h-[300px] flex items-center justify-center">
                   <Image
                     src={step.image}
                     alt={step.alt}
@@ -313,10 +285,10 @@ export const PlatformTechnologySection = ({
 
               {/* Text content */}
               <div className="flex-1 text-left">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-gray-200 to-gray-400 bg-clip-text text-transparent">
+                <h3 className="text-2xl xl:text-3xl font-bold mb-4 bg-gradient-to-br from-lightGrey to-gray-600 bg-clip-text text-transparent">
                   {step.title}
                 </h3>
-                <p className="text-gray-400 text-lg mb-6">{step.description}</p>
+                <p className="text-gray-500 text-md xl:text-lg mb-6 leading-tight xl:leading-snug">{step.description}</p>
                 <div className="w-24 h-1 bg-gradient-to-r from-tealAccent to-mintAccent/50 rounded-full mb-6"></div>
 
                 {index < technologyProcessSteps.length - 1 && (

@@ -29,16 +29,16 @@ const MobileNetworkDiagramWithNodes: React.FC<MobileNetworkDiagramWithNodesProps
   imageHeight = 500,
 }) => {
   const icons = [
-    <Sprout key="sprout" className="w-8 h-8 text-teal-700" />,
-    <Zap key="zap" className="w-8 h-8 text-teal-700" />,
-    <TrendingDown key="trending" className="w-8 h-8 text-teal-700" />,
-    <Recycle key="recycle" className="w-8 h-8 text-teal-700" />,
-    <Leaf key="leaf" className="w-8 h-8 text-teal-700" />,
+    <Sprout key="sprout" className="" />,
+    <Zap key="zap" className="" />,
+    <TrendingDown key="trending" className="" />,
+    <Recycle key="recycle" className="" />,
+    <Leaf key="leaf" className="" />,
   ];
 
   return (
     <div
-      className={`bg-gray-800/0 px-8 rounded-lg shadow-lg w-[350px] sm:w-full ${width} ${className}`}
+      className={`bg-gray-900/20 px-8 rounded-lg shadow-lg w-[350px] sm:w-full ${width} ${className}`}
     >
       <div className="w-full flex flex-col gap-0 relative">
         {/* First row: 5 square divs */}
@@ -46,9 +46,11 @@ const MobileNetworkDiagramWithNodes: React.FC<MobileNetworkDiagramWithNodesProps
           {nodeLabels.map((label, index) => (
             <div
               key={index}
-              className="w-[100px] h-[100px] bg-slate-900 rounded-lg flex items-center justify-center border border-[#4B5563]"
+              className="w-[50px] sm:w-[90px] aspect-square p-1 sm:p-4
+              bg-gray-800/20 rounded-lg flex items-center justify-center border border-tealAccent/20 backdrop-blur-sm"
             >
-              <div className="w-12 h-12 rounded-full bg-tealAccent/10 flex items-center justify-center group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)]">
+              <div className="w-full h-full rounded-full bg-slate-900/50 flex items-center justify-center 
+              text-sm text-tealAccent ">
                 {icons[index]}
               </div>
             </div>
@@ -61,8 +63,8 @@ const MobileNetworkDiagramWithNodes: React.FC<MobileNetworkDiagramWithNodesProps
         </div>
 
         {/* Third row: One centered square div */}
-        <div className="w-full flex justify-center z-10 mt-[-230px] md:mt-[-35%] bg-red-500/0">
-          <div className="w-[70%] rounded-lg flex items-center justify-center bg-blue-500/0">
+        <div className="w-full flex justify-center z-10 mt-[-230px]">
+          <div className="w-[70%] rounded-lg flex items-center justify-center bg-transparent">
             {enzymeImage && (
               <Image
                 src={enzymeImage}

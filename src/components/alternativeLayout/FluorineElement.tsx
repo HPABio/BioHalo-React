@@ -33,9 +33,9 @@ const FluorineElement: React.FC<FluorineElementProps> = ({
             </span>
           </div>
           {/* Subtitle */}
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-600 text-center mt-6 md:mt-8 max-w-2xl leading-tight px-4">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-600 text-center mt-6 md:mt-8 max-w-2xl leading-tight px-4">
             our modern society <br className="sm:hidden block" /> is built on <br />
-            <span className="bg-gradient-to-bl from-red-800/90 via-pinkAccent to-purple-900/80 bg-clip-text text-transparent font-extrabold">
+            <span className="md:text-4xl bg-gradient-to-bl from-red-800/90 via-pinkAccent to-purple-900/80 bg-clip-text text-transparent font-extrabold">
               fluorinated materials
             </span>
           </h2>
