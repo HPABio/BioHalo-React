@@ -18,10 +18,9 @@ export function MobileBentoIntroNoBG({ className }: { className?: string }) {
       whileHover="textHover"
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className={`col-span-2 row-span-2 relative overflow-hidden rounded-3xl
-         p-4 sm:p-6 md:p-8 text-white ${className}`}
+      className={`col-span-2 row-span-2 relative overflow-hidden rounded-3xl text-white ${className}`}
     >
-      <div className="w-full h-full relative z-10 flex flex-col font-poppins pt-8 sm:pt-10 lg:pt-14 px-4 sm:px-8 lg:px-12">
+      <div className="w-full h-full relative z-10 flex flex-col font-poppins pt-8 sm:pt-10 lg:pt-14 px-4 sm:px-14 lg:px-12">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
           Incorporating{" "}
           <motion.span

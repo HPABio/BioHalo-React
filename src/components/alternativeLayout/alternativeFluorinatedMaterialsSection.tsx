@@ -125,59 +125,23 @@ export function AlternativeFluorinatedMaterialsSection({
   debug = false,
 }: AlternativeFluorinatedMaterialsSectionProps) {
   const ref2 = useRef(null);
-  const refCPUText = useRef(null);
-  const refTurbine = useRef(null);
-  const refBottle = useRef(null);
+  const refSkull1 = useRef(null);
+  const refSkull2 = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref2,
     offset: ["center end", "center start"],
   });
-  const { scrollYProgress: scrollYProgressBottle } = useScroll({
-    target: refBottle,
-    offset: ["start end", "center start"],
-  });
-  const shouldRasterize = false;
-  const saveToAssets = false;
   if (debug) console.log("Rendering FluorinatedMaterialsSection");
 
   return (
     <section
-      className={`${className} w-full h-full  relative bg-gradient-to-b from-black via-black to-slate-900`}
-    >
+      className={`${className} w-full h-full  relative bg-gradient-to-b from-black via-black to-slate-900`}>
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
-
       <div className="w-full max-w-[580px] mx-auto h-fit relative bg-gradient-to-b from-black via-black to-transparent ">
         <div
           className="w-full h-fit relative overflow-hidden 
-        bg-gradient-to-b from-black via-black to-transparent "
-        >
+        bg-gradient-to-b from-black via-black to-transparent">
           <div className="relative w-full h-full max-w-[1280px] flex flex-col mx-auto px-6">
-            {/* TEXT COLUMN */}
-           {/*  <div className="w-full flex flex-col items-center">
-              <p className="text-lightGrey/30 text-lg font-poppins font-light">Forever Chemicals are also known as:</p>
-
-              <h1 className="w-full text-center font-black font-poppins 
-              bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-4 groupleading-none">
-                <span className="text-4xl text-gray-500 font-medium leading-none">
-                  <span className="font-bold text-transparent">P</span>er<span className="font-bold text-transparent">F</span>luoro
-                  <span className="font-bold text-transparent">A</span>lkyl <span className="font-bold text-transparent">S</span>ubstances <span className="text-gray-500 font-light">&</span> <br />
-                  <span className="font-bold text-transparent">P</span>oly<span className="font-bold text-transparent">F</span>luoro
-                  <span className="font-bold text-transparent">A</span>lkyl <span className="font-bold text-transparent">S</span>ubstances
-                </span>
-                      <p className="text-md lg:text-xl text-gray-500 font-poppins font-light leading-snug">
-                        or for short
-                      </p>
-              </h1>
-                  <div className="w-full h-full flex flex-col items-center justify-center">
-                      <div className="w-full h-full flex flex-col items-center justify-center 
-                    border-2 border-red-500/0">
-                      <BentoStats className="w-full  aspect-[16/4] border-2 border-red-500/0" />
-                </div>
-              </div>
-            </div> */}
-
-
-
             {/* Content container */}
             <div className="flex flex-col gap-8 w-full">
               {/* Text content */}
@@ -207,17 +171,68 @@ export function AlternativeFluorinatedMaterialsSection({
 
       {/* Circles section */}
       <div className="w-full h-[47vw] max-h-[500px] relative mt-24">
-          {/* Circle 1 */}
-          <div className="w-[50vw] aspect-[6/9] max-w-[500px] mx-auto relative flex items-center justify-center"
-          style={{
-            willChange: "transform, opacity",
-          }}>
-            <Circle1 />
-          </div>
-        <div className="w-full relative">
+        <div className="w-full h-[47vw] max-h-[500px] mt-12 absolute top-0 left-0 z-0"
+        style={{
+          backgroundImage: `url(${IndustrialPollution.src})`,
+          backgroundSize: "100%",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundBlendMode: "multiply",
+          opacity: 0.3,
+        }}>
+          <div className="w-full h-full bg-gradient-to-b from-black via-black/50 to-transparent"></div>
         </div>
+          {/* Circle 1 */}
+          <div className="absolute top-0 left-[50%] translate-x-[-55%] w-[50vw] aspect-[6/9] max-w-[500px] mx-auto flex items-center justify-center z-10"
+          style={{willChange: "transform, opacity",}}>
+            {/* <Circle1 /> */}
+            <motion.div
+                ref={refSkull1}
+                initial={{ rotate: 0 }}
+                transition={{ duration: 1 }}
+                style={{
+                  rotate: useTransform(useScroll({
+                    target: refSkull1,
+                    offset: ["start end", "center start"],
+                  }).scrollYProgress, [0, 1], [0, -15]),
+                  y: useTransform(useScroll({
+                    target: refSkull1,
+                    offset: ["start end", "center start"],
+                  }).scrollYProgress, [0, 0.6], [0, -100]),
+                }}
+                className="relative w-full h-full rounded-full overflow-hidden border-2 border-lightGrey/40 grid place-items-center"
+              >
+                <Image
+                  src={ColorfulGradientRainbowTexture}
+                  alt="TexturedGlassSurface"
+                  sizes="(max-width: 768px) 100vw, 350px"
+                  className="w-full h-full object-cover"
+                />
+                <motion.div
+                  ref={refSkull2}
+                  className="absolute w-[110%] h-[110%] min-w-[110%] min-h-[110%] 
+                  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
+                  mix-blend-multiply"
+                  style={{
+                    opacity: useTransform(useScroll({
+                      target: refSkull2,
+                      offset: ["start end", "center start"],
+                    }).scrollYProgress, [0, 0.6], [0, 1]),
+                  }}
+                >
+                  <Image
+                    src={IconToxicSkull}
+                    alt="IconToxicSkull"
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, 500px"
+                    className="w-full h-full object-cover invert grayscale"
+                  />
+                </motion.div>
+            </motion.div>
+          </div>
       </div>
-      <div className="absolute bottom-0 right-0 w-full h-[100px] lg:h-[200px] 2xl:h-[300px] bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+      <div className="absolute bottom-0 right-0 w-full h-[100px] lg:h-[200px] 2xl:h-[300px] bg-gradient-to-t from-black via-black/60 to-transparent z-10"></div>
     </section>
   );
 }

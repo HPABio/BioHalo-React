@@ -334,24 +334,12 @@ export default function AlternativeLayout() {
       {/* Transition Section */}
       <section
         className="relative w-screen max-h-[120vh] z-10 "
-        id="transition-section-one"
-      >
+        id="transition-section-one">
         <FluorineElement />
-
-        {/* <div
-          className="relative bottom-0 left-0 w-full min-h-[200px] h-[30vw] xl:h-[30vw]"
-          style={{
-            backgroundImage: `url(${BlackSmokeDivider.src})`,
-            backgroundSize: "contain",
-            backgroundPosition: "center bottom",
-            backgroundRepeat: "no-repeat",
-          }}
-        /> */}
         {/* Enzyme Image right */}
         <div
           className="absolute w-[80vw] h-[80vw] max-w-[1450px] 
-            top-0 right-0 opacity-1 blur-[6px] translate-x-[35%] translate-y-[-50%] pointer-events-none"
-        >
+            top-0 right-0 opacity-1 blur-[6px] translate-x-[35%] translate-y-[-50%] pointer-events-none">
           <motion.div
             className="absolute w-full h-full hidden sm:block"
             style={{
@@ -362,10 +350,7 @@ export default function AlternativeLayout() {
               filter: useTransform(
                 useScroll().scrollY,
                 [0, 1000],
-                ["blur(0px)", "blur(20px)"]
-              ),
-            }}
-          >
+                ["blur(0px)", "blur(20px)"]),}}>
             <Image
               src={enzymeImage}
               alt="Enzyme"
@@ -416,7 +401,7 @@ export default function AlternativeLayout() {
       <section className="relative w-full h-full block sm:hidden"
       id="mobile-what-we-do">
         <MobileWhatWeDoSection
-          className="relative w-full h-full overflow-hidden z-20 pt-20"
+          className="relative w-full h-full overflow-hidden pt-20"
           stats={stats}
           />
         </section>
@@ -425,8 +410,7 @@ export default function AlternativeLayout() {
       <section className="relative w-full h-full hidden sm:block"
       id="what-we-do">
         <AlternativeWhatWeDoSection
-          className="relative w-full h-full overflow-hidden z-20 pt-20 hidden sm:block"
-          stats={stats}
+          className="relative w-full h-full overflow-hidden pt-20 hidden sm:block"
         />
       </section>
 

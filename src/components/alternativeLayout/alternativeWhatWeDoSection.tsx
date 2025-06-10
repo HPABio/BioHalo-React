@@ -1,69 +1,29 @@
-import { useRef } from "react";
-import { useScroll, motion } from "framer-motion";
+
 import Image from "next/image";
-import {
-  StatsBox,
-  StaticStatsBox,
-  SimpleStatsBox,
-} from "@/components/ui/StatsBox";
 import { MovingAtom } from "@/components/ui/MovingAtom";
-import WaterColorReveal from "@/components/WaterColorReveal";
 import EcoliTripletsPNG from "@/assets/images/BluePrintPNGs/E.coli.png";
 
-import BGFabricTealPink from "@/assets/images/BGImages/BGFabricTealPink_222564810.png";
-import MeshFabric from "@/assets/images/BGImages/Mesh-fabric_1020623350.png";
 import LightBGWithDroplets from "@/assets/images/AdobeStock/AdobeStock_291137317.jpeg";
 
 import BioFMonomer from "@/assets/images/BluePrintSVG/BioF-Monomer.svg";
-import EcoliTripletsSVG from "@/components/ui/EcoliTripletsSVG";
-import beaker2 from "@/assets/images/BluePrintSVG/beaker-product.svg";
 import BioHaloLogoOnly from "@/assets/BioHaloLogoOnly.svg";
-import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 import BeakerHalfAndHalf from "@/assets/images/BluePrintPNGs/Beaker-half-and-half.png";
-import { ScreenSizeDEVTOOL } from "@/components/ui/ScreenSizeDEVTOOL";
-import PfasBP from "@/assets/images/BluePrintStyle/pfasBP.svg";
-import BioFMonomerAllPink from "@/assets/images/BluePrintSVG/BioF-Monomer-all-pink.svg";
 import BioReactor from "@/assets/images/BluePrint with Color/bio-reactor.png";
-import BioReactorBlueprint from "@/assets/images/BioReactorBlueprint.svg";
-import BioHaloStep1 from "@/assets/images/BluePrintSVG/BioHalo-step1.svg";
-import BioHaloStep2 from "@/assets/images/BluePrintSVG/BioHalo-step2.svg";
-import BioHaloStep3 from "@/assets/images/BluePrintSVG/BioHalo-step3.svg";
-import EnzymeImage2 from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 
-interface AlternativeWhatWeDoSectionProps {
-  stats: any[];
-  className?: string;
-  debug?: boolean;
-}
 
-export const AlternativeWhatWeDoSection = ({
-  stats,
-  className,
-  debug = false,
-}: AlternativeWhatWeDoSectionProps) => {
-  if (debug) console.log("Rendering AlternativeWhatWeDoSection");
-
-  const refmWWD = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: refmWWD,
-    offset: ["center end", "start start"],
-  });
-
+export function AlternativeWhatWeDoSection({ className }: { className?: string }) {
   return (
     <section
-      className={`${className} overflow-visible z-20  mx-auto`}
-    >
+      className={`${className} overflow-visible z-20  mx-auto`}>
       <div className="absolute top-[0%] left-0 w-full overflow-hidden">
         <div
           className="relative w-full h-full  translate-y-[-10%]
-          [mask-image:linear-gradient(to_bottom_right,black,black,transparent)]"
-        >
+          [mask-image:linear-gradient(to_bottom,black,black,transparent,transparent)]
+          ">
           <Image
             src={LightBGWithDroplets}
             alt="LightBGWithDroplets"
-            className="w-full h-full object-contain -scale-x-100 mix-blend-overlay opacity-20
-            [mask-image:linear-gradient(to_bottom,black,black,transparent)]"
-          />
+            className="w-full h-full object-contain -scale-x-100 mix-blend-overlay opacity-20"/>
           {/* <Image
             src={EnzymeImage2}
             alt="EnzymeImage2"
@@ -159,36 +119,6 @@ export const AlternativeWhatWeDoSection = ({
         {/* devider */}
         <div className="w-full h-[10vw] border-2 border-blue-300/0 relative mt-12 bg-red-500/0" />
 
-        <MovingAtom
-          width={580}
-          height={580}
-          hoverAmplitude={4}
-          hoverDuration={4}
-          shouldRotate={false}
-          rotationDuration={5}
-          shouldScale={false}
-          scaleRange={[0.9, 1.1]}
-          scaleDuration={4}
-          color="rgba(195,12,95,1)" //pink
-          className="absolute top-[105%] left-[99%] 
-          translate-x-[-50%] translate-y-[-150%] opacity-[0.07] z-5 md:hidden"
-        />
-        <MovingAtom
-          width={100}
-          height={100}
-          hoverAmplitude={7}
-          hoverDuration={16}
-          shouldRotate={false}
-          rotationDuration={20}
-          shouldScale={false}
-          scaleRange={[0.9, 1.8]}
-          scaleDuration={24}
-          color="rgba(18,110,119,1)" //teal
-          className="absolute top-[50%] right-[50%] 
-          translate-x-[-80%] translate-y-[280%] opacity-[0.3] z-5
-          sm:translate-x-[-165%] sm:translate-y-[250%] hidden"
-        />
-
         {/* Text Section */}
         <div className="bg-black/0 text-gray-800/70 w-full relative border-2 border-blue-300/0
         md:max-w-[600px] lg:max-w-[900px] xl:max-w-[1000px] mx-auto">
@@ -255,10 +185,6 @@ export const AlternativeWhatWeDoSection = ({
                 className="w-full flex flex-col items-center justify-center 
               gap-8 p-4 border-2 border-blue-300/0 mt-12 px-12 md:px-0"
               >
-                <h1 className="text-center text-4xl font-bold uppercase hidden">
-                  {" "}
-                  split design
-                </h1>
                 <div className="w-full flex flex-row items-start justify-start gap-8">
                   <div className="flex-1 flex flex-col items-start">
                     <p className="text-sm md:text-xl lg:text-2xl 2xl:text-3xl font-poppins font-medium opacity-30 leading-none">
@@ -277,10 +203,6 @@ export const AlternativeWhatWeDoSection = ({
                     </h1>
                     <p className="text-sm md:text-xl lg:text-xl 2xl:text-3xl font-poppins font-normal">
                       are safe and sustainable without compromising performance
-                    </p>
-                    <p className="text-2xl sm:text-3xl sm:leading-tight font-poppins sm:py-4 hidden">
-                      don't compromise performance while also being safe and
-                      sustainable
                     </p>
                   </div>
                   <div className="flex-1 relative border-2 border-blue-300/0">
@@ -304,10 +226,6 @@ export const AlternativeWhatWeDoSection = ({
                 className="w-full flex flex-col items-center justify-center 
               gap-8 p-4 border-2 border-blue-300/0 mt-12"
               >
-                <h1 className="text-center text-4xl font-bold uppercase hidden">
-                  {" "}
-                  split design
-                </h1>
                 <div className="w-full flex flex-row items-center justify-start gap-8 pl-4 p-0">
                   <div className="flex-1 relative md:scale-150 lg:scale-125">
                     <Image
@@ -367,14 +285,6 @@ export const AlternativeWhatWeDoSection = ({
                     </p>
                   </div>
                   <div className="flex-1 relative ">
-                  <Image
-                      src={EnzymeImage2}
-                      alt="EnzymeImage2"
-                      className="w-full object-cover grayscale opacity-80 lg:opacity-1 scale-[2.5] lg:scale-[2] 2xl:scale-[2.2]
-                      brightness-[1.2] contrast-[1.2] mix-blend-darken
-                      translate-x-[-40%] translate-y-[120%]
-                      lg:translate-x-[-20%] lg:translate-y-[70%] hidden"
-                    />
                   </div>
                 </div>
               </div>

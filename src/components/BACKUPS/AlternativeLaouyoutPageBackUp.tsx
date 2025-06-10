@@ -496,7 +496,6 @@ export default function AlternativeLayout() {
       <section className="relative w-full h-full z-20 ´">
       <AlternativeWhatWeDoSection
         className="relative w-full h-full overflow-hidden z-20 pt-20 hidden md:block"
-        stats={stats}
       />
       </section>
 
@@ -926,7 +925,6 @@ export function AlternativeLayoutBackUp() {
       <section className="relative w-full h-full z-20 ´">
       <AlternativeWhatWeDoSection
         className="relative w-full h-full overflow-hidden z-20 pt-20 hidden md:block"
-        stats={stats}
       />
       </section>
 

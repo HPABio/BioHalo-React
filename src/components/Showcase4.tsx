@@ -470,7 +470,6 @@ export const Showcase4 = () => {
         />
         <AlternativeWhatWeDoSection
           className="min-h-[50vh] w-[100vw] text-white relative hidden"
-          stats={stats}
         />
       </section>
 
