@@ -474,7 +474,6 @@ export default function AlternativeLayout() {
       <section className="relative w-full h-full overflow-hidden z-20">
       <AlternativeFluorinatedMaterialsSection
         className="relative w-full h-full overflow-hidden z-20 pt-20 "
-        stats={stats}
       />
       </section>
 
@@ -903,7 +902,6 @@ export function AlternativeLayoutBackUp() {
       <section className="relative w-full h-full overflow-hidden z-20">
       <AlternativeFluorinatedMaterialsSection
         className="relative w-full h-full overflow-hidden z-20 pt-20 "
-        stats={stats}
       />
       </section>
 
