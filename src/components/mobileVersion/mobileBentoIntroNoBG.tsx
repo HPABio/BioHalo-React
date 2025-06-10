@@ -166,12 +166,12 @@ export function MobileBentoIntroNoBG({ className }: { className?: string }) {
         </p>
 
         <div className="mt-16 sm:mt-24 lg:mt-32">
-          <BentoStats className="w-full aspect-[16/4] border-2 border-lightGrey/20" />
-          <h3 className="text-base sm:text-lg font-medium text-lightGrey/60 pt-2 mb-3 sm:mb-4 lg:mb-8">
+          <BentoStats className="w-full aspect-[16/4] border-2 border-lightGrey/50" />
+          <h3 className="text-base sm:text-lg font-medium text-lightGrey/80 pt-2 mb-3 sm:mb-4 lg:mb-8">
             are known for their exceptional properties...
           </h3>
           <PFASBenefits />
-          <p className="text-xs sm:text-sm text-lightGrey/60 mt-3 sm:mt-4 text-right italic">
+          <p className="text-xs sm:text-sm text-lightGrey/50 mt-3 sm:mt-4 text-right italic">
             ...and many more unique characteristics that make them valuable in
             various applications
           </p>

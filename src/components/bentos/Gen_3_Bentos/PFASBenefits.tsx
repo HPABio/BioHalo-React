@@ -42,6 +42,7 @@ export function PFASBenefits({ className }: { className?: string }) {
           key={benefit.title}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors
           border-2 border-lightGrey/20"
         >

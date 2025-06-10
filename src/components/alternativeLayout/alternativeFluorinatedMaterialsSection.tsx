@@ -208,7 +208,10 @@ export function AlternativeFluorinatedMaterialsSection({
       {/* Circles section */}
       <div className="w-full h-[47vw] max-h-[500px] relative mt-24">
           {/* Circle 1 */}
-          <div className="w-[50vw] aspect-[6/9] max-w-[500px] mx-auto relative flex items-center justify-center">
+          <div className="w-[50vw] aspect-[6/9] max-w-[500px] mx-auto relative flex items-center justify-center"
+          style={{
+            willChange: "transform, opacity",
+          }}>
             <Circle1 />
           </div>
         <div className="w-full relative">

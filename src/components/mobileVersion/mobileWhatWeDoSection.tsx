@@ -332,7 +332,7 @@ export const MobileWhatWeDoSection = ({
         />
         <div
           className="relative bottom-0 left-[50%] 
-          translate-x-[-50%] translate-y-[-57px] 
+          translate-x-[-50%] translate-y-[-54px] 
           lg:translate-x-[-30%] lg:translate-y-[-380px] 
           w-[300px] h-[300px] lg:w-[800px] lg:h-[800px]"
           style={{
