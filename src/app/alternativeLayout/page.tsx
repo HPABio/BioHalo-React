@@ -438,7 +438,9 @@ export default function AlternativeLayout() {
 
 
       {/* Fluorinated Materials Section */}
-      <section className="relative w-full h-full overflow-hidden z-20">
+      <section className="relative w-full h-full overflow-hidden z-20"
+      id="fluorinated-materials-section"
+      >
       <AlternativeFluorinatedMaterialsSection
         className="relative w-full h-full overflow-hidden z-20 pt-12"
         stats={stats}

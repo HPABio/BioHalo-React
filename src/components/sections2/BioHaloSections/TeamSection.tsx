@@ -50,7 +50,8 @@ const teamMembers: TeamMember[] = [
   {
     id: 4,
     name: "Alberto De Maria",
-    position: "Head of Science",
+    // position: "Head of Science",
+    position: "Chief Scientific Officer",
     image: albertoImage,
     linkedIn: "https://www.linkedin.com/in/aldema503039157/",
   },
