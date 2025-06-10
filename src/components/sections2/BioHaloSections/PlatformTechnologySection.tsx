@@ -275,7 +275,7 @@ export const PlatformTechnologySection = ({
               <div className="flex-1 relative group">
                 <div className="absolute inset-0 bg-tealAccent/20 rounded-2xl blur-3xl group-hover:blur-2xl opacity-70 transition-all duration-500 -z-10"></div>
                 <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl border border-tealAccent/20 backdrop-blur-sm shadow-xl overflow-hidden 
-                h-[250px] xl:h-[300px] flex items-center justify-center">
+                h-[200px] lg:h-[250px] xl:h-[300px] flex items-center justify-center">
                   <Image
                     src={step.image}
                     alt={step.alt}
@@ -331,8 +331,8 @@ export const PlatformTechnologySection = ({
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center relative pt-12 sm:pt-24
-          flex flex-col items-center justify-center pb-24"
+          className="text-center relative pt-12 lg:pt-24
+          flex flex-col items-center justify-center pb-12 lg:pb-20 2xl:pb-24"
         >
           <h1 className="text-center bg-gradient-to-br from-mintAccent/30 via-gray-500/40 to-lightGrey/30 bg-clip-text text-transparent
           text-3xl lg:text-4xl 2xl:text-5xl font-Poppins font-light relative">
@@ -376,8 +376,9 @@ export const PlatformTechnologySection = ({
 
           {/* Right side: Features list */}
           <div className="flex flex-col justify-center items-center w-full">
-          <p className="text-gray-500 sm:w-[80%] md:w-[50%] lg:w-[55%] xl:max-w-[550px] mx-auto font-light text-sm lg:text-base 2xl:text-lg  
-          leading-tight 2xl:leading-snug text-center pb-2
+          <p className="text-gray-500 sm:w-[80%] md:w-[65%] xl:max-w-[550px] mx-auto font-light text-base lg:text-lg 
+          2xl:text-xl  
+          leading-tight 2xl:leading-snug text-center pb-4 lg:pb-6
           ">
             Our revolutionary biohalogenation platform offers unique
             advantages over traditional fluorination methods
