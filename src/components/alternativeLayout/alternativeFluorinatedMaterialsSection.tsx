@@ -156,7 +156,7 @@ const Circle1 = React.memo(function Circle1() {
       {/* Circles section */}
       <div className="w-full h-[47vw] max-h-[500px] relative mt-24 bg-black">
         <div className="w-full h-[47vw] max-h-[500px] mt-12 absolute top-0 left-0 z-0
-        opacity-60 md:opacity-60 xl:max-w-[1400px] xl:left-1/2 xl:translate-x-[-50%]"
+        opacity-30 lg:opacity-50 xl:max-w-[1400px] xl:left-1/2 xl:translate-x-[-50%]"
         style={{
           backgroundImage: `url(${IndustrialPollution.src})`,
           backgroundSize: "100%",
@@ -164,8 +164,10 @@ const Circle1 = React.memo(function Circle1() {
           backgroundRepeat: "no-repeat",
           backgroundBlendMode: "multiply",
         }}>
-           <div className="w-full h-full bg-gradient-to-b from-black via-black/50 to-transparent"/>
-           <div className="w-full h-[90px] absolute top-0 left-0 bg-gradient-to-b from-black via-black/50 to-transparent lg:hidden"/>
+           <div className="w-full h-1/2 lg:h-2/3
+           bg-gradient-to-b from-black via-black/80 to-transparent md:block hidden"/>
+           <div className="w-full h-[90px] sm:h-1/2 absolute top-0 left-0 
+           bg-gradient-to-b from-black via-black/50 to-transparent md:hidden"/>
            <div className="w-[100px] h-full absolute top-0 left-0 rotate-6 translate-x-[-25%]
            bg-gradient-to-r from-black via-black/70 to-transparent xl:block hidden"/>
            <div className="w-[100px] h-full absolute top-0 right-0 -rotate-6 translate-x-[25%]
@@ -212,7 +214,7 @@ const Circle1 = React.memo(function Circle1() {
             </motion.div>
           </div>
       </div>
-      <div className="absolute bottom-0 right-0 w-full h-[100px] lg:h-[200px] bg-gradient-to-t from-black via-black/60 to-transparent z-10"></div>
+      <div className="absolute bottom-0 right-0 w-full h-[30px] sm:h-[100px] lg:h-[200px] bg-gradient-to-t from-black via-black/60 to-transparent z-10"></div>
     </section>
   );
 }
