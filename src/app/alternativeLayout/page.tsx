@@ -19,6 +19,7 @@ import { FluorinatedMaterialsSectionV2 } from "@/components/sections2/BioHaloSec
 import { WhatWeDoSection } from "@/components/sections2/BioHaloSections/WhatWeDoSection";
 import { TeamSection } from "@/components/sections2/BioHaloSections/TeamSection";
 import { PlatformTechnologySection } from "@/components/sections2/BioHaloSections/PlatformTechnologySection";
+import { AlternativeIntroSectionNoBG } from "@/components/alternativeLayout/alternativeIntroSectionNoBG";
 
 // Mobile Version
 import MobileIconCarousel from "@/components/mobileVersion/mobileIconCarousel";
@@ -366,7 +367,7 @@ export default function AlternativeLayout() {
         </div>
       </section>
 
-      <section className="w-full h-[400px] top-0 left-0 z-10 mt-2 relative overflow-hidden
+      <section className="w-full h-[250px] md:h-[400px] top-0 left-0 z-10 mt-2 relative overflow-hidden
 ">
                   <div className="w-[2400px] aspect-square xl:scale-x-[1.2] 2xl:scale-x-[2] bottom-0 left-[50%] translate-x-[-50%] absolute " 
                   style={{
@@ -378,8 +379,7 @@ export default function AlternativeLayout() {
 
                   <div className="w-full h-[800px] translate-y-[400px]
                   absolute bottom-0 left-0 flex items-center justify-center
-                  bg-gray-300 bg-gradient-to-br from-mintAccent via-mintAccent/60 to-tealAccent
-                  border-2 border-green-500" />
+                  bg-gray-300 bg-gradient-to-br from-mintAccent via-mintAccent/60 to-tealAccent" />
                 </div>
       </section>
 
@@ -388,7 +388,7 @@ export default function AlternativeLayout() {
         className="relative w-full  overflow-hidden z-0 font-poppins
         bg-gradient-to-tl from-slate-800 via-tealAccent/60 to-slate-300/40
         ">
-          <div className="w-full h-[400px] top-0 left-0 relative overflow-hidden">
+          <div className="w-full h-[250px] md:h-[400px] top-0 left-0 relative overflow-hidden">
                   <div className="w-[2400px] aspect-square xl:scale-x-[1.2] 2xl:scale-x-[2]  -top-0 left-[50%] translate-x-[-50%] absolute " 
                   style={{
                     maskImage: "radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 65%, rgba(0,0,0,1) 70%)",
@@ -402,25 +402,27 @@ export default function AlternativeLayout() {
                 </div>
       </div>
           
-        <div className="absolute inset-0 flex items-center justify-center">
-          {/* <div className="w-full h-[10%] absolute top-0 left-0 bg-gradient-to-b from-white to-transparent" /> */}
-          <div
-            className="w-[80vw] aspect-video absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[20%] lg:translate-y-[-10%] scale-x-[-1] 
-            max-w-[1000px] xl:max-w-[1300px] opacity-[0.08] xl:opacity-[0.05]"
-            style={{
-              backgroundImage: `url(${PfasBP.src})`,
-              backgroundSize: "contain",
-              backgroundPosition: "center center",
-              backgroundRepeat: "no-repeat",
+        
+        <div className="w-screen mx-auto flex flex-col items-end justify-center -mt-44 relative"
+        style={{
+          willChange: "transform",
 
-            }}
-          ></div>
-        </div>
-        <div className="w-screen mx-auto flex flex-col items-end justify-center -mt-44">
+        }}>
+          <div className="w-full h-[400px] absolute top-[50%] translate-y-[-50%]
+          scale-[1.5]"
+          style={{
+            willChange: "transform",
+            backgroundImage: `url(${PfasBP.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            opacity: 0.05,
+          }}/>
           {/* <BentoIntroNoBG className="w-full max-w-[650px] mx-auto bg-mint-60" /> */}
-          <MobileBentoIntroNoBG className="w-full max-w-[650px] mx-auto bg-mint-60" />
+          <AlternativeIntroSectionNoBG className="w-full max-w-[650px] mx-auto hidden md:block" />
+          <MobileBentoIntroNoBG className="w-full max-w-[650px] mx-auto block md:hidden" />
           <div
-            className="w-full min-h-[150px] h-[30vw] bottom-0  2xl:mt-[-6vw] mix-blend-multiply"
+            className="w-full min-h-[150px] h-[30vw] bottom-0 translate-y-[5px] 2xl:mt-[-6vw] mix-blend-multiply"
             style={{
               backgroundImage: `url(${BlackSmokeDivider.src})`,
               backgroundSize: "contain",
@@ -437,7 +439,7 @@ export default function AlternativeLayout() {
 
       {/* Fluorinated Materials Section */}
       <section
-        className="relative w-full h-full overflow-hidden z-20"
+        className="relative w-full h-full overflow-hidden z-20 border-2 border-black"
         id="fluorinated-materials-section"
       >
         <AlternativeFluorinatedMaterialsSection
@@ -490,18 +492,6 @@ export default function AlternativeLayout() {
         <MobilePlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
       </section>
 
-      <section className="w-full h-fit bg-red-500/0 border-2 border-blue-300 relative hidden">
-        <div
-          className="relative w-full min-h-[200px] h-[30vw] xl:h-[30vw] pt-16 "
-          style={{
-            backgroundImage: `url(${BlackSmokeDivider.src})`,
-            backgroundSize: "contain",
-            backgroundPosition: "center bottom",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
-        <div className="w-full h-[10vw] absolute bottom-0 left-0 bg-gradient-to-t from-black via-black/50 to-black/0 " />
-      </section>
 
       {/* Icon Carousel Section - No ID here since it's not in the navigation */}
       <section className="w-full">

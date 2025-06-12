@@ -6,22 +6,24 @@ import PfasBP from "@/assets/images/BluePrintStyle/pfasBP.svg";
 import BioFMonomer from "@/assets/images/BluePrintSVG/BioF-Monomer.svg";
 import BioFMonomerAllPink from "@/assets/images/BluePrintSVG/BioF-Monomer-all-pink.svg";
 import { MovingAtom } from "@/components/ui/MovingAtom";
-import { backgroundImage } from "html2canvas/dist/types/css/property-descriptors/background-image";
 import AtomDiagram from "@/components/ui/AtomDiagram";
 import { BentoStats } from "../bentos/Gen_3_Bentos/BentoStats";
 import { PFASBenefits } from "../bentos/Gen_3_Bentos/PFASBenefits";
 
-export function AlternativeIntroSectionNoBG({ className }: { className?: string }) {
+export function AlternativeIntroSectionNoBG({
+  className,
+}: {
+  className?: string;
+}) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 20}}
       whileHover="textHover"
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       className={`col-span-2 row-span-2 relative overflow-hidden rounded-3xl text-white ${className}`}
     >
-      <motion.div
-        className="w-full h-full relative z-10 flex flex-col font-poppins pt-8 sm:pt-10 lg:pt-14 px-4 sm:px-14 lg:px-12">
+      <motion.div className="w-full h-full relative z-10 flex flex-col font-poppins pt-8 sm:pt-10 lg:pt-14 px-4 sm:px-14 lg:px-12">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
           Incorporating{" "}
           <motion.span
@@ -43,12 +45,10 @@ export function AlternativeIntroSectionNoBG({ className }: { className?: string 
         <motion.div className="flex-1 relative" transition={{ duration: 0.1 }}>
           <motion.div
             whileHover="hover"
-            className="flex w-full h-full gap-2 sm:gap-4 max-w-[700px] mx-auto
-          border-2 border-blue-500/0"
+            className="flex w-full h-full gap-2 sm:gap-4 max-w-[700px] mx-auto"
           >
             <motion.div
-              className="flex w-fit h-full max-w-[120px] sm:max-w-[180px] justify-center items-center relative
-               border-2 border-red-500/0 my-auto"
+              className="flex w-fit h-full max-w-[120px] sm:max-w-[180px] justify-center items-center relative my-auto"
               variants={{
                 hover: {
                   opacity: [1, 0, 0],
@@ -59,11 +59,13 @@ export function AlternativeIntroSectionNoBG({ className }: { className?: string 
                 },
               }}
             >
-              <div className="relative aspect-square w-24 h-24 sm:w-32 sm:h-32 bg-white/10 overflow-visible">
-                <div
-                  className="absolute inset-0 flex flex-col items-center justify-center
-                 border-2 border-white/80 rounded-lg overflow-hidden"
-                >
+              <div
+                className="relative aspect-square w-24 h-24 sm:w-32 sm:h-32 bg-white/10 overflow-visible"
+                style={{
+                  willChange: "transform",
+                }}
+              >
+                <div className="absolute inset-0 flex flex-col items-center justify-center border-2 border-white/80 rounded-lg overflow-hidden">
                   <AtomDiagram
                     width={"250%"}
                     height={"250%"}
@@ -89,6 +91,7 @@ export function AlternativeIntroSectionNoBG({ className }: { className?: string 
                 />
               </div>
             </motion.div>
+
             <motion.div
               className="flex-grow flex max-w-[200px] justify-center items-center"
               variants={{
@@ -99,7 +102,12 @@ export function AlternativeIntroSectionNoBG({ className }: { className?: string 
                 },
               }}
             >
-              <div className="w-fit bg-yellow-400/0">
+              <div
+                className="w-fit"
+                style={{
+                  willChange: "transform, opacity",
+                }}
+              >
                 <span className="text-4xl font-bold">+</span>
               </div>
             </motion.div>
@@ -148,28 +156,24 @@ export function AlternativeIntroSectionNoBG({ className }: { className?: string 
                   backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
+                  transform: "translateZ(0)",
                 }}
               />
             </motion.div>
           </motion.div>
+          <p className="text-base sm:text-lg opacity-90 mt-3 sm:mt-5">
+            ...into the molecular structure of certain polymers, enhances their
+            properties and transforms them into a class of
+            <span className="font-bold">
+              {" "}
+              high-performance materials with advanced properties{" "}
+            </span>{" "}
+            known as "Perfluoroalkyl and Polyfluoroalkyl Substances" or for
+            short <b>PFAS</b>.
+          </p>
         </motion.div>
 
-        <p className="text-base sm:text-lg opacity-90 mt-3 sm:mt-4">
-          ...into the molecular structure of certain polymers, enhances their
-          properties and transforms them into a class of
-          <span className="font-bold">
-            {" "}
-            high-performance materials with advanced properties{" "}
-          </span>{" "}
-          known as "Perfluoroalkyl and Polyfluoroalkyl Substances" or for short{" "}
-          <b>PFAS</b>.
-        </p>
-
-        <motion.div className="mt-16 sm:mt-24 lg:mt-32"
-        style={{
-          willChange: "transform",
-        }}
-        >
+        <motion.div className="mt-16 sm:mt-24 lg:mt-32">
           <BentoStats className="w-full aspect-[16/4] border-2 border-lightGrey/50" />
           <h3 className="text-base sm:text-lg font-medium text-lightGrey/80 pt-2 mb-3 sm:mb-4 lg:mb-8">
             are known for their exceptional properties...
@@ -181,19 +185,6 @@ export function AlternativeIntroSectionNoBG({ className }: { className?: string 
           </p>
         </motion.div>
       </motion.div>
-
-      <motion.div
-        className="absolute inset-0"
-        initial={{
-          backgroundImage: "none",
-        }}
-        variants={{
-          hover: {
-            backgroundImage: "none",
-          },
-        }}
-        transition={{ duration: 0.2 }}
-      />
     </motion.div>
   );
 }

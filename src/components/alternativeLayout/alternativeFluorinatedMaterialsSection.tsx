@@ -154,17 +154,22 @@ const Circle1 = React.memo(function Circle1() {
       </div>
 
       {/* Circles section */}
-      <div className="w-full h-[47vw] max-h-[500px] relative mt-24">
-        <div className="w-full h-[47vw] max-h-[500px] mt-12 absolute top-0 left-0 z-0"
+      <div className="w-full h-[47vw] max-h-[500px] relative mt-24 bg-black">
+        <div className="w-full h-[47vw] max-h-[500px] mt-12 absolute top-0 left-0 z-0
+        opacity-60 md:opacity-60 xl:max-w-[1400px] xl:left-1/2 xl:translate-x-[-50%]"
         style={{
           backgroundImage: `url(${IndustrialPollution.src})`,
           backgroundSize: "100%",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundBlendMode: "multiply",
-          opacity: 0.4,
         }}>
-          <div className="w-full h-full bg-gradient-to-b from-black via-black/50 to-transparent"></div>
+           <div className="w-full h-full bg-gradient-to-b from-black via-black/50 to-transparent"/>
+           <div className="w-full h-[90px] absolute top-0 left-0 bg-gradient-to-b from-black via-black/50 to-transparent lg:hidden"/>
+           <div className="w-[100px] h-full absolute top-0 left-0 rotate-6 translate-x-[-25%]
+           bg-gradient-to-r from-black via-black/70 to-transparent xl:block hidden"/>
+           <div className="w-[100px] h-full absolute top-0 right-0 -rotate-6 translate-x-[25%]
+           bg-gradient-to-l from-black via-black/70 to-transparent xl:block hidden"/>
         </div>
           {/* Circle 1 */}
           <div className="absolute top-0 left-[50%] translate-x-[-55%] w-[50vw] aspect-[6/9] max-w-[500px] mx-auto flex items-center justify-center z-10"
@@ -207,7 +212,7 @@ const Circle1 = React.memo(function Circle1() {
             </motion.div>
           </div>
       </div>
-      <div className="absolute bottom-0 right-0 w-full h-[100px] lg:h-[200px] 2xl:h-[300px] bg-gradient-to-t from-black via-black/60 to-transparent z-10"></div>
+      <div className="absolute bottom-0 right-0 w-full h-[100px] lg:h-[200px] bg-gradient-to-t from-black via-black/60 to-transparent z-10"></div>
     </section>
   );
 }
