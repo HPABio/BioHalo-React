@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useRef, useEffect, useMemo } from "react";
-import { useScroll, motion, useTransform } from "framer-motion";
+import { useScroll, motion, useTransform, useInView } from "framer-motion";
 import Image from "next/image";
 import {
   StatsBox,
@@ -61,6 +63,8 @@ import { BentoStats } from "@/components/bentos/Gen_3_Bentos/BentoStats";
 const Circle1 = React.memo(function Circle1() {
   console.log("Rendering Circle1 component");
   const ref = useRef(null);
+  const isInView = useInView(ref, {once: true});
+  console.log("Circle1 isInView", isInView);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "center start"],
@@ -107,6 +111,8 @@ const Circle1 = React.memo(function Circle1() {
 
   export function AlternativeFluorinatedMaterialsSection({ className }: { className?: string }) {
     const refSkull1 = useRef(null);
+    const isInView = useInView(refSkull1, {once: true});
+    console.log("Skull1 isInView", isInView);
   const { scrollYProgress: scrollYProgressSkull1 } = useScroll({
     target: refSkull1,
     offset: ["center end", "center start"],
@@ -169,8 +175,9 @@ const Circle1 = React.memo(function Circle1() {
                 initial={{ rotate: 0 }}
                 transition={{ duration: 1 }}
                 style={{
-                  rotate: useTransform(scrollYProgressSkull1, [0, 1], [0, -15]),
-                  y: useTransform(scrollYProgressSkull1, [0, 0.6], [0, -100]),
+                  rotate: useTransform(
+                    isInView ? scrollYProgressSkull1 : scrollYProgressSkull1, [0, 1], [0, -15]),
+                  y: useTransform(isInView ? scrollYProgressSkull1 : scrollYProgressSkull1, [0, 0.6], [0, -100]),
                 }}
                 className="relative w-full h-full rounded-full overflow-hidden border-2 border-lightGrey/40 grid place-items-center"
               >

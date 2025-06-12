@@ -1,3 +1,4 @@
+"use client";
 
 import Image from "next/image";
 import { MovingAtom } from "@/components/ui/MovingAtom";
@@ -17,13 +18,15 @@ export function AlternativeWhatWeDoSection({ className }: { className?: string }
       className={`${className} overflow-visible z-20  mx-auto`}>
       <div className="absolute top-[0%] left-0 w-full overflow-hidden">
         <div
-          className="relative w-full h-full  translate-y-[-10%]
-          [mask-image:linear-gradient(to_bottom,black,black,transparent,transparent)]
-          ">
+          className="relative w-full h-full  translate-y-[-10%]"
+          style={{
+            willChange: "opacity, transform, background-image, background-blend-mode",
+            maskImage: "linear-gradient(to bottom,black,black,transparent,transparent)",
+          }}>
           <Image
             src={LightBGWithDroplets}
             alt="LightBGWithDroplets"
-            className="w-full h-full object-contain -scale-x-100 mix-blend-overlay opacity-20"/>
+            className="w-full h-full object-contain -scale-x-100 mix-blend-color-dodge opacity-40"/>
           {/* <Image
             src={EnzymeImage2}
             alt="EnzymeImage2"
@@ -344,10 +347,6 @@ export function AlternativeWhatWeDoSection({ className }: { className?: string }
         ></div>
       </div>
 
-      <div
-        className="absolute w-[800px] h-[400px] 
-          bottom-[-11%] left-[30%]"
-      ></div>
 
       <div className="relative bottom-0 left-0 w-full h-[100px] md:h-[200px]">
         {/*   <div className="w-full h-full opacity-1"

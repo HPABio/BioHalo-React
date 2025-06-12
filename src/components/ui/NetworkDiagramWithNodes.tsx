@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import NetworkDiagram from "./NetworkDiagram";
@@ -60,7 +61,11 @@ const NetworkDiagramWithNodes: React.FC<NetworkDiagramWithNodesProps> = ({
         </div>
 
         {/* Second row: Network Diagram */}
-        <div className="w-full h-[400px] flex items-center justify-center z-0 mt-[-140px] sm:mt-[-125px] md:mt-[-100px]">
+        <div className="w-full h-[400px] flex items-center justify-center z-0 mt-[-140px] sm:mt-[-125px] md:mt-[-100px]"
+        style={{
+          willChange: "transform",
+        }}
+        >
           <NetworkDiagram className="w-full h-full" />
         </div>
 

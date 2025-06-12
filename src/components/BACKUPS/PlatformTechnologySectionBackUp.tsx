@@ -167,8 +167,23 @@ export const PlatformTechnologySection = ({
 }: PlatformTechnologySectionProps) => {
   return (
     <section className={`w-full relative ${className} overflow-hidden`}>
+      <div className="relative bottom-0 left-0 w-full h-[200px] bg-gradient-to-b from-black/0 via-black/50 to-black">
+        <div
+          className="relative top-0 left-[50%] hidden
+          translate-x-[-50%] translate-y-[-250px] 
+          md:translate-x-[-50%] md:translate-y-[-380px] 
+          lg:translate-x-[-30%]  lg:translate-y-[-580px] 
+          w-[300px] h-[300px] md:w-[500px] md:h-[500px] lg:w-[800px] lg:h-[800px] "
+          style={{
+            backgroundImage: `url(${beaker.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+      </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-8 pt-[200px]">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-8 -mt-32 md:mt-0">
         <div className="absolute bottom-[100%] left-[100%] translate-x-[-50%] translate-y-[50%] opacity-[6%] mix-blend-screen blur-lg">
           <AtomDiagram width={5300} height={5300} color="rgba(108,200,209,1)" />
         </div>

@@ -20,7 +20,8 @@ export function MobileBentoIntroNoBG({ className }: { className?: string }) {
       viewport={{ once: true }}
       className={`col-span-2 row-span-2 relative overflow-hidden rounded-3xl text-white ${className}`}
     >
-      <div className="w-full h-full relative z-10 flex flex-col font-poppins pt-8 sm:pt-10 lg:pt-14 px-4 sm:px-14 lg:px-12">
+      <motion.div
+        className="w-full h-full relative z-10 flex flex-col font-poppins pt-8 sm:pt-10 lg:pt-14 px-4 sm:px-14 lg:px-12">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
           Incorporating{" "}
           <motion.span
@@ -164,7 +165,11 @@ export function MobileBentoIntroNoBG({ className }: { className?: string }) {
           <b>PFAS</b>.
         </p>
 
-        <div className="mt-16 sm:mt-24 lg:mt-32">
+        <motion.div className="mt-16 sm:mt-24 lg:mt-32"
+        style={{
+          willChange: "transform",
+        }}
+        >
           <BentoStats className="w-full aspect-[16/4] border-2 border-lightGrey/50" />
           <h3 className="text-base sm:text-lg font-medium text-lightGrey/80 pt-2 mb-3 sm:mb-4 lg:mb-8">
             are known for their exceptional properties...
@@ -174,8 +179,8 @@ export function MobileBentoIntroNoBG({ className }: { className?: string }) {
             ...and many more unique characteristics that make them valuable in
             various applications
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <motion.div
         className="absolute inset-0"

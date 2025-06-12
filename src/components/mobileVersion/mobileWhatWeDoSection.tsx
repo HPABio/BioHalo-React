@@ -1,11 +1,9 @@
+"use client";
+
 import { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 import Image from "next/image";
-import {
-  StatsBox,
-  StaticStatsBox,
-  SimpleStatsBox,
-} from "@/components/ui/StatsBox";
+
 import { MovingAtom } from "@/components/ui/MovingAtom";
 import WaterColorReveal from "@/components/WaterColorReveal";
 import EnzymeImage2 from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";

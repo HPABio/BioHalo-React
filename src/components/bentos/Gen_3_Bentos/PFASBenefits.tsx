@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { Droplet, Flame, Shield, Clock, Zap, Layers } from "lucide-react";
 
