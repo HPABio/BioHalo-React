@@ -370,10 +370,10 @@ export function AlternativeWhatWeDoSection({ className }: { className?: string }
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(195,12,95,1)" //pink
-          className="absolute top-[50%] left-[50%] 
+          className="absolute top-[50%] left-[50%] 2xl:top-0
             translate-x-[-50%] translate-y-[-150%] 
             md:translate-x-[-50%] md:translate-y-[-250%] 
-            2xl:translate-x-[200%] 2xl:-translate-y-[50%] opacity-90 z-5 "
+            2xl:translate-x-[50%] 2xl:-translate-y-[390%] opacity-90 z-5"
         />
         <div
           className="absolute bottom-0 left-[50%]
@@ -398,7 +398,7 @@ export function AlternativeWhatWeDoSection({ className }: { className?: string }
           scaleDuration={4}
           color="rgba(18,110,119,1)" //teal
           className="absolute top-[50%] left-[50%] translate-x-[50%] translate-y-[-80%] 
-          2xl:translate-x-[350%] 2xl:-translate-y-[500%] opacity-90 z-5"
+           opacity-90 z-5"
         />
         <MovingAtom
           width={50}
@@ -413,7 +413,7 @@ export function AlternativeWhatWeDoSection({ className }: { className?: string }
           color="rgba(195,12,95,1)" //pink
           className="hidden md:block
           absolute top-[18%] left-[50%] translate-x-[350%] translate-y-[-260%] 
-          2xl:translate-x-[950%] 2xl:-translate-y-[500%] opacity-90 z-5"
+           opacity-90 z-5"
         />
         <MovingAtom
           width={40}
@@ -427,7 +427,7 @@ export function AlternativeWhatWeDoSection({ className }: { className?: string }
           scaleDuration={4}
           color="rgba(195,12,95,1)" //pink
           className="absolute top-[2%] left-[50%] translate-x-[100%] translate-y-[20%] 
-          2xl:translate-x-[100%] 2xl:-translate-y-[690%] opacity-90 z-5"
+           opacity-90 z-5"
         />
         <MovingAtom
           width={50}
@@ -442,7 +442,7 @@ export function AlternativeWhatWeDoSection({ className }: { className?: string }
           color="rgba(18,110,119,1)" //teal
           className="hidden md:block
           absolute top-[20%] left-[47%] translate-x-[180%] translate-y-[-480%] 
-          2xl:translate-x-[650%] 2xl:-translate-y-[350%] opacity-90 z-5"
+           opacity-90 z-5"
         />
         <MovingAtom
           width={50}
@@ -456,7 +456,7 @@ export function AlternativeWhatWeDoSection({ className }: { className?: string }
           scaleDuration={4}
           color="rgba(18,110,119,1)" //teal
           className="absolute top-[20%] left-[50%] translate-x-[-100%] translate-y-[-40%] 
-          2xl:translate-x-[300%] 2xl:-translate-y-[800%] opacity-90 z-5"
+          opacity-90 z-5"
         />
       </div>
     </section>
