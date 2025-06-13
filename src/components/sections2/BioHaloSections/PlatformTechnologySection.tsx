@@ -376,7 +376,7 @@ export const PlatformTechnologySection = ({
               imageHeight={400}
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 -mt-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-6 -mt-6">
             {technologyFeatures.map((feature, index) => (
               <motion.div
               key={feature.id}
@@ -384,14 +384,16 @@ export const PlatformTechnologySection = ({
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3 }}
-              className="p-3 
+              className="pl-6 pr-5 py-4
               bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm 
               border border-tealAccent/10 rounded-lg hover:border-tealAccent/30 transition-all group"
             >
-              <div className="flex items-center space-x-3 ">
+              <div className="flex items-center space-x-3 h-full w-full ">
                 <div
-                  className="flex-shrink-0 w-10 h-10 rounded-full bg-tealAccent/10 flex items-center justify-center 
-                group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)] text-tealAccent"
+                  className="flex-shrink-0 w-12 lg:w-14 aspect-square xl:w-14 rounded-full flex items-center justify-center 
+                group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)] text-tealAccent
+                bg-gradient-to-tl from-gray-900/50 to-gray-800/60 backdrop-blur-xl 
+              border-[0.75px] border-mintAccent/10 group-hover:border-mintAccent/30"
                 >
                   {feature.icon}
                 </div>

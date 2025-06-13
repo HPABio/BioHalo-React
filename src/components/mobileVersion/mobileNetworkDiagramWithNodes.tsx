@@ -38,19 +38,22 @@ const MobileNetworkDiagramWithNodes: React.FC<MobileNetworkDiagramWithNodesProps
 
   return (
     <div
-      className={`bg-gray-900/20 px-8 rounded-lg shadow-lg w-[350px] sm:w-full ${width} ${className}`}
+      className={`rounded-lg shadow-lg w-[100vw] flex justify-center ${width} ${className}`}
     >
-      <div className="w-full flex flex-col gap-0 relative">
+      <div className="w-full flex flex-col relative max-w-[400px] justify-center">
         {/* First row: 5 square divs */}
-        <div className="flex justify-between w-full z-10 mb-[-20px]">
+        <div className="flex justify-between w-full z-10 mb-[-20px] px-6">
           {nodeLabels.map((label, index) => (
             <div
               key={index}
-              className="w-[50px] sm:w-[90px] aspect-square p-1 sm:p-4
-              bg-gray-800/20 rounded-lg flex items-center justify-center border border-tealAccent/20 backdrop-blur-sm"
+              className="w-full max-w-[17%] aspect-square p-1 rounded-lg flex items-center justify-center
+              bg-gradient-to-br from-gray-900/50 to-gray-800/60 backdrop-blur-xl 
+              border-[0.75px] lg:border-[1.2px] border-mintAccent/5 lg:border-tealAccent/15 hover:border-mintAccent/10 group"
             >
-              <div className="w-full h-full rounded-full bg-slate-900/50 flex items-center justify-center 
-              text-sm text-tealAccent ">
+              <div className="w-full aspect-square rounded-full flex items-center justify-center 
+              text-lg text-tealAccent
+              bg-gradient-to-tl from-gray-900/50 to-gray-800/60 backdrop-blur-xl 
+              border-[0.75px] border-mintAccent/10 group-hover:border-mintAccent/30 ">
                 {icons[index]}
               </div>
             </div>
@@ -58,7 +61,7 @@ const MobileNetworkDiagramWithNodes: React.FC<MobileNetworkDiagramWithNodesProps
         </div>
 
         {/* Second row: Network Diagram */}
-        <div className="w-full h-[400px] flex items-center justify-center z-0 mt-[-140px] sm:mt-[-125px] md:mt-[-100px]">
+        <div className="w-full h-[400px] flex items-center justify-center z-0 mt-[-140px] sm:mt-[-130px] md:mt-[-100px] px-6">
           <MobileNetworkDiagram className="w-full h-full" />
         </div>
 

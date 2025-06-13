@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import NetworkDiagram from "./NetworkDiagram";
 import { TrendingDown, Sprout, Zap, Recycle, Leaf } from "lucide-react";
+import enzymeImage1 from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
 
 interface NetworkDiagramWithNodesProps {
   className?: string;
@@ -30,29 +31,29 @@ const NetworkDiagramWithNodes: React.FC<NetworkDiagramWithNodesProps> = ({
   imageHeight = 500,
 }) => {
   const icons = [
-    <Sprout key="sprout" className="" />,
-    <Zap key="zap" className="w-8 h-8" />,
-    <TrendingDown key="trending" className="w-8 h-8" />,
-    <Recycle key="recycle" className="w-8 h-8" />,
-    <Leaf key="leaf" className="w-8 h-8" />,
+    <Sprout key="sprout" className="w-full h-full" />,
+    <Zap key="zap" className="w-full h-full" />,
+    <TrendingDown key="trending" className="w-full h-full" />,
+    <Recycle key="recycle" className="w-full h-full" />, 
+    <Leaf key="leaf" className="w-full h-full" />,
   ];
 
   return (
     <div
-      className={`bg-gray-800/0 px-8 rounded-lg shadow-lg w-[350px] sm:w-full ${width} ${className}`}
+      className={`bg-gray-800/0 px-8 rounded-lg shadow-lg w-full flex justify-center ${width} ${className}`}
     >
-      <div className="w-full flex flex-col gap-0 relative">
+      <div className="w-full flex flex-col gap-0 relative max-w-[550px] ">
         {/* First row: 5 square divs */}
         <div className="flex justify-between w-full z-10 mb-[-20px]">
           {nodeLabels.map((label, index) => (
             <div
               key={index}
-              className="w-[100px] h-[100px] rounded-lg flex items-center justify-center p-4
+              className="w-[100px] aspect-square rounded-lg flex items-center justify-center p-4
               bg-gradient-to-br from-gray-900/50 to-gray-800/60 backdrop-blur-xl 
               border-[1px] lg:border-[1.2px] border-mintAccent/5 lg:border-tealAccent/15 hover:border-mintAccent/10 group"
             >
-              <div className="w-full h-full rounded-full flex items-center justify-center text-tealAccent
-              bg-gradient-to-tl from-gray-900/50 to-gray-800/60 backdrop-blur-xl 
+              <div className="w-full h-full rounded-full flex items-center justify-center p-4 xl:p-5
+               text-tealAccent bg-gradient-to-tl from-gray-900/50 to-gray-800/60 backdrop-blur-xl 
               border-[1px] border-mintAccent/10 group-hover:border-mintAccent/30">
                 {icons[index]}
               </div>
@@ -61,26 +62,25 @@ const NetworkDiagramWithNodes: React.FC<NetworkDiagramWithNodesProps> = ({
         </div>
 
         {/* Second row: Network Diagram */}
-        <div className="w-full h-[400px] flex items-center justify-center z-0 mt-[-140px] sm:mt-[-125px] md:mt-[-100px]"
+        <div className="w-full aspect-[4/3] flex flex-col items-start justify-center p-0 m-0 -mt-[75px]"
         style={{
           willChange: "transform",
         }}
         >
-          <NetworkDiagram className="w-full h-full" />
-        </div>
+          <NetworkDiagram className="w-full h-full " />
 
         {/* Third row: One centered square div */}
-        <div className="w-full flex justify-center z-10 mt-[-230px] md:mt-[-35%] bg-red-500/0">
-          <div className="w-[70%] rounded-lg flex items-center justify-center bg-blue-500/0">
-            {enzymeImage && (
-              <Image
-                src={enzymeImage}
-                alt={enzymeImageAlt}
-                width={imageWidth}
-                height={imageHeight}
-                className="w-full h-full object-contain"
-              />
-            )}
+        <div className="w-full flex justify-center z-10 -mt-[220px] xl:-mt-[180px]">
+          <div className="w-full aspect-video scale-[1.3]"
+           style={{
+             willChange: "transform",
+             backgroundImage: `url(${enzymeImage1.src})`,
+             backgroundSize: "contain",
+             backgroundPosition: "center",
+             backgroundRepeat: "no-repeat",
+            }}>
+            
+            </div>
           </div>
         </div>
       </div>

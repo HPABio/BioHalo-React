@@ -217,8 +217,14 @@ export const MobilePlatformTechnologySection = ({
               </span>{" "}
               Offers
             </span> */}
+            <div className="relative w-[90%] mx-auto h-0.5 bg-gradient-to-r from-transparent via-tealAccent to-transparent mt-5 opacity-60">
+              <div className="w-[25%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent opacity-30
+                absolute top-0 left-[50%] translate-x-[-50%] "/>
+              <div className="w-[15%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent opacity-30
+                absolute top-0 left-[50%] translate-x-[-50%] "/>
+            </div>
           </h1>
-          <p className="text-gray-500 sm:w-[70%] mx-auto mt-12 font-light text-xs leading-tight 
+          <p className="text-gray-500 sm:w-[70%] mx-auto mt-20 font-light text-xs leading-tight 
           sm:text-base sm:leading-tight ">
             {/* Harnessing the potential of biology for controlled{" "} */}
             By harnessing the potential of biology <br /> we can achieve  <span className="font-bold bg-tealAccent bg-gradient-to-r from-mintAccent/10 via-mintAccent/60 to-mintAccent/10 bg-clip-text text-transparent">
@@ -238,14 +244,14 @@ export const MobilePlatformTechnologySection = ({
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
               viewport={{ once: true }}
-              className="max-sm:text-center px-4 flex flex-col items-center gap-8"
+              className="max-sm:text-center px-4 flex flex-col items-center gap-4 sm:gap-6"
             >
               {/* Image */}
               <div className="flex-1 relative group p-4">
                 <div className="absolute inset-0 bg-tealAccent/20 rounded-2xl blur-3xl group-hover:blur-2xl opacity-70 transition-all duration-500 -z-10"></div>
                 <div
                   className="bg-gray-200/0 bg-gradient-to-br from-gray-200/10 via-slate-700/20 to-tealAccent/20 p-6 rounded-2xl border border-tealAccent/30 backdrop-blur-sm shadow-xl 
-                overflow-hidden h-[250px] flex items-center justify-center sm:p-12"
+                overflow-hidden h-[170px] flex items-center justify-center sm:p-12"
                 >
                   <Image
                     src={step.image}
@@ -256,7 +262,7 @@ export const MobilePlatformTechnologySection = ({
                     className="opacity-90 w-full h-auto max-h-[350px] sm:p-12 transition-all duration-500 filter hover:grayscale-[30%] group-hover:scale-105"
                   />
                 </div>
-                <div className="absolute -bottom-3 -left-3 bg-tealAccent/80 w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                <div className="absolute -bottom-3 -left-3 bg-tealAccent/80 w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-xl">
                   {step.id}
                 </div>
               </div>
@@ -331,13 +337,12 @@ export const MobilePlatformTechnologySection = ({
               <br />
             </span>
 
-            {/* <span className="text-4xl md:text-6xl">
-              The{" "}
-              <span className="text-4xl md:text-6xl bg-gradient-to-br from-mintAccent/40 to-mintAccent/70 bg-clip-text text-transparent">
-                Platform
-              </span>{" "}
-              Offers
-            </span> */}
+            <div className="relative w-[90%] mx-auto h-0.5 bg-gradient-to-r from-transparent via-tealAccent to-transparent mt-5 opacity-60">
+              <div className="w-[25%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent opacity-30
+                absolute top-0 left-[50%] translate-x-[-50%] "/>
+              <div className="w-[15%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent opacity-40
+                absolute top-0 left-[50%] translate-x-[-50%] "/>
+            </div>
           </h1>
           
         </motion.div>
@@ -373,8 +378,10 @@ export const MobilePlatformTechnologySection = ({
               >
                 <div className="flex items-center space-x-3 ">
                   <div
-                    className="flex-shrink-0 w-10 h-10 rounded-full bg-tealAccent/10 flex items-center justify-center 
-                  group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)] text-tealAccent"
+                    className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center 
+                  group-hover:shadow-[0px_0px_15px_1px_rgba(18,110,99,0.3)] text-tealAccent
+                  bg-gradient-to-tl from-gray-900/50 to-gray-800/60 backdrop-blur-xl 
+                  border-[0.85px] border-mintAccent/15 group-hover:border-mintAccent/30"
                   >
                     {feature.icon}
                   </div>
