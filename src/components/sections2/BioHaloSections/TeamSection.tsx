@@ -36,7 +36,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 2,
     name: "Mariela Mezzina",
-    position: "Co-founder, CSO & COO",
+    position: "Co-founder & COO",
     image: marielaImage,
     linkedIn: "https://www.linkedin.com/in/mariela-mezzina/",
   },
@@ -51,7 +51,7 @@ const teamMembers: TeamMember[] = [
     id: 4,
     name: "Alberto De Maria",
     // position: "Head of Science",
-    position: "Chief Scientific Officer",
+    position: "CSO",
     image: albertoImage,
     linkedIn: "https://www.linkedin.com/in/aldema503039157/",
   },

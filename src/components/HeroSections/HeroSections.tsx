@@ -693,8 +693,10 @@ export const HeroSection4 = ({
             <div className="w-full bg-transparent">
               {/* Subtitle */}
               <div className="w-full h-fit bg-red-500/0 mt-8 md:mt-[10vh]">
-                <p className="w-full relative tracking-widest text-[clamp(0.9rem,4vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-pre-wrap bg-transparent
-                leading-tight">
+                <p
+                  className="w-full relative tracking-widest text-[clamp(0.9rem,4vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-pre-wrap bg-transparent
+                leading-tight"
+                >
                   <span
                     className="text-[clamp(1.1rem,5vw,2.2rem)] bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent 
                                                       uppercase drop-shadow-sm font-black font-Poppins"

@@ -1,33 +1,43 @@
 "use client";
 
 import Image from "next/image";
-import React, { memo } from "react";
+import React, { Suspense, memo, useRef } from "react";
+import dynamic from "next/dynamic";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ScreenSizeDEVTOOL } from "@/components/ui/ScreenSizeDEVTOOL";
+// Hero Sections
+import {
+  HeroSection5 as DesktopHeroSection,
+} from "@/components/HeroSections/HeroSections";
 
-import { HeroSection4, HeroSection5, HeroSection4 as MobileHeroSection } from "@/components/HeroSections/HeroSections";
-
-import { TransitionSectionFour } from "@/components/sections2/BioHaloSections/TransitionSectionFour";
-
+// BioHalo Sections
 import { TeamSection } from "@/components/sections2/BioHaloSections/TeamSection";
+import { PlatformTechnologySection } from "@/components/sections2/BioHaloSections/PlatformTechnologySection";
+import { AlternativeIntroSectionNoBG } from "@/components/alternativeLayout/alternativeIntroSectionNoBG";
 
-// Import the new sections
+// Mobile Version
+import MobileIconCarousel from "@/components/mobileVersion/mobileIconCarousel";
+import { MobilePlatformTechnologySection } from "@/components/mobileVersion/mobilePlatformTechnologySection";
+import { MobileWhatWeDoSection } from "@/components/mobileVersion/mobileWhatWeDoSection";
 
 import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSection";
 
-import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
-import { MobileFluorinatedMaterialsSection } from "./mobileVersion/mobileFluorinatedMaterialsSection";
-import { MobileWhatWeDoSection } from "@/components/mobileVersion/mobileWhatWeDoSection";
-import { MobilePlatformTechnologySection } from "@/components/mobileVersion/mobilePlatformTechnologySection";
-import BlackSmokeDivider from "@/assets/images/VariousImages/BlackSmokeDivider.png";
-import { useScroll } from "framer-motion";
-import { useTransform } from "framer-motion";
-import { motion } from "framer-motion";
-import MobileIconCarousel from "./mobileVersion/mobileIconCarousel";
-import { AlternativeIntroSectionNoBG } from "./alternativeLayout/alternativeIntroSectionNoBG";
-import FluorineElement from "@/components/alternativeLayout/FluorineElement";
+// UI Components
+import IconCarousel from "@/components/ui/IconCarousel";
+
+// Bento Components
+
+// Images
 import PfasBP from "@/assets/images/BluePrintStyle/pfasBP.svg";
-import { MobileBentoIntroNoBG } from "./mobileVersion/mobileBentoIntroNoBG";
-import { AlternativeFluorinatedMaterialsSection } from "./alternativeLayout/alternativeFluorinatedMaterialsSection";
-import { ScreenSizeDEVTOOL } from "./ui/ScreenSizeDEVTOOL";
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
+
+import BlackSmokeDivider from "@/assets/images/VariousImages/BlackSmokeDivider.png";
+
+import { AlternativeWhatWeDoSection } from "@/components/alternativeLayout/alternativeWhatWeDoSection";
+import { AlternativeFluorinatedMaterialsSection } from "@/components/alternativeLayout/alternativeFluorinatedMaterialsSection";
+import { MobileBentoIntroNoBG } from "@/components/mobileVersion/mobileBentoIntroNoBG";
+import FluorineElement from "@/components/alternativeLayout/FluorineElement";
+
 
 
 // Copy all the content from page.tsx here
@@ -38,8 +48,13 @@ const stats = [
     suffix: "",
     label: (
       <>
-        <span className="text-lightGrey/80">fluorinated</span> compounds{" "}
-        <br className="md:hidden block" /> are already known
+        <span
+          className="text-lg md:text-xl lg:text-2xl xl:text-4xl  uppercase font-bold text-center bg-gradient-to-bl 
+        from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent"
+        >
+          fluorinated compounds
+        </span>{" "}
+        <br /> are already known
       </>
     ),
   },
@@ -129,26 +144,68 @@ const stats = [
       </>
     ),
   },
+  {
+    number: "49",
+    prefix: "+",
+    suffix: (
+      <>
+        <span className="text-4xl md:text-7xl ">k</span>
+      </>
+    ),
+    label: (
+      <>
+        <span className="text-sm lg:text-2xl  uppercase font-normal  text-center">
+          tons of{" "}
+        </span>
+        <span
+          className="text-sm lg:text-2xl  uppercase font-bold text-center bg-gradient-to-bl 
+        from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent"
+        >
+          Fluoropolymers
+        </span>
+        <br />
+        <span className="font-normal text-base lg:text-lg">
+          Are Exported from the EU annually
+        </span>
+      </>
+    ),
+    note: (
+      <>
+        <span className="text-5xl font-normal">
+          Europe is a net exporter of fluoropolymers, with 49,000 tonnes
+          estimated to be produced annually in the EU28/EEA, 24,000 tonnes
+          exported outside of the EU28/EEA, and around 15,000 tonnes imported.
+        </span>
+      </>
+    ),
+    link_source:
+      "https://fluoropolymers.eu/wp-content/uploads/2023/12/Fluoropolymers_SEA_2022.pdf",
+  },
 ];
 
-export const MobilePageSetUp = () => {
-  console.log("Showcase4 component rendering");
+export default function DesktopPageSetUp() {
+  const ref4 = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref4,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
     <main
-      className="min-h-screen w-full h-full bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70 overflow-hidden"
+      className="min-h-screen w-full h-full bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70 overflow-hidden font-poppins"
       id="top"
     >
+      {/* <ScreenSizeDEVTOOL /> */}
       {/* Invisible element for top section detection */}
-      <ScreenSizeDEVTOOL />
       <div
         className="absolute top-0 h-32 w-full pointer-events-none"
         aria-hidden="true"
       ></div>
 
 
-        <HeroSection4 className=" block md:hidden w-screen h-screen relative overflow-hidden" />
-        <HeroSection5 className=" hidden md:block w-screen h-screen relative overflow-hidden" />
+      <DesktopHeroSection className=" hidden md:block w-screen h-screen relative overflow-hidden" />
 
       {/* Transition Section */}
       <section
@@ -236,7 +293,8 @@ export const MobilePageSetUp = () => {
             backgroundRepeat: "no-repeat",
             opacity: 0.05,
           }}/>
-          <MobileBentoIntroNoBG className="w-full max-w-[650px] mx-auto pl-2 pr-4 sm:pl-0 sm:pr-0" />
+          <AlternativeIntroSectionNoBG className="w-full max-w-[650px] mx-auto" />
+
           <div
             className="w-full min-h-[150px] h-[30vw] bottom-0 translate-y-[5px] 2xl:mt-[-6vw] mix-blend-multiply"
             style={{
@@ -253,31 +311,40 @@ export const MobilePageSetUp = () => {
         </div>
       </section>
 
-      {/* Fluorinated Materials Section */} 
-      <section id="mobile-fluorinated-materials" className="relative z-10">
-      <AlternativeFluorinatedMaterialsSection
-        className="relative w-full h-full overflow-hidden z-20 pt-16"
-      />
+      {/* Fluorinated Materials Section */}
+      <section
+        className="relative w-full h-full overflow-hidden z-20 border-2 border-black"
+        id="fluorinated-materials-section"
+      >
+        <AlternativeFluorinatedMaterialsSection
+          className="relative w-full h-full overflow-hidden z-20 pt-12"
+        />
       </section>
 
+
+      {/* Desktop What We Do Section */}
       <section
-        id="mobile-what-we-do"
-        className=" min-h-[80vh] relative z-10"
+        className="relative w-full h-full bg-lightGrey/50"
+        id="what-we-do"
+      >
+        <AlternativeWhatWeDoSection className="relative w-full h-full overflow-hidden pt-20 hidden sm:block" />
+      </section>
+
+      {/* Platform Technology Section */}
+      <section
+        id="platform-technology"
+        className="w-full min-h-[80vh] relative z-10 hidden md:block"
       >
         {/* Section detection helper */}
         <div
           className="absolute top-0 h-24 w-full pointer-events-none"
           aria-hidden="true"
         ></div>
-
-        <MobileWhatWeDoSection
-          className="min-h-[50vh] w-[100vw] text-white relative"
-          stats={stats}
-        />
+        <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
       </section>
 
-    {/* Mobile Platform Technology Section */}
-    <section
+      {/* Mobile Platform Technology Section */}
+      <section
         id="mobile-platform-technology"
         className="w-full min-h-[80vh] relative z-10 block md:hidden"
       >
@@ -289,17 +356,19 @@ export const MobilePageSetUp = () => {
         <MobilePlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
       </section>
 
+
       {/* Icon Carousel Section - No ID here since it's not in the navigation */}
       <section className="w-full">
         <div className="bg-red-500/0 w-full">
           <div className="w-full h-[400px] pt-10 overflow-hidden flex items-center justify-center">
-            <MobileIconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100" />
+            <IconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100 hidden sm:block" />
+            <MobileIconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100 block sm:hidden" />
           </div>
         </div>
       </section>
 
       {/* Team Section */}
-      <section id="mobile-team-section" className="min-h-[80vh] relative">
+      <section id="team-section" className="min-h-[80vh] relative">
         {/* Section detection helper */}
         <div
           className="absolute top-0 h-24 w-full pointer-events-none"
@@ -310,10 +379,15 @@ export const MobilePageSetUp = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="mobile-contact-section">
+      <section id="contact-section">
         <ContactSection className="w-full" />
       </section>
 
+      {/* Bento Section 
+      <section className="py-16 bg-lightGrey text-center px-4">
+        <BentoSection2 className="bg-lightGrey relative" />
+      </section>
+        */}
     </main>
   );
-};
+}

@@ -33,11 +33,6 @@ export const MobileWhatWeDoSection = ({
 }: MobileWhatWeDoSectionProps) => {
   if (debug) console.log("Rendering MobileWhatWeDoSection");
 
-  const refmWWD = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: refmWWD,
-    offset: ["center end", "start start"],
-  });
 
   return (
     <section
@@ -51,7 +46,7 @@ export const MobileWhatWeDoSection = ({
           <Image
             src={LightBGWithDroplets}
             alt="LightBGWithDroplets"
-            className="w-full h-full object-contain -scale-x-100 mix-blend-overlay opacity-20
+            className="w-full h-full object-contain -scale-x-100 mix-blend-overlay opacity-60
             [mask-image:linear-gradient(to_bottom,black,black,transparent)]"
           />
         </div>
@@ -128,7 +123,7 @@ export const MobileWhatWeDoSection = ({
 
         {/* Subtitle */}
         <div className="w-full ">
-          <h2 className="text-gray-800/60 text-2xl  font-poppins text-center sm:leading-tight ">
+          <h2 className="text-gray-800/60 text-2xl  font-poppins text-center leading-tight sm:leading-tight ">
             through our <br />
             microbial-based
             <br />
@@ -207,10 +202,10 @@ export const MobileWhatWeDoSection = ({
             {/* Top Text Section */}
             <div className="space-y-4">
               <h1
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-2 capitalize opacity-1 text-center pb-10
-                bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent"
+                className="text-2xl sm:text-4xl font-semibold mb-2 capitalize opacity-1 text-center pb-10
+                bg-gradient-to-tl from-slate-800/80 via-gray-700/60 to-gray-400 bg-clip-text text-transparent leading-none"
               >
-                <span className="text-2xl sm:text-3xl ">
+                <span className="text-2xl sm:text-3xl leading-tight ">
                   We explore, design,
                   <br />
                   and produce, unmatched
@@ -227,10 +222,12 @@ export const MobileWhatWeDoSection = ({
                   className="bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent
                   uppercase drop-shadow-sm font-black font-Poppins"
                 ></span>
+                <br />
                 products
               </h1>
               <div className="w-fit h-full border-2 border-blue-300/0 relative mx-auto ">
-                <p className="text-2xl sm:text-3xl sm:leading-tight font-poppins text-center sm:py-4">
+                <p className="text-2xl sm:text-3xl sm:leading-tight font-poppins text-center sm:py-4 leading-tight
+                bg-gradient-to-tl from-slate-600 via-gray-700 to-gray-500 bg-clip-text text-transparent">
                   Our{" "}
                   <span className="font-bold ">
                     Bio-

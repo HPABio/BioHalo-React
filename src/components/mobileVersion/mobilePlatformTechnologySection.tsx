@@ -282,7 +282,7 @@ export const MobilePlatformTechnologySection = ({
 
         {/* Features Section */}
         <div
-          className="grid grid-cols-1 gap-12 mb-20 px-4 mt-16 relative"
+          className="grid grid-cols-1 gap-12 mb-20 px-4 mt-16 relative "
           id="mobile-platform-features-content"
         >
           {/* Section detection helper - invisible element to help with intersection detection */}
@@ -364,7 +364,7 @@ export const MobilePlatformTechnologySection = ({
               imageHeight={400}
             />
           </div>
-          <div className="grid grid-cols-1 gap-3 -mt-14 px-0 sm:px-32">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 -mt-14 px-0">
             {technologyFeatures.map((feature, index) => (
               <motion.div
                 key={feature.id}

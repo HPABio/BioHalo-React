@@ -1,75 +1,529 @@
 "use client";
 
-import { Showcase4 as DesktopPage } from "@/components/Showcase4";
-import { MobilePageSetUp as MobilePage } from "@/components/MobilePageSetUp";
+import Image from "next/image";
+import React, { Suspense, memo, useRef } from "react";
+import dynamic from "next/dynamic";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ScreenSizeDEVTOOL } from "@/components/ui/ScreenSizeDEVTOOL";
-import { useEffect } from "react";
+// Hero Sections
+import {
+  HeroSection1,
+  HeroSection2,
+  HeroSection3,
+  HeroSection4,
+  HeroSection5,
+} from "@/components/HeroSections/HeroSections";
 
-export default function Home() {
-  // Add scroll padding to account for fixed navbar
-  useEffect(() => {
-    document.documentElement.style.scrollPaddingTop = "120px"; // Increased padding for better visual landing
-  }, []);
+// BioHalo Sections
+import { FluorinatedMaterialsSectionV2 } from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection";
+import { WhatWeDoSection } from "@/components/sections2/BioHaloSections/WhatWeDoSection";
+import { TeamSection } from "@/components/sections2/BioHaloSections/TeamSection";
+import { PlatformTechnologySection } from "@/components/sections2/BioHaloSections/PlatformTechnologySection";
+import { AlternativeIntroSectionNoBG } from "@/components/alternativeLayout/alternativeIntroSectionNoBG";
+
+// Mobile Version
+import MobileIconCarousel from "@/components/mobileVersion/mobileIconCarousel";
+import MobileNetworkDiagram from "@/components/mobileVersion/mobileNetworkDiagram";
+import MobileNetworkDiagramWithNodes from "@/components/mobileVersion/mobileNetworkDiagramWithNodes";
+import { MobileFluorinatedMaterialsSection } from "@/components/mobileVersion/mobileFluorinatedMaterialsSection";
+import { MobileFluorinatedMaterialsSectionV2 } from "@/components/mobileVersion/mobileFluorinatedMaterialsSectionV2";
+import { MobilePlatformTechnologySection } from "@/components/mobileVersion/mobilePlatformTechnologySection";
+import { MobileWhatWeDoSection } from "@/components/mobileVersion/mobileWhatWeDoSection";
+
+import { ContactSection } from "@/components/sections2/BioHaloSections/ContactSection";
+import { TransitionSectionFour } from "@/components/sections2/BioHaloSections/TransitionSectionFour";
+
+// UI Components
+import IconCarousel from "@/components/ui/IconCarousel";
+import { SimpleStatsBox } from "@/components/ui/StatsBox";
+
+// Bento Components
+import { BentoIntro } from "@/components/bentos/Gen_3_Bentos/BentoIntro";
+import { BentoContact } from "@/components/bentos/Gen_3_Bentos/BentoContact";
+import { BentoDurability } from "@/components/bentos/Gen_3_Bentos/BentoDurability";
+import { BentoHeatResistant } from "@/components/bentos/Gen_3_Bentos/BentoHeatResistant";
+import { BentoLongLasting } from "@/components/bentos/Gen_3_Bentos/BentoLongLasting";
+import { BentoPeriodicTable } from "@/components/bentos/Gen_3_Bentos/BentoPeriodicTable";
+import { BentoProcess } from "@/components/bentos/Gen_3_Bentos/BentoProcess";
+import { BentoStats } from "@/components/bentos/Gen_3_Bentos/BentoStats";
+import { BentoTeam } from "@/components/bentos/Gen_3_Bentos/BentoTeam";
+import { BentoVideo } from "@/components/bentos/Gen_3_Bentos/BentoVideo";
+import { BentoWaterRepellant } from "@/components/bentos/Gen_3_Bentos/BentoWaterRepellant";
+import { BentoSectionGen3 } from "@/components/sections2/BentoSectionGen3";
+import { BentoVerticalDouble } from "@/components/bentos/Gen_3_Bentos/BentoVerticalDouble ";
+
+// Images
+import BioHaloBG from "@/assets/images/BioHalo-background-compressed.jpeg";
+import WomanWhiteRainJacket from "@/assets/images/BGImagesTest/WomanWhiteRainJacket.jpeg";
+import PfasBP from "@/assets/images/BluePrintStyle/pfasBP.svg";
+import BioReactor from "@/assets/images/BluePrint with Color/bio-reactor.png";
+import BioReactorBlueprint from "@/assets/images/BioReactorBlueprint.svg";
+import enzymeImage from "@/assets/images/AdobeStock/AdobeStock_747938517_Compressed.png";
+import industrialPollutionImage from "@/assets/images/VariousImages/IndustrialPollution.png";
+import industrialPollutionImageV2 from "@/assets/images/VariousImages/IndutrialPollutionV2.png";
+import industrialPollutionImageV3 from "@/assets/images/VariousImages/IndustrialPollutionV3.png";
+import industrialPollutionImageV3flipped from "@/assets/images/VariousImages/IndustrialPollutionV3flipped.png";
+import ribbonImage from "@/assets/images/BGImagesTest/Twisted Ribbon Structure transparent.png";
+import abstractImage from "@/assets/images/BGImagesTest/Abstract Black and White Design Transition.png";
+import WaterRepellantFabric from "@/assets/images/water-repellant-fabric.png";
+import Pharma from "@/assets/images/BluePrintSVG/Pharma.svg";
+import MeshFabric from "@/assets/images/Mesh-fabric.png";
+import Droplets1 from "@/assets/images/Droplets1.jpg";
+import BGFabricTealPink from "@/assets/images/BGImagesTest/BGFabricTealPink.png";
+import BlackSmokeDivider from "@/assets/images/VariousImages/BlackSmokeDivider.png";
+
+// Letter Images - WornOurMetal
+import A from "@/assets/images/Lettering/WornOurMetal/A.png";
+import C from "@/assets/images/Lettering/WornOurMetal/C.png";
+import C2 from "@/assets/images/Lettering/WornOurMetal/C2.png";
+import E from "@/assets/images/Lettering/WornOurMetal/E.png";
+import E2 from "@/assets/images/Lettering/WornOurMetal/E2.png";
+import F from "@/assets/images/Lettering/WornOurMetal/F.png";
+import H from "@/assets/images/Lettering/WornOurMetal/H.png";
+import I from "@/assets/images/Lettering/WornOurMetal/I.png";
+import I2 from "@/assets/images/Lettering/WornOurMetal/I2.png";
+import M from "@/assets/images/Lettering/WornOurMetal/M.png";
+import L from "@/assets/images/Lettering/WornOurMetal/L.png";
+import O from "@/assets/images/Lettering/WornOurMetal/O.png";
+import R from "@/assets/images/Lettering/WornOurMetal/R.png";
+import S from "@/assets/images/Lettering/WornOurMetal/S.png";
+import V from "@/assets/images/Lettering/WornOurMetal/V.png";
+
+// Letter Images - BlackLiquid
+import ABlackLiquid from "@/assets/images/Lettering/BlackLiquid/A.png";
+import CBlackLiquid from "@/assets/images/Lettering/BlackLiquid/C.png";
+import C2BlackLiquid from "@/assets/images/Lettering/BlackLiquid/C2.png";
+import EBlackLiquid from "@/assets/images/Lettering/BlackLiquid/E.png";
+import E2BlackLiquid from "@/assets/images/Lettering/BlackLiquid/E2.png";
+import FBlackLiquid from "@/assets/images/Lettering/BlackLiquid/F.png";
+import F2BlackLiquid from "@/assets/images/Lettering/BlackLiquid/F2.png";
+import HBlackLiquid from "@/assets/images/Lettering/BlackLiquid/H.png";
+import IBlackLiquid from "@/assets/images/Lettering/BlackLiquid/I.png";
+import LBlackLiquid from "@/assets/images/Lettering/BlackLiquid/L.png";
+import MBlackLiquid from "@/assets/images/Lettering/BlackLiquid/M.png";
+import OBlackLiquid from "@/assets/images/Lettering/BlackLiquid/O.png";
+import O2BlackLiquid from "@/assets/images/Lettering/BlackLiquid/O2.png";
+import PBlackLiquid from "@/assets/images/Lettering/BlackLiquid/P.png";
+import RBlackLiquid from "@/assets/images/Lettering/BlackLiquid/R.png";
+import SBlackLiquid from "@/assets/images/Lettering/BlackLiquid/S.png";
+import S2BlackLiquid from "@/assets/images/Lettering/BlackLiquid/S2.png";
+import VBlackLiquid from "@/assets/images/Lettering/BlackLiquid/V.png";
+
+import ColorfulGradientRainbowTexture from "@/assets/images/BGImagesTest/ColorfulGradientRainbowTexture.jpeg";
+import { AlternativeWhatWeDoSection } from "@/components/alternativeLayout/alternativeWhatWeDoSection";
+import { AlternativeFluorinatedMaterialsSection } from "@/components/alternativeLayout/alternativeFluorinatedMaterialsSection";
+import AtomDiagram from "@/components/ui/AtomDiagram";
+import { BentoIntroNoBG } from "@/components/bentos/Gen_3_Bentos/BentoIntroNoBG";
+import { MobileBentoIntroNoBG } from "@/components/mobileVersion/mobileBentoIntroNoBG";
+import FluorineElement from "@/components/alternativeLayout/FluorineElement";
+
+// Memoize static sections to prevent re-renders
+const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
+
+// Array of letter images for the "FOREVER CHEMICALS" display
+const letterImages = [
+  F, // F
+  O, // O
+  R, // R
+  E, // E
+  V, // V
+  E2, // E
+  R, // R
+
+  C, // C
+  C, // C
+  H, // H
+  E, // E
+  M, // M (Note: M is not in the imports, would need to be added)
+  I, // I
+  C2, // C
+  A, // A
+  L, // L
+  S, // S
+];
+const letterImagesBlackLiquid = [
+  FBlackLiquid, // F
+  O2BlackLiquid, // O
+  RBlackLiquid, // R
+  EBlackLiquid, // E
+  VBlackLiquid, // V
+  E2BlackLiquid, // E
+  RBlackLiquid, // R
+
+  CBlackLiquid, // C
+  CBlackLiquid, // C
+  HBlackLiquid, // H
+  EBlackLiquid, // E
+  MBlackLiquid, // M (Note: M is not in the imports, would need to be added)
+  IBlackLiquid, // I
+  C2BlackLiquid, // C
+  ABlackLiquid, // A
+  LBlackLiquid, // L
+  SBlackLiquid, // S
+];
+
+// Copy all the content from page.tsx here
+const stats = [
+  {
+    number: "10000",
+    prefix: ">",
+    suffix: "",
+    label: (
+      <>
+        <span
+          className="text-lg md:text-xl lg:text-2xl xl:text-4xl  uppercase font-bold text-center bg-gradient-to-bl 
+        from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent"
+        >
+          fluorinated compounds
+        </span>{" "}
+        <br /> are already known
+      </>
+    ),
+  },
+  {
+    number: "25",
+    prefix: "+",
+    suffix: "bn €",
+    label: "Global Annual PFAS Market",
+  },
+  {
+    number: "20000",
+    prefix: ">",
+    label: (
+      <>
+        <span className="text-4xl font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+          Contaminated
+        </span>
+        <br />
+        Sites in Europe alone
+      </>
+    ),
+  },
+  {
+    number: "50",
+    prefix: "+",
+    suffix: "bn€",
+    label: "Health-Related Costs",
+  },
+  {
+    number: "49",
+    prefix: "+",
+    suffix: (
+      <>
+        <span className="text-4xl md:text-7xl ">k</span>
+      </>
+    ),
+    label: (
+      <>
+        <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-normal">
+          tons of{" "}
+        </span>
+        <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+          Fluoropolymers
+        </span>
+        <br />
+        <span className="font-normal text-lg md:text-2xl lg:text-3xl">
+          Are Exported from the EU annually
+        </span>
+      </>
+    ),
+    note: (
+      <>
+        <span className="text-5xl font-normal">
+          Europe is a net exporter of fluoropolymers, with 49,000 tonnes
+          estimated to be produced annually in the EU28/EEA, 24,000 tonnes
+          exported outside of the EU28/EEA, and around 15,000 tonnes imported.
+        </span>
+      </>
+    ),
+    link_source:
+      "https://fluoropolymers.eu/wp-content/uploads/2023/12/Fluoropolymers_SEA_2022.pdf",
+  },
+  {
+    number: "3000",
+    prefix: "+",
+    suffix: " years",
+    label: "Maximum Environmental Persistence",
+  },
+  {
+    number: "500",
+    prefix: "+",
+    suffix: "",
+    label: "",
+  },
+  {
+    number: "4.4",
+    prefix: "+",
+    suffix: "",
+    label: (
+      <>
+        <span
+          className="text-center text-4xl lowercase
+              font-bold bg-gradient-to-tl from-tealAccent to-lightGrey bg-clip-text text-transparent"
+        >
+          million tons
+        </span>
+      </>
+    ),
+  },
+  {
+    number: "49",
+    prefix: "+",
+    suffix: (
+      <>
+        <span className="text-4xl md:text-7xl ">k</span>
+      </>
+    ),
+    label: (
+      <>
+        <span className="text-sm lg:text-2xl  uppercase font-normal  text-center">
+          tons of{" "}
+        </span>
+        <span
+          className="text-sm lg:text-2xl  uppercase font-bold text-center bg-gradient-to-bl 
+        from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent"
+        >
+          Fluoropolymers
+        </span>
+        <br />
+        <span className="font-normal text-base lg:text-lg">
+          Are Exported from the EU annually
+        </span>
+      </>
+    ),
+    note: (
+      <>
+        <span className="text-5xl font-normal">
+          Europe is a net exporter of fluoropolymers, with 49,000 tonnes
+          estimated to be produced annually in the EU28/EEA, 24,000 tonnes
+          exported outside of the EU28/EEA, and around 15,000 tonnes imported.
+        </span>
+      </>
+    ),
+    link_source:
+      "https://fluoropolymers.eu/wp-content/uploads/2023/12/Fluoropolymers_SEA_2022.pdf",
+  },
+];
+
+export default function AlternativeLayout() {
+  const ref4 = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref4,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-800 text-white">
-      <div className="relative bg-gradient-to-br from-slate-50 to-slate-800 w-full h-full">
+    <main
+      className="min-h-screen w-full h-full bg-gradient-to-br from-lightGrey via-mintAccent/50 to-tealAccent/70 overflow-hidden font-poppins"
+      id="top"
+    >
+      <ScreenSizeDEVTOOL />
+      {/* Invisible element for top section detection */}
+      <div
+        className="absolute top-0 h-32 w-full pointer-events-none"
+        aria-hidden="true"
+      ></div>
 
-        {/* <HeroSection4 /> */}
-        {/* <Showcase /> */}
-        <section className="hidden md:block">
-          <DesktopPage />
-        </section>
-        <section className="block md:hidden">
-          <MobilePage />
-        </section>
-        {/* <StatsSection6 className="z-10  overflow-visible" />
-        <StatsSection5 className="z-3" />
+      {/* <HeroSection1 className="w-screen h-screen relative" /> */}
+      {/* <HeroSection2 className="w-screen h-screen relative overflow-hidden" /> */}
+      {/* <HeroSection4 className=" block w-screen h-screen relative overflow-hidden" /> */}
+      <HeroSection4 className=" md:hidden block w-screen h-screen relative overflow-hidden" />
+      <HeroSection5 className=" hidden md:block w-screen h-screen relative overflow-hidden" />
+
+      {/* Transition Section */}
+      <section
+        className="relative w-screen max-h-[120vh] z-10 "
+        id="transition-section-one"
+      >
+        <FluorineElement />
+        {/* Enzyme Image right */}
+        <div
+          className="absolute w-[80vw] h-[80vw] max-w-[1450px] 
+            top-0 right-0 opacity-1 blur-[6px] translate-x-[35%] translate-y-[-50%] pointer-events-none"
+        >
+          <motion.div
+            className="absolute w-full h-full hidden sm:block"
+            style={{
+              opacity: useTransform(useScroll().scrollY, [0, 600], [1, 0.1]),
+              scale: useTransform(useScroll().scrollY, [0, 1000], [1, 1.1]),
+              x: useTransform(useScroll().scrollY, [0, 1000], [0, 500]),
+              y: useTransform(useScroll().scrollY, [0, 1000], [0, -100]),
+              filter: useTransform(
+                useScroll().scrollY,
+                [0, 1000],
+                ["blur(0px)", "blur(20px)"]
+              ),
+            }}
+          >
+            <Image
+              src={enzymeImage}
+              alt="Enzyme"
+              fill
+              className="object-contain"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="w-full h-[250px] md:h-[400px] top-0 left-0 z-10 mt-2 relative overflow-hidden
+">
+                  <div className="w-[2400px] aspect-square xl:scale-x-[1.2] 2xl:scale-x-[2] bottom-0 left-[50%] translate-x-[-50%] absolute " 
+                  style={{
+                    maskImage: "radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 65%, rgba(0,0,0,1) 70%)",
+                    backgroundSize: "contain",
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                }}>
+
+                  <div className="w-full h-[800px] translate-y-[400px]
+                  absolute bottom-0 left-0 flex items-center justify-center
+                  bg-gray-300 bg-gradient-to-br from-mintAccent via-mintAccent/60 to-tealAccent" />
+                </div>
+      </section>
+
+      {/* Blueprint Section */}
+      <section
+        className="relative w-full  overflow-hidden z-0 font-poppins
+        bg-gradient-to-tl from-slate-800 via-tealAccent/60 to-slate-300/40
+        ">
+          <div className="w-full h-[250px] md:h-[400px] top-0 left-0 relative overflow-hidden">
+                  <div className="w-[2400px] aspect-square xl:scale-x-[1.2] 2xl:scale-x-[2]  -top-0 left-[50%] translate-x-[-50%] absolute " 
+                  style={{
+                    maskImage: "radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 65%, rgba(0,0,0,1) 70%)",
+                    backgroundSize: "contain",
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",}}>
+
+                  <div className="w-full h-[800px] translate-y-[-400px]
+                  absolute top-0 left-0 flex items-center justify-center
+                  bg-gray-300 bg-gradient-to-br from-mintAccent via-mintAccent/60 to-tealAccent" />
+                </div>
+      </div>
+          
         
-        <ChallengesSection className="bg-lightGrey relative" />
-        <SolutionSection className="bg-white relative" />
-        <BentoSection className="bg-lightGrey relative" />
-        <AchievementsSection className="bg-white relative" />
-        <ConferencesSection className="bg-white relative" /> */}
-      </div>
+        <div className="w-screen mx-auto flex flex-col items-end justify-center -mt-44 relative"
+        style={{
+          willChange: "transform",
+
+        }}>
+          <div className="w-full h-[400px] absolute top-[50%] translate-y-[-50%]
+          scale-[1.5]"
+          style={{
+            willChange: "transform",
+            backgroundImage: `url(${PfasBP.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            opacity: 0.05,
+          }}/>
+          {/* <BentoIntroNoBG className="w-full max-w-[650px] mx-auto bg-mint-60" /> */}
+          <AlternativeIntroSectionNoBG className="w-full max-w-[650px] mx-auto hidden md:block" />
+          <MobileBentoIntroNoBG className="w-full max-w-[650px] mx-auto block md:hidden" />
+          <div
+            className="w-full min-h-[150px] h-[30vw] bottom-0 translate-y-[5px] 2xl:mt-[-6vw] mix-blend-multiply"
+            style={{
+              backgroundImage: `url(${BlackSmokeDivider.src})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center bottom",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+          <div
+            className="w-full h-[10vw] absolute bottom-0 left-0 
+        bg-gradient-to-t from-black via-black/50 to-transparent"
+          ></div>
+        </div>
+      </section>
+
+      {/* Fluorinated Materials Section */}
+      <section
+        className="relative w-full h-full overflow-hidden z-20 border-2 border-black"
+        id="fluorinated-materials-section"
+      >
+        <AlternativeFluorinatedMaterialsSection
+          className="relative w-full h-full overflow-hidden z-20 pt-12"
+        />
+      </section>
+
+      {/* Mobile What We Do Section */}
+      <section
+        className="relative w-full h-full block sm:hidden"
+        id="mobile-what-we-do"
+      >
+        <MobileWhatWeDoSection
+          className="relative w-full h-full overflow-hidden pt-20"
+          stats={stats}
+        />
+      </section>
+
+      {/* Desktop What We Do Section */}
+      <section
+        className="relative w-full h-full hidden sm:block"
+        id="what-we-do"
+      >
+        <AlternativeWhatWeDoSection className="relative w-full h-full overflow-hidden pt-20 hidden sm:block" />
+      </section>
+
+      {/* Platform Technology Section */}
+      <section
+        id="platform-technology"
+        className="w-full min-h-[80vh] relative z-10 hidden md:block"
+      >
+        {/* Section detection helper */}
+        <div
+          className="absolute top-0 h-24 w-full pointer-events-none"
+          aria-hidden="true"
+        ></div>
+        <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
+      </section>
+
+      {/* Mobile Platform Technology Section */}
+      <section
+        id="mobile-platform-technology"
+        className="w-full min-h-[80vh] relative z-10 block md:hidden"
+      >
+        {/* Section detection helper */}
+        <div
+          className="absolute top-0 h-24 w-full pointer-events-none"
+          aria-hidden="true"
+        ></div>
+        <MobilePlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
+      </section>
+
+
+      {/* Icon Carousel Section - No ID here since it's not in the navigation */}
+      <section className="w-full">
+        <div className="bg-red-500/0 w-full">
+          <div className="w-full h-[400px] pt-10 overflow-hidden flex items-center justify-center">
+            <IconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100 hidden sm:block" />
+            <MobileIconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100 block sm:hidden" />
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section id="team-section" className="min-h-[80vh] relative">
+        {/* Section detection helper */}
+        <div
+          className="absolute top-0 h-24 w-full pointer-events-none"
+          aria-hidden="true"
+        ></div>
+
+        <TeamSection className="w-full" />
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact-section">
+        <ContactSection className="w-full" />
+      </section>
+
+      {/* Bento Section 
+      <section className="py-16 bg-lightGrey text-center px-4">
+        <BentoSection2 className="bg-lightGrey relative" />
+      </section>
+        */}
     </main>
   );
 }
-
-/* 
-background-image: linear-gradient(#8b9da9, #fff6e4);
-box-shadow: inset 0 0 100px hsla(0,0%,0%,.3);
-} */
-
-/* "use client";
-
-
-import { HeroSection } from '@/components/sections/HeroSection'
-import { StatsSection } from "@/components/sections/StatsSection";
-import { ChallengesSection } from "@/components/sections/ChallengesSection";
-import { SolutionSection } from "@/components/sections/SolutionSection";
-import { AchievementsSection } from "@/components/sections/AchievementsSection";
-import { ConferencesSection } from "@/components/sections/ConferencesSection";
-import { BentoSection } from "@/components/sections/BentoSection";
-import { PfasProducts } from "@/components/sections/PfasProducts";
-import { PfasPolution } from "@/components/sections/PfasPolution";
-
-export default function Home() {
-  return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
-
-      <div className="relative z-40">
-        <HeroSection />
-      </div>
-      <StatsSection />
-      <PfasProducts />
-      <PfasPolution />
-      <ChallengesSection />
-      <SolutionSection />
-      <BentoSection />
-      <AchievementsSection />
-      <ConferencesSection />
-    </main>
-  );
-}
- */

@@ -212,7 +212,7 @@ export function AlternativeWhatWeDoSection({ className }: { className?: string }
                     <Image
                       src={BioFMonomer}
                       alt="BioFMonomerAllPink"
-                      className="w-full object-cover grayscale opacity-20 invert rotate-[-20deg] scale-[1.2] xl:scale-[1.5]
+                      className="w-full object-cover grayscale opacity-30 invert rotate-[-20deg] scale-[1.2] xl:scale-[1.5]
                       translate-x-[-30%] translate-y-[60%]
                       lg:translate-x-[-30%] lg:translate-y-[40%]
                       2xl:translate-x-[-30%] 2xl:translate-y-[55%]"
@@ -269,7 +269,7 @@ export function AlternativeWhatWeDoSection({ className }: { className?: string }
               gap-8 p-4 border-2 border-blue-300/0 mt-12 "
               >
                 <div className="w-full flex flex-row items-start justify-start gap-8">
-                  <div className="flex flex-col items-start w-2/3 border-2 border-blue-300/0">
+                  <div className="flex-col items-start w-2/3 border-2 border-blue-300/0 hidden">
                   <p className="text-sm md:text-xl lg:text-2xl 2xl:text-3xl font-poppins font-medium opacity-30 leading-none">
                       And our flexible
                     </p>

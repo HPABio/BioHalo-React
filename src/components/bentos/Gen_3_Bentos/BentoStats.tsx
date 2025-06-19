@@ -28,7 +28,7 @@ export function BentoStats({ className }: { className?: string }) {
             },
           }}
         >
-          <span className="font-bold text-3xl">PFAS</span> <br/>can be found in countless materials and products throughout various industries
+          <span className="font-bold text-3xl">PFAS</span> <br/>can be found in countless materials and products throughout various industries and are...
         </motion.h1>
       {/* <Image src={EnzymeImage} alt="Enzyme Image" className="w-full h-full object-cover absolute top-0 left-0" /> */}
       <motion.div
@@ -80,7 +80,7 @@ export function BentoStats({ className }: { className?: string }) {
           viewport={{ once: true }}
           className="text-2xl leading-7 font-semibold bg-gradient-to-r bg-slate-600 from-tealAccent/30 to-tealAccent/20 text-transparent bg-clip-text text-left w-full tracking-wider"
         >
-          <span className="font-bold text-3xl">PFAS</span> <br/>can be found in countless materials and products throughout various industries
+          <span className="font-bold text-3xl">PFAS</span> <br/>can be found in countless materials and products throughout various industries and are...
         </motion.h1>
       <motion.div className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
           initial={{

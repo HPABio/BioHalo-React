@@ -37,22 +37,22 @@ const benefits = [
 
 export function PFASBenefits({ className }: { className?: string }) {
   return (
-    <div className={`grid grid-cols-2 xl:grid-cols-3 gap-4 ${className}`}>
+    <div className={`grid sm:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-4 ${className}`}>
       {benefits.map((benefit, index) => (
         <motion.div
           key={benefit.title}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex items-start gap-3 py-4 px-4 rounded-lg  backdrop-blur-[10px] bg-white/15
+          className="flex items-start gap-3 py-4 px-4 rounded-lg backdrop-blur-[10px] bg-white/15
            hover:bg-white/10 border-2 border-lightGrey/40"
         >
-          <div className="text-mintAccent/80 mt-1">{benefit.icon}</div>
+          <div className="text-tealAccent/80 mt-1">{benefit.icon}</div>
           <div>
-            <h3 className="font-semibold text-sm text-gray-200">
+            <h3 className="font-semibold text-sm md:text-lg bg-slate-200 bg-gradient-to-br from-mintAccent via-mintAccent/10 to-tealAccent/80 bg-clip-text text-transparent">
               {benefit.title}
             </h3>
-            <p className="text-xs text-gray-400">{benefit.description}</p>
+            <p className="text-xs lg:text-sm text-gray-200 lg:leading-tight">{benefit.description}</p>
           </div>
         </motion.div>
       ))}

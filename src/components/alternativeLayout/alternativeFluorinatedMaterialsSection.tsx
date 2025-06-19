@@ -119,9 +119,11 @@ const Circle1 = React.memo(function Circle1() {
   })
   return (
     <section
-      className={`${className} w-full h-full  relative bg-gradient-to-b from-black via-black to-slate-900`}>
+      className={`${className} w-full h-full  relative bg-black 
+      md:bg-gradient-to-b md:from-black md:via-black md:to-slate-900`}>
       <div className="absolute top-0 right-0 w-full h-[100px] bg-gradient-to-t from-black/0 via-black/70 to-black"></div>
-      <div className="w-full max-w-[580px] mx-auto h-fit relative bg-gradient-to-b from-black via-black to-transparent ">
+      <div className="w-full max-w-[580px] mx-auto h-fit relative 
+      bg-gradient-to-b from-black via-black to-transparent ">
         <div
           className="w-full h-fit relative overflow-hidden 
         bg-gradient-to-b from-black via-black to-transparent">
@@ -214,7 +216,7 @@ const Circle1 = React.memo(function Circle1() {
             </motion.div>
           </div>
       </div>
-      <div className="absolute bottom-0 right-0 w-full h-[30px] sm:h-[100px] lg:h-[200px] bg-gradient-to-t from-black via-black/60 to-transparent z-10"></div>
+      <div className="absolute bottom-0 right-0 w-full h-[60px] sm:h-[100px] lg:h-[200px] bg-gradient-to-t from-black via-black/60 to-transparent z-10"></div>
     </section>
   );
 }

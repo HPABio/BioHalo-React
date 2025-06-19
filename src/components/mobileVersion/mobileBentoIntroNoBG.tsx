@@ -145,8 +145,12 @@ export function MobileBentoIntroNoBG({ className }: { className?: string }) {
               {" "}
               high-performance materials with advanced properties{" "}
             </span>{" "}
-            known as "Perfluoroalkyl and Polyfluoroalkyl Substances" or for
-            short <b>PFAS</b>.
+            known as Perfluoroalkyl and Polyfluoroalkyl Substances or for
+            short <b>PFAS</b>. Due to their long life cycle, PFAS are also ofter referred to as
+            <span className="font-bold">
+              {" "}
+              "forever chemicals"
+            </span>.{" "}
           </p>
         </motion.div>
 
