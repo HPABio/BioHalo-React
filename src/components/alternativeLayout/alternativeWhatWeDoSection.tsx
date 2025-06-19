@@ -269,6 +269,8 @@ export function AlternativeWhatWeDoSection({ className }: { className?: string }
               gap-8 p-4 border-2 border-blue-300/0 mt-12 "
               >
                 <div className="w-full flex flex-row items-start justify-start gap-8">
+                  <div className="relative w-full h-[100px] hidden 2xl:block">
+                  </div>
                   <div className="flex-col items-start w-2/3 border-2 border-blue-300/0 hidden">
                   <p className="text-sm md:text-xl lg:text-2xl 2xl:text-3xl font-poppins font-medium opacity-30 leading-none">
                       And our flexible
