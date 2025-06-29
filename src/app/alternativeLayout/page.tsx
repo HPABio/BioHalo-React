@@ -117,6 +117,9 @@ import { BentoIntroNoBG } from "@/components/bentos/Gen_3_Bentos/BentoIntroNoBG"
 import { MobileBentoIntroNoBG } from "@/components/mobileVersion/mobileBentoIntroNoBG";
 import FluorineElement from "@/components/alternativeLayout/FluorineElement";
 
+import { AlternativeTeamSection } from "@/components/alternativeLayout/alternativeTeamSection";
+import { AlternativeTeamSectionV2 } from "@/components/alternativeLayout/alternativeTeamSectionV2";
+
 // Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
 
@@ -511,7 +514,8 @@ export default function AlternativeLayout() {
           aria-hidden="true"
         ></div>
 
-        <TeamSection className="w-full" />
+        {/* <TeamSection className="w-full" /> */}
+        <AlternativeTeamSectionV2 className="w-full" />
       </section>
 
       {/* Contact Section */}

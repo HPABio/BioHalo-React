@@ -44,11 +44,10 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: 4,
-    name: "Alberto De Maria",
-    // position: "Head of Science",
-    position: "Chief Scientific Officer",
-    image: albertoImage,
-    linkedIn: "https://www.linkedin.com/in/aldema503039157/",
+    name: "Johann Liebeton",
+    position: "Business Development Lead",
+    image: johannImage,
+    linkedIn: "https://www.linkedin.com/in/johannliebeton/",
   },
   {
     id: 5,
@@ -66,10 +65,11 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: 7,
-    name: "Johann Liebeton",
-    position: "Business Development Lead",
-    image: johannImage,
-    linkedIn: "https://www.linkedin.com/in/johannliebeton/",
+    name: "Alberto De Maria",
+    // position: "Head of Science",
+    position: "Chief Scientific Officer",
+    image: albertoImage,
+    linkedIn: "https://www.linkedin.com/in/aldema503039157/",
   },
   {
     id: 8,
@@ -94,13 +94,13 @@ interface TeamSectionProps {
   className?: string;
 }
 
-export const AlternativeTeamSection: React.FC<TeamSectionProps> = ({
+export const AlternativeTeamSectionV2: React.FC<TeamSectionProps> = ({
   className = "",
 }) => {
   return (
     <section className={`relative py-20 overflow-hidden ${className}`}>
       {/* Background elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black"></div>
+      <div className="absolute inset-0 bg-black bg-gradient-to-b from-slate-950/70 via-gray-900 to-black"></div>
       {/* Decorative atom diagrams */}
       <div className="absolute top-0 right-0 translate-x-[60%] -translate-y-[30%] opacity-[2%] mix-blend-screen">
         <AtomDiagram width={3000} height={3000} color="rgba(18,110,119,1)" />
@@ -142,7 +142,7 @@ export const AlternativeTeamSection: React.FC<TeamSectionProps> = ({
             <div className="w-[10%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mt-6 opacity-20 absolute bottom-0 left-[50%] translate-x-[-50%] " />
           </h1>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center max-w-6xl lg:mx-auto mt-12 md:px-[12vw] lg:px-0">
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-8 lg:gap-x-12 justify-items-center md:max-w-[calc(580px+2rem)] lg:max-w-[calc(870px+2rem)]">
           {teamMembers.map((member) => (
             <TeamMemberCard key={member.id} member={member} />
           ))}
@@ -156,12 +156,12 @@ export const AlternativeTeamSection: React.FC<TeamSectionProps> = ({
           className="text-center relative pt-16 lg:pt-24 flex flex-col items-center justify-center pb-8 lg:pb-12 2xl:pb-16"
         >
           <h2 className="text-center bg-gradient-to-br from-mintAccent/30 via-gray-500/40 to-lightGrey/30 bg-clip-text text-transparent text-2xl lg:text-3xl 2xl:text-4xl font-Poppins font-light relative">
-            alumni
+            a big "thank you" to 
           </h2>
           <div className="text-center bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent relative">
             <span className="text-4xl md:text-5xl 2xl:text-6xl drop-shadow-sm font-bold font-Poppins flex flex-col sm:flex-row items-center justify-center">
-              <span className="mt-2 sm:mt-0 ml-2 text-gray-300/40 bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text">
-                Mariela Mezzina
+              <span className="uppercase mt-2 sm:mt-0 ml-2 text-gray-300/40 bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text">
+                our alumni
               </span>
             </span>
             <div className="relative w-full h-0.5 bg-gradient-to-r from-transparent via-tealAccent to-transparent mt-6 opacity-60"></div>
@@ -169,7 +169,7 @@ export const AlternativeTeamSection: React.FC<TeamSectionProps> = ({
             <div className="w-[6%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mt-6 opacity-20 absolute bottom-0 left-[50%] translate-x-[-50%] " />
           </div>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center max-w-6xl lg:mx-auto mt-4 md:px-[12vw] lg:px-0">
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-8 lg:gap-x-12 justify-items-center md:max-w-[calc(580px+2rem)] lg:max-w-[calc(870px+2rem)] mt-4">
           {alumniMembers.map((member) => (
             <TeamMemberCard key={member.id} member={member} />
           ))}
@@ -181,60 +181,111 @@ export const AlternativeTeamSection: React.FC<TeamSectionProps> = ({
 
 const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
   const [isHovered, setIsHovered] = useState(false);
+
   return (
     <motion.div
-      className="pl-6 pr-5 py-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-tealAccent/10 rounded-lg hover:border-tealAccent/30 transition-all group w-full max-w-xs flex flex-col items-center relative"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.3 }}
+      className="overflow-hidden relative h-[420px] w-[290px] rounded-xl
+      bg-gradient-to-bl from-gray-100/15 to-gray-900/50 backdrop-blur-sm 
+              border border-tealAccent/10 hover:border-tealAccent/30 transition-all group"
+      initial={{ y: 0 }}
+      whileHover={{
+        y: -8,
+        filter: "grayscale(0%)",
+        boxShadow:
+          "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 15px 0 rgba(60, 224, 206, 0.05)",
+      }}
+      transition={{
+        y: { type: "spring", stiffness: 300, damping: 15 },
+        filter: { duration: 0.3 },
+        boxShadow: { duration: 0.3 },
+      }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
+      style={{ filter: isHovered ? "grayscale(0%)" : "grayscale(20%)" }}
     >
-      <div className="w-fit aspect-square rounded-full overflow-hidden border-2 border-tealAccent/20 mb-4 group-hover:border-tealAccent/40 transition-all flex items-center justify-center bg-gray-900/60">
-        <Image
-          src={member.image}
-          alt={member.name}
-          width={120}
-          height={120}
-          className="object-contain object-bottom pt-8 grayscale"
-        />
-      </div>
-      <h3 className="text-xl font-semibold mb-1 bg-lightGrey bg-gradient-to-br from-lightGrey via-gray-900/60 to-gray-300 bg-clip-text text-transparent text-center">
-        {member.name}
-      </h3>
-      <p className="text-gray-400 text-center text-sm mb-4">
-        {member.position}
-      </p>
+      {/* Card background with gradient that changes on hover */}
       <motion.div
-        className="mt-2 flex justify-center space-x-4"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{
-          opacity: isHovered ? 1 : 0,
-          y: isHovered ? 0 : 10,
+        className="absolute inset-0 "
+        initial={{
+          opacity: 0.6,
+          filter: "grayscale(20%)",
         }}
-        transition={{ duration: 0.3, delay: 0.1 }}
+        animate={{
+          opacity: isHovered ? 1 : 0.6,
+          filter: isHovered ? "grayscale(0%)" : "grayscale(20%)",
+        }}
+        transition={{ duration: 0.4 }}
+      />
+
+      {/* Full-size image that spans the entire card (grayscale controlled by parent) */}
+      <div className="absolute inset-0 w-full h-full border-[1px] border-mintAccent/10 rounded-xl">
+        <motion.div
+          className="relative w-full h-full"
+          animate={{
+            scale: isHovered ? 1.05 : 1,
+          }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image
+            src={member.image}
+            alt={member.name}
+            className="w-full h-full object-cover object-top grayscale"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+          />
+        </motion.div>
+      </div>
+
+      {/* White overlay for text area */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-[130px] bg-black bg-gradient-to-b from-slate-950/60 via-gray-800/20 to-gray-950/70 backdrop-blur-xl 
+         border-t-2 rounded-b-xl border-gray-100/60 z-20"
+      ></div>
+
+      {/* Text content */}
+      <div
+        className="absolute bottom-0 left-0 right-0 p-4 text-center z-30
+      border-b-[0.5px] border-r-[0.5px] border-l-[0.5px] rounded-b-xl border-gray-100/40"
       >
-        {member.linkedIn && (
-          <a
-            href={member.linkedIn}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-pinkAccent hover:text-tealAccent transition-colors duration-300"
-            aria-label={`Visit ${member.name}'s LinkedIn profile`}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              fill="currentColor"
-              viewBox="0 0 16 16"
+        <motion.h3
+          className="text-2xl font-semibold leading-tight translate-y-[7%]
+                      bg-lightGrey bg-gradient-to-br from-gray-300/80 via-gray-900/60 to-gray-300/80 bg-clip-text text-transparent"
+        >
+          {member.name}
+        </motion.h3>
+        <p className="text-slate-600">{member.position}</p>
+
+        <motion.div
+          className="mt-4 flex justify-center space-x-4"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{
+            opacity: isHovered ? 1 : 0,
+            y: isHovered ? 0 : 10,
+          }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+        >
+          {member.linkedIn && (
+            <a
+              href={member.linkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pinkAccent hover:text-tealAccent transition-colors duration-300"
+              aria-label={`Visit ${member.name}'s LinkedIn profile`}
             >
-              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-            </svg>
-          </a>
-        )}
-      </motion.div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+              </svg>
+            </a>
+          )}
+        </motion.div>
+      </div>
     </motion.div>
   );
 };
