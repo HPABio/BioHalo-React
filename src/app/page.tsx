@@ -18,6 +18,7 @@ import {
 import { FluorinatedMaterialsSectionV2 } from "@/components/sections2/BioHaloSections/FluorinatedMaterialsSection";
 import { WhatWeDoSection } from "@/components/sections2/BioHaloSections/WhatWeDoSection";
 import { TeamSection } from "@/components/sections2/BioHaloSections/TeamSection";
+import { AlternativeTeamSectionV2 } from "@/components/alternativeLayout/alternativeTeamSectionV2";
 import { PlatformTechnologySection } from "@/components/sections2/BioHaloSections/PlatformTechnologySection";
 import { AlternativeIntroSectionNoBG } from "@/components/alternativeLayout/alternativeIntroSectionNoBG";
 
@@ -469,50 +470,42 @@ export default function AlternativeLayout() {
       {/* Platform Technology Section */}
       <section
         id="platform-technology"
-        className="w-full min-h-[80vh] relative z-10 hidden md:block"
+        className="w-full min-h-[80vh] relative z-10 hidden md:block bg-gradient-to-b from-black via-gray-900 to-black"
       >
         {/* Section detection helper */}
         <div
           className="absolute top-0 h-24 w-full pointer-events-none"
           aria-hidden="true"
         ></div>
-        <PlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
+        <PlatformTechnologySection className="" />
+        <AlternativeTeamSectionV2 className="w-full bg-gradient-to-b from-black/30 via-gray-900 to-black/0" />
       </section>
 
       {/* Mobile Platform Technology Section */}
       <section
         id="mobile-platform-technology"
-        className="w-full min-h-[80vh] relative z-10 block md:hidden"
+        className="w-full min-h-[80vh] relative z-10 block md:hidden bg-gradient-to-b from-black via-gray-900 to-black"
       >
         {/* Section detection helper */}
         <div
           className="absolute top-0 h-24 w-full pointer-events-none"
           aria-hidden="true"
         ></div>
-        <MobilePlatformTechnologySection className="bg-gradient-to-b from-black via-gray-900 to-black" />
+        <MobilePlatformTechnologySection className="" />
+        <AlternativeTeamSectionV2 className="w-full bg-gradient-to-b from-black/30 via-gray-900 to-black/0" />
       </section>
 
 
       {/* Icon Carousel Section - No ID here since it's not in the navigation */}
-      <section className="w-full">
+      <section className="w-full hidden">
         <div className="bg-red-500/0 w-full">
           <div className="w-full h-[400px] pt-10 overflow-hidden flex items-center justify-center">
             <IconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100 hidden sm:block" />
-            <MobileIconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100 block sm:hidden" />
+              
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section id="team-section" className="min-h-[80vh] relative">
-        {/* Section detection helper */}
-        <div
-          className="absolute top-0 h-24 w-full pointer-events-none"
-          aria-hidden="true"
-        ></div>
-
-        <TeamSection className="w-full" />
-      </section>
 
       {/* Contact Section */}
       <section id="contact-section">

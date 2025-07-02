@@ -100,7 +100,7 @@ export const AlternativeTeamSectionV2: React.FC<TeamSectionProps> = ({
   return (
     <section className={`relative py-20 overflow-hidden ${className}`}>
       {/* Background elements */}
-      <div className="absolute inset-0 bg-black bg-gradient-to-b from-slate-950/70 via-gray-900 to-black"></div>
+      <div className="absolute inset-0 "></div>
       {/* Decorative atom diagrams */}
       <div className="absolute top-0 right-0 translate-x-[60%] -translate-y-[30%] opacity-[2%] mix-blend-screen">
         <AtomDiagram width={3000} height={3000} color="rgba(18,110,119,1)" />
@@ -169,7 +169,7 @@ export const AlternativeTeamSectionV2: React.FC<TeamSectionProps> = ({
             <div className="w-[6%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mt-6 opacity-20 absolute bottom-0 left-[50%] translate-x-[-50%] " />
           </div>
         </motion.div>
-        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-8 lg:gap-x-12 justify-items-center md:max-w-[calc(580px+2rem)] lg:max-w-[calc(870px+2rem)] mt-4">
+        <div className="mx-auto flex flex-col justify-center items-center">
           {alumniMembers.map((member) => (
             <TeamMemberCard key={member.id} member={member} />
           ))}

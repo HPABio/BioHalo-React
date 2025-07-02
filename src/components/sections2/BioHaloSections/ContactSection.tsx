@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Linkedin } from "lucide-react";
 import AtomDiagram from "@/components/ui/AtomDiagram";
 import Link from "next/link";
+import BioHaloLogoOnly from "@/assets/BioHaloLogoOnly.svg";
+import Image from "next/image";
 
 interface ContactSectionProps {
   className?: string;
@@ -31,16 +33,35 @@ export const ContactSection = ({ className = "" }: ContactSectionProps) => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="uppercase bg-gradient-to-r from-tealAccent via-teal-500 to-tealAccent bg-clip-text text-transparent drop-shadow-sm font-black font-Poppins">
-              Get in Touch
-            </span>
+          <h2 className="text-center bg-gradient-to-br from-mintAccent/30 via-gray-500/40 to-lightGrey/30 bg-clip-text text-transparent text-2xl lg:text-3xl 2xl:text-4xl font-Poppins font-light relative">
+            to get in touch with
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            We're excited to hear from you! Reach out to us with any questions,
-            partnership inquiries, or just to say hello.
-          </p>
+          <h1 className="text-center bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent relative">
+            <span className="text-5xl md:text-6xl 2xl:text-7xl drop-shadow-sm font-bold font-Poppins flex flex-col sm:flex-row items-center justify-center">
+              <Image
+                src={BioHaloLogoOnly}
+                alt="BioHalo Logo"
+                className="h-[0.8em] sm:h-[1em] w-auto sm:ml-4"
+              />
+              <span className="mt-2 sm:mt-0 ml-2 text-gray-300/40 bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text">
+                BioHalo
+              </span>
+            </span>
+            <span
+              className="text-5xl md:text-6xl 2xl:text-7xl uppercase drop-shadow-sm font-normal font-Poppins
+              bg-gradient-to-br from-mintAccent/60 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparentt"
+            >
+              reach out to us via
+              <br />
+            </span>
+            <div className="relative w-full max-w-2xl mx-auto h-0.5 bg-gradient-to-r from-transparent via-tealAccent to-transparent mt-6 opacity-60"></div>
+            <div className="w-[30%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mt-6 opacity-20 absolute bottom-0 left-[50%] translate-x-[-50%] " />
+            <div className="w-[10%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mt-6 opacity-20 absolute bottom-0 left-[50%] translate-x-[-50%] " />
+          </h1>
         </motion.div>
+          <p className="text-gray-400 max-w-2xl mx-auto w-full text-center my-12">
+            Say <b>"hello"</b> to us! We're excited to hear from you.
+          </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {/* Email address card */}
