@@ -113,7 +113,7 @@ export const ShowcaseNavbar = () => {
       // Get the element's position with offset for the fixed header
       // The 80px offset accounts for the navbar height
       const yPosition =
-        targetElement.getBoundingClientRect().top + window.scrollY - 80;
+        targetElement.getBoundingClientRect().top + window.scrollY;
       console.log("targetElement:", targetElement);
       console.log("yPosition:", yPosition);
 

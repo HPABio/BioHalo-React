@@ -156,12 +156,12 @@ export const AlternativeTeamSectionV2: React.FC<TeamSectionProps> = ({
           className="text-center relative pt-16 lg:pt-24 flex flex-col items-center justify-center pb-8 lg:pb-12 2xl:pb-16"
         >
           <h2 className="text-center bg-gradient-to-br from-mintAccent/30 via-gray-500/40 to-lightGrey/30 bg-clip-text text-transparent text-2xl lg:text-3xl 2xl:text-4xl font-Poppins font-light relative">
-            a big "thank you" to 
+            a big "<b>thank you</b>" to 
           </h2>
           <div className="text-center bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent relative">
             <span className="text-4xl md:text-5xl 2xl:text-6xl drop-shadow-sm font-bold font-Poppins flex flex-col sm:flex-row items-center justify-center">
               <span className="uppercase mt-2 sm:mt-0 ml-2 text-gray-300/40 bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text">
-                our alumni
+                our alumnis
               </span>
             </span>
             <div className="relative w-full h-0.5 bg-gradient-to-r from-transparent via-tealAccent to-transparent mt-6 opacity-60"></div>

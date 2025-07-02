@@ -734,9 +734,7 @@ export const HeroSection4 = ({
                   );
                   if (targetElement) {
                     const yPosition =
-                      targetElement.getBoundingClientRect().top +
-                      window.scrollY -
-                      80;
+                      targetElement.getBoundingClientRect().top;
                     window.scrollTo({
                       top: yPosition,
                       behavior: "smooth",
@@ -763,8 +761,7 @@ export const HeroSection4 = ({
                   if (targetElement) {
                     const yPosition =
                       targetElement.getBoundingClientRect().top +
-                      window.scrollY -
-                      80;
+                      window.scrollY;
                     window.scrollTo({
                       top: yPosition,
                       behavior: "smooth",

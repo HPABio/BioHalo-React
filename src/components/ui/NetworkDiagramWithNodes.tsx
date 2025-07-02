@@ -40,7 +40,7 @@ const NetworkDiagramWithNodes: React.FC<NetworkDiagramWithNodesProps> = ({
 
   return (
     <div
-      className={`bg-gray-800/0 px-8 rounded-lg shadow-lg w-full flex justify-center ${width} ${className}`}
+      className={`bg-gray-800/0 px-8 rounded-lg w-full flex justify-center ${width} ${className}`}
     >
       <div className="w-full flex flex-col gap-0 relative max-w-[550px] ">
         {/* First row: 5 square divs */}

@@ -306,7 +306,7 @@ export const PlatformTechnologySection = ({
           ></div>
 
           {/* Background decorative elements */}
-          <div className="absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute inset-0 -z-10 overflow-visible">
             <div className="absolute top-0 left-0 w-64 h-64 bg-tealAccent/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
             <div className="absolute top-1/4 right-0 w-80 h-80 bg-tealAccent/10 rounded-full blur-3xl transform translate-x-1/3"></div>
             <div className="absolute bottom-1/3 left-1/4 w-40 h-40 bg-pinkAccent/5 rounded-full blur-xl"></div>

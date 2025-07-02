@@ -478,7 +478,10 @@ export default function AlternativeLayout() {
           aria-hidden="true"
         ></div>
         <PlatformTechnologySection className="" />
+        <div className="w-full h-fit"
+        id="team-section">
         <AlternativeTeamSectionV2 className="w-full bg-gradient-to-b from-black/30 via-gray-900 to-black/0" />
+        </div>
       </section>
 
       {/* Mobile Platform Technology Section */}
@@ -492,7 +495,10 @@ export default function AlternativeLayout() {
           aria-hidden="true"
         ></div>
         <MobilePlatformTechnologySection className="" />
+        <div className="w-full h-fit"
+        id="mobile-team-section">
         <AlternativeTeamSectionV2 className="w-full bg-gradient-to-b from-black/30 via-gray-900 to-black/0" />
+        </div>
       </section>
 
 
