@@ -74,7 +74,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 8,
     name: "Artemis Talliou",
-    position: "Junior Operations Associate",
+    position: "Business Development Associate",
     image: artemisImage,
     linkedIn: "https://www.linkedin.com/in/artemis-talliou/",
   },
