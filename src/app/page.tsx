@@ -116,7 +116,7 @@ import { AlternativeFluorinatedMaterialsSection } from "@/components/alternative
 import AtomDiagram from "@/components/ui/AtomDiagram";
 import { BentoIntroNoBG } from "@/components/bentos/Gen_3_Bentos/BentoIntroNoBG";
 import { MobileBentoIntroNoBG } from "@/components/mobileVersion/mobileBentoIntroNoBG";
-import FluorineElement from "@/components/alternativeLayout/FluorineElement";
+import { CoatingFocusSection } from "@/components/sections2/BioHaloSections/CoatingFocusSection";
 
 // Memoize static sections to prevent re-renders
 const MemoizedTransitionSectionFour = memo(TransitionSectionFour);
@@ -164,6 +164,26 @@ const letterImagesBlackLiquid = [
 ];
 
 // Copy all the content from page.tsx here
+const stats = [
+  {
+    prefix: ">",
+    number: "4.4",
+    suffix: "M tons",
+    label: "Harmful chemicals entering our environment annually",
+  },
+  {
+    prefix: "+",
+    number: "25",
+    suffix: "bn €",
+    label: "Global Annual PFAS Coating Market",
+  },
+  {
+    prefix: "+",
+    number: "3000",
+    suffix: " years",
+    label: "Environmental Persistence",
+  },
+];
 
 export default function AlternativeLayout() {
   const ref4 = useRef(null);
@@ -297,15 +317,8 @@ export default function AlternativeLayout() {
         </div>
       </section>
 
-      {/* Fluorinated Materials Section */}
-      <section
-        className="relative w-full h-full overflow-hidden z-20 border-2 border-black"
-        id="fluorinated-materials-section"
-      >
-        <AlternativeFluorinatedMaterialsSection
-          className="relative w-full h-full overflow-hidden z-20 pt-12"
-        />
-      </section>
+      {/* Modular Coatings Focus Section */}
+      <CoatingFocusSection stats={stats} />
 
       {/* Team Section */}
       <section
