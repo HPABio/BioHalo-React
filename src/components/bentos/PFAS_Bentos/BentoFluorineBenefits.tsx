@@ -23,10 +23,10 @@ export function BentoPeriodicTable({ className }: { className?: string }) {
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="flex items-center justify-center flex-col w-full h-full">
           {/* <h3 className="text-7xl font-semibold bg-gradient-to-br from-mintAccent to-teal-100/30 text-transparent bg-clip-text uppercase text-bold">Bio
-          <span className='text-pinkAccent font-bold '>&lsaquo;F&rsaquo;</span>Polymers</h3> */}
+          <span className='text-tealAccent font-bold '>&lsaquo;F&rsaquo;</span>Polymers</h3> */}
           <h3 className="text-8xl  font-semibold bg-gradient-to-br from-tealAccent/70 to-tealAccent  text-transparent bg-clip-text text-bold text-center uppercase">
             Our Bio
-            <span className="bg-gradient-to-bl from-pinkAccent via-pinkAccent to-red-800 text-transparent bg-clip-text font-bold ">
+            <span className="bg-gradient-to-bl from-tealAccent via-tealAccent to-blue-900 text-transparent bg-clip-text font-bold ">
               F
             </span>
             <br />

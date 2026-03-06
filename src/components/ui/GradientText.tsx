@@ -1,5 +1,5 @@
 'use client'
-const gradient1 = 'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-purple-500 via-teal-500 to-red-500'
+const gradient1 = 'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-blue-500 via-teal-500 to-red-500'
 
 export function GradientText({ 
   text, 

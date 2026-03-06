@@ -87,7 +87,7 @@ export function PollutionSection2({
             The Consequences of
             <br /> pollution can be
             <br />
-            <span className="bg-gradient-to-t from-pinkAccent to-tealAccent/30 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-t from-tealAccent to-tealAccent/30 bg-clip-text text-transparent">
               devastating
               <br />
             </span>
@@ -104,7 +104,7 @@ export function PollutionSection2({
             The Consequences of
             <br /> pollution can be
             <br />
-            <span className="bg-gradient-to-t from-pinkAccent to-tealAccent/30 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-t from-tealAccent to-tealAccent/30 bg-clip-text text-transparent">
               devastating
               <br />
             </span>

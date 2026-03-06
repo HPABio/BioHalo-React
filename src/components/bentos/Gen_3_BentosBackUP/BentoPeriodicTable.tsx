@@ -24,7 +24,7 @@ export function BentoPeriodicTable({ className }: { className?: string }) {
             Due to their durability and resistance these compounds are also
             known as
           </h3>
-          <h3 className="text-8xl font-bold bg-gradient-to-r from-pinkAccent to-red-800 text-transparent bg-clip-text text-center mt-4">
+          <h3 className="text-8xl font-bold bg-gradient-to-r from-tealAccent to-blue-900 text-transparent bg-clip-text text-center mt-4">
             FOREVER CHEMICALS
           </h3>
         </div>

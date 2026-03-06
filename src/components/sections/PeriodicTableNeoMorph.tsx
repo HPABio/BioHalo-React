@@ -142,7 +142,7 @@ const elements: Element[] = [
 const TILE_BG = '#f8f8f8'         // Match specified background
 const HALOGEN_BG = '#225566'      // Special background for halogens - ADJUSTABLE (tealAccent)
 const HALOGEN_TEXT = '#BCE2E2'    // Special text color for halogens - ADJUSTABLE (mintAccent)
-const FLUORINE_BG = '#E10C73'     // Special background for fluorine - ADJUSTABLE (pinkAccent)
+const FLUORINE_BG = '#E10C73'     // Special background for fluorine - ADJUSTABLE (tealAccent)
 const FLUORINE_TEXT = '#FFFFFF'   // Special text color for fluorine - ADJUSTABLE
 
 // Neomorphic shadow variables
@@ -261,7 +261,7 @@ function ElementTile({ element }: { element: Element }) {
         >
           <div className="space-y-1.5">
             <div className="flex items-center justify-between">
-              <h4 className="text-[clamp(12px,1.2vw,14px)] font-semibold text-pinkAccent">Fluorine (F)</h4>
+              <h4 className="text-[clamp(12px,1.2vw,14px)] font-semibold text-tealAccent">Fluorine (F)</h4>
               <span className="text-[clamp(10px,1vw,12px)] text-gray-500">Atomic number: 9</span>
             </div>
             <p className="text-[clamp(11px,1.1vw,13px)] text-gray-600">

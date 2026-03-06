@@ -64,7 +64,7 @@ const features = [
       "We utilize biological systems and renewable resources to create sustainable fluorinated polymers.",
   },
   {
-    icon: <Droplet className="w-6 h-6 text-pinkAccent" />,
+    icon: <Droplet className="w-6 h-6 text-tealAccent" />,
     title: "Reduced Fluorine Usage",
     description:
       "Our technology requires significantly less fluorine while maintaining or enhancing material performance.",

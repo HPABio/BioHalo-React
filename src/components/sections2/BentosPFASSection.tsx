@@ -46,7 +46,7 @@ export const BentosPFASSection = ({ className }: { className?: string }) => {
               <br />
               <span className="">and produce, unmatched</span>
               <br />
-              <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-tr from-tealAccent to-tealAccent/60 bg-clip-text text-transparent">
                 new-to-market{" "}
               </span>{" "}
               <br className="hidden lg:block xl:hidden" />

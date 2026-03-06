@@ -26,7 +26,7 @@ export const BentoPFASOverview = ({ className }: { className?: string }) => {
       </div>
       <div className="w-full relative z-10 mt-12">
         <motion.h2 
-          className="text-4xl font-bold mb-4 text-pink-950"
+          className="text-4xl font-bold mb-4 text-teal-950"
           variants={{
             hover: {
               color: "rgb(209 213 219)" // gray-300

@@ -70,7 +70,7 @@ export const Showcase2 = () => {
       prefix: ">",
       label: (
         <>
-          <span className="text-4xl font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+          <span className="text-4xl font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
             Contaminated
           </span>
           <br />
@@ -95,7 +95,7 @@ export const Showcase2 = () => {
       label: (
         <>
           <span className="text-5xl uppercase font-normal">tons of </span>
-          <span className="text-5xl uppercase font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+          <span className="text-5xl uppercase font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
             Fluoropolymers
           </span>
           <br />
@@ -188,7 +188,7 @@ export const Showcase2 = () => {
         <div className="hidden xl:flex 2xl:hidden w-[50px] h-[50px] rounded-full bg-blue-500  items-center justify-center">
           XL
         </div>
-        <div className="hidden 2xl:flex w-[50px] h-[50px] rounded-full bg-purple-500  items-center justify-center">
+        <div className="hidden 2xl:flex w-[50px] h-[50px] rounded-full bg-blue-500  items-center justify-center">
           2XL
         </div>
       </div>

@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 pb-6 bg-gradient-to-r from-tealAccent to-pinkAccent bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-8 pb-6 bg-gradient-to-r from-tealAccent to-tealAccent bg-clip-text text-transparent">
             Privacy Policy
           </h1>
 
@@ -165,7 +165,7 @@ export default function PrivacyPolicy() {
                 To exercise these rights, please contact us at{" "}
                 <a
                   href="mailto:info@BioHalo.io"
-                  className="text-tealAccent hover:text-pinkAccent"
+                  className="text-tealAccent hover:text-tealAccent"
                 >
                   info@BioHalo.io
                 </a>
@@ -245,7 +245,7 @@ export default function PrivacyPolicy() {
                 Privacy Policy or our data practices, please contact us at{" "}
                 <a
                   href="mailto:info@BioHalo.io"
-                  className="text-tealAccent hover:text-pinkAccent"
+                  className="text-tealAccent hover:text-tealAccent"
                 >
                   info@BioHalo.io
                 </a>

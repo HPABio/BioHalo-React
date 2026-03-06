@@ -20,7 +20,7 @@ export default function TestBed() {
       <section className="w-screen h-screen flex items-center justify-center  bg-lightGrey">
         <div className="top-0 left-0 w-full h-full flex flex-row items-center justify-between gap-8 p-12 max-w-[1800px]">
           <div className="w-1/2 bg-yellow-300/0">
-            <h1 className="text-7xl lg:text-9xl font-bold mb-4 bg-gradient-to-r from-pink-500 via-teal-400 to-mint-400 bg-clip-text text-transparent uppercase">
+            <h1 className="text-7xl lg:text-9xl font-bold mb-4 bg-gradient-to-r from-teal-500 via-teal-400 to-mint-400 bg-clip-text text-transparent uppercase">
               PFAS
             </h1>
             <h2 className="text-xl lg:text-4xl mb-6">
@@ -33,7 +33,7 @@ export default function TestBed() {
             </p>
           </div>
           <div className="w-1/2">
-            <div className="w-full h-full max-w-[600px] aspect-square rounded-lg overflow-hidden shadow-xl flex items-center justify-center bg-purple-500/0">
+            <div className="w-full h-full max-w-[600px] aspect-square rounded-lg overflow-hidden shadow-xl flex items-center justify-center bg-blue-500/0">
               {/* <PfasMolecule className="w-full px-12"/>   */}
               <div className="relative w-full h-full  bg-yellow-500/0">
                 {/*       <div className="absolute top-0 left-0 w-full h-full blur-sm blend-multiply">
@@ -102,10 +102,10 @@ export default function TestBed() {
             </div>
           </div>
           <div className="w-1/2 pl-12">
-            <h1 className="text-4xl lg:text-7xl 2xl:text-9xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-blue-400 to-cyan-400 bg-clip-text text-transparent uppercase">
+            <h1 className="text-4xl lg:text-7xl 2xl:text-9xl font-bold mb-4 bg-gradient-to-r from-blue-500 via-blue-400 to-cyan-400 bg-clip-text text-transparent uppercase">
               they are everywhere
             </h1>
-            <h2 className="text-xl lg:text-4xl 3xl:text-6xl text-purple-600 mb-6">
+            <h2 className="text-xl lg:text-4xl 3xl:text-6xl text-blue-600 mb-6">
               Due to their specific properties...
             </h2>
             <p className="text-gray-600 leading-relaxed">
@@ -118,7 +118,7 @@ export default function TestBed() {
         </div>
       </section>
       {/* Section 5 - Image Right */}
-      <section className="w-screen h-screen bg-purple-500 relative">
+      <section className="w-screen h-screen bg-blue-500 relative">
         <div className="absolute top-0 left-0 w-full h-full flex items-center justify-between p-12 bg-lightGrey">
           <div className="w-1/2 pr-12">
             <h1 className="text-4xl lg:text-7xl 2xl:text-9xl font-bold mb-4 bg-gradient-to-r from-indigo-500 via-purple-400 to-pink-400 bg-clip-text text-transparent uppercase">

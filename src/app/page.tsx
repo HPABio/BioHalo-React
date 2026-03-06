@@ -165,145 +165,7 @@ const letterImagesBlackLiquid = [
 
 // Copy all the content from page.tsx here
 const stats = [
-  {
-    number: "10000",
-    prefix: ">",
-    suffix: "",
-    label: (
-      <>
-        <span
-          className="text-lg md:text-xl lg:text-2xl xl:text-4xl  uppercase font-bold text-center bg-gradient-to-bl 
-        from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent"
-        >
-          fluorinated compounds
-        </span>{" "}
-        <br /> are already known
-      </>
-    ),
-  },
-  {
-    number: "25",
-    prefix: "+",
-    suffix: "bn €",
-    label: "Global Annual PFAS Market",
-  },
-  {
-    number: "20000",
-    prefix: ">",
-    label: (
-      <>
-        <span className="text-4xl font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
-          Contaminated
-        </span>
-        <br />
-        Sites in Europe alone
-      </>
-    ),
-  },
-  {
-    number: "50",
-    prefix: "+",
-    suffix: "bn€",
-    label: "Health-Related Costs",
-  },
-  {
-    number: "49",
-    prefix: "+",
-    suffix: (
-      <>
-        <span className="text-4xl md:text-7xl ">k</span>
-      </>
-    ),
-    label: (
-      <>
-        <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-normal">
-          tons of{" "}
-        </span>
-        <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
-          Fluoropolymers
-        </span>
-        <br />
-        <span className="font-normal text-lg md:text-2xl lg:text-3xl">
-          Are Exported from the EU annually
-        </span>
-      </>
-    ),
-    note: (
-      <>
-        <span className="text-5xl font-normal">
-          Europe is a net exporter of fluoropolymers, with 49,000 tonnes
-          estimated to be produced annually in the EU28/EEA, 24,000 tonnes
-          exported outside of the EU28/EEA, and around 15,000 tonnes imported.
-        </span>
-      </>
-    ),
-    link_source:
-      "https://fluoropolymers.eu/wp-content/uploads/2023/12/Fluoropolymers_SEA_2022.pdf",
-  },
-  {
-    number: "3000",
-    prefix: "+",
-    suffix: " years",
-    label: "Maximum Environmental Persistence",
-  },
-  {
-    number: "500",
-    prefix: "+",
-    suffix: "",
-    label: "",
-  },
-  {
-    number: "4.4",
-    prefix: "+",
-    suffix: "",
-    label: (
-      <>
-        <span
-          className="text-center text-4xl lowercase
-              font-bold bg-gradient-to-tl from-tealAccent to-lightGrey bg-clip-text text-transparent"
-        >
-          million tons
-        </span>
-      </>
-    ),
-  },
-  {
-    number: "49",
-    prefix: "+",
-    suffix: (
-      <>
-        <span className="text-4xl md:text-7xl ">k</span>
-      </>
-    ),
-    label: (
-      <>
-        <span className="text-sm lg:text-2xl  uppercase font-normal  text-center">
-          tons of{" "}
-        </span>
-        <span
-          className="text-sm lg:text-2xl  uppercase font-bold text-center bg-gradient-to-bl 
-        from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent"
-        >
-          Fluoropolymers
-        </span>
-        <br />
-        <span className="font-normal text-base lg:text-lg">
-          Are Exported from the EU annually
-        </span>
-      </>
-    ),
-    note: (
-      <>
-        <span className="text-5xl font-normal">
-          Europe is a net exporter of fluoropolymers, with 49,000 tonnes
-          estimated to be produced annually in the EU28/EEA, 24,000 tonnes
-          exported outside of the EU28/EEA, and around 15,000 tonnes imported.
-        </span>
-      </>
-    ),
-    link_source:
-      "https://fluoropolymers.eu/wp-content/uploads/2023/12/Fluoropolymers_SEA_2022.pdf",
-  },
+  // Hiding stats for now
 ];
 
 export default function AlternativeLayout() {
@@ -338,7 +200,7 @@ export default function AlternativeLayout() {
         className="relative w-screen max-h-[120vh] z-10 "
         id="transition-section-one"
       >
-        <FluorineElement />
+        {/* <FluorineElement /> */}
         {/* Enzyme Image right */}
         <div
           className="absolute w-[80vw] h-[80vw] max-w-[1450px] 
@@ -370,18 +232,18 @@ export default function AlternativeLayout() {
 
       <section className="w-full h-[250px] md:h-[400px] top-0 left-0 z-10 mt-2 relative overflow-hidden
 ">
-                  <div className="w-[2400px] aspect-square xl:scale-x-[1.2] 2xl:scale-x-[2] bottom-0 left-[50%] translate-x-[-50%] absolute " 
-                  style={{
-                    maskImage: "radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 65%, rgba(0,0,0,1) 70%)",
-                    backgroundSize: "contain",
-                    backgroundPosition: "center center",
-                    backgroundRepeat: "no-repeat",
-                }}>
+        <div className="w-[2400px] aspect-square xl:scale-x-[1.2] 2xl:scale-x-[2] bottom-0 left-[50%] translate-x-[-50%] absolute "
+          style={{
+            maskImage: "radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 65%, rgba(0,0,0,1) 70%)",
+            backgroundSize: "contain",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+          }}>
 
-                  <div className="w-full h-[800px] translate-y-[400px]
+          <div className="w-full h-[800px] translate-y-[400px]
                   absolute bottom-0 left-0 flex items-center justify-center
                   bg-gray-300 bg-gradient-to-br from-mintAccent via-mintAccent/60 to-tealAccent" />
-                </div>
+        </div>
       </section>
 
       {/* Blueprint Section */}
@@ -389,36 +251,37 @@ export default function AlternativeLayout() {
         className="relative w-full  overflow-hidden z-0 font-poppins
         bg-gradient-to-tl from-slate-800 via-tealAccent/60 to-slate-300/40
         ">
-          <div className="w-full h-[250px] md:h-[400px] top-0 left-0 relative overflow-hidden">
-                  <div className="w-[2400px] aspect-square xl:scale-x-[1.2] 2xl:scale-x-[2]  -top-0 left-[50%] translate-x-[-50%] absolute " 
-                  style={{
-                    maskImage: "radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 65%, rgba(0,0,0,1) 70%)",
-                    backgroundSize: "contain",
-                    backgroundPosition: "center center",
-                    backgroundRepeat: "no-repeat",}}>
+        <div className="w-full h-[250px] md:h-[400px] top-0 left-0 relative overflow-hidden">
+          <div className="w-[2400px] aspect-square xl:scale-x-[1.2] 2xl:scale-x-[2]  -top-0 left-[50%] translate-x-[-50%] absolute "
+            style={{
+              maskImage: "radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 65%, rgba(0,0,0,1) 70%)",
+              backgroundSize: "contain",
+              backgroundPosition: "center center",
+              backgroundRepeat: "no-repeat",
+            }}>
 
-                  <div className="w-full h-[800px] translate-y-[-400px]
+            <div className="w-full h-[800px] translate-y-[-400px]
                   absolute top-0 left-0 flex items-center justify-center
                   bg-gray-300 bg-gradient-to-br from-mintAccent via-mintAccent/60 to-tealAccent" />
-                </div>
-      </div>
-          
-        
-        <div className="w-screen mx-auto flex flex-col items-end justify-center -mt-44 relative"
-        style={{
-          willChange: "transform",
+          </div>
+        </div>
 
-        }}>
-          <div className="w-full h-[400px] absolute top-[50%] translate-y-[-50%]
-          scale-[1.5]"
+
+        <div className="w-screen mx-auto flex flex-col items-end justify-center -mt-44 relative"
           style={{
             willChange: "transform",
-            backgroundImage: `url(${PfasBP.src})`,
-            backgroundSize: "contain",
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-            opacity: 0.05,
-          }}/>
+
+          }}>
+          <div className="w-full h-[400px] absolute top-[50%] translate-y-[-50%]
+          scale-[1.5]"
+            style={{
+              willChange: "transform",
+              backgroundImage: `url(${PfasBP.src})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center center",
+              backgroundRepeat: "no-repeat",
+              opacity: 0.05,
+            }} />
           {/* <BentoIntroNoBG className="w-full max-w-[650px] mx-auto bg-mint-60" /> */}
           <AlternativeIntroSectionNoBG className="w-full max-w-[650px] mx-auto hidden md:block" />
           <MobileBentoIntroNoBG className="w-full max-w-[650px] mx-auto block md:hidden" />
@@ -448,7 +311,7 @@ export default function AlternativeLayout() {
         />
       </section>
 
-      {/* Mobile What We Do Section */}
+      {/* Mobile What We Do Section 
       <section
         className="relative w-full h-full block sm:hidden"
         id="mobile-what-we-do"
@@ -458,14 +321,16 @@ export default function AlternativeLayout() {
           stats={stats}
         />
       </section>
+      */}
 
-      {/* Desktop What We Do Section */}
+      {/* Desktop What We Do Section 
       <section
         className="relative w-full h-full hidden sm:block"
         id="what-we-do"
       >
         <AlternativeWhatWeDoSection className="relative w-full h-full overflow-hidden pt-20 hidden sm:block" />
       </section>
+      */}
 
       {/* Platform Technology Section */}
       <section
@@ -477,10 +342,10 @@ export default function AlternativeLayout() {
           className="absolute top-0 h-24 w-full pointer-events-none"
           aria-hidden="true"
         ></div>
-        <PlatformTechnologySection className="" />
+        {/* <PlatformTechnologySection className="" /> */}
         <div className="w-full h-fit"
-        id="team-section">
-        <AlternativeTeamSectionV2 className="w-full bg-gradient-to-b from-black/30 via-gray-900 to-black/0" />
+          id="team-section">
+          <AlternativeTeamSectionV2 className="w-full bg-gradient-to-b from-black/30 via-gray-900 to-black/0" />
         </div>
       </section>
 
@@ -494,10 +359,10 @@ export default function AlternativeLayout() {
           className="absolute top-0 h-24 w-full pointer-events-none"
           aria-hidden="true"
         ></div>
-        <MobilePlatformTechnologySection className="" />
+        {/* <MobilePlatformTechnologySection className="" /> */}
         <div className="w-full h-fit"
-        id="mobile-team-section">
-        <AlternativeTeamSectionV2 className="w-full bg-gradient-to-b from-black/30 via-gray-900 to-black/0" />
+          id="mobile-team-section">
+          <AlternativeTeamSectionV2 className="w-full bg-gradient-to-b from-black/30 via-gray-900 to-black/0" />
         </div>
       </section>
 
@@ -507,7 +372,7 @@ export default function AlternativeLayout() {
         <div className="bg-red-500/0 w-full">
           <div className="w-full h-[400px] pt-10 overflow-hidden flex items-center justify-center">
             <IconCarousel className="w-[1200px] h-[1200px] mx-auto mt-[50px] scale-[0.5] md:scale-100 hidden sm:block" />
-              
+
           </div>
         </div>
       </section>

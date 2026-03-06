@@ -12,7 +12,7 @@ export function BentoVideo({ className }: { className?: string }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       whileHover="hover"
-      className={`group col-span-1 row-span-1 relative overflow-hidden rounded-3xl bg-pinkAccent cursor-pointer ${className}`}
+      className={`group col-span-1 row-span-1 relative overflow-hidden rounded-3xl bg-tealAccent cursor-pointer ${className}`}
     >
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       <motion.div

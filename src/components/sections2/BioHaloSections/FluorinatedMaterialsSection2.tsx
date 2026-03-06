@@ -100,7 +100,7 @@ export function FluorinatedMaterialsSection2({
           </h1>
           <p className="text-gray-400 max-w-3xl mx-auto text-sm sm:text-base md:text-lg">
             Harnessing the potential of biology for controlled{" "}
-            <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+            <span className="font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
               fluorination
             </span>{" "}
             which is deemed impossible by chemical approaches

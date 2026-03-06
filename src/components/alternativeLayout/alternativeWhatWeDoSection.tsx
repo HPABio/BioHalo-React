@@ -64,7 +64,7 @@ export function AlternativeWhatWeDoSection({ className }: { className?: string }
               </h2>
               <h2
                 className="font-poppins leading-tight font-black font-poppin relative uppercase
-                   bg-clip-text text-transparent bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 
+                   bg-clip-text text-transparent bg-gradient-to-r from-slate-800 via-tealAccent to-slate-800 
                           text-[clamp(1.1rem,4vw,4rem)] text-center text-nowrap"
               >
                 forever chemicals
@@ -102,7 +102,7 @@ export function AlternativeWhatWeDoSection({ className }: { className?: string }
                 >
                   we selectively halogenate organic molecules, opening up new
                   possibilities for{" "}<br/>
-                  <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent font-semibold">
+                  <span className="bg-gradient-to-tr from-tealAccent to-tealAccent/60 bg-clip-text text-transparent font-semibold">
                     fluorine
                   </span>
                   -based chemistry.
@@ -323,7 +323,7 @@ export function AlternativeWhatWeDoSection({ className }: { className?: string }
                       <p className="text-lg hidden">
                       BioHalos revolutionary enzyme-based biohalogenation platform
                       offers you near limitless possibilities for{" "}
-                      <span className="bg-gradient-to-tr from-pinkAccent to-red-900/80 bg-clip-text text-transparent ">
+                      <span className="bg-gradient-to-tr from-tealAccent to-blue-900/80 bg-clip-text text-transparent ">
                         fluorine
                       </span>
                       -enhanced compound development.

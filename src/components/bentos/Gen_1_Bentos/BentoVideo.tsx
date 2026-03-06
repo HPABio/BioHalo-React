@@ -9,7 +9,7 @@ export function BentoVideo() {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="group col-span-1 row-span-1 relative overflow-hidden rounded-3xl bg-pinkAccent cursor-pointer"
+      className="group col-span-1 row-span-1 relative overflow-hidden rounded-3xl bg-tealAccent cursor-pointer"
     >
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       <div className="relative h-full p-6 flex flex-col justify-between">

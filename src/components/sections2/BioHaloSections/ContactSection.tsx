@@ -38,13 +38,8 @@ export const ContactSection = ({ className = "" }: ContactSectionProps) => {
           </h2>
           <h1 className="text-center bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent relative">
             <span className="text-5xl md:text-6xl 2xl:text-7xl drop-shadow-sm font-bold font-Poppins flex flex-col sm:flex-row items-center justify-center">
-              <Image
-                src={BioHaloLogoOnly}
-                alt="BioHalo Logo"
-                className="h-[0.8em] sm:h-[1em] w-auto sm:ml-4"
-              />
               <span className="mt-2 sm:mt-0 ml-2 text-gray-300/40 bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text">
-                BioHalo
+                Johann
               </span>
             </span>
             <span
@@ -59,9 +54,9 @@ export const ContactSection = ({ className = "" }: ContactSectionProps) => {
             <div className="w-[10%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mt-6 opacity-20 absolute bottom-0 left-[50%] translate-x-[-50%] " />
           </h1>
         </motion.div>
-          <p className="text-gray-400 max-w-2xl mx-auto w-full text-center my-12">
-            Say <b>"hello"</b> to us! We're excited to hear from you.
-          </p>
+        <p className="text-gray-400 max-w-2xl mx-auto w-full text-center my-12">
+          Say <b>"hello"</b> to us! We're excited to hear from you.
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {/* Email address card */}
@@ -80,10 +75,10 @@ export const ContactSection = ({ className = "" }: ContactSectionProps) => {
             </h3>
             <div className="text-center">
               <a
-                href="mailto:info@biohalo.io"
+                href="mailto:johann@biohalo.io"
                 className="text-tealAccent hover:text-mintAccent transition-colors text-lg"
               >
-                info@biohalo.io
+                johann@biohalo.io
               </a>
             </div>
           </motion.div>

@@ -22,7 +22,7 @@ export function ScreenSizeDEVTOOL() {
                     <div className="hidden xl:flex 2xl:hidden w-[50px] h-[50px] rounded-full bg-blue-500  items-center justify-center">
                     XL
                     </div>
-                    <div className="hidden 2xl:flex w-[50px] h-[50px] rounded-full bg-purple-500  items-center justify-center">
+                    <div className="hidden 2xl:flex w-[50px] h-[50px] rounded-full bg-blue-500  items-center justify-center">
                     2XL
                     </div>
                 </div>

@@ -76,10 +76,10 @@ export function SplitScreenLayout() {
               gap between the two sides, creating a cohesive design.
             </p>
             <div className="flex space-x-4">
-              <button className="px-6 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700">
+              <button className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-purple-700">
                 Primary Action
               </button>
-              <button className="px-6 py-2 border border-purple-600 text-purple-600 rounded-md hover:bg-purple-50">
+              <button className="px-6 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-purple-50">
                 Secondary
               </button>
             </div>
@@ -149,7 +149,7 @@ export function SplitScreenLayout() {
         <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <div className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
             <svg
-              className="w-8 h-8 text-purple-600"
+              className="w-8 h-8 text-blue-600"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

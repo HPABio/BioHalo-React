@@ -20,7 +20,7 @@ const config: Config = {
         lightGrey: "#F8F8F8",
         mediumGrey: "#CCCCCC",
         darkGrey: "#333333",
-        pinkAccent: "#E10C73",
+        tealAccent: "#E10C73",
         tealAccent: "#225566",
         mintAccent: "#BCE2E2",
 

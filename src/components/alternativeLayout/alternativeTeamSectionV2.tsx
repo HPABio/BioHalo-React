@@ -29,32 +29,18 @@ type TeamMember = {
 // Actual team members data
 const teamMembers: TeamMember[] = [
   {
-    id: 1,
-    name: "Nicolas Krink",
-    position: "Co-founder & CEO",
-    image: nicolasImage,
-    linkedIn: "https://www.linkedin.com/in/nicolaskrink/",
-  },
-  {
-    id: 3,
-    name: "Pablo Nikel",
-    position: "Co-founder",
-    image: pabloImage,
-    linkedIn: "https://www.linkedin.com/in/pabnik/",
-  },
-  {
     id: 4,
     name: "Johann Liebeton",
-    position: "Business Development Lead",
+    position: "Chief Executive Officer",
     image: johannImage,
     linkedIn: "https://www.linkedin.com/in/johannliebeton/",
   },
   {
-    id: 5,
-    name: "Justine Turlin",
-    position: "R&D Project Associate",
-    image: justineImage,
-    linkedIn: "https://www.linkedin.com/in/justine-turlin/",
+    id: 7,
+    name: "Dr. Alberto De Maria",
+    position: "Chief Scientific Officer",
+    image: albertoImage,
+    linkedIn: "https://www.linkedin.com/in/aldema503039157/",
   },
   {
     id: 6,
@@ -63,32 +49,9 @@ const teamMembers: TeamMember[] = [
     image: arthurImage,
     linkedIn: "https://www.linkedin.com/in/arthur-vancolen/",
   },
-  {
-    id: 7,
-    name: "Alberto De Maria",
-    // position: "Head of Science",
-    position: "Chief Scientific Officer",
-    image: albertoImage,
-    linkedIn: "https://www.linkedin.com/in/aldema503039157/",
-  },
-  {
-    id: 8,
-    name: "Artemis Talliou",
-    position: "Business Development Associate",
-    image: artemisImage,
-    linkedIn: "https://www.linkedin.com/in/artemis-talliou/",
-  },
 ];
 
-const alumniMembers: TeamMember[] = [
-  {
-    id: 2,
-    name: "Mariela Mezzina",
-    position: "Co-founder, CSO & COO",
-    image: marielaImage,
-    linkedIn: "https://www.linkedin.com/in/mariela-mezzina/",
-  },
-];
+const alumniMembers: TeamMember[] = [];
 
 interface TeamSectionProps {
   className?: string;
@@ -148,32 +111,7 @@ export const AlternativeTeamSectionV2: React.FC<TeamSectionProps> = ({
           ))}
         </div>
 
-        {/* Alumni Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center relative pt-16 lg:pt-24 flex flex-col items-center justify-center pb-8 lg:pb-12 2xl:pb-16"
-        >
-          <h2 className="text-center bg-gradient-to-br from-mintAccent/30 via-gray-500/40 to-lightGrey/30 bg-clip-text text-transparent text-2xl lg:text-3xl 2xl:text-4xl font-Poppins font-light relative">
-            a big "<b>thank you</b>" to
-          </h2>
-          <div className="text-center bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text text-transparent relative">
-            <span className="text-4xl md:text-5xl 2xl:text-6xl drop-shadow-sm font-bold font-Poppins flex flex-col sm:flex-row items-center justify-center">
-              <span className="uppercase mt-2 sm:mt-0 ml-2 text-gray-300/40 bg-gradient-to-br from-mintAccent/50 via-gray-500/60 to-lightGrey/50 bg-clip-text">
-                our alumni
-              </span>
-            </span>
-            <div className="relative w-full h-0.5 bg-gradient-to-r from-transparent via-tealAccent to-transparent mt-6 opacity-60"></div>
-            <div className="w-[20%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mt-6 opacity-20 absolute bottom-0 left-[50%] translate-x-[-50%] " />
-            <div className="w-[6%] h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mt-6 opacity-20 absolute bottom-0 left-[50%] translate-x-[-50%] " />
-          </div>
-        </motion.div>
-        <div className="mx-auto flex flex-col justify-center items-center">
-          {alumniMembers.map((member) => (
-            <TeamMemberCard key={member.id} member={member} />
-          ))}
-        </div>
+
       </div>
     </section>
   );
@@ -270,7 +208,7 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
               href={member.linkedIn}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-pinkAccent hover:text-tealAccent transition-colors duration-300"
+              className="text-tealAccent hover:text-tealAccent transition-colors duration-300"
               aria-label={`Visit ${member.name}'s LinkedIn profile`}
             >
               <svg

@@ -207,7 +207,7 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
               href={member.linkedIn}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-pinkAccent hover:text-tealAccent transition-colors duration-300"
+              className="text-tealAccent hover:text-tealAccent transition-colors duration-300"
               aria-label={`Visit ${member.name}'s LinkedIn profile`}
             >
               <svg

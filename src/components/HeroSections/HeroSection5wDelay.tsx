@@ -180,7 +180,7 @@ export const HeroSection5wDelay = ({
 
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto capitalize text-gray-500 ">
               Using Enzymes to{" "}
-              <span className="text-pinkAccent bg-gradient-to-bl from-pinkAccent via-pink-500 to-red-900 bg-clip-text text-transparent">
+              <span className="text-tealAccent bg-gradient-to-bl from-tealAccent via-teal-500 to-blue-900 bg-clip-text text-transparent">
                 fluorinate
               </span>{" "}
               the future
@@ -206,7 +206,7 @@ export const HeroSection5wDelay = ({
           </h2>
           <h2 className="absolute top-0 left-0 font-black font-Arial text-6xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
             Using Biology <br /> to Revolutionize <br />
-            <span className="text-pinkAccent">Fluorine </span>
+            <span className="text-tealAccent">Fluorine </span>
             Chemistry
           </h2>
         </div>

@@ -53,7 +53,7 @@ export function HeroLayout() {
       </section>
 
       {/* Animated Hero with Gradient */}
-      <section className="min-h-screen bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center p-12">
+      <section className="min-h-screen bg-gradient-to-br from-blue-600 to-blue-600 flex items-center justify-center p-12">
         <div className="text-center text-white">
           <div className="animate-bounce mb-8">
             <svg

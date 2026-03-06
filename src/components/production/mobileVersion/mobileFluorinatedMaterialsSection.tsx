@@ -157,7 +157,7 @@ export function MobileFluorinatedMaterialsSection({
                   also known as
                   <br />
                 </span>
-                <span className="text-8xl bg-gradient-to-r from-pink-950 via-pinkAccent to-pink-950 bg-clip-text text-transparent leading-tight">
+                <span className="text-8xl bg-gradient-to-r from-teal-950 via-tealAccent to-teal-950 bg-clip-text text-transparent leading-tight">
                   PFAS{" "}
                 </span>
                 <br />
@@ -185,7 +185,7 @@ export function MobileFluorinatedMaterialsSection({
                     water repellency, they are used in a wide range of products.
                     However, these special properties also make them nearly
                     impossible to degrade and <br />{" "}
-                    <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                    <span className="font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
                       highly toxic
                     </span>
                     . PFAS accumulate in the environment and pose a threat to

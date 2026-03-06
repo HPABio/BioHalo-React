@@ -63,7 +63,7 @@ import { BentoStats } from "@/components/bentos/Gen_3_Bentos/BentoStats";
 const Circle1 = React.memo(function Circle1() {
   console.log("Rendering Circle1 component");
   const ref = useRef(null);
-  const isInView = useInView(ref, {once: true});
+  const isInView = useInView(ref, { once: true });
   console.log("Circle1 isInView", isInView);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -109,10 +109,10 @@ const Circle1 = React.memo(function Circle1() {
 });
 
 
-  export function AlternativeFluorinatedMaterialsSection({ className }: { className?: string }) {
-    const refSkull1 = useRef(null);
-    const isInView = useInView(refSkull1, {once: true});
-    console.log("Skull1 isInView", isInView);
+export function AlternativeFluorinatedMaterialsSection({ className }: { className?: string }) {
+  const refSkull1 = useRef(null);
+  const isInView = useInView(refSkull1, { once: true });
+  console.log("Skull1 isInView", isInView);
   const { scrollYProgress: scrollYProgressSkull1 } = useScroll({
     target: refSkull1,
     offset: ["center end", "center start"],
@@ -141,12 +141,12 @@ const Circle1 = React.memo(function Circle1() {
                     However...
                   </h2>
                   <p className="text-base leading-relaxed text-gray-500 font-poppins xl:text-lg">
-                  these special properties also make them nearly
+                    these special properties also make them nearly
                     impossible to degrade and {" "}
-                    <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                    <span className="font-bold bg-gradient-to-bl from-teal-800/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
                       highly toxic
-                    </span>. Over time, PFAS accumulate in the environment and pose a threat to
-                    public health and the environment itself.
+                    </span>. Over time, harmful coating ingredients accumulate in the environment and pose a threat to
+                    public health and maritime ecosystems.
                   </p>
                 </div>
               </div>
@@ -159,62 +159,62 @@ const Circle1 = React.memo(function Circle1() {
       <div className="w-full h-[47vw] max-h-[500px] relative mt-24 bg-black">
         <div className="w-full h-[47vw] max-h-[500px] mt-12 absolute top-0 left-0 z-0
         opacity-30 lg:opacity-50 xl:max-w-[1400px] xl:left-1/2 xl:translate-x-[-50%]"
-        style={{
-          backgroundImage: `url(${IndustrialPollution.src})`,
-          backgroundSize: "100%",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundBlendMode: "multiply",
-        }}>
-           <div className="w-full h-1/2 lg:h-2/3
+          style={{
+            backgroundImage: `url(${IndustrialPollution.src})`,
+            backgroundSize: "100%",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundBlendMode: "multiply",
+          }}>
+          <div className="w-full h-1/2 lg:h-2/3
            bg-gradient-to-b from-black via-black/80 to-transparent md:block hidden"/>
-           <div className="w-full h-[90px] sm:h-1/2 absolute top-0 left-0 
+          <div className="w-full h-[90px] sm:h-1/2 absolute top-0 left-0 
            bg-gradient-to-b from-black via-black/50 to-transparent md:hidden"/>
-           <div className="w-[100px] h-full absolute top-0 left-0 rotate-6 translate-x-[-25%]
+          <div className="w-[100px] h-full absolute top-0 left-0 rotate-6 translate-x-[-25%]
            bg-gradient-to-r from-black via-black/70 to-transparent xl:block hidden"/>
-           <div className="w-[100px] h-full absolute top-0 right-0 -rotate-6 translate-x-[25%]
+          <div className="w-[100px] h-full absolute top-0 right-0 -rotate-6 translate-x-[25%]
            bg-gradient-to-l from-black via-black/70 to-transparent xl:block hidden"/>
         </div>
-          {/* Circle 1 */}
-          <div className="absolute top-0 left-[50%] translate-x-[-55%] w-[50vw] aspect-[6/9] max-w-[500px] mx-auto flex items-center justify-center z-10"
-          style={{willChange: "transform, opacity",}}>
-            {/* <Circle1 /> */}
+        {/* Circle 1 */}
+        <div className="absolute top-0 left-[50%] translate-x-[-55%] w-[50vw] aspect-[6/9] max-w-[500px] mx-auto flex items-center justify-center z-10"
+          style={{ willChange: "transform, opacity", }}>
+          {/* <Circle1 /> */}
+          <motion.div
+            ref={refSkull1}
+            initial={{ rotate: 0 }}
+            transition={{ duration: 1 }}
+            style={{
+              rotate: useTransform(
+                isInView ? scrollYProgressSkull1 : scrollYProgressSkull1, [0, 1], [0, -15]),
+              y: useTransform(isInView ? scrollYProgressSkull1 : scrollYProgressSkull1, [0, 0.6], [0, -100]),
+            }}
+            className="relative w-full h-full rounded-full overflow-hidden border-2 border-lightGrey/40 grid place-items-center"
+          >
+            <Image
+              src={ColorfulGradientRainbowTexture}
+              alt="TexturedGlassSurface"
+              sizes="(max-width: 768px) 100vw, 350px"
+              className="w-full h-full object-cover"
+            />
             <motion.div
-                ref={refSkull1}
-                initial={{ rotate: 0 }}
-                transition={{ duration: 1 }}
-                style={{
-                  rotate: useTransform(
-                    isInView ? scrollYProgressSkull1 : scrollYProgressSkull1, [0, 1], [0, -15]),
-                  y: useTransform(isInView ? scrollYProgressSkull1 : scrollYProgressSkull1, [0, 0.6], [0, -100]),
-                }}
-                className="relative w-full h-full rounded-full overflow-hidden border-2 border-lightGrey/40 grid place-items-center"
-              >
-                <Image
-                  src={ColorfulGradientRainbowTexture}
-                  alt="TexturedGlassSurface"
-                  sizes="(max-width: 768px) 100vw, 350px"
-                  className="w-full h-full object-cover"
-                />
-                <motion.div
-                  className="absolute w-[110%] h-[110%] min-w-[110%] min-h-[110%] 
+              className="absolute w-[110%] h-[110%] min-w-[110%] min-h-[110%] 
                   top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
                   mix-blend-multiply"
-                  style={{
-                    opacity: useTransform(scrollYProgressSkull1, [0, 0.6], [0, 1]),
-                  }}
-                >
-                  <Image
-                    src={IconToxicSkull}
-                    alt="IconToxicSkull"
-                    fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, 500px"
-                    className="w-full h-full object-cover invert grayscale"
-                  />
-                </motion.div>
+              style={{
+                opacity: useTransform(scrollYProgressSkull1, [0, 0.6], [0, 1]),
+              }}
+            >
+              <Image
+                src={IconToxicSkull}
+                alt="IconToxicSkull"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 500px"
+                className="w-full h-full object-cover invert grayscale"
+              />
             </motion.div>
-          </div>
+          </motion.div>
+        </div>
       </div>
       <div className="absolute bottom-0 right-0 w-full h-[60px] sm:h-[100px] lg:h-[200px] bg-gradient-to-t from-black via-black/60 to-transparent z-10"></div>
     </section>
