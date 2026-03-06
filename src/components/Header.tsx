@@ -58,7 +58,7 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-tealAccent hover:bg-pinkAccent/90 text-white">
+            <Button className="bg-tealAccent hover:bg-tealAccent/90 text-white">
               Get in Touch
             </Button>
           </div>

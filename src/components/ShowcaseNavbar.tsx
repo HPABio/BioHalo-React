@@ -135,7 +135,7 @@ export const ShowcaseNavbar = () => {
       >
         {/* Scroll Progress Indicator */}
         <motion.div
-          className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-tealAccent to-pinkAccent"
+          className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-tealAccent to-tealAccent"
           style={{ scaleX: scrollProgress, transformOrigin: "0%" }}
         />
 

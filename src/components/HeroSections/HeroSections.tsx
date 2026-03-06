@@ -73,7 +73,7 @@ export const HeroSection1 = ({
           <div className="flex flex-col w-[clamp(450px,80%,1600px)] relative bg-red-500/0">
             {/* Desktop version */}
             <div className="w-full h-full absolute top-0 left-0 bg-blue-500/0 hidden md:block">
-              <div className="w-[65%] h-full absolute top-0 right-0 bg-pink-500/0">
+              <div className="w-[65%] h-full absolute top-0 right-0 bg-teal-500/0">
                 <p className="w-full absolute right-0 bottom-0 tracking-widest text-[clamp(0.6rem,1.5vw,2rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-green-300/0">
                   Your Partner in{" "}
                   <span
@@ -87,7 +87,7 @@ export const HeroSection1 = ({
                 <p className="w-full absolute right-0 bottom-[-12%] tracking-widest text-[clamp(0.3rem,1vw,1.3rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-green-300/0">
                   <span className="block uppercase mt-4 mb-2 font-medium text-gray-500/90 max-w-4xl mx-auto">
                     We disrupt the{" "}
-                    <span className="font-black bg-pink-800 bg-gradient-to-br from-gray-800/60 via-gray-200/30 to-gray-900/30 bg-clip-text text-transparent">
+                    <span className="font-black bg-teal-800 bg-gradient-to-br from-gray-800/60 via-gray-200/30 to-gray-900/30 bg-clip-text text-transparent">
                       forever chemicals
                     </span>{" "}
                     industry using{" "}
@@ -101,7 +101,7 @@ export const HeroSection1 = ({
 
             {/* Mobile version */}
             <div className="w-full h-full absolute top-0 left-0 bg-blue-500/0 block md:hidden">
-              <div className="w-full h-full absolute top-0 left-0 bg-pink-500/0">
+              <div className="w-full h-full absolute top-0 left-0 bg-teal-500/0">
                 <p className="w-full absolute left-0 bottom-[-60%] tracking-widest text-[clamp(0.6rem,3vw,1.2rem)] font-medium uppercase text-center text-gray-700/80 bg-green-300/0">
                   Your Partner in
                   <br />
@@ -117,7 +117,7 @@ export const HeroSection1 = ({
                 <p className="w-full absolute left-0 bottom-[-110%] tracking-widest text-[clamp(0.3rem,2vw,0.9rem)] font-medium uppercase text-center text-gray-700/80 bg-green-300/0">
                   <span className="block uppercase mt-4 mb-2 font-medium text-gray-500/90 max-w-4xl mx-auto">
                     We disrupt the{" "}
-                    <span className="font-black bg-pink-800 bg-gradient-to-br from-gray-800/60 via-gray-200/30 to-gray-900/30 bg-clip-text text-transparent">
+                    <span className="font-black bg-teal-800 bg-gradient-to-br from-gray-800/60 via-gray-200/30 to-gray-900/30 bg-clip-text text-transparent">
                       forever chemicals
                     </span>
                     <br />
@@ -408,7 +408,7 @@ export const HeroSection3 = ({
                 <p className="w-full relative tracking-widest text-[clamp(0.7rem,1.5vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
                   the{" "}
                   <span
-                    className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent 
+                    className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-slate-800 via-tealAccent to-slate-800 bg-clip-text text-transparent 
                           uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
                   >
                     forever chemicals
@@ -549,7 +549,7 @@ export const HeroSection4 = ({
           </span>{" "}
           to disrupt <br /> the{" "}
           <span
-            className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent 
+            className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-slate-800 via-tealAccent to-slate-800 bg-clip-text text-transparent 
                                       uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
           >
             forever chemicals
@@ -564,7 +564,7 @@ export const HeroSection4 = ({
         <p className="w-full relative tracking-widest text-[clamp(0.7rem,1.5vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
           the{" "}
           <span
-            className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent 
+            className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-slate-800 via-tealAccent to-slate-800 bg-clip-text text-transparent 
                                       uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
           >
             forever chemicals
@@ -586,7 +586,7 @@ export const HeroSection4 = ({
         <p className="w-full relative tracking-widest text-[clamp(0.7rem,1.5vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
           the{" "}
           <span
-            className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent 
+            className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-slate-800 via-tealAccent to-slate-800 bg-clip-text text-transparent 
                                       uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
           >
             forever chemicals
@@ -608,7 +608,7 @@ export const HeroSection4 = ({
       content: (
         <p className="w-full relative tracking-widest text-[clamp(0.7rem,1.5vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
           <span
-            className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent 
+            className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-slate-800 via-tealAccent to-slate-800 bg-clip-text text-transparent 
                                       uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
           >
             forever chemicals
@@ -628,7 +628,7 @@ export const HeroSection4 = ({
       content: (
         <p className="w-full relative tracking-widest text-[clamp(0.7rem,1.5vw,1.8rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
           <span
-            className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent 
+            className="text-[clamp(1rem,1.8vw,2.4rem)] bg-gradient-to-r from-slate-800 via-tealAccent to-slate-800 bg-clip-text text-transparent 
                                       uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
           >
             forever chemicals
@@ -698,7 +698,7 @@ export const HeroSection4 = ({
                 leading-tight"
                 >
                   <span
-                    className="text-[clamp(1.1rem,5vw,2.2rem)] bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent 
+                    className="text-[clamp(1.1rem,5vw,2.2rem)] bg-gradient-to-r from-slate-800 via-tealAccent to-slate-800 bg-clip-text text-transparent 
                                                       uppercase drop-shadow-sm font-black font-Poppins"
                   >
                     forever chemicals
@@ -859,7 +859,7 @@ export const HeroSection5 = ({
               <div className="w-full h-fit bg-red-500/0 md:mt-[10vh] lg:mt-[10vh] xl:mt-[10vh]">
                 <p className="w-full relative tracking-widest text-[clamp(1.2rem,2vw,2.4rem)] font-medium uppercase text-center text-gray-700/80 whitespace-nowrap bg-transparent">
                   <span
-                    className="text-[clamp(1.4rem,2.5vw,3rem)] bg-gradient-to-r from-slate-800 via-pinkAccent to-slate-800 bg-clip-text text-transparent 
+                    className="text-[clamp(1.4rem,2.5vw,3rem)] bg-gradient-to-r from-slate-800 via-tealAccent to-slate-800 bg-clip-text text-transparent 
                                                       uppercase drop-shadow-sm font-black font-Poppins whitespace-nowrap"
                   >
                     forever chemicals

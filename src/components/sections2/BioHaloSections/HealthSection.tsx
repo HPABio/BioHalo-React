@@ -40,7 +40,7 @@ export const HealthSectionImgLeft = ({
             And also public health <br className="block lg:hidden xl:block" />{" "}
             is <br className="block lg:hidden" />
             the{" "}
-            <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/30 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-tr from-tealAccent to-tealAccent/30 bg-clip-text text-transparent">
               suffering
             </span>
           </span>
@@ -218,7 +218,7 @@ export const HealthSectionImgRight = ({
           <span className="">
           But their special properties<br />
             also make them <br /> hard to degrade and{" "}
-            <span className="bg-gradient-to-t from-pinkAccent to-tealAccent/30 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-t from-tealAccent to-tealAccent/30 bg-clip-text text-transparent">
               <br />
               highly toxic
             </span>
@@ -232,7 +232,7 @@ export const HealthSectionImgRight = ({
           <span className="">
             But their special properties<br />
             also make them <br /> hard to degrade and{" "}
-            <span className="bg-gradient-to-t from-pinkAccent to-tealAccent/30 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-t from-tealAccent to-tealAccent/30 bg-clip-text text-transparent">
               <br />
               highly toxic
             </span>
@@ -484,7 +484,7 @@ export function HealthSectionBACKUP({
             And also public health <br className="block lg:hidden xl:block" />{" "}
             is <br className="block lg:hidden" />
             the{" "}
-            <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/30 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-tr from-tealAccent to-tealAccent/30 bg-clip-text text-transparent">
               suffering
             </span>
           </span>

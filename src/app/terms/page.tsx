@@ -16,7 +16,7 @@ export default function TermsOfService() {
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 pb-6 bg-gradient-to-r from-tealAccent to-pinkAccent bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-8 pb-6 bg-gradient-to-r from-tealAccent to-tealAccent bg-clip-text text-transparent">
             Terms of Service
           </h1>
 
@@ -171,7 +171,7 @@ export default function TermsOfService() {
                 Service, please contact us at{" "}
                 <a
                   href="mailto:info@biohalo.io"
-                  className="text-tealAccent hover:text-pinkAccent"
+                  className="text-tealAccent hover:text-tealAccent"
                 >
                   info@biohalo.io
                 </a>

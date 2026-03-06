@@ -46,7 +46,7 @@ export default function ComponentTestbed() {
       prefix: ">",
       label: (
         <>
-          <span className="text-4xl font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+          <span className="text-4xl font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
             Contaminated
           </span>
           <br />
@@ -71,7 +71,7 @@ export default function ComponentTestbed() {
       label: (
         <>
           <span className="text-5xl uppercase font-normal">tons of </span>
-          <span className="text-5xl uppercase font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+          <span className="text-5xl uppercase font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
             Fluoropolymers
           </span>
           <br />

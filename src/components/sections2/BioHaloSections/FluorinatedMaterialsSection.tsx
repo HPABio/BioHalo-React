@@ -181,16 +181,16 @@ export function FluorinatedMaterialsSection({
             {/* TEXT COLUMN */}
             <div className="w-full bg-red-500/0">
               <h1 className="max-w-[720px] font-black font-Arial text-4xl xl:text-6xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
-                <span className="text-9xl scale-[2] opacity-80 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                <span className="text-9xl scale-[2] opacity-80 bg-gradient-to-tr from-red-600 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
                   PFAS{" "}
                 </span>
                 <br />
                 <span className="">also known as</span>
                 <br />"
-                <span className="absolute bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm opacity-50">
+                <span className="absolute bg-gradient-to-tr from-red-600 via-tealAccent to-blue-900/70 bg-clip-text text-transparent blur-sm opacity-50">
                   Forever Chemicals
                 </span>
-                <span className="bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-tr from-red-600 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
                   Forever Chemicals
                 </span>
                 "
@@ -215,7 +215,7 @@ export function FluorinatedMaterialsSection({
                     water repellency, they are used in a wide range of products.
                     However, these special properties also make them nearly
                     impossible to degrade and <br />{" "}
-                    <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                    <span className="font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
                       highly toxic
                     </span>
                     . PFAS accumulate in the environment and pose a threat to
@@ -368,16 +368,16 @@ export function FluorinatedMaterialsSectionV2({
               {/* TEXT COLUMN */}
               <div className="w-full">
                 <h1 className="max-w-[500px] xl:max-w-[700px] font-black font-Arial text-4xl xl:text-6xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
-                  <span className="text-9xl scale-[2] opacity-80 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                  <span className="text-9xl scale-[2] opacity-80 bg-gradient-to-tr from-red-600 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
                     PFAS{" "}
                   </span>
                   <br />
                   <span className="">also known as</span>
                   <br />"
-                  <span className="absolute bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm opacity-50">
+                  <span className="absolute bg-gradient-to-tr from-red-600 via-tealAccent to-blue-900/70 bg-clip-text text-transparent blur-sm opacity-50">
                     Forever Chemicals
                   </span>
-                  <span className="bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-tr from-red-600 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
                     Forever Chemicals
                   </span>
                   "
@@ -399,7 +399,7 @@ export function FluorinatedMaterialsSectionV2({
                     water repellency, they are used in a wide range of products.
                     However, these special properties also make them nearly
                     impossible to degrade and{" "}
-                    <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                    <span className="font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
                       highly toxic
                     </span>
                     . PFAS accumulate in the environment and pose a threat to
@@ -538,7 +538,7 @@ export function FluorinatedMaterialsSectionV3({
             {/* Right Column - Text Content */}
             <div className="w-1/2 text-right">
               <h1 className="relative max-w-[500px] xl:max-w-[700px] font-black font-Arial text-4xl xl:text-6xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10 ml-auto">
-                <span className="text-9xl scale-[2] opacity-80 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                <span className="text-9xl scale-[2] opacity-80 bg-gradient-to-tr from-red-600 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
                   PFAS{" "}
                 </span>
                 <br />
@@ -546,10 +546,10 @@ export function FluorinatedMaterialsSectionV3({
                 <br />
                 <span className="relative inline-block">
                   <span>"df"</span>
-                  <span className="absolute top-0 left-0 bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm opacity-50">
+                  <span className="absolute top-0 left-0 bg-gradient-to-tr from-red-600 via-tealAccent to-blue-900/70 bg-clip-text text-transparent blur-sm opacity-50">
                     Forever Chemicals
                   </span>
-                  <span className="bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-tr from-red-600 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
                     Forever Chemicals
                   </span>
                 </span>
@@ -570,7 +570,7 @@ export function FluorinatedMaterialsSectionV3({
                   repellency, they are used in a wide range of products.
                   However, these special properties also make them nearly
                   impossible to degrade and{" "}
-                  <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                  <span className="font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
                     highly toxic
                   </span>
                   . PFAS accumulate in the environment and pose a threat to
@@ -666,10 +666,10 @@ export function FluorinatedMaterialsSectionBACKUP({
               <h1 className="max-w-[720px] font-black font-Arial text-4xl md:text-6xl bg-gradient-to-br from-mintAccent to-tealAccent bg-clip-text text-transparent pb-10">
                 <span className="">We encounter</span>
                 <br />
-                <span className="absolute bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent blur-sm opacity-50">
+                <span className="absolute bg-gradient-to-tr from-red-600 via-tealAccent to-blue-900/70 bg-clip-text text-transparent blur-sm opacity-50">
                   Fluorinated{" "}
                 </span>
-                <span className="bg-gradient-to-tr from-red-600 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-tr from-red-600 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
                   Fluorinated{" "}
                 </span>
                 <span className=""> Materials</span>
@@ -685,7 +685,7 @@ export function FluorinatedMaterialsSectionBACKUP({
                   <p className="text-2xl md:text-3xl text-gray-300">
                     From coatings and textiles to <br />
                     food packaging and electronics, <br />
-                    <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                    <span className="font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
                       PFAS
                     </span>{" "}
                     are everywhere.

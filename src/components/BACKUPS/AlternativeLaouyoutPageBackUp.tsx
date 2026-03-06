@@ -169,7 +169,7 @@ const stats = [
       <>
         <span
           className="text-lg md:text-xl lg:text-2xl xl:text-4xl  uppercase font-bold text-center bg-gradient-to-bl 
-        from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent"
+        from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent"
         >
           fluorinated compounds
         </span>{" "}
@@ -188,7 +188,7 @@ const stats = [
     prefix: ">",
     label: (
       <>
-        <span className="text-4xl font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+        <span className="text-4xl font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
           Contaminated
         </span>
         <br />
@@ -215,7 +215,7 @@ const stats = [
         <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-normal">
           tons of{" "}
         </span>
-        <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+        <span className="text-2xl md:text-4xl lg:text-5xl uppercase font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
           Fluoropolymers
         </span>
         <br />
@@ -278,7 +278,7 @@ const stats = [
         </span>
         <span
           className="text-sm lg:text-2xl  uppercase font-bold text-center bg-gradient-to-bl 
-        from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent"
+        from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent"
         >
           Fluoropolymers
         </span>
@@ -341,7 +341,7 @@ export default function AlternativeLayout() {
                             scale-[3] opacity-20" />
                                 <div
                                   className="relative aspect-square w-40 border-[8px] border-gray-600 drop-shadow-2xl
-                                  rounded-xl flex flex-col items-center justify-center bg-gradient-to-br from-pink-800/10 to-purple-900/10 backdrop-blur-md text-gray-600
+                                  rounded-xl flex flex-col items-center justify-center bg-gradient-to-br from-teal-800/10 to-blue-900/10 backdrop-blur-md text-gray-600
                                   hover:scale-105 transition-transform duration-300"
                                 >
                                   <span className="text-[min(8vw,4rem)] font-bold tracking-wider">
@@ -362,7 +362,7 @@ export default function AlternativeLayout() {
                                   className="text-3xl md:text-4xl font-bold text-gray-600 text-center mt-8 max-w-2xl leading-relaxed"
                                 >
                                   our modern society is built on{" "}<br />
-                                  <span className="bg-gradient-to-bl from-red-800/90 via-pinkAccent to-purple-900/80 bg-clip-text text-transparent font-extrabold">
+                                  <span className="bg-gradient-to-bl from-blue-900/90 via-tealAccent to-blue-900/80 bg-clip-text text-transparent font-extrabold">
                                     fluorinated materials
                                   </span>
                                 </h2>
@@ -584,7 +584,7 @@ export default function AlternativeLayout() {
             repellency, they are used in a wide range of products. However,
             these special properties also make them nearly impossible to degrade
             and{" "}
-            <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+            <span className="font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
               highly toxic
             </span>
             . PFAS accumulate in the environment and pose a threat to public
@@ -752,7 +752,7 @@ export function AlternativeLayoutBackUp() {
                             scale-[3] opacity-20" />
                                 <div
                                   className="relative aspect-square w-40 border-[8px] border-gray-600 drop-shadow-2xl
-                                  rounded-xl flex flex-col items-center justify-center bg-gradient-to-br from-pink-800/10 to-purple-900/10 backdrop-blur-md text-gray-600
+                                  rounded-xl flex flex-col items-center justify-center bg-gradient-to-br from-teal-800/10 to-blue-900/10 backdrop-blur-md text-gray-600
                                   hover:scale-105 transition-transform duration-300"
                                 >
                                   <span className="text-[min(8vw,4rem)] font-bold tracking-wider">
@@ -773,7 +773,7 @@ export function AlternativeLayoutBackUp() {
                                   className="text-3xl md:text-4xl font-bold text-gray-600 text-center mt-8 max-w-2xl leading-relaxed"
                                 >
                                   our modern society is built on{" "}<br />
-                                  <span className="bg-gradient-to-bl from-red-800/90 via-pinkAccent to-purple-900/80 bg-clip-text text-transparent font-extrabold">
+                                  <span className="bg-gradient-to-bl from-blue-900/90 via-tealAccent to-blue-900/80 bg-clip-text text-transparent font-extrabold">
                                     fluorinated materials
                                   </span>
                                 </h2>
@@ -1012,7 +1012,7 @@ export function AlternativeLayoutBackUp() {
             repellency, they are used in a wide range of products. However,
             these special properties also make them nearly impossible to degrade
             and{" "}
-            <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+            <span className="font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
               highly toxic
             </span>
             . PFAS accumulate in the environment and pose a threat to public

@@ -72,7 +72,7 @@ export const MobileWhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(225,12,115,0.7)" //pink
-          className="absolute bg-red-500/0 top-[10%] left-[50%] translate-x-[-1220%] translate-y-[-10%] bg-pinkAccent"
+          className="absolute bg-red-500/0 top-[10%] left-[50%] translate-x-[-1220%] translate-y-[-10%] bg-tealAccent"
         />
 
         <div className="w-full sm:w-full bg-red-500/0 xl:mt-10 relative z-10">
@@ -96,7 +96,7 @@ export const MobileWhatWeDoSection = ({
             alternative to <br />
             <span
               className="uppercase text-wrap box-decoration-clone text-3xl
-            bg-clip-text text-transparent bg-gradient-to-r from-slate-800/80 via-pinkAccent/70 to-slate-800/80 "
+            bg-clip-text text-transparent bg-gradient-to-r from-slate-800/80 via-tealAccent/70 to-slate-800/80 "
             >
               forever chemicals
             </span>
@@ -123,7 +123,7 @@ export const MobileWhatWeDoSection = ({
           <p className="text-gray-500/80 text-1xl font-poppins text-center  ">
             we can selectively halogenate organic molecules, opening up new
             possibilities for{" "}
-            <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-tr from-tealAccent to-tealAccent/60 bg-clip-text text-transparent">
               fluorine
             </span>
             -based chemistry.
@@ -210,7 +210,7 @@ export const MobileWhatWeDoSection = ({
               <p className="text-lg max-w-md pt-4 leading-relaxed">
                 BioHalos revolutionary enzyme-based biohalogenation platform
                 offers you near limitless possibilities for{" "}
-                <span className="bg-gradient-to-tr from-pinkAccent to-red-900/80 bg-clip-text text-transparent ">
+                <span className="bg-gradient-to-tr from-tealAccent to-blue-900/80 bg-clip-text text-transparent ">
                   fluorine
                 </span>
                 -enhanced compound development.

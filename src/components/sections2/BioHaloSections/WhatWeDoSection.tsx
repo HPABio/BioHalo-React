@@ -77,7 +77,7 @@ export const WhatWeDoSection = ({
           scaleRange={[0.9, 1.1]}
           scaleDuration={4}
           color="rgba(225,12,115,0.7)" //pink
-          className="absolute bg-red-500/0 top-[10%] left-[50%] translate-x-[-1220%] translate-y-[-10%] bg-pinkAccent"
+          className="absolute bg-red-500/0 top-[10%] left-[50%] translate-x-[-1220%] translate-y-[-10%] bg-tealAccent"
         />
 
         <div
@@ -131,15 +131,15 @@ export const WhatWeDoSection = ({
             provides the world <br />
             with sustainable <br />
             <span className="relative group">
-              <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent cursor-help">
+              <span className="bg-gradient-to-tr from-tealAccent to-tealAccent/60 bg-clip-text text-transparent cursor-help">
                 PFAS{" "}
               </span>
               <span className="invisible font-normal group-hover:visible absolute left-0 top-full mt-2 w-56 sm:w-60 md:w-64 p-3 md:p-4 bg-white/90 backdrop-blur-md rounded-lg shadow-lg text-xs sm:text-sm text-gray-800 z-50 transition-all duration-200 ease-in-out">
-                <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
+                <span className="font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent cursor-help">
                   PFAS
                 </span>{" "}
                 are Per- and PolyfluoroAlkyl Substances also known as "
-                <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent cursor-help">
+                <span className="font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent cursor-help">
                   forever chemicals
                 </span>
                 "
@@ -161,7 +161,7 @@ export const WhatWeDoSection = ({
           <p className="text-gray-500/80 text-2xl font-poppins">
             we can selectively halogenate organic molecules, opening up new
             possibilities for{" "}
-            <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-tr from-tealAccent to-tealAccent/60 bg-clip-text text-transparent">
               fluorine
             </span>
             -based chemistry.
@@ -251,7 +251,7 @@ export const WhatWeDoSection = ({
                 <br />
                 <span className="">and produce, unmatched</span>
                 <br />
-                <span className="bg-gradient-to-tr from-pinkAccent to-tealAccent/60 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-tr from-tealAccent to-tealAccent/60 bg-clip-text text-transparent">
                   new-to-market{" "}
                 </span>{" "}
                 <br className="hidden lg:block xl:hidden" />
@@ -261,7 +261,7 @@ export const WhatWeDoSection = ({
                 Our{" "}
                 <span className="font-bold ">
                   Bio-
-                  <span className="bg-gradient-to-tr from-pinkAccent to-red-900/80 bg-clip-text text-transparent text-4xl">
+                  <span className="bg-gradient-to-tr from-tealAccent to-blue-900/80 bg-clip-text text-transparent text-4xl">
                     F
                   </span>
                   -Polymers
@@ -273,7 +273,7 @@ export const WhatWeDoSection = ({
               <p className="text-lg max-w-md pt-4 leading-relaxed">
                 BioHalos revolutionary enzyme-based biohalogenation platform
                 offers you near limitless possibilities for{" "}
-                <span className="bg-gradient-to-tr from-pinkAccent to-red-900/80 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-tr from-tealAccent to-blue-900/80 bg-clip-text text-transparent">
                   fluorine
                 </span>
                 -enhanced compound development.

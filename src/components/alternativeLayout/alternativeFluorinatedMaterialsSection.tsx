@@ -143,7 +143,7 @@ const Circle1 = React.memo(function Circle1() {
                   <p className="text-base leading-relaxed text-gray-500 font-poppins xl:text-lg">
                   these special properties also make them nearly
                     impossible to degrade and {" "}
-                    <span className="font-bold bg-gradient-to-bl from-red-800/80 via-pinkAccent to-purple-900/70 bg-clip-text text-transparent">
+                    <span className="font-bold bg-gradient-to-bl from-blue-900/80 via-tealAccent to-blue-900/70 bg-clip-text text-transparent">
                       highly toxic
                     </span>. Over time, PFAS accumulate in the environment and pose a threat to
                     public health and the environment itself.

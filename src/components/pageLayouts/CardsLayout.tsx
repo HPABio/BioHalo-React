@@ -31,7 +31,7 @@ export function CardsLayout() {
         </div>
 
         {/* Gradient Card */}
-        <div className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg shadow-md overflow-hidden text-white">
+        <div className="bg-gradient-to-br from-blue-600 to-blue-600 rounded-lg shadow-md overflow-hidden text-white">
           <div className="p-6">
             <h3 className="text-xl font-semibold mb-2">Gradient Card</h3>
             <p className="text-white/90">

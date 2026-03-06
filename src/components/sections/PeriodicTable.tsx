@@ -141,7 +141,7 @@ const elements: Element[] = [
 const TILE_BG = "#F8F8F8"; // Default tile background - ADJUSTABLE (lightGrey)
 const HALOGEN_BG = "#225566"; // Special background for halogens - ADJUSTABLE (tealAccent)
 const HALOGEN_TEXT = "#BCE2E2"; // Special text color for halogens - ADJUSTABLE (mintAccent)
-const FLUORINE_BG = "#E10C73"; // Special background for fluorine - ADJUSTABLE (pinkAccent)
+const FLUORINE_BG = "#E10C73"; // Special background for fluorine - ADJUSTABLE (tealAccent)
 const FLUORINE_TEXT = "#FFFFFF"; // Special text color for fluorine - ADJUSTABLE
 
 // Convert hex to RGB for brightness calculation
@@ -249,7 +249,7 @@ function ElementTile({ element }: { element: Element }) {
         >
           <div className="space-y-1.5">
             <div className="flex items-center justify-between">
-              <h4 className="text-[clamp(12px,1.2vw,14px)] font-semibold text-pinkAccent">
+              <h4 className="text-[clamp(12px,1.2vw,14px)] font-semibold text-tealAccent">
                 Fluorine (F)
               </h4>
               <span className="text-[clamp(10px,1vw,12px)] text-gray-500">

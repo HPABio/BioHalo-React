@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable}`}>
       <head>
         <meta name="color-scheme" content="light only" />
-        {/* <script src="https://unpkg.com/react-scan/dist/auto.global.js" /> */}
+        <script src="https://unpkg.com/react-scan/dist/auto.global.js" />
         {/* rest of your scripts go under */}
       </head>
       <body className="min-h-screen min-w-screen bg-lightGrey text-darkGrey font-sans antialiased">

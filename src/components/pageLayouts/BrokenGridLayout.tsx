@@ -84,7 +84,7 @@ export function BrokenGridLayout() {
               <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-blue-600 rounded-full" />
             </div>
             <div className="relative mt-12 md:mt-24">
-              <div className="absolute -top-8 -left-8 w-24 h-24 bg-purple-600 rounded-full" />
+              <div className="absolute -top-8 -left-8 w-24 h-24 bg-blue-600 rounded-full" />
               <img
                 src="https://picsum.photos/601/400"
                 alt="Overlapping image 2"

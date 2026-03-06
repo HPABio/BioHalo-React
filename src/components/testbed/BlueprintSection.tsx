@@ -17,7 +17,7 @@ export const BlueprintSection = () => {
           />
         </div>
 
-        <div className="relative w-full h-full bg-purple-500/90">
+        <div className="relative w-full h-full bg-blue-500/90">
           <BacteriaWindowBlueprint
             classNames="absolute top-0 left-0 bg-blue-500 w-full h-full scale-100"
             duration="6.5s"
